@@ -110,7 +110,7 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="stats-section" style={{ padding: '80px 0 40px' }}>
+      <section className="stats-section" style={{ padding: '80px 0 0' }}>
         <div className="container">
           <h2 className="section-title">Go beyond vanity metrics</h2>
           <p className="section-subtitle">Marketing teams using Momentum prove real business value, not just MQL counts</p>
@@ -118,7 +118,7 @@ export default function Home() {
       </section>
 
       {/* FSS Score Section */}
-      <section id="scores" className="fss-section">
+      <section id="scores" className="fss-section" style={{ paddingTop: '60px' }}>
         <div className="container">
           <div className="fss-content">
             <div className="fss-visual animate-on-scroll">
