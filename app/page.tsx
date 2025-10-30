@@ -110,7 +110,7 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="stats-section">
+      <section className="stats-section" style={{ padding: '80px 0 40px' }}>
         <div className="container">
           <h2 className="section-title">Go beyond vanity metrics</h2>
           <p className="section-subtitle">Marketing teams using Momentum prove real business value, not just MQL counts</p>
