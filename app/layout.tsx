@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Momentum - Ship quality code with AI confidence",
-  description: "Momentum gives you real-time quality metrics and test coverage for every AI-generated code change. Track code quality with FSS Score.",
+  title: "Momentum - Measure field marketing success with confidence",
+  description: "MQL, meeting, and pipeline data from Salesforce with real feedback from your attendees and sales partners. Go beyond vanity metrics with the Field Success Score.",
 };
 
 export default function RootLayout({
