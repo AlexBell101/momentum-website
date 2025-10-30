@@ -293,7 +293,7 @@ h1 {
 
 /* Stats Section */
 .stats-section {
-  padding: 120px 0;
+  padding: 120px 0 60px;
   background: white;
 }
 
@@ -459,15 +459,15 @@ h1 {
 
 /* FSS Score Section */
 .fss-section {
-  padding: 120px 0;
-  background: white;
+  padding: 60px 0 120px;
+  background: linear-gradient(180deg, #ffffff 0%, #f5f7fa 100%);
 }
 
 .fss-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
-  align-items: center;
+  align-items: start;
   margin-top: 0;
 }
 
@@ -587,6 +587,10 @@ h1 {
   font-weight: 700;
   font-variant-numeric: tabular-nums;
   letter-spacing: -0.01em;
+}
+
+.fss-info {
+  padding-top: 20px;
 }
 
 .fss-info h3 {
