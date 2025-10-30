@@ -89,7 +89,7 @@ body {
 
 .btn-primary {
   background: var(--accent);
-  color: white;
+  color: white !important;
   padding: 10px 20px;
   border-radius: 8px;
   border: none;
@@ -103,6 +103,7 @@ body {
 
 .btn-primary:hover {
   background: var(--accent-hover);
+  color: white !important;
   transform: translateY(-1px);
 }
 
@@ -377,6 +378,8 @@ body {
   background: linear-gradient(135deg, var(--accent) 0%, #8B5CF6 100%);
   border-radius: 16px;
   color: white;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cta-section h2 {

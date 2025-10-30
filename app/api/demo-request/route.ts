@@ -28,7 +28,7 @@ export async function POST(request: NextRequest) {
         filterGroups: [{
           filters: [{
             propertyName: 'email',
-            operator: 'EQ',
+            operator: 'EQ' as any,
             value: email
           }]
         }],
