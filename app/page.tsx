@@ -186,7 +186,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="cta-section" id="demo" style={{ margin: '80px 24px' }}>
+      <section className="cta-section" id="demo">
         <h2>Ready to prove event ROI?</h2>
         <p>Book a demo with our team or start your free trial.</p>
         <form className="cta-form" onSubmit={handleSubmit}>
