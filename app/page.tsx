@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   useEffect(() => {
@@ -63,11 +64,12 @@ export default function Home() {
       <nav id="navbar">
         <div className="container">
           <div className="nav-content">
-            <div className="logo">Momentum</div>
+            <Link href="/" className="logo">Momentum</Link>
             <ul className="nav-links">
               <li><a href="#features">Features</a></li>
-              <li><a href="#scores">FSS Score</a></li>
-              <li><a href="#pricing">Pricing</a></li>
+              <li><Link href="/fss-score">FSS Score</Link></li>
+              <li><Link href="/integrations">Integrations</Link></li>
+              <li><Link href="/docs">Docs</Link></li>
             </ul>
             <a href="#" className="cta-button">Get Started</a>
           </div>
@@ -314,10 +316,10 @@ export default function Home() {
             <div className="footer-section">
               <h4>Product</h4>
               <ul className="footer-links">
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Integrations</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><Link href="/integrations">Integrations</Link></li>
                 <li><a href="#">Pricing</a></li>
-                <li><a href="#">Documentation</a></li>
+                <li><Link href="/docs">Documentation</Link></li>
               </ul>
             </div>
 
