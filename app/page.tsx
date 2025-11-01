@@ -86,8 +86,8 @@ export default function Home() {
               The only platform with 360° campaign intelligence
             </div>
 
-            <h1 className="hero-title-enterprise">The Complete<br />Campaign Feedback Loop</h1>
-            <p className="hero-subtitle-enterprise">Momentum captures feedback from Sales, Marketing, Attendees, <strong>and Partners</strong>—then uses AI to turn that 360° view into strategic insights you can act on.</p>
+            <h1 className="hero-title-enterprise">Turn Event Chaos<br />Into Strategic Clarity</h1>
+            <p className="hero-subtitle-enterprise">The holistic insights platform that combines Salesforce metrics with feedback from Sales, Marketing, Attendees, and Partners—powered by AI to show you what's working, what's not, and exactly what to do next.</p>
 
             {/* Four Stakeholder Indicators with SVG Icons */}
             <div className="stakeholder-indicators">
@@ -114,7 +114,6 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
                 </svg>
                 <span>Partners</span>
-                <span className="new-badge-enterprise">NEW</span>
               </div>
             </div>
 
@@ -182,7 +181,6 @@ export default function Home() {
                 quote: '"We\'re co-marketing 5 more events"',
                 insight: '→ Predicts channel pipeline',
                 color: 'green',
-                isNew: true,
                 highlight: true
               }
             ].map((perspective, i) => (
@@ -194,7 +192,6 @@ export default function Home() {
                 </div>
                 <h3 className="perspective-title-enterprise">
                   {perspective.title}
-                  {perspective.isNew && <span className="new-badge-enterprise">NEW</span>}
                 </h3>
                 <p className="perspective-quote-enterprise">{perspective.quote}</p>
                 <p className="perspective-insight-enterprise">{perspective.insight}</p>
@@ -209,132 +206,159 @@ export default function Home() {
         </div>
       </section>
 
-      {/* AI Insights Section */}
+      {/* Holistic Insights Platform */}
       <section className="ai-section-enterprise">
         <div className="container">
           <div className="ai-content-enterprise">
-            <div className="ai-visual-enterprise animate-on-scroll">
-              <div className="ai-badge-large-enterprise">
-                <svg className="ai-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <div className="ai-info-enterprise animate-on-scroll">
+              <h3>The Holistic Insights Platform for Field Marketing</h3>
+              <p className="ai-intro-enterprise">Momentum combines your GTM metrics from Salesforce with feedback loops from every stakeholder—then uses AI to connect the dots and show you exactly what's driving results.</p>
+
+              <div className="holistic-features-enterprise">
+                <div className="holistic-feature-enterprise">
+                  <div className="holistic-number">1</div>
+                  <div>
+                    <h4>Connect Your GTM Data</h4>
+                    <p>Automatic sync from Salesforce Campaign objects: MQLs generated, pipeline created, meetings booked, target account engagement, win rates, and deal velocity. Real business outcomes, not vanity metrics.</p>
+                  </div>
+                </div>
+
+                <div className="holistic-feature-enterprise">
+                  <div className="holistic-number">2</div>
+                  <div>
+                    <h4>Capture the Complete Feedback Loop</h4>
+                    <p>Multi-stakeholder surveys (90 seconds, 65% response rate) collect qualitative insights from Sales ("Were these leads worth pursuing?"), Marketing ("Did execution match our standards?"), Attendees ("Did we deliver value?"), and Partners ("Will we co-market again?").</p>
+                  </div>
+                </div>
+
+                <div className="holistic-feature-enterprise">
+                  <div className="holistic-number">3</div>
+                  <div>
+                    <h4>AI Connects Metrics to Feedback</h4>
+                    <p>Claude AI analyzes verbatim comments alongside Salesforce metrics to identify what actually drives outcomes. "Events with Partner Score &gt;80 generate 2.3x more channel pipeline." "Partner feedback mentions 'ICP mismatch' 12 times when conversion rates drop below 15%."</p>
+                  </div>
+                </div>
+
+                <div className="holistic-feature-enterprise">
+                  <div className="holistic-number">4</div>
+                  <div>
+                    <h4>Get Strategic Recommendations</h4>
+                    <p>AI doesn't just analyze—it tells you what to do next. Replicate high-performing formats, adjust targeting for specific regions, improve partner alignment, or double down on channels that convert. Actionable insights, not dashboards you have to interpret.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="holistic-callout-enterprise">
+                <svg className="callout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
                 </svg>
-                <span>Powered by Claude AI</span>
-              </div>
-              <div className="ai-chat-preview-enterprise">
-                <div className="chat-message user-message">
-                  <p>Why did partners love our Austin event but not Boston?</p>
+                <div>
+                  <h4>Powered by Claude AI</h4>
+                  <p>Ask questions in natural language. "Why did partners love Austin but not Boston?" "Which webinars should we replicate in Q2?" Get instant answers that combine hard metrics with qualitative insights.</p>
                 </div>
-                <div className="chat-message ai-message">
-                  <p><strong>Partners in Austin mentioned "ICP alignment" 8 times vs 0 in Boston.</strong> Austin attracted enterprise SaaS attendees (partner sweet spot). Boston skewed toward SMB.</p>
-                  <p className="recommendation-enterprise">
-                    <svg className="recommendation-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
-                    </svg>
-                    <strong>Recommendation:</strong> For Boston 2025, add enterprise track or adjust targeting to attract larger companies.
-                  </p>
-                </div>
-              </div>
-              <div className="ai-insights-list-enterprise">
-                {[
-                  { icon: (<path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />), label: 'Pattern Detection' },
-                  { icon: (<path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" />), label: 'Pipeline Prediction' },
-                  { icon: (<path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />), label: 'Risk Alerts' }
-                ].map((item, i) => (
-                  <div key={i} className="insight-item-enterprise">
-                    <svg className="insight-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      {item.icon}
-                    </svg>
-                    <span>{item.label}</span>
-                  </div>
-                ))}
               </div>
             </div>
 
-            <div className="ai-info-enterprise animate-on-scroll">
-              <h3>AI-Powered Strategic Insights</h3>
-              <p className="ai-intro-enterprise">Momentum doesn't just collect feedback from all 4 stakeholders—it uses AI to turn that 360° view into strategic insights you can act on.</p>
-
-              <div className="ai-features-enterprise">
-                {[
-                  {
-                    icon: (<path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />),
-                    title: 'Analyze Verbatim Feedback',
-                    desc: 'AI reads every comment from sales, marketing, attendees, and partners—spotting patterns humans miss.'
-                  },
-                  {
-                    icon: (<path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />),
-                    title: 'Surface Hidden Insights',
-                    desc: '"Partner feedback mentions \'ICP mismatch\' 12 times across Q3 events. Consider targeting adjustments."'
-                  },
-                  {
-                    icon: (<path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />),
-                    title: 'Generate Recommendations',
-                    desc: 'Not just data—actionable next steps. "Events with Partner Score >80 generate 2.3x more channel pipeline."'
-                  },
-                  {
-                    icon: (<path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />),
-                    title: 'Ask Questions in Natural Language',
-                    desc: '"Which events should we replicate in Q2?" "How did our webinars compare to field events?" Get instant answers.'
-                  }
-                ].map((feature, i) => (
-                  <div key={i} className="ai-feature-enterprise">
-                    <div className="ai-feature-icon-enterprise">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        {feature.icon}
-                      </svg>
+            <div className="ai-visual-enterprise animate-on-scroll">
+              <div className="ai-example-enterprise">
+                <div className="example-label">Real Example</div>
+                <div className="example-question">
+                  <svg className="example-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
+                  </svg>
+                  <p>Which of our Q3 field events generated the most pipeline per dollar spent, and what made them successful?</p>
+                </div>
+                <div className="example-answer">
+                  <div className="answer-header">
+                    <svg className="ai-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z" />
+                    </svg>
+                    <span>AI Analysis</span>
+                  </div>
+                  <div className="answer-metrics">
+                    <div className="answer-metric">
+                      <div className="metric-value-large">$47</div>
+                      <div className="metric-label-small">Cost per $1K pipeline</div>
+                      <div className="metric-event">Austin Executive Dinner</div>
                     </div>
-                    <div>
-                      <h4>{feature.title}</h4>
-                      <p>{feature.desc}</p>
+                    <div className="answer-metric">
+                      <div className="metric-value-large">$89</div>
+                      <div className="metric-label-small">Cost per $1K pipeline</div>
+                      <div className="metric-event">Chicago Webinar Series</div>
                     </div>
                   </div>
-                ))}
+                  <div className="answer-insight">
+                    <strong>Key Success Factors for Austin:</strong>
+                    <ul>
+                      <li><strong>Partner Score: 94</strong> — Partners mentioned &quot;perfect ICP fit&quot; 11 times. Strong partner satisfaction predicts channel pipeline.</li>
+                      <li><strong>Sales Feedback: 88</strong> — Sales team commented &quot;pre-qualified leads saved us weeks&quot; (mentioned 6 times).</li>
+                      <li><strong>Targeting Quality:</strong> 78% enterprise attendees vs. 45% in Chicago. Higher enterprise mix = higher deal values.</li>
+                    </ul>
+                  </div>
+                  <div className="answer-recommendation">
+                    <svg className="rec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+                    </svg>
+                    <div>
+                      <strong>Recommendation:</strong> Replicate Austin's executive dinner format in SF and NYC. Prioritize partner co-hosted events (2.1x better pipeline efficiency). Adjust Chicago targeting to enterprise ICP.
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Competitive Differentiation */}
-      <section className="comparison-section-enterprise">
+      {/* Platform Capabilities */}
+      <section className="capabilities-section-enterprise">
         <div className="container">
-          <h2 className="section-title-enterprise">The Only Platform with Complete Campaign Intelligence</h2>
-          <p className="section-subtitle-enterprise">Most tools show 2-3 perspectives. We show all four.</p>
+          <h2 className="section-title-enterprise">Everything Your Field Marketing Team Needs</h2>
+          <p className="section-subtitle-enterprise">A complete platform that connects your GTM data with human feedback to deliver actionable insights.</p>
 
-          <div className="comparison-table-enterprise">
-            <div className="comparison-header-enterprise">
-              <div className="comparison-cell-enterprise empty"></div>
-              <div className="comparison-cell-enterprise">
-                <div className="company-logo-enterprise momentum">Momentum</div>
-              </div>
-              <div className="comparison-cell-enterprise">
-                <div className="company-logo-enterprise">Competitor A</div>
-              </div>
-              <div className="comparison-cell-enterprise">
-                <div className="company-logo-enterprise">Competitor B</div>
-              </div>
-            </div>
-
+          <div className="capabilities-grid-enterprise">
             {[
-              { name: 'Sales Feedback', momentum: true, a: true, b: true },
-              { name: 'Marketing Feedback', momentum: true, a: true, b: false },
-              { name: 'Attendee Feedback', momentum: true, a: true, b: true },
-              { name: 'Partner Feedback', momentum: true, a: false, b: false, highlight: true },
-              { name: '360° Campaign View', momentum: true, a: false, b: false },
-              { name: 'AI-Powered Insights', momentum: true, a: false, b: false, highlight: true },
-              { name: 'Channel Pipeline Prediction', momentum: true, a: false, b: false }
-            ].map((row, i) => (
-              <div key={i} className={`comparison-row-enterprise ${row.highlight ? 'highlight-row-enterprise' : ''}`}>
-                <div className="comparison-cell-enterprise feature-name"><strong>{row.name}</strong></div>
-                <div className="comparison-cell-enterprise">
-                  {row.momentum ? <span className="check-enterprise">✓</span> : <span className="cross-enterprise">✗</span>}
+              {
+                name: 'Salesforce Integration',
+                desc: 'Automatic sync of MQLs, pipeline, meetings, and target account engagement from Campaign objects',
+                icon: (<path strokeLinecap="round" strokeLinejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />)
+              },
+              {
+                name: 'Multi-Stakeholder Surveys',
+                desc: '90-second surveys with 65% response rates capturing feedback from all four perspectives',
+                icon: (<path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />)
+              },
+              {
+                name: 'Partner Feedback Tracking',
+                desc: 'The only platform that measures partner satisfaction and predicts channel pipeline',
+                icon: (<path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />),
+                highlight: true
+              },
+              {
+                name: 'AI-Powered Analysis',
+                desc: 'Claude AI reads verbatim feedback, identifies patterns, and generates strategic recommendations',
+                icon: (<path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />),
+                highlight: true
+              },
+              {
+                name: 'Field Success Score',
+                desc: 'Single metric combining hard metrics and qualitative feedback across all four stakeholders',
+                icon: (<path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />)
+              },
+              {
+                name: 'Executive Dashboards',
+                desc: 'FSS and all feedback scores sync to Salesforce Campaign objects for real-time reporting',
+                icon: (<path strokeLinecap="round" strokeLinejoin="round" d="M7.5 14.25v2.25m3-4.5v4.5m3-6.75v6.75m3-9v9M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" />)
+              }
+            ].map((capability, i) => (
+              <div key={i} className={`capability-card-enterprise animate-on-scroll ${capability.highlight ? 'highlight' : ''}`} style={{ animationDelay: `${i * 0.1}s` }}>
+                <div className="capability-icon-enterprise">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    {capability.icon}
+                  </svg>
                 </div>
-                <div className="comparison-cell-enterprise">
-                  {row.a ? <span className="check-enterprise">✓</span> : <span className="cross-enterprise">✗</span>}
-                </div>
-                <div className="comparison-cell-enterprise">
-                  {row.b ? <span className="check-enterprise">✓</span> : <span className="cross-enterprise">✗</span>}
-                </div>
+                <h3 className="capability-title-enterprise">{capability.name}</h3>
+                <p className="capability-desc-enterprise">{capability.desc}</p>
               </div>
             ))}
           </div>
