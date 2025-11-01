@@ -809,3 +809,880 @@ footer {
   .stats-grid { grid-template-columns: 1fr; }
   .footer-content { grid-template-columns: 1fr; }
 }
+
+/* ==============================================
+   NEW STYLES FOR 360° CAMPAIGN INTELLIGENCE
+   ============================================== */
+
+/* Hero Badge */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  padding: 8px 20px;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #059669;
+  margin-bottom: 24px;
+  animation: fadeInUp 0.8s ease;
+}
+
+.badge-icon {
+  font-size: 16px;
+}
+
+/* Stakeholder Pills */
+.stakeholder-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin: 32px 0;
+}
+
+.pill {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px 20px;
+  border-radius: 24px;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.pill:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.pill-highlight {
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  border-color: #10B981;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+/* ==============================================
+   PERSPECTIVES SECTION
+   ============================================== */
+
+.perspectives-section {
+  padding: 120px 0;
+  background: linear-gradient(to bottom, #f9fafb 0%, white 100%);
+}
+
+.perspectives-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 60px;
+}
+
+.perspective-card {
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 32px;
+  transition: all 0.4s ease;
+}
+
+.perspective-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  border-color: #667eea;
+}
+
+.perspective-card.highlight {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(5, 150, 105, 0.05) 100%);
+  border-color: #10B981;
+}
+
+.perspective-card.highlight:hover {
+  border-color: #059669;
+  box-shadow: 0 12px 32px rgba(16, 185, 129, 0.2);
+}
+
+.perspective-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.perspective-icon.sales {
+  background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+}
+
+.perspective-icon.marketing {
+  background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
+}
+
+.perspective-icon.attendees {
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+}
+
+.perspective-icon.partners {
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+}
+
+.perspective-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.new-badge {
+  font-size: 11px;
+  font-weight: 700;
+  background: #10B981;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.perspective-quote {
+  font-size: 15px;
+  font-style: italic;
+  color: #6B7280;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.perspective-insight {
+  font-size: 14px;
+  font-weight: 600;
+  color: #667eea;
+}
+
+.perspectives-footer {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.perspectives-footer p {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.text-link {
+  color: #667eea;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.text-link:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+/* ==============================================
+   AI INSIGHTS SECTION
+   ============================================== */
+
+.ai-section {
+  padding: 120px 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.ai-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.ai-badge-large {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+.ai-icon {
+  font-size: 20px;
+}
+
+.ai-chat-preview {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.chat-message {
+  margin-bottom: 16px;
+}
+
+.chat-message:last-child {
+  margin-bottom: 0;
+}
+
+.user-message {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 16px 20px;
+  border-radius: 16px;
+  font-size: 15px;
+  margin-bottom: 16px;
+}
+
+.ai-message {
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  padding: 16px 20px;
+  border-radius: 16px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.recommendation {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.ai-insights-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.insight-item {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.insight-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.insight-icon {
+  font-size: 20px;
+}
+
+.ai-info h3 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.ai-intro {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  opacity: 0.95;
+}
+
+.ai-features {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.ai-feature {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.ai-feature-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.ai-feature h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.ai-feature p {
+  font-size: 15px;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+/* ==============================================
+   COMPARISON TABLE SECTION
+   ============================================== */
+
+.comparison-section {
+  padding: 120px 0;
+  background: #f9fafb;
+}
+
+.comparison-table {
+  max-width: 900px;
+  margin: 60px auto 0;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+.comparison-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 700;
+}
+
+.comparison-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  border-bottom: 1px solid #e5e7eb;
+  transition: background 0.2s ease;
+}
+
+.comparison-row:hover {
+  background: #f9fafb;
+}
+
+.comparison-row:last-child {
+  border-bottom: none;
+}
+
+.highlight-row {
+  background: rgba(16, 185, 129, 0.05);
+}
+
+.highlight-row:hover {
+  background: rgba(16, 185, 129, 0.08);
+}
+
+.comparison-cell {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.comparison-cell.empty {
+  background: transparent;
+}
+
+.comparison-cell.feature-name {
+  justify-content: flex-start;
+  font-weight: 500;
+  color: #111827;
+}
+
+.company-logo {
+  font-weight: 700;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.company-logo.momentum {
+  background: white;
+  color: #667eea;
+}
+
+.check {
+  font-size: 24px;
+  color: #10B981;
+  font-weight: 700;
+}
+
+.cross {
+  font-size: 24px;
+  color: #EF4444;
+  font-weight: 700;
+}
+
+/* ==============================================
+   FSS SECTION UPDATES
+   ============================================== */
+
+.metric-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.metric-item:hover {
+  background: #f3f4f6;
+  transform: translateX(4px);
+}
+
+.metric-item:last-child {
+  margin-bottom: 0;
+}
+
+.metric-icon {
+  font-size: 20px;
+  margin-right: 12px;
+}
+
+.metric-name {
+  font-size: 14px;
+  color: #6B7280;
+  font-weight: 500;
+  flex: 1;
+}
+
+.metric-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  min-width: 40px;
+  text-align: right;
+}
+
+.highlight-metric {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(5, 150, 105, 0.08) 100%);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.highlight-metric .metric-value {
+  color: #059669;
+}
+
+.highlight-indicator {
+  border: 2px solid #10B981;
+  background: rgba(16, 185, 129, 0.05);
+}
+
+.highlight-indicator .indicator-icon {
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  color: white;
+}
+
+.learn-more-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #667eea;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 32px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.learn-more-link:hover {
+  color: #764ba2;
+  gap: 12px;
+}
+
+/* ==============================================
+   RESPONSIVE DESIGN
+   ============================================== */
+
+@media (max-width: 1024px) {
+  .ai-content {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .comparison-header,
+  .comparison-row {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    font-size: 14px;
+  }
+
+  .comparison-cell {
+    padding: 16px 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .perspectives-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stakeholder-pills {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .pill {
+    text-align: center;
+  }
+
+  .ai-insights-list {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-header,
+  .comparison-row {
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    font-size: 12px;
+  }
+
+  .comparison-cell {
+    padding: 12px 8px;
+  }
+
+  .company-logo {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .check,
+  .cross {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-badge {
+    font-size: 12px;
+    padding: 6px 16px;
+  }
+
+  .ai-section {
+    padding: 80px 0;
+  }
+
+  .ai-info h3 {
+    font-size: 28px;
+  }
+
+  .comparison-table {
+    overflow-x: auto;
+  }
+}
+/* ==============================================
+   FEEDBACK LOOP VISUALIZATION (FSS Score Page)
+   ============================================== */
+
+.feedback-loop-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.feedback-loop {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+}
+
+.connections-svg {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Center - Event & AI */
+.feedback-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+}
+
+.event-hub {
+  width: 160px;
+  height: 160px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  margin: 0 auto 16px;
+  animation: hubPulse 3s ease-in-out infinite;
+}
+
+@keyframes hubPulse {
+  0%, 100% { 
+    transform: scale(1); 
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); 
+  }
+  50% { 
+    transform: scale(1.05); 
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4); 
+  }
+}
+
+.event-hub-text {
+  font-size: 18px;
+  font-weight: 700;
+  color: #667eea;
+}
+
+.ai-analyzing-badge {
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 16px;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-block;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+  margin-bottom: 12px;
+  animation: aiGlow 2s ease-in-out infinite;
+}
+
+@keyframes aiGlow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+.fss-score-display {
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 8px 16px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+/* Stakeholder Nodes */
+.stakeholder {
+  position: absolute;
+  width: 180px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 5;
+}
+
+.stakeholder:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+  background: white;
+  z-index: 15;
+}
+
+.stakeholder.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  transform: scale(1.1);
+  z-index: 20;
+}
+
+.stakeholder.active .stakeholder-icon {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.stakeholder.active .stakeholder-title,
+.stakeholder.active .stakeholder-desc {
+  color: white;
+}
+
+.stakeholder-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.stakeholder-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #111827;
+  transition: color 0.3s ease;
+}
+
+.stakeholder-desc {
+  font-size: 13px;
+  color: #6B7280;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+/* Positioning */
+.stakeholder.marketing {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.stakeholder.marketing:hover {
+  transform: translateX(-50%) translateY(-8px) scale(1.05);
+}
+
+.stakeholder.sales {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.stakeholder.sales:hover {
+  transform: translateX(-50%) translateY(-8px) scale(1.05);
+}
+
+.stakeholder.partners {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.stakeholder.partners:hover {
+  transform: translateY(-50%) translateX(-8px) scale(1.05);
+}
+
+.stakeholder.partners {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(5, 150, 105, 0.05) 100%);
+  border: 2px solid rgba(16, 185, 129, 0.2);
+}
+
+.stakeholder.partners:hover {
+  border-color: #10B981;
+  background: rgba(16, 185, 129, 0.1);
+}
+
+.stakeholder.partners .stakeholder-icon {
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+}
+
+.stakeholder.attendees {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.stakeholder.attendees:hover {
+  transform: translateY(-50%) translateX(8px) scale(1.05);
+}
+
+/* Responsive Design for Feedback Loop */
+@media (max-width: 768px) {
+  .feedback-loop {
+    width: 400px;
+    height: 400px;
+  }
+
+  .connections-svg {
+    width: 400px;
+    height: 400px;
+  }
+
+  .event-hub {
+    width: 120px;
+    height: 120px;
+  }
+
+  .event-hub-text {
+    font-size: 16px;
+  }
+
+  .stakeholder {
+    width: 140px;
+    padding: 16px;
+  }
+
+  .stakeholder-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+
+  .stakeholder-title {
+    font-size: 14px;
+  }
+
+  .stakeholder-desc {
+    font-size: 11px;
+  }
+
+  /* Adjust SVG line positions for smaller viewport */
+  .connections-svg line[x1="300"],
+  .connections-svg line[x2="300"] {
+    x1: 200;
+    x2: 200;
+  }
+
+  .connections-svg line[y1="300"],
+  .connections-svg line[y2="300"] {
+    y1: 200;
+    y2: 200;
+  }
+}
+
+@media (max-width: 480px) {
+  .feedback-loop {
+    width: 320px;
+    height: 320px;
+  }
+
+  .connections-svg {
+    width: 320px;
+    height: 320px;
+  }
+
+  .event-hub {
+    width: 100px;
+    height: 100px;
+  }
+
+  .stakeholder {
+    width: 120px;
+    padding: 12px;
+  }
+
+  .ai-analyzing-badge {
+    font-size: 11px;
+    padding: 4px 12px;
+  }
+
+  .fss-score-display {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}
