@@ -111,17 +111,17 @@ export default function Home() {
                 letterSpacing: '0.02em'
               }}>
                 <span style={{ fontSize: '16px' }}>◆</span>
-                <span>360° CAMPAIGN INTELLIGENCE</span>
+                <span>FIELD EVENT ANALYTICS</span>
               </div>
 
               <h1 className="hero-title-dramatic">
-                The Complete
+                Measure What
                 <br />
-                <span className="gradient-text">Feedback Loop</span>
+                <span className="gradient-text">Actually Drives Event ROI</span>
               </h1>
 
               <p className="hero-subtitle-large">
-                The only platform that captures feedback from <strong>Sales, Marketing, Attendees, and Partners</strong>—then uses AI to turn that 360° view into strategic insights.
+                The only platform that measures in-person event success from all four stakeholders—<strong>Sales, Marketing, Attendees, and Partners</strong>—then uses AI to show which events drive real pipeline.
               </p>
 
               <div className="hero-cta">
@@ -270,16 +270,16 @@ export default function Home() {
             <div className="problem-content animate-on-scroll">
               <div className="section-label">The Problem</div>
               <h2 className="section-title-large">
-                Most platforms only show<br />
+                Most event platforms only show<br />
                 <span className="text-muted">half the story</span>
               </h2>
               <p className="text-xlarge">
-                You hit your MQL targets. Sales complains about lead quality.
+                Your events hit MQL targets. Sales complains about lead quality.
                 Attendees show up but you don&apos;t know if they found value.
                 Partners co-invest but you never ask if it worked for them.
               </p>
               <p className="text-xlarge">
-                <strong>You&apos;re flying blind with incomplete data.</strong>
+                <strong>You&apos;re measuring events with incomplete data.</strong>
               </p>
             </div>
 
@@ -366,12 +366,12 @@ export default function Home() {
           <div className="section-header-center animate-on-scroll">
             <div className="section-label">The Momentum Platform</div>
             <h2 className="section-title-xl">
-              Complete campaign intelligence<br />
+              Complete event intelligence<br />
               from <span className="gradient-text">all four perspectives</span>
             </h2>
             <p className="section-subtitle-xl">
-              Momentum captures feedback from Sales, Marketing, Attendees, and Partners—
-              <br />then uses AI to surface insights you can act on.
+              Momentum captures feedback from every event—Sales, Marketing, Attendees, and Partners—
+              <br />then uses AI to show which events actually drive pipeline.
             </p>
           </div>
 
@@ -589,10 +589,10 @@ export default function Home() {
         <div className="container">
           <div className="cta-content-modern animate-on-scroll">
             <h2 className="cta-title-huge">
-              See the complete picture
+              Measure event success completely
             </h2>
             <p className="cta-subtitle-large">
-              Stop flying blind with incomplete data. Get 360° campaign intelligence from all four stakeholders—powered by AI to show you what actually works.
+              Stop measuring events with incomplete data. Get feedback from all four stakeholders—Sales, Marketing, Attendees, and Partners—then let AI show which events drive real pipeline.
             </p>
             <div className="cta-actions">
               <a href="https://fss-app-iota.vercel.app/" className="btn-primary-xl">

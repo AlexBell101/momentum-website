@@ -100,7 +100,7 @@ export default function HowItWorks() {
       <section style={{ padding: '80px 0', background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>
         <div className="container">
           <div style={{ textAlign: 'center', color: 'white', marginBottom: '60px' }}>
-            <h2 className="section-title" style={{ color: 'white' }}>The Complete Feedback Loop</h2>
+            <h2 style={{ fontSize: '48px', fontWeight: '800', marginBottom: '24px', color: 'white', letterSpacing: '-0.02em', lineHeight: '1.2' }}>The Complete Feedback Loop</h2>
             <p style={{ fontSize: '18px', opacity: 0.95, maxWidth: '700px', margin: '0 auto' }}>
               All four perspectives flow into your Field Success Score, with AI analyzing patterns to surface strategic insights.
             </p>
@@ -273,7 +273,7 @@ export default function HowItWorks() {
               <div className="animate-on-scroll">
                 <h3 style={{ fontSize: '24px', fontWeight: '600', color: '#2d3748', marginBottom: '15px' }}>For Marketing Leaders</h3>
                 <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#4a5568' }}>
-                  Prove ROI with confidence. Show which events drive actual pipeline and customer value, not just activity. Defend your budget with data that executives trust—from all four stakeholders.
+                  Prove ROI with confidence. Show which events drive actual pipeline and customer value. Defend your budget with trusted data from all four stakeholders.
                 </p>
               </div>
 
