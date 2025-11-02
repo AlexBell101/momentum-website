@@ -73,9 +73,22 @@ export default function HowItWorks() {
       <section className="hero" style={{ paddingBottom: '80px' }}>
         <div className="container">
           <div className="hero-content" style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
-            <div className="hero-badge">
-              <span className="badge-icon">✨</span>
-              <span>360° Campaign Intelligence</span>
+            <div style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '8px',
+              background: 'rgba(79, 70, 229, 0.1)',
+              border: '1px solid rgba(79, 70, 229, 0.2)',
+              padding: '8px 16px',
+              borderRadius: '9999px',
+              fontSize: '13px',
+              fontWeight: '600',
+              color: '#4F46E5',
+              marginBottom: '24px',
+              letterSpacing: '0.02em'
+            }}>
+              <span style={{ fontSize: '16px' }}>◆</span>
+              <span>360° CAMPAIGN INTELLIGENCE</span>
             </div>
             <h1>How Momentum Works</h1>
             <p className="hero-subtitle">The complete feedback loop: Salesforce data + feedback from Sales, Marketing, Attendees, and Partners—synthesized by AI into your Field Success Score.</p>
@@ -139,29 +152,29 @@ export default function HowItWorks() {
                 <div className="fss-score-display">FSS: 85</div>
               </div>
 
-              {/* Stakeholders */}
-              <div className="stakeholder marketing">
+              {/* Stakeholders - with white text for purple background */}
+              <div className="stakeholder marketing" style={{ color: 'white' }}>
                 <div className="stakeholder-icon">📊</div>
-                <div className="stakeholder-title">Marketing</div>
-                <div className="stakeholder-desc">Execution & logistics</div>
+                <div className="stakeholder-title" style={{ color: 'white' }}>Marketing</div>
+                <div className="stakeholder-desc" style={{ color: 'rgba(255,255,255,0.9)' }}>Execution & logistics</div>
               </div>
 
-              <div className="stakeholder sales">
+              <div className="stakeholder sales" style={{ color: 'white' }}>
                 <div className="stakeholder-icon">💼</div>
-                <div className="stakeholder-title">Sales</div>
-                <div className="stakeholder-desc">Lead quality & ICP fit</div>
+                <div className="stakeholder-title" style={{ color: 'white' }}>Sales</div>
+                <div className="stakeholder-desc" style={{ color: 'rgba(255,255,255,0.9)' }}>Lead quality & ICP fit</div>
               </div>
 
-              <div className="stakeholder partners">
+              <div className="stakeholder partners" style={{ color: 'white' }}>
                 <div className="stakeholder-icon">🤝</div>
-                <div className="stakeholder-title">Partners</div>
-                <div className="stakeholder-desc">Co-marketing value</div>
+                <div className="stakeholder-title" style={{ color: 'white' }}>Partners</div>
+                <div className="stakeholder-desc" style={{ color: 'rgba(255,255,255,0.9)' }}>Co-marketing value</div>
               </div>
 
-              <div className="stakeholder attendees">
+              <div className="stakeholder attendees" style={{ color: 'white' }}>
                 <div className="stakeholder-icon">👥</div>
-                <div className="stakeholder-title">Attendees</div>
-                <div className="stakeholder-desc">Value delivery & NPS</div>
+                <div className="stakeholder-title" style={{ color: 'white' }}>Attendees</div>
+                <div className="stakeholder-desc" style={{ color: 'rgba(255,255,255,0.9)' }}>Value delivery & NPS</div>
               </div>
             </div>
           </div>
@@ -243,7 +256,7 @@ export default function HowItWorks() {
                   </svg>
                 </div>
                 <h3 className="feature-title">6. Marketing Team Assessment</h3>
-                <p className="feature-description">Your field marketing team's assessment of execution quality, logistics, and whether the event achieved its strategic goals. This captures operational excellence and provides context that numbers alone can't show.</p>
+                <p className="feature-description">Your team&apos;s evaluation of execution quality, logistics, and strategic goal achievement. Captures operational excellence beyond metrics.</p>
               </div>
             </div>
           </div>
