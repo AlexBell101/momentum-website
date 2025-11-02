@@ -78,6 +78,7 @@ body {
 }
 
 /* Navigation */
+/* OLD NAV STYLES - COMMENTED OUT TO FIX WHITE BACKGROUND ISSUE
 nav {
   position: fixed;
   top: 0;
@@ -95,6 +96,7 @@ nav.scrolled {
   padding: 15px 0;
   box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
 }
+*/
 
 .nav-content {
   display: flex;
