@@ -2,610 +2,306 @@
 
 import { useEffect } from 'react';
 import Link from 'next/link';
+import Script from 'next/script';
 
 export default function Home() {
   useEffect(() => {
-    // Navbar scroll effect
-    const navbar = document.getElementById('navbar');
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        navbar?.classList.add('scrolled');
-      } else {
-        navbar?.classList.remove('scrolled');
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    // Animate elements on scroll
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -100px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animated');
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', (e) => {
+        e.preventDefault();
+        const href = anchor.getAttribute('href');
+        if (href) {
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
         }
       });
-    }, observerOptions);
-
-    document.querySelectorAll('.animate-on-scroll').forEach(el => {
-      observer.observe(el);
     });
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
   }, []);
 
   return (
     <>
-      {/* Sticky Navbar - Dark */}
-      <nav id="navbar" className="dark-nav">
-        <div className="container-nav">
-          <Link href="/" className="logo-dark">Momentum</Link>
-          <ul className="nav-links-dark">
-            <li><Link href="/how-it-works">How it works</Link></li>
-            <li><Link href="#stakeholders">Stakeholders</Link></li>
-            <li><Link href="/integrations">Integrations</Link></li>
-            <li><Link href="/docs">Resources</Link></li>
-          </ul>
-          <div className="nav-actions">
-            <a href="https://fss-app-iota.vercel.app/" className="nav-login">Login</a>
-            <a href="https://fss-app-iota.vercel.app/" className="nav-cta-primary">Schedule a walkthrough</a>
+      <Script src="https://cdn.tailwindcss.com" />
+
+      {/* Navigation */}
+      <header className="sticky top-0 z-40 bg-slate-950/85 backdrop-blur border-b border-slate-900">
+        <div className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between gap-6">
+          <div className="flex items-center gap-2">
+            <div className="h-8 w-8 rounded-md bg-violet-500/90 flex items-center justify-center text-sm font-bold">M</div>
+            <span className="font-semibold tracking-tight">Momentum</span>
+          </div>
+          <nav className="hidden md:flex gap-6 text-sm text-slate-200/70">
+            <Link href="/how-it-works" className="hover:text-white">How it works</Link>
+            <a href="#stakeholders" className="hover:text-white">Stakeholders</a>
+            <Link href="/integrations" className="hover:text-white">Integrations</Link>
+            <Link href="/docs" className="hover:text-white">Resources</Link>
+          </nav>
+          <div className="flex gap-3">
+            <a href="https://fss-app-iota.vercel.app/" className="text-sm text-slate-200/70 hover:text-white">Login</a>
+            <a href="https://fss-app-iota.vercel.app/" className="bg-white text-slate-950 text-sm px-4 py-2 rounded-md font-medium">
+              Schedule a walkthrough
+            </a>
           </div>
         </div>
-      </nav>
+      </header>
 
-      {/* Hero Section - Split Layout */}
-      <section className="hero-dark">
-        <div className="container-wide">
-          <div className="hero-split">
-            {/* Left: Copy + CTAs */}
-            <div className="hero-content-dark">
-              <div className="hero-badge-dark">
-                <span className="badge-dot"></span>
-                <span>FIELD EVENT INTELLIGENCE</span>
-              </div>
-
-              <h1 className="hero-title-dark">
-                Know which events to<br />
-                <span className="gradient-text-blue">repeat, resize, or pause.</span>
+      <main className="bg-slate-950 text-slate-50">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden py-16 md:py-20">
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(124,58,237,0.18),_transparent_55%)]"></div>
+          <div className="relative mx-auto max-w-6xl px-4 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="inline-flex items-center gap-2 rounded-full bg-violet-500/10 border border-violet-500/30 px-3 py-1 text-xs text-violet-100 mb-5">
+                FIELD & EVENT ANALYTICS
+              </p>
+              <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-4">
+                Know which events to repeat, resize, or pause.
               </h1>
-
-              <p className="hero-subtitle-dark">
-                Stop guessing. Momentum collects feedback from Sales, Attendees, Marketing, and Partners—then uses AI to recommend what to run next.
+              <p className="text-slate-200/80 mb-6 max-w-xl">
+                Momentum collects post-event feedback from sales, attendees, marketing, and partners — then ranks events by pipeline impact, not just registrations.
               </p>
-
-              <div className="hero-ctas">
-                <a href="https://fss-app-iota.vercel.app/" className="btn-primary-dark">
+              <div className="flex flex-wrap gap-4 mb-6">
+                <a href="https://fss-app-iota.vercel.app/" className="bg-violet-500 hover:bg-violet-400 text-sm px-5 py-2.5 rounded-md font-medium inline-block">
                   Schedule a walkthrough
-                  <svg className="btn-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
                 </a>
-                <a href="https://fss-app-iota.vercel.app/" className="btn-secondary-dark">
-                  Start free trial
+                <a href="https://fss-app-iota.vercel.app/" className="text-sm text-slate-100/80 hover:text-white">
+                  View sample event scorecard →
                 </a>
               </div>
+              <p className="text-xs text-slate-500">
+                Built for field & event marketing teams at B2B SaaS, cybersecurity, and data companies.
+              </p>
             </div>
 
-            {/* Right: Product Panel showing Events with AI Recommendations */}
-            <div className="hero-visual-dark">
-              <div className="product-panel">
-                <div className="panel-header">
-                  <span className="panel-title">Recent Events</span>
-                  <span className="panel-subtitle">AI-powered recommendations</span>
-                </div>
-
-                <div className="event-cards">
-                  {/* Event 1 - Repeat */}
-                  <div className="event-card">
-                    <div className="event-header">
-                      <div>
-                        <h3 className="event-name">Austin Field Summit</h3>
-                        <p className="event-date">Dec 2024 • 80 attendees</p>
-                      </div>
-                      <div className="event-score success">87</div>
-                    </div>
-                    <div className="event-recommendation success-rec">
-                      <svg className="rec-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span><strong>Recommendation:</strong> Repeat Q1 2025</span>
-                    </div>
+            {/* Hero Mock Panel */}
+            <div className="bg-slate-900/40 border border-slate-800 rounded-2xl p-5 shadow-xl space-y-4">
+              <div className="flex items-center justify-between">
+                <p className="text-sm font-medium text-slate-50">Q3 field events — AI recommendations</p>
+                <span className="text-xs text-slate-400">Updated 3m ago</span>
+              </div>
+              <ul className="space-y-3">
+                <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
+                  <div>
+                    <p className="text-sm">Austin Customer Breakfast</p>
+                    <p className="text-xs text-slate-400">Sales 88 · Attendees 90 · Partners 78</p>
                   </div>
-
-                  {/* Event 2 - Resize */}
-                  <div className="event-card">
-                    <div className="event-header">
-                      <div>
-                        <h3 className="event-name">Boston Tech Mixer</h3>
-                        <p className="event-date">Nov 2024 • 120 attendees</p>
-                      </div>
-                      <div className="event-score warning">62</div>
-                    </div>
-                    <div className="event-recommendation warning-rec">
-                      <svg className="rec-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                      </svg>
-                      <span><strong>Recommendation:</strong> Reduce to 60 people</span>
-                    </div>
-                  </div>
-
-                  {/* Event 3 - Pause */}
-                  <div className="event-card">
-                    <div className="event-header">
-                      <div>
-                        <h3 className="event-name">NYC Networking Happy Hour</h3>
-                        <p className="event-date">Oct 2024 • 95 attendees</p>
-                      </div>
-                      <div className="event-score danger">43</div>
-                    </div>
-                    <div className="event-recommendation danger-rec">
-                      <svg className="rec-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      <span><strong>Recommendation:</strong> Pause this format</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Four Stakeholders Section */}
-      <section id="stakeholders" className="stakeholders-dark">
-        <div className="container">
-          <div className="section-header-dark">
-            <h2 className="section-title-dark">
-              One event. Four reports.<br />
-              <span className="gradient-text-blue">Zero chasing.</span>
-            </h2>
-            <p className="section-subtitle-dark">
-              Most platforms only collect feedback from attendees. Momentum gets the full picture—automatically.
-            </p>
-          </div>
-
-          <div className="stakeholder-grid-dark">
-            {/* Sales Card */}
-            <div className="stakeholder-card-dark animate-on-scroll">
-              <div className="card-icon blue-icon">
-                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h3 className="card-title-dark">Sales</h3>
-              <p className="card-desc-dark">
-                Were the leads high-quality? Did attendees match our ICP? Would sales want us to run it again?
-              </p>
-            </div>
-
-            {/* Attendees Card */}
-            <div className="stakeholder-card-dark animate-on-scroll" style={{ animationDelay: '0.1s' }}>
-              <div className="card-icon emerald-icon">
-                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-              </div>
-              <h3 className="card-title-dark">Attendees</h3>
-              <p className="card-desc-dark">
-                Was the content valuable? Would they come again? Post-event NPS and sentiment analysis.
-              </p>
-            </div>
-
-            {/* Marketing Card */}
-            <div className="stakeholder-card-dark animate-on-scroll" style={{ animationDelay: '0.2s' }}>
-              <div className="card-icon purple-icon">
-                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
-              </div>
-              <h3 className="card-title-dark">Marketing</h3>
-              <p className="card-desc-dark">
-                Did execution go smoothly? Was logistics on point? Internal team assessment of event quality.
-              </p>
-            </div>
-
-            {/* Partners Card */}
-            <div className="stakeholder-card-dark animate-on-scroll" style={{ animationDelay: '0.3s' }}>
-              <div className="card-icon cyan-icon">
-                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                </svg>
-              </div>
-              <h3 className="card-title-dark">Partners</h3>
-              <p className="card-desc-dark">
-                Did the co-marketing work? Were attendees a good fit for their ICP too? Will they co-invest again?
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* AI Decision Section - Austin vs Boston */}
-      <section className="ai-decision-dark">
-        <div className="container">
-          <div className="ai-split-layout">
-            {/* Left: Copy */}
-            <div className="ai-copy-dark">
-              <div className="ai-badge-dark">
-                <svg className="ai-badge-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-                <span>AI-POWERED INSIGHTS</span>
-              </div>
-
-              <h2 className="ai-title-dark">
-                AI that tells you<br />
-                <span className="gradient-text-blue">what to do next</span>
-              </h2>
-
-              <p className="ai-desc-dark">
-                Momentum doesn't just report scores. Claude AI analyzes patterns across all four stakeholders, compares events, and recommends which formats to scale—and which to cut.
-              </p>
-
-              <ul className="ai-benefits-dark">
-                <li>
-                  <svg className="benefit-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Spot patterns across dozens of events</span>
+                  <span className="text-xs bg-emerald-500/10 text-emerald-200 px-2 py-1 rounded-md">
+                    Run again
+                  </span>
                 </li>
-                <li>
-                  <svg className="benefit-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Predict which events will drive pipeline</span>
+                <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
+                  <div>
+                    <p className="text-sm">Boston Executive Dinner</p>
+                    <p className="text-xs text-slate-400">Sales 62 · Attendees 85 · Partners 55</p>
+                  </div>
+                  <span className="text-xs bg-amber-500/10 text-amber-200 px-2 py-1 rounded-md">
+                    Resize
+                  </span>
                 </li>
-                <li>
-                  <svg className="benefit-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Get recommendations you can act on</span>
+                <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
+                  <div>
+                    <p className="text-sm">Partner Webinar</p>
+                    <p className="text-xs text-slate-400">Sales 48 · Attendees 74 · Partners 42</p>
+                  </div>
+                  <span className="text-xs bg-rose-500/10 text-rose-200 px-2 py-1 rounded-md">
+                    Pause
+                  </span>
+                </li>
+              </ul>
+              <div className="border-t border-slate-800 pt-3">
+                <p className="text-xs text-slate-400">
+                  AI insight: partner-aligned breakfasts in Austin produced 2.3× co-fundable pipeline. Repeat in Q4.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Four Stakeholders */}
+        <section id="stakeholders" className="mx-auto max-w-6xl px-4 py-16">
+          <h2 className="text-2xl font-semibold mb-4">One event. Four reports. Zero chasing.</h2>
+          <p className="text-slate-300/80 mb-8 max-w-3xl">
+            Sales, attendees, marketing, and partners all see the event differently. Momentum centralizes their feedback and turns it into a single event score.
+          </p>
+          <div className="grid md:grid-cols-4 gap-4">
+            <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-5 flex flex-col gap-3">
+              <span className="text-xs px-2 py-1 rounded-full bg-slate-950/50 text-slate-200/70 w-fit">Auto-sent to AE/SE</span>
+              <h3 className="font-medium">Sales</h3>
+              <p className="text-sm text-slate-300/80">Were the leads ICP? Did the event help active opps at this account?</p>
+            </div>
+            <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-5 flex flex-col gap-3">
+              <span className="text-xs px-2 py-1 rounded-full bg-slate-950/50 text-slate-200/70 w-fit">Branded survey</span>
+              <h3 className="font-medium">Attendees</h3>
+              <p className="text-sm text-slate-300/80">Experience, topic interest, who else to invite next time.</p>
+            </div>
+            <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-5 flex flex-col gap-3">
+              <span className="text-xs px-2 py-1 rounded-full bg-slate-950/50 text-slate-200/70 w-fit">Ops-friendly</span>
+              <h3 className="font-medium">Marketing</h3>
+              <p className="text-sm text-slate-300/80">Promo, list quality, campaign member updates — no more manual cleanup.</p>
+            </div>
+            <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-5 flex flex-col gap-3">
+              <span className="text-xs px-2 py-1 rounded-full bg-slate-950/50 text-slate-200/70 w-fit">Predicts renewals</span>
+              <h3 className="font-medium">Partners</h3>
+              <p className="text-sm text-slate-300/80">Was it worth the co-investment or sponsorship? Should we co-fund again?</p>
+            </div>
+          </div>
+        </section>
+
+        {/* AI / Decisions */}
+        <section id="how" className="mx-auto max-w-6xl px-4 py-16">
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <div>
+              <h2 className="text-2xl font-semibold mb-4">AI that tells you what to run next.</h2>
+              <p className="text-slate-300/80 mb-4">
+                Momentum analyzes stakeholder feedback across location, audience, and partner alignment to recommend what to scale and what to adjust.
+              </p>
+              <ul className="space-y-3 text-sm text-slate-200/80">
+                <li className="flex gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  See which event formats generate pipeline, not just attendance.
+                </li>
+                <li className="flex gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  Spot partner events worth repeating and co-funding.
+                </li>
+                <li className="flex gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  Compare cities, audiences, and hosting teams.
                 </li>
               </ul>
             </div>
-
-            {/* Right: Comparison Card */}
-            <div className="ai-comparison-card">
-              <div className="comparison-header">
-                <span className="comparison-title">Event Comparison Analysis</span>
-                <span className="ai-chip">
-                  <svg className="chip-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                  AI Powered
-                </span>
-              </div>
-
-              <div className="comparison-events">
-                <div className="comparison-event winner">
-                  <div className="event-label">
-                    <span className="event-location">Austin</span>
-                    <span className="winner-badge">Winner</span>
-                  </div>
-                  <div className="event-score-large">87</div>
-                  <div className="event-metrics">
-                    <div className="metric">
-                      <span className="metric-label">Sales Rating</span>
-                      <span className="metric-value">9/10</span>
-                    </div>
-                    <div className="metric">
-                      <span className="metric-label">Attendee NPS</span>
-                      <span className="metric-value">+72</span>
-                    </div>
-                    <div className="metric">
-                      <span className="metric-label">Partner Score</span>
-                      <span className="metric-value">8/10</span>
-                    </div>
-                  </div>
+            <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-5">
+              <p className="text-sm font-medium mb-3 text-slate-50">Insight: Austin vs. Boston events</p>
+              <p className="text-sm text-slate-200/80 mb-3">
+                Austin events scored higher because sales follow-up was 32% faster and partner target accounts were present. Replicate for Q4 roadshow.
+              </p>
+              <div className="grid grid-cols-2 gap-3 text-sm">
+                <div className="bg-slate-950/30 rounded-lg p-3">
+                  <p className="text-xs text-slate-400 mb-1">Austin</p>
+                  <p className="text-2xl font-semibold">88</p>
+                  <p className="text-xs text-emerald-300 mt-1">Run again</p>
                 </div>
-
-                <div className="comparison-divider">vs</div>
-
-                <div className="comparison-event">
-                  <div className="event-label">
-                    <span className="event-location">Boston</span>
-                  </div>
-                  <div className="event-score-large">62</div>
-                  <div className="event-metrics">
-                    <div className="metric">
-                      <span className="metric-label">Sales Rating</span>
-                      <span className="metric-value">5/10</span>
-                    </div>
-                    <div className="metric">
-                      <span className="metric-label">Attendee NPS</span>
-                      <span className="metric-value">+34</span>
-                    </div>
-                    <div className="metric">
-                      <span className="metric-label">Partner Score</span>
-                      <span className="metric-value">6/10</span>
-                    </div>
-                  </div>
+                <div className="bg-slate-950/30 rounded-lg p-3">
+                  <p className="text-xs text-slate-400 mb-1">Boston</p>
+                  <p className="text-2xl font-semibold">62</p>
+                  <p className="text-xs text-amber-200 mt-1">Resize</p>
                 </div>
               </div>
-
-              <div className="ai-recommendation-box">
-                <svg className="rec-icon-ai" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-                <div>
-                  <p className="rec-label">AI Recommendation</p>
-                  <p className="rec-text">
-                    Austin's format drives 2.3x more qualified pipeline. Repeat quarterly. Boston needs smaller groups—sales rated venue size as "too large for meaningful conversations."
-                  </p>
-                </div>
-              </div>
+              <p className="text-xs text-slate-500 mt-4">
+                Explanation available inside the app for stakeholders. Exportable to Salesforce / Sheets.
+              </p>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Today vs Momentum Section */}
-      <section className="comparison-section-dark">
-        <div className="container">
-          <div className="section-header-dark">
-            <h2 className="section-title-dark">
-              Most teams only see<br />
-              <span className="gradient-text-blue">half the story</span>
-            </h2>
-          </div>
-
-          <div className="today-vs-momentum">
-            {/* Today Card */}
-            <div className="comparison-card-dark incomplete animate-on-scroll">
-              <div className="comparison-card-header">
-                <h3 className="comparison-card-title">Today</h3>
-                <span className="incomplete-badge">Incomplete data</span>
-              </div>
-              <ul className="comparison-list">
-                <li className="has-data">
-                  <svg className="list-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Registrations</span>
-                </li>
-                <li className="has-data">
-                  <svg className="list-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Check-ins</span>
-                </li>
-                <li className="has-data">
-                  <svg className="list-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Attendee NPS</span>
-                </li>
-                <li className="missing-data">
-                  <svg className="list-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                  <span>Sales feedback</span>
-                </li>
-                <li className="missing-data">
-                  <svg className="list-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                  <span>Partner feedback</span>
-                </li>
-                <li className="missing-data">
-                  <svg className="list-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                  <span>AI recommendations</span>
-                </li>
+        {/* 50% Story */}
+        <section className="mx-auto max-w-6xl px-4 py-16">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-6">
+              <h3 className="font-medium mb-3">How most teams measure events today</h3>
+              <ul className="space-y-2 text-sm text-slate-200/80">
+                <li>✔ Registrations</li>
+                <li>✔ Check-ins</li>
+                <li>✔ Attendee survey / NPS</li>
+                <li>✖ Sales reality</li>
+                <li>✖ Partner ROI</li>
               </ul>
+              <p className="text-xs text-slate-500 mt-4">= 50% of the story</p>
             </div>
-
-            {/* Arrow */}
-            <div className="arrow-divider">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-            </div>
-
-            {/* Momentum Card */}
-            <div className="comparison-card-dark complete animate-on-scroll" style={{ animationDelay: '0.2s' }}>
-              <div className="comparison-card-header">
-                <h3 className="comparison-card-title">Momentum</h3>
-                <span className="complete-badge">Complete picture</span>
-              </div>
-              <ul className="comparison-list">
-                <li className="has-data">
-                  <svg className="list-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Registrations</span>
-                </li>
-                <li className="has-data">
-                  <svg className="list-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Check-ins</span>
-                </li>
-                <li className="has-data">
-                  <svg className="list-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Attendee NPS</span>
-                </li>
-                <li className="has-data highlight">
-                  <svg className="list-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Sales feedback</span>
-                </li>
-                <li className="has-data highlight">
-                  <svg className="list-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Partner feedback</span>
-                </li>
-                <li className="has-data highlight">
-                  <svg className="list-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>AI recommendations</span>
-                </li>
+            <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-6">
+              <h3 className="font-medium mb-3">What Momentum adds</h3>
+              <ul className="space-y-2 text-sm text-slate-200/80">
+                <li>✅ Sales feedback (auto-routed)</li>
+                <li>✅ Partner/sponsor value</li>
+                <li>✅ AI recommendation</li>
               </ul>
+              <p className="text-xs text-slate-500 mt-4">= full view for repeat / resize / pause</p>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Integrations Section */}
-      <section className="integrations-dark">
-        <div className="container">
-          <div className="section-header-dark">
-            <h2 className="section-title-dark">Integrations</h2>
-            <p className="section-subtitle-dark">
-              Works with the tools you already use
-            </p>
+        {/* Integrations */}
+        <section id="integrations" className="mx-auto max-w-6xl px-4 py-16">
+          <h2 className="text-2xl font-semibold mb-4">Works with your event and GTM stack.</h2>
+          <p className="text-slate-300/80 mb-6 max-w-3xl">
+            Fast to connect, predictable to maintain. Export to where your sales and ops teams already live.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <span className="px-4 py-2 rounded-full bg-slate-900/50 border border-slate-800 text-sm">Salesforce</span>
+            <span className="px-4 py-2 rounded-full bg-slate-900/50 border border-slate-800 text-sm">Marketo</span>
+            <span className="px-4 py-2 rounded-full bg-slate-900/50 border border-slate-800 text-sm">HubSpot</span>
+            <span className="px-4 py-2 rounded-full bg-slate-900/50 border border-slate-800 text-sm">Cvent / Splash</span>
+            <span className="px-4 py-2 rounded-full bg-slate-900/50 border border-slate-800 text-sm">Slack</span>
+            <span className="px-4 py-2 rounded-full bg-slate-900/50 border border-slate-800 text-sm">Sheets / CSV</span>
           </div>
+        </section>
 
-          <div className="integration-badges">
-            <div className="integration-badge">
-              <svg className="integration-icon" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
-              </svg>
-              <span>Salesforce</span>
+        {/* CTA / Resources */}
+        <section id="resources" className="mx-auto max-w-6xl px-4 py-16">
+          <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-8 flex flex-col md:flex-row justify-between gap-6">
+            <div>
+              <h2 className="text-xl font-semibold mb-2">Ready to show which events actually drive pipeline?</h2>
+              <p className="text-slate-300/80">
+                We'll walk you through the event scorecard, stakeholder surveys, and how we export to Salesforce.
+              </p>
             </div>
-            <div className="integration-badge">
-              <svg className="integration-icon" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
-              </svg>
-              <span>Marketo</span>
-            </div>
-            <div className="integration-badge">
-              <svg className="integration-icon" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
-              </svg>
-              <span>HubSpot</span>
-            </div>
-            <div className="integration-badge">
-              <svg className="integration-icon" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
-              </svg>
-              <span>Cvent</span>
-            </div>
-            <div className="integration-badge">
-              <svg className="integration-icon" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
-              </svg>
-              <span>Splash</span>
-            </div>
-            <div className="integration-badge">
-              <svg className="integration-icon" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
-              </svg>
-              <span>Slack</span>
-            </div>
-            <div className="integration-badge">
-              <svg className="integration-icon" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
-              </svg>
-              <span>Google Sheets</span>
-            </div>
-            <div className="integration-badge">
-              <svg className="integration-icon" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
-              </svg>
-              <span>CSV Import</span>
-            </div>
-          </div>
-
-          <div className="integration-cta">
-            <Link href="/integrations" className="link-view-all">
-              View all integrations
-              <svg className="link-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA Section */}
-      <section className="final-cta-dark">
-        <div className="container">
-          <div className="cta-box-dark">
-            <h2 className="cta-title-dark">
-              Ready to show which events<br />
-              <span className="gradient-text-blue">actually drive pipeline?</span>
-            </h2>
-            <p className="cta-subtitle-dark">
-              Join field marketing teams who stopped guessing and started proving ROI with complete event intelligence.
-            </p>
-            <div className="cta-actions-dark">
-              <a href="https://fss-app-iota.vercel.app/" className="btn-primary-dark">
+            <div className="flex gap-3 flex-shrink-0">
+              <a href="https://fss-app-iota.vercel.app/" className="bg-white text-slate-950 text-sm px-4 py-2 rounded-md font-medium inline-block">
                 Schedule a walkthrough
-                <svg className="btn-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
               </a>
-              <a href="https://fss-app-iota.vercel.app/" className="btn-secondary-dark">
-                Start free trial
+              <a href="https://fss-app-iota.vercel.app/" className="text-sm text-slate-100/80 hover:text-white whitespace-nowrap">
+                Download sample report →
               </a>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
 
       {/* Footer */}
-      <footer className="footer-dark">
-        <div className="container">
-          <div className="footer-grid-dark">
-            <div className="footer-brand-dark">
-              <div className="logo-dark">Momentum</div>
-              <p className="footer-tagline-dark">
+      <footer className="bg-slate-950 py-8 border-t border-slate-900 text-center text-sm text-slate-500">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="grid md:grid-cols-4 gap-8 mb-8 text-left">
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <div className="h-8 w-8 rounded-md bg-violet-500/90 flex items-center justify-center text-sm font-bold">M</div>
+                <span className="font-semibold tracking-tight text-white">Momentum</span>
+              </div>
+              <p className="text-xs text-slate-400">
                 The only platform with complete event intelligence. Feedback from Sales, Marketing, Attendees, and Partners—powered by AI.
               </p>
             </div>
-
-            <div className="footer-column-dark">
-              <h4>Product</h4>
-              <ul>
-                <li><Link href="/how-it-works">How it works</Link></li>
-                <li><Link href="/integrations">Integrations</Link></li>
-                <li><Link href="/fss-score">FSS Score</Link></li>
-                <li><Link href="/docs">Documentation</Link></li>
+            <div>
+              <h4 className="text-white font-semibold mb-3 text-sm">Product</h4>
+              <ul className="space-y-2 text-xs">
+                <li><Link href="/how-it-works" className="hover:text-white">How it works</Link></li>
+                <li><Link href="/integrations" className="hover:text-white">Integrations</Link></li>
+                <li><Link href="/fss-score" className="hover:text-white">FSS Score</Link></li>
+                <li><Link href="/docs" className="hover:text-white">Documentation</Link></li>
               </ul>
             </div>
-
-            <div className="footer-column-dark">
-              <h4>Company</h4>
-              <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Contact</a></li>
+            <div>
+              <h4 className="text-white font-semibold mb-3 text-sm">Company</h4>
+              <ul className="space-y-2 text-xs">
+                <li><a href="#" className="hover:text-white">About</a></li>
+                <li><a href="#" className="hover:text-white">Blog</a></li>
+                <li><a href="#" className="hover:text-white">Careers</a></li>
+                <li><a href="#" className="hover:text-white">Contact</a></li>
               </ul>
             </div>
-
-            <div className="footer-column-dark">
-              <h4>Resources</h4>
-              <ul>
-                <li><a href="#">Case Studies</a></li>
-                <li><a href="#">Help Center</a></li>
-                <li><a href="#">Community</a></li>
-                <li><a href="#">Privacy Policy</a></li>
+            <div>
+              <h4 className="text-white font-semibold mb-3 text-sm">Resources</h4>
+              <ul className="space-y-2 text-xs">
+                <li><a href="#" className="hover:text-white">Case Studies</a></li>
+                <li><a href="#" className="hover:text-white">Help Center</a></li>
+                <li><a href="#" className="hover:text-white">Community</a></li>
+                <li><a href="#" className="hover:text-white">Privacy Policy</a></li>
               </ul>
             </div>
           </div>
-
-          <div className="footer-bottom-dark">
-            <div>&copy; 2025 Momentum. All rights reserved.</div>
-            <div className="social-links-dark">
-              <a href="#">𝕏</a>
-              <a href="#">in</a>
-              <a href="#">📧</a>
-            </div>
+          <div className="pt-8 border-t border-slate-900">
+            © 2025 Momentum. Built for field & event marketing teams.
           </div>
         </div>
       </footer>
