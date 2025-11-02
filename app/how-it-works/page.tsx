@@ -77,13 +77,13 @@ export default function HowItWorks() {
               display: 'inline-flex',
               alignItems: 'center',
               gap: '8px',
-              background: 'rgba(79, 70, 229, 0.1)',
-              border: '1px solid rgba(79, 70, 229, 0.2)',
+              background: 'rgba(255, 255, 255, 0.15)',
+              border: '1px solid rgba(255, 255, 255, 0.25)',
               padding: '8px 16px',
               borderRadius: '9999px',
               fontSize: '13px',
               fontWeight: '600',
-              color: '#4F46E5',
+              color: 'white',
               marginBottom: '24px',
               letterSpacing: '0.02em'
             }}>
@@ -100,7 +100,7 @@ export default function HowItWorks() {
       <section style={{ padding: '80px 0', background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>
         <div className="container">
           <div style={{ textAlign: 'center', color: 'white', marginBottom: '60px' }}>
-            <h2 className="section-title" style={{ color: 'white' }}>The Complete Feedback Loop</h2>
+            <h2 style={{ fontSize: '48px', fontWeight: '800', marginBottom: '24px', color: 'white', letterSpacing: '-0.02em', lineHeight: '1.2' }}>The Complete Feedback Loop</h2>
             <p style={{ fontSize: '18px', opacity: 0.95, maxWidth: '700px', margin: '0 auto' }}>
               All four perspectives flow into your Field Success Score, with AI analyzing patterns to surface strategic insights.
             </p>
@@ -152,29 +152,29 @@ export default function HowItWorks() {
                 <div className="fss-score-display">FSS: 85</div>
               </div>
 
-              {/* Stakeholders - with white text for purple background */}
-              <div className="stakeholder marketing" style={{ color: 'white' }}>
+              {/* Stakeholders - white boxes with dark text */}
+              <div className="stakeholder marketing">
                 <div className="stakeholder-icon">📊</div>
-                <div className="stakeholder-title" style={{ color: 'white' }}>Marketing</div>
-                <div className="stakeholder-desc" style={{ color: 'rgba(255,255,255,0.9)' }}>Execution & logistics</div>
+                <div className="stakeholder-title">Marketing</div>
+                <div className="stakeholder-desc">Execution & logistics</div>
               </div>
 
-              <div className="stakeholder sales" style={{ color: 'white' }}>
+              <div className="stakeholder sales">
                 <div className="stakeholder-icon">💼</div>
-                <div className="stakeholder-title" style={{ color: 'white' }}>Sales</div>
-                <div className="stakeholder-desc" style={{ color: 'rgba(255,255,255,0.9)' }}>Lead quality & ICP fit</div>
+                <div className="stakeholder-title">Sales</div>
+                <div className="stakeholder-desc">Lead quality & ICP fit</div>
               </div>
 
-              <div className="stakeholder partners" style={{ color: 'white' }}>
+              <div className="stakeholder partners">
                 <div className="stakeholder-icon">🤝</div>
-                <div className="stakeholder-title" style={{ color: 'white' }}>Partners</div>
-                <div className="stakeholder-desc" style={{ color: 'rgba(255,255,255,0.9)' }}>Co-marketing value</div>
+                <div className="stakeholder-title">Partners</div>
+                <div className="stakeholder-desc">Co-marketing value</div>
               </div>
 
-              <div className="stakeholder attendees" style={{ color: 'white' }}>
+              <div className="stakeholder attendees">
                 <div className="stakeholder-icon">👥</div>
-                <div className="stakeholder-title" style={{ color: 'white' }}>Attendees</div>
-                <div className="stakeholder-desc" style={{ color: 'rgba(255,255,255,0.9)' }}>Value delivery & NPS</div>
+                <div className="stakeholder-title">Attendees</div>
+                <div className="stakeholder-desc">Value delivery & NPS</div>
               </div>
             </div>
           </div>
@@ -273,7 +273,7 @@ export default function HowItWorks() {
               <div className="animate-on-scroll">
                 <h3 style={{ fontSize: '24px', fontWeight: '600', color: '#2d3748', marginBottom: '15px' }}>For Marketing Leaders</h3>
                 <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#4a5568' }}>
-                  Prove ROI with confidence. Show which events drive actual pipeline and customer value, not just activity. Defend your budget with data that executives trust—from all four stakeholders.
+                  Prove ROI with confidence. Show which events drive actual pipeline and customer value. Defend your budget with trusted data from all four stakeholders.
                 </p>
               </div>
 
