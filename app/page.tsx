@@ -41,7 +41,7 @@ export default function Home() {
           <div className="nav-actions">
             <a href="https://fss-app-iota.vercel.app/" className="nav-login">Login</a>
             <a href="https://fss-app-iota.vercel.app/" className="nav-cta">
-              Schedule a walkthrough
+              Get started
             </a>
           </div>
         </div>
@@ -64,7 +64,7 @@ export default function Home() {
               </p>
               <div className="flex flex-wrap gap-4 mb-6">
                 <a href="https://fss-app-iota.vercel.app/" className="bg-violet-500 hover:bg-violet-400 text-sm px-5 py-2.5 rounded-md font-medium inline-block">
-                  Schedule a walkthrough
+                  Get started
                 </a>
                 <a href="https://fss-app-iota.vercel.app/" className="text-sm text-slate-100/80 hover:text-white">
                   View sample event scorecard →
@@ -240,16 +240,16 @@ export default function Home() {
 
         {/* CTA / Resources */}
         <section id="resources" className="mx-auto max-w-6xl px-4 py-16">
-          <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-8 flex flex-col md:flex-row justify-between gap-6">
+          <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-8 flex flex-col md:flex-row justify-between gap-6 items-center">
             <div>
               <h2 className="text-xl font-semibold mb-2">Ready to show which events actually drive pipeline?</h2>
               <p className="text-slate-300/80">
                 We'll walk you through the event scorecard, stakeholder surveys, and how we export to Salesforce.
               </p>
             </div>
-            <div className="flex gap-3 flex-shrink-0">
-              <a href="https://fss-app-iota.vercel.app/" className="bg-white text-slate-950 text-sm px-4 py-2 rounded-md font-medium inline-block">
-                Schedule a walkthrough
+            <div className="flex gap-3 flex-shrink-0 items-center">
+              <a href="https://fss-app-iota.vercel.app/" className="bg-white text-slate-950 text-sm px-4 py-2 rounded-md font-medium inline-block hover:bg-slate-100">
+                Get started
               </a>
               <a href="https://fss-app-iota.vercel.app/" className="text-sm text-slate-100/80 hover:text-white whitespace-nowrap">
                 Download sample report →
