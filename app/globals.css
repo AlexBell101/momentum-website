@@ -1518,6 +1518,14 @@ footer {
   color: white;
 }
 
+/* Ensure active state text is white for all stakeholders, even with specific styling */
+.stakeholder.partners.active .stakeholder-title,
+.stakeholder.partners.active .stakeholder-desc,
+.stakeholder.attendees.active .stakeholder-title,
+.stakeholder.attendees.active .stakeholder-desc {
+  color: white !important;
+}
+
 .stakeholder-icon {
   width: 48px;
   height: 48px;
