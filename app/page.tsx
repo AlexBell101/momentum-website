@@ -1,10 +1,12 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Home() {
+  const circleRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     // Navbar scroll effect
     const navbar = document.getElementById('navbar');
@@ -36,563 +38,556 @@ export default function Home() {
       observer.observe(el);
     });
 
-    // Smooth scroll for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', (e) => {
-        e.preventDefault();
-        const href = anchor.getAttribute('href');
-        if (href) {
-          const target = document.querySelector(href);
-          if (target) {
-            target.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
-            });
-          }
+    // Interactive circle - mouse tracking
+    const handleMouseMove = (e: MouseEvent) => {
+      if (circleRef.current) {
+        const rect = circleRef.current.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        const distance = Math.sqrt(x * x + y * y);
+
+        if (distance < 300) {
+          const angle = Math.atan2(y, x);
+          const offsetX = Math.cos(angle) * (300 - distance) * 0.1;
+          const offsetY = Math.sin(angle) * (300 - distance) * 0.1;
+          circleRef.current.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+        } else {
+          circleRef.current.style.transform = 'translate(0, 0)';
         }
-      });
-    });
+      }
+    };
+
+    document.addEventListener('mousemove', handleMouseMove);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
 
   return (
     <>
       {/* Navigation */}
-      <nav id="navbar">
+      <nav id="navbar" className="navbar-modern">
         <div className="container">
           <div className="nav-content">
-            <Link href="/" className="logo">Momentum</Link>
-            <ul className="nav-links">
-              <li><a href="#features">Features</a></li>
+            <Link href="/" className="logo-modern">
+              <div className="logo-icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12C20 16.4183 16.4183 20 12 20" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"/>
+                  <path d="M4 12L8 8M4 12L8 16" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"/>
+                </svg>
+              </div>
+              <span>Momentum</span>
+            </Link>
+            <ul className="nav-links-modern">
+              <li><a href="#platform">Platform</a></li>
               <li><Link href="/how-it-works">How It Works</Link></li>
               <li><Link href="/integrations">Integrations</Link></li>
               <li><Link href="/docs">Docs</Link></li>
             </ul>
-            <a href="#" className="cta-button">Get Started</a>
+            <a href="https://fss-app-iota.vercel.app/" className="cta-button-modern">Get Started</a>
           </div>
         </div>
       </nav>
 
-      {/* Hero Section - Enterprise */}
-      <section className="hero-enterprise">
+      {/* Hero Section - DRAMATIC */}
+      <section className="hero-modern">
         <div className="container">
-          <div className="hero-content-enterprise">
-            {/* Professional Badge */}
-            <div className="badge-enterprise">
-              <span className="badge-dot"></span>
-              The only platform with 360° campaign intelligence
-            </div>
-
-            <h1 className="hero-title-enterprise">Turn Event Chaos<br />Into Strategic Clarity</h1>
-            <p className="hero-subtitle-enterprise">The holistic insights platform that combines Salesforce metrics with feedback from Sales, Marketing, Attendees, and Partners—powered by AI to show you what's working, what's not, and exactly what to do next.</p>
-
-            {/* Four Stakeholder Indicators with SVG Icons */}
-            <div className="stakeholder-indicators">
-              <div className="indicator-item">
-                <svg className="indicator-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
-                </svg>
-                <span>Marketing</span>
+          <div className="hero-grid">
+            <div className="hero-content-modern">
+              <div className="badge-modern">
+                <span className="badge-pulse"></span>
+                360° Campaign Intelligence
               </div>
-              <div className="indicator-item">
-                <svg className="indicator-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" />
-                </svg>
-                <span>Sales</span>
-              </div>
-              <div className="indicator-item">
-                <svg className="indicator-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
-                </svg>
-                <span>Attendees</span>
-              </div>
-              <div className="indicator-item indicator-highlight">
-                <svg className="indicator-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
-                </svg>
-                <span>Partners</span>
-              </div>
-            </div>
 
-            <div className="hero-buttons-enterprise">
-              <a href="#" className="primary-button-enterprise">Start Free Trial</a>
-              <a href="#" className="secondary-button-enterprise">Watch Demo</a>
-            </div>
+              <h1 className="hero-title-dramatic">
+                The Complete
+                <br />
+                <span className="gradient-text">Feedback Loop</span>
+              </h1>
 
-            {/* Dashboard Mockup */}
-            <div className="dashboard-mockup-enterprise">
-              <div className="dashboard-header-enterprise">
-                <div className="traffic-lights">
-                  <div className="traffic-light red"></div>
-                  <div className="traffic-light yellow"></div>
-                  <div className="traffic-light green"></div>
-                </div>
-              </div>
-              <div className="dashboard-content">
-                <Image
-                  src="/screenshot.png"
-                  alt="Momentum Dashboard"
-                  width={1200}
-                  height={800}
-                  style={{ width: '100%', height: 'auto' }}
-                  priority
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+              <p className="hero-subtitle-large">
+                The only platform that captures feedback from <strong>Sales, Marketing, Attendees, and Partners</strong>—then uses AI to turn that 360° view into strategic insights.
+              </p>
 
-      {/* Why Four Perspectives Matter */}
-      <section className="perspectives-section-enterprise">
-        <div className="container">
-          <h2 className="section-title-enterprise">Why Four Perspectives Matter</h2>
-          <p className="section-subtitle-enterprise">Most platforms show 2-3 views. We show all four—because your channel partners are co-investing, co-generating pipeline, and influencing deals outside your visibility.</p>
-
-          <div className="perspectives-grid-enterprise">
-            {[
-              {
-                icon: (<path strokeLinecap="round" strokeLinejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" />),
-                title: 'Sales Feedback',
-                quote: '"These leads matched our ICP perfectly"',
-                insight: '→ Validates targeting',
-                color: 'blue'
-              },
-              {
-                icon: (<path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />),
-                title: 'Marketing Feedback',
-                quote: '"Logistics were flawless, messaging resonated"',
-                insight: '→ Confirms execution quality',
-                color: 'purple'
-              },
-              {
-                icon: (<path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />),
-                title: 'Attendee Feedback',
-                quote: '"Best content I\'ve seen on this topic"',
-                insight: '→ Proves customer value delivery',
-                color: 'orange'
-              },
-              {
-                icon: (<path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />),
-                title: 'Partner Feedback',
-                quote: '"We\'re co-marketing 5 more events"',
-                insight: '→ Predicts channel pipeline',
-                color: 'green',
-                highlight: true
-              }
-            ].map((perspective, i) => (
-              <div key={i} className={`perspective-card-enterprise animate-on-scroll ${perspective.highlight ? 'highlight' : ''}`} style={{ animationDelay: `${i * 0.1}s` }}>
-                <div className={`perspective-icon-enterprise ${perspective.color}`}>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    {perspective.icon}
+              <div className="hero-cta">
+                <a href="https://fss-app-iota.vercel.app/" className="btn-primary-large">
+                  Start Free Trial
+                  <svg className="btn-icon" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
-                </div>
-                <h3 className="perspective-title-enterprise">
-                  {perspective.title}
-                </h3>
-                <p className="perspective-quote-enterprise">{perspective.quote}</p>
-                <p className="perspective-insight-enterprise">{perspective.insight}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="perspectives-footer-enterprise">
-            <p><strong>All four combine into your Field Success Score</strong></p>
-            <Link href="/how-it-works" className="text-link-enterprise">Learn more about how it works →</Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Holistic Insights Platform */}
-      <section className="ai-section-enterprise">
-        <div className="container">
-          <div className="ai-content-enterprise">
-            <div className="ai-info-enterprise animate-on-scroll">
-              <h3>The Holistic Insights Platform for Field Marketing</h3>
-              <p className="ai-intro-enterprise">Momentum combines your GTM metrics from Salesforce with feedback loops from every stakeholder—then uses AI to connect the dots and show you exactly what's driving results.</p>
-
-              <div className="holistic-features-enterprise">
-                <div className="holistic-feature-enterprise">
-                  <div className="holistic-number">1</div>
-                  <div>
-                    <h4>Connect Your GTM Data</h4>
-                    <p>Automatic sync from Salesforce Campaign objects: MQLs generated, pipeline created, meetings booked, target account engagement, win rates, and deal velocity. Real business outcomes, not vanity metrics.</p>
-                  </div>
-                </div>
-
-                <div className="holistic-feature-enterprise">
-                  <div className="holistic-number">2</div>
-                  <div>
-                    <h4>Capture the Complete Feedback Loop</h4>
-                    <p>Multi-stakeholder surveys (90 seconds, 65% response rate) collect qualitative insights from Sales ("Were these leads worth pursuing?"), Marketing ("Did execution match our standards?"), Attendees ("Did we deliver value?"), and Partners ("Will we co-market again?").</p>
-                  </div>
-                </div>
-
-                <div className="holistic-feature-enterprise">
-                  <div className="holistic-number">3</div>
-                  <div>
-                    <h4>AI Connects Metrics to Feedback</h4>
-                    <p>Claude AI analyzes verbatim comments alongside Salesforce metrics to identify what actually drives outcomes. "Events with Partner Score &gt;80 generate 2.3x more channel pipeline." "Partner feedback mentions 'ICP mismatch' 12 times when conversion rates drop below 15%."</p>
-                  </div>
-                </div>
-
-                <div className="holistic-feature-enterprise">
-                  <div className="holistic-number">4</div>
-                  <div>
-                    <h4>Get Strategic Recommendations</h4>
-                    <p>AI doesn't just analyze—it tells you what to do next. Replicate high-performing formats, adjust targeting for specific regions, improve partner alignment, or double down on channels that convert. Actionable insights, not dashboards you have to interpret.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="holistic-callout-enterprise">
-                <svg className="callout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
-                </svg>
-                <div>
-                  <h4>Powered by Claude AI</h4>
-                  <p>Ask questions in natural language. "Why did partners love Austin but not Boston?" "Which webinars should we replicate in Q2?" Get instant answers that combine hard metrics with qualitative insights.</p>
-                </div>
+                </a>
+                <a href="#" className="btn-secondary-large">
+                  <svg className="btn-icon-play" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                  Watch Demo
+                </a>
               </div>
             </div>
 
-            <div className="ai-visual-enterprise animate-on-scroll">
-              <div className="ai-example-enterprise">
-                <div className="example-label">Real Example</div>
-                <div className="example-question">
-                  <svg className="example-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
-                  </svg>
-                  <p>Which of our Q3 field events generated the most pipeline per dollar spent, and what made them successful?</p>
-                </div>
-                <div className="example-answer">
-                  <div className="answer-header">
-                    <svg className="ai-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z" />
+            {/* Interactive Visual - THE KEY PIECE */}
+            <div className="hero-visual-modern" ref={circleRef}>
+              <div className="circle-diagram">
+                {/* Center Score */}
+                <div className="circle-center">
+                  <div className="fss-number">85</div>
+                  <div className="fss-label">FSS</div>
+                  <div className="ai-indicator">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
-                    <span>AI Analysis</span>
+                    <span>AI Powered</span>
                   </div>
-                  <div className="answer-metrics">
-                    <div className="answer-metric">
-                      <div className="metric-value-large">$47</div>
-                      <div className="metric-label-small">Cost per $1K pipeline</div>
-                      <div className="metric-event">Austin Executive Dinner</div>
-                    </div>
-                    <div className="answer-metric">
-                      <div className="metric-value-large">$89</div>
-                      <div className="metric-label-small">Cost per $1K pipeline</div>
-                      <div className="metric-event">Chicago Webinar Series</div>
-                    </div>
-                  </div>
-                  <div className="answer-insight">
-                    <strong>Key Success Factors for Austin:</strong>
-                    <ul>
-                      <li><strong>Partner Score: 94</strong> — Partners mentioned &quot;perfect ICP fit&quot; 11 times. Strong partner satisfaction predicts channel pipeline.</li>
-                      <li><strong>Sales Feedback: 88</strong> — Sales team commented &quot;pre-qualified leads saved us weeks&quot; (mentioned 6 times).</li>
-                      <li><strong>Targeting Quality:</strong> 78% enterprise attendees vs. 45% in Chicago. Higher enterprise mix = higher deal values.</li>
-                    </ul>
-                  </div>
-                  <div className="answer-recommendation">
-                    <svg className="rec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+                </div>
+
+                {/* Connection Lines */}
+                <svg className="connection-lines" viewBox="0 0 400 400">
+                  <defs>
+                    <linearGradient id="lineGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stopColor="#4F46E5" stopOpacity="0.2"/>
+                      <stop offset="50%" stopColor="#06B6D4" stopOpacity="0.8"/>
+                      <stop offset="100%" stopColor="#4F46E5" stopOpacity="0.2"/>
+                    </linearGradient>
+                  </defs>
+
+                  {/* Animated connecting lines */}
+                  <circle cx="200" cy="200" r="120" fill="none" stroke="url(#lineGradient1)" strokeWidth="2" strokeDasharray="8 4">
+                    <animateTransform
+                      attributeName="transform"
+                      type="rotate"
+                      from="0 200 200"
+                      to="360 200 200"
+                      dur="20s"
+                      repeatCount="indefinite"
+                    />
+                  </circle>
+
+                  <circle cx="200" cy="200" r="140" fill="none" stroke="url(#lineGradient1)" strokeWidth="1" strokeDasharray="4 8" opacity="0.4">
+                    <animateTransform
+                      attributeName="transform"
+                      type="rotate"
+                      from="360 200 200"
+                      to="0 200 200"
+                      dur="30s"
+                      repeatCount="indefinite"
+                    />
+                  </circle>
+                </svg>
+
+                {/* Stakeholder Nodes - Circular Layout */}
+                <div className="stakeholder-node node-top">
+                  <div className="node-icon marketing-node">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                     </svg>
-                    <div>
-                      <strong>Recommendation:</strong> Replicate Austin's executive dinner format in SF and NYC. Prioritize partner co-hosted events (2.1x better pipeline efficiency). Adjust Chicago targeting to enterprise ICP.
-                    </div>
+                  </div>
+                  <div className="node-label">Marketing</div>
+                  <div className="node-score">88</div>
+                </div>
+
+                <div className="stakeholder-node node-right">
+                  <div className="node-icon sales-node">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div className="node-label">Sales</div>
+                  <div className="node-score">82</div>
+                </div>
+
+                <div className="stakeholder-node node-bottom">
+                  <div className="node-icon attendees-node">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                  </div>
+                  <div className="node-label">Attendees</div>
+                  <div className="node-score">90</div>
+                </div>
+
+                <div className="stakeholder-node node-left">
+                  <div className="node-icon partners-node">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                  </div>
+                  <div className="node-label">Partners</div>
+                  <div className="node-score">78</div>
+                </div>
+
+                {/* Data Flow Particles */}
+                <div className="particle particle-1"></div>
+                <div className="particle particle-2"></div>
+                <div className="particle particle-3"></div>
+                <div className="particle particle-4"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="scroll-indicator">
+          <div className="scroll-mouse">
+            <div className="scroll-wheel"></div>
+          </div>
+          <span>Scroll to explore</span>
+        </div>
+      </section>
+
+      {/* Social Proof */}
+      <section className="social-proof">
+        <div className="container">
+          <p className="proof-text">Trusted by marketing teams at</p>
+          <div className="company-logos">
+            <div className="logo-item">Company A</div>
+            <div className="logo-item">Company B</div>
+            <div className="logo-item">Company C</div>
+            <div className="logo-item">Company D</div>
+            <div className="logo-item">Company E</div>
+          </div>
+        </div>
+      </section>
+
+      {/* The Problem - Asymmetric Layout */}
+      <section className="problem-section">
+        <div className="container">
+          <div className="problem-grid">
+            <div className="problem-content animate-on-scroll">
+              <div className="section-label">The Problem</div>
+              <h2 className="section-title-large">
+                Most platforms only show<br />
+                <span className="text-muted">half the story</span>
+              </h2>
+              <p className="text-xlarge">
+                You hit your MQL targets. Sales complains about lead quality.
+                Attendees show up but you don&apos;t know if they found value.
+                Partners co-invest but you never ask if it worked for them.
+              </p>
+              <p className="text-xlarge">
+                <strong>You&apos;re flying blind with incomplete data.</strong>
+              </p>
+            </div>
+
+            <div className="incomplete-visual animate-on-scroll">
+              <div className="incomplete-circle">
+                <div className="incomplete-segment seg-1"></div>
+                <div className="incomplete-segment seg-2"></div>
+                <div className="incomplete-segment seg-3 missing"></div>
+                <div className="incomplete-segment seg-4 missing"></div>
+                <div className="incomplete-label">Incomplete View</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* The Solution - Platform Section */}
+      <section id="platform" className="platform-section">
+        <div className="container-wide">
+          <div className="section-header-center animate-on-scroll">
+            <div className="section-label">The Momentum Platform</div>
+            <h2 className="section-title-xl">
+              Complete campaign intelligence<br />
+              from <span className="gradient-text">all four perspectives</span>
+            </h2>
+            <p className="section-subtitle-xl">
+              Momentum captures feedback from Sales, Marketing, Attendees, and Partners—
+              <br />then uses AI to surface insights you can act on.
+            </p>
+          </div>
+
+          {/* Interconnected Features - NOT A BORING GRID */}
+          <div className="features-interconnected">
+            {/* Center Hub */}
+            <div className="feature-hub animate-on-scroll">
+              <div className="hub-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3>AI-Powered Insights</h3>
+              <p>Claude analyzes all four perspectives to surface patterns and predict outcomes</p>
+            </div>
+
+            {/* Connected Feature Cards */}
+            <div className="feature-card card-top-left animate-on-scroll">
+              <div className="feature-number">01</div>
+              <div className="feature-card-icon marketing-color">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <h4>Marketing Execution</h4>
+              <p>Track logistics, messaging effectiveness, and operational quality from your team&apos;s perspective</p>
+              <div className="feature-link">
+                <span>Learn more</span>
+                <svg viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                </svg>
+              </div>
+            </div>
+
+            <div className="feature-card card-top-right animate-on-scroll">
+              <div className="feature-number">02</div>
+              <div className="feature-card-icon sales-color">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h4>Sales Reality Check</h4>
+              <p>Understand lead quality, ICP fit, and whether events actually help advance deals</p>
+              <div className="feature-link">
+                <span>Learn more</span>
+                <svg viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                </svg>
+              </div>
+            </div>
+
+            <div className="feature-card card-bottom-left animate-on-scroll">
+              <div className="feature-number">03</div>
+              <div className="feature-card-icon attendees-color">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <h4>Customer Value Signal</h4>
+              <p>High attendee satisfaction predicts conversion and proves ROI to leadership</p>
+              <div className="feature-link">
+                <span>Learn more</span>
+                <svg viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                </svg>
+              </div>
+            </div>
+
+            <div className="feature-card card-bottom-right animate-on-scroll highlight-card">
+              <div className="feature-number">04</div>
+              <div className="feature-card-icon partners-color">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+              </div>
+              <h4>Channel Partnership Health</h4>
+              <p>Partners co-invest in events. Their feedback predicts co-marketing and channel revenue</p>
+              <div className="feature-link">
+                <span>Learn more</span>
+                <svg viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                </svg>
+              </div>
+            </div>
+
+            {/* Connection Lines Visual */}
+            <svg className="feature-connections" viewBox="0 0 1000 800">
+              <defs>
+                <linearGradient id="connGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#4F46E5" stopOpacity="0.3"/>
+                  <stop offset="100%" stopColor="#06B6D4" stopOpacity="0.3"/>
+                </linearGradient>
+              </defs>
+              <path d="M 250 200 Q 500 300 750 200" stroke="url(#connGrad)" strokeWidth="2" fill="none" strokeDasharray="5,5"/>
+              <path d="M 250 600 Q 500 500 750 600" stroke="url(#connGrad)" strokeWidth="2" fill="none" strokeDasharray="5,5"/>
+              <path d="M 250 200 Q 300 400 250 600" stroke="url(#connGrad)" strokeWidth="2" fill="none" strokeDasharray="5,5"/>
+              <path d="M 750 200 Q 700 400 750 600" stroke="url(#connGrad)" strokeWidth="2" fill="none" strokeDasharray="5,5"/>
+            </svg>
+          </div>
+
+          <div className="platform-footer animate-on-scroll">
+            <Link href="/how-it-works" className="btn-secondary-xl">
+              See how it all connects
+              <svg className="btn-icon" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats - Full Width Impact */}
+      <section className="stats-modern">
+        <div className="container-wide">
+          <div className="stats-grid-large">
+            <div className="stat-modern animate-on-scroll">
+              <div className="stat-number-huge">500+</div>
+              <div className="stat-label-modern">Events measured with complete feedback</div>
+            </div>
+            <div className="stat-modern animate-on-scroll" style={{animationDelay: '0.1s'}}>
+              <div className="stat-number-huge">$50M+</div>
+              <div className="stat-label-modern">Pipeline tracked across all channels</div>
+            </div>
+            <div className="stat-modern animate-on-scroll" style={{animationDelay: '0.2s'}}>
+              <div className="stat-number-huge">92%</div>
+              <div className="stat-label-modern">Teams see improved ROI visibility</div>
+            </div>
+            <div className="stat-modern animate-on-scroll" style={{animationDelay: '0.3s'}}>
+              <div className="stat-number-huge">65%</div>
+              <div className="stat-label-modern">Average survey response rate</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AI Section - Split Screen */}
+      <section className="ai-modern">
+        <div className="ai-split">
+          <div className="ai-content-side">
+            <div className="animate-on-scroll">
+              <div className="section-label">Powered by Claude AI</div>
+              <h2 className="section-title-large">
+                Turn 360° feedback into<br />
+                <span className="gradient-text-cyan">strategic insights</span>
+              </h2>
+              <p className="text-xlarge">
+                Momentum doesn&apos;t just collect feedback—it uses AI to analyze patterns across all four stakeholders, predict outcomes, and generate actionable recommendations.
+              </p>
+
+              <div className="ai-capabilities">
+                <div className="capability-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                  <div>
+                    <strong>Pattern Recognition</strong>
+                    <p>&quot;Partners consistently score webinars 15pts lower than field events&quot;</p>
+                  </div>
+                </div>
+
+                <div className="capability-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                  </svg>
+                  <div>
+                    <strong>Predictive Analytics</strong>
+                    <p>&quot;Events with Partner Score &gt;80 generate 2.3x more channel pipeline&quot;</p>
+                  </div>
+                </div>
+
+                <div className="capability-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                  </svg>
+                  <div>
+                    <strong>Natural Language Queries</strong>
+                    <p>&quot;Which Q3 events should we replicate in Q4?&quot; Get instant answers</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Platform Capabilities */}
-      <section className="capabilities-section-enterprise">
-        <div className="container">
-          <h2 className="section-title-enterprise">Everything Your Field Marketing Team Needs</h2>
-          <p className="section-subtitle-enterprise">A complete platform that connects your GTM data with human feedback to deliver actionable insights.</p>
-
-          <div className="capabilities-grid-enterprise">
-            {[
-              {
-                name: 'Salesforce Integration',
-                desc: 'Automatic sync of MQLs, pipeline, meetings, and target account engagement from Campaign objects',
-                icon: (<path strokeLinecap="round" strokeLinejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />)
-              },
-              {
-                name: 'Multi-Stakeholder Surveys',
-                desc: '90-second surveys with 65% response rates capturing feedback from all four perspectives',
-                icon: (<path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />)
-              },
-              {
-                name: 'Partner Feedback Tracking',
-                desc: 'The only platform that measures partner satisfaction and predicts channel pipeline',
-                icon: (<path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />),
-                highlight: true
-              },
-              {
-                name: 'AI-Powered Analysis',
-                desc: 'Claude AI reads verbatim feedback, identifies patterns, and generates strategic recommendations',
-                icon: (<path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />),
-                highlight: true
-              },
-              {
-                name: 'Field Success Score',
-                desc: 'Single metric combining hard metrics and qualitative feedback across all four stakeholders',
-                icon: (<path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />)
-              },
-              {
-                name: 'Executive Dashboards',
-                desc: 'FSS and all feedback scores sync to Salesforce Campaign objects for real-time reporting',
-                icon: (<path strokeLinecap="round" strokeLinejoin="round" d="M7.5 14.25v2.25m3-4.5v4.5m3-6.75v6.75m3-9v9M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" />)
-              }
-            ].map((capability, i) => (
-              <div key={i} className={`capability-card-enterprise animate-on-scroll ${capability.highlight ? 'highlight' : ''}`} style={{ animationDelay: `${i * 0.1}s` }}>
-                <div className="capability-icon-enterprise">
+          <div className="ai-visual-side">
+            <div className="ai-dashboard-preview animate-on-scroll">
+              <div className="ai-query">
+                <div className="query-avatar">You</div>
+                <div className="query-text">Why did Austin perform better than Boston for partners?</div>
+              </div>
+              <div className="ai-response">
+                <div className="response-avatar">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    {capability.icon}
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
-                <h3 className="capability-title-enterprise">{capability.name}</h3>
-                <p className="capability-desc-enterprise">{capability.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FSS Score Section */}
-      <section id="scores" className="fss-section-enterprise">
-        <div className="container">
-          <div className="fss-content-enterprise">
-            <div className="fss-visual-enterprise animate-on-scroll">
-              <div className="score-display-enterprise">
-                <div className="score-ring-enterprise">
-                  <svg width="250" height="250">
-                    <circle className="score-bg-enterprise" cx="125" cy="125" r="90"></circle>
-                    <circle className="score-progress-enterprise" cx="125" cy="125" r="90"></circle>
-                  </svg>
-                  <div className="score-text-enterprise">85</div>
-                </div>
-                <div className="score-label-enterprise">Field Success Score</div>
-
-                <div className="metrics-list-enterprise">
-                  {[
-                    { icon: (<path strokeLinecap="round" strokeLinejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" />), name: 'Sales Feedback', value: 82 },
-                    { icon: (<path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />), name: 'Marketing Score', value: 88 },
-                    { icon: (<path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />), name: 'Attendee Experience', value: 90 },
-                    { icon: (<path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />), name: 'Partner Feedback', value: 78, highlight: true }
-                  ].map((metric, i) => (
-                    <div key={i} className={`metric-item-enterprise ${metric.highlight ? 'highlight-metric-enterprise' : ''}`}>
-                      <svg className="metric-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        {metric.icon}
-                      </svg>
-                      <span className="metric-name-enterprise">{metric.name}</span>
-                      <span className="metric-value-enterprise">{metric.value}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            <div className="fss-info-enterprise animate-on-scroll">
-              <h3>Beyond the numbers</h3>
-              <p>Your leadership wants to know if events are worth the investment. Sales wants quality leads they can close. Prospects want valuable experiences. <strong>Partners want co-marketing opportunities that work.</strong> The FSS shows you're delivering on all four.</p>
-
-              <div className="quality-indicators-enterprise">
-                {[
-                  {
-                    icon: (<path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />),
-                    title: 'Hard Business Metrics',
-                    desc: 'MQLs, pipeline generated, meetings booked, target account engagement. The quantitative proof that events drive revenue.'
-                  },
-                  {
-                    icon: (<path strokeLinecap="round" strokeLinejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" />),
-                    title: 'Sales Team Reality Check',
-                    desc: 'Did they get leads worth pursuing? Were attendees engaged? Sales feedback tells you if you\'re creating actual opportunities or just hitting a number.'
-                  },
-                  {
-                    icon: (<path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />),
-                    title: 'Customer Value Signal',
-                    desc: 'High attendee satisfaction means prospects found real value. That predicts conversion. That proves ROI. That\'s what leadership needs to see.'
-                  },
-                  {
-                    icon: (<path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />),
-                    title: 'Channel Partnership Health',
-                    desc: 'Partners co-invest in your events and co-generate pipeline. High partner scores predict future co-marketing opportunities and channel revenue.',
-                    highlight: true
-                  }
-                ].map((indicator, i) => (
-                  <div key={i} className={`indicator-enterprise ${indicator.highlight ? 'highlight-indicator-enterprise' : ''}`}>
-                    <div className="indicator-icon-enterprise">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        {indicator.icon}
-                      </svg>
-                    </div>
-                    <div className="indicator-content-enterprise">
-                      <h4>{indicator.title}</h4>
-                      <p>{indicator.desc}</p>
-                    </div>
+                <div className="response-text">
+                  <p><strong>Austin partners mentioned &quot;ICP alignment&quot; 8x vs Boston.</strong></p>
+                  <p>Austin attracted enterprise SaaS (partner sweet spot), Boston skewed SMB.</p>
+                  <div className="ai-rec">
+                    💡 <strong>Recommendation:</strong> Add enterprise track to Boston 2025 or adjust targeting
                   </div>
-                ))}
+                </div>
               </div>
-
-              <Link href="/how-it-works" className="learn-more-link-enterprise">
-                See the complete feedback loop visualization →
-              </Link>
+              <div className="insights-preview">
+                <div className="insight-pill">Pattern detected across 12 events</div>
+                <div className="insight-pill">87% confidence</div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="stats-section-enterprise">
+      {/* CTA - Full Bleed */}
+      <section className="cta-modern">
         <div className="container">
-          <h2 className="section-title-enterprise">The platform built for modern field marketing</h2>
-          <p className="section-subtitle-enterprise">One metric that tells you if your event created real value for prospects, customers, sales, and partners</p>
-
-          <div className="stats-grid-enterprise">
-            {[
-              { number: '500+', label: 'Events Measured' },
-              { number: '$50M+', label: 'Pipeline Tracked' },
-              { number: '92%', label: 'Teams See Better ROI' },
-              { number: '10K+', label: 'Survey Responses' }
-            ].map((stat, i) => (
-              <div key={i} className="stat-card-enterprise animate-on-scroll" style={{ animationDelay: `${i * 0.1}s` }}>
-                <div className="stat-number-enterprise">{stat.number}</div>
-                <div className="stat-label-enterprise">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section id="features" className="features-section-enterprise">
-        <div className="container">
-          <h2 className="section-title-enterprise">Everything you need for complete campaign intelligence</h2>
-          <p className="section-subtitle-enterprise">Stop guessing which campaigns create real value. See which events resonate with customers, align with sales, satisfy partners, and drive actual pipeline.</p>
-
-          <div className="features-grid-enterprise">
-            {[
-              {
-                icon: (<path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />),
-                title: 'Salesforce Data Integration',
-                desc: 'MQLs, meetings booked, pipeline generated, and target account engagement flow directly from your Salesforce campaigns. See the business outcomes that matter.'
-              },
-              {
-                icon: (<path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />),
-                title: 'Partner Feedback Collection',
-                desc: 'The only platform that captures partner perspectives. Know which events drive channel loyalty, competitive wins, and future co-marketing pipeline.'
-              },
-              {
-                icon: (<path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />),
-                title: 'AI-Powered Insights',
-                desc: 'Claude AI analyzes verbatim feedback from all four stakeholders, surfaces hidden patterns, predicts pipeline, and generates strategic recommendations.'
-              },
-              {
-                icon: (<path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />),
-                title: 'Multi-Stakeholder Surveys',
-                desc: 'Automated surveys for attendees, sales reps, marketing teams, and partners. 90-second surveys with 65% response rates.'
-              },
-              {
-                icon: (<path strokeLinecap="round" strokeLinejoin="round" d="M7.5 14.25v2.25m3-4.5v4.5m3-6.75v6.75m3-9v9M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" />),
-                title: 'Campaign Object Sync',
-                desc: 'FSS and all four feedback scores sync directly to Salesforce Campaign objects. Build executive dashboards showing real ROI, not vanity metrics.'
-              },
-              {
-                icon: (<path strokeLinecap="round" strokeLinejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />),
-                title: 'Continuous Improvement',
-                desc: 'Compare events over time. AI helps you learn what works, double down on high-performing formats, and stop wasting budget on events that don\'t deliver.'
-              }
-            ].map((feature, i) => (
-              <div key={i} className="feature-card-enterprise animate-on-scroll" style={{ animationDelay: `${i * 0.1}s` }}>
-                <div className="feature-icon-enterprise">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    {feature.icon}
-                  </svg>
-                </div>
-                <h3 className="feature-title-enterprise">{feature.title}</h3>
-                <p className="feature-desc-enterprise">{feature.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="cta-section-enterprise">
-        <div className="container">
-          <div className="cta-content-enterprise">
-            <h2>See the complete picture.<br />Not just the metrics you hope leadership accepts.</h2>
-            <p>360° campaign intelligence from Sales, Marketing, Attendees, and Partners—powered by AI to show you what actually works.</p>
-            <a href="#" className="primary-button-enterprise-large">Start Your Free Trial</a>
+          <div className="cta-content-modern animate-on-scroll">
+            <h2 className="cta-title-huge">
+              See the complete picture
+            </h2>
+            <p className="cta-subtitle-large">
+              Stop flying blind with incomplete data. Get 360° campaign intelligence from all four stakeholders—powered by AI to show you what actually works.
+            </p>
+            <div className="cta-actions">
+              <a href="https://fss-app-iota.vercel.app/" className="btn-primary-xl">
+                Start Free Trial
+                <svg className="btn-icon" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </a>
+              <a href="#" className="btn-outline-xl">Schedule Demo</a>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="footer-enterprise">
+      <footer className="footer-modern">
         <div className="container">
-          <div className="footer-content-enterprise">
-            <div>
-              <div className="footer-brand-enterprise">Momentum</div>
-              <p className="footer-description-enterprise">The only platform with 360° campaign intelligence. Capture feedback from Sales, Marketing, Attendees, and Partners—then use AI to turn insights into action.</p>
+          <div className="footer-grid-modern">
+            <div className="footer-brand-modern">
+              <div className="logo-modern">
+                <div className="logo-icon">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12C20 16.4183 16.4183 20 12 20" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"/>
+                    <path d="M4 12L8 8M4 12L8 16" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"/>
+                  </svg>
+                </div>
+                <span>Momentum</span>
+              </div>
+              <p className="footer-tagline">
+                The only platform with 360° campaign intelligence.
+              </p>
             </div>
 
-            <div className="footer-section-enterprise">
-              <h4>Product</h4>
-              <ul className="footer-links-enterprise">
-                <li><a href="#features">Features</a></li>
-                <li><Link href="/integrations">Integrations</Link></li>
-                <li><a href="#">Pricing</a></li>
-                <li><Link href="/docs">Documentation</Link></li>
-              </ul>
-            </div>
+            <div className="footer-links-modern">
+              <div className="footer-column">
+                <h4>Product</h4>
+                <ul>
+                  <li><a href="#platform">Platform</a></li>
+                  <li><Link href="/how-it-works">How It Works</Link></li>
+                  <li><Link href="/integrations">Integrations</Link></li>
+                  <li><a href="#">Pricing</a></li>
+                </ul>
+              </div>
 
-            <div className="footer-section-enterprise">
-              <h4>Company</h4>
-              <ul className="footer-links-enterprise">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
-            </div>
+              <div className="footer-column">
+                <h4>Company</h4>
+                <ul>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Careers</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </div>
 
-            <div className="footer-section-enterprise">
-              <h4>Resources</h4>
-              <ul className="footer-links-enterprise">
-                <li><a href="#">Case Studies</a></li>
-                <li><a href="#">Help Center</a></li>
-                <li><a href="#">Community</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-              </ul>
+              <div className="footer-column">
+                <h4>Resources</h4>
+                <ul>
+                  <li><Link href="/docs">Documentation</Link></li>
+                  <li><a href="#">Help Center</a></li>
+                  <li><a href="#">Privacy</a></li>
+                  <li><a href="#">Terms</a></li>
+                </ul>
+              </div>
             </div>
           </div>
 
-          <div className="footer-bottom-enterprise">
-            <div>&copy; 2025 Momentum. All rights reserved.</div>
-            <div className="social-links-enterprise">
-              <a href="#" className="social-link-enterprise">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                </svg>
-              </a>
-              <a href="#" className="social-link-enterprise">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2ZM8 19H5v-9h3ZM6.5 8.25A1.75 1.75 0 1 1 8.3 6.5a1.78 1.78 0 0 1-1.8 1.75ZM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0 0 13 14.19a.66.66 0 0 0 0 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 0 1 2.7-1.4c1.55 0 3.36.86 3.36 3.66Z"/>
-                </svg>
-              </a>
-              <a href="#" className="social-link-enterprise">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-                </svg>
-              </a>
+          <div className="footer-bottom-modern">
+            <p>&copy; 2025 Momentum. All rights reserved.</p>
+            <div className="social-links-modern">
+              <a href="#" aria-label="Twitter">𝕏</a>
+              <a href="#" aria-label="LinkedIn">in</a>
+              <a href="#" aria-label="GitHub">GitHub</a>
             </div>
           </div>
         </div>
