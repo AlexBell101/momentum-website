@@ -96,9 +96,22 @@ export default function Home() {
         <div className="container">
           <div className="hero-grid">
             <div className="hero-content-modern">
-              <div className="badge-modern">
-                <span className="badge-pulse"></span>
-                360° Campaign Intelligence
+              <div style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                background: 'rgba(79, 70, 229, 0.08)',
+                border: '1px solid rgba(79, 70, 229, 0.15)',
+                padding: '10px 20px',
+                borderRadius: '9999px',
+                fontSize: '13px',
+                fontWeight: '700',
+                color: '#4F46E5',
+                marginBottom: '32px',
+                letterSpacing: '0.02em'
+              }}>
+                <span style={{ fontSize: '16px' }}>◆</span>
+                <span>360° CAMPAIGN INTELLIGENCE</span>
               </div>
 
               <h1 className="hero-title-dramatic">
@@ -271,12 +284,76 @@ export default function Home() {
             </div>
 
             <div className="incomplete-visual animate-on-scroll">
-              <div className="incomplete-circle">
-                <div className="incomplete-segment seg-1"></div>
-                <div className="incomplete-segment seg-2"></div>
-                <div className="incomplete-segment seg-3 missing"></div>
-                <div className="incomplete-segment seg-4 missing"></div>
-                <div className="incomplete-label">Incomplete View</div>
+              <div style={{ position: 'relative', width: '320px', height: '320px', margin: '0 auto' }}>
+                {/* SVG Pie Chart with Missing Slices */}
+                <svg viewBox="0 0 200 200" style={{ width: '100%', height: '100%', transform: 'rotate(-90deg)' }}>
+                  {/* Background circle */}
+                  <circle cx="100" cy="100" r="90" fill="#F9FAFB" stroke="#E5E7EB" strokeWidth="2"/>
+
+                  {/* Filled slices (Sales & Marketing) */}
+                  <path
+                    d="M 100 100 L 100 10 A 90 90 0 0 1 190 100 Z"
+                    fill="url(#incompleteGrad1)"
+                    opacity="0.9"
+                  />
+                  <path
+                    d="M 100 100 L 190 100 A 90 90 0 0 1 100 190 Z"
+                    fill="url(#incompleteGrad2)"
+                    opacity="0.9"
+                  />
+
+                  {/* Missing slices (dashed outlines) */}
+                  <path
+                    d="M 100 100 L 100 190 A 90 90 0 0 1 10 100 Z"
+                    fill="#FAFAFA"
+                    stroke="#D1D5DB"
+                    strokeWidth="2"
+                    strokeDasharray="8 4"
+                    opacity="0.4"
+                  />
+                  <path
+                    d="M 100 100 L 10 100 A 90 90 0 0 1 100 10 Z"
+                    fill="#FAFAFA"
+                    stroke="#D1D5DB"
+                    strokeWidth="2"
+                    strokeDasharray="8 4"
+                    opacity="0.4"
+                  />
+
+                  {/* Gradients */}
+                  <defs>
+                    <linearGradient id="incompleteGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#8B5CF6" />
+                      <stop offset="100%" stopColor="#7C3AED" />
+                    </linearGradient>
+                    <linearGradient id="incompleteGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#3B82F6" />
+                      <stop offset="100%" stopColor="#2563EB" />
+                    </linearGradient>
+                  </defs>
+
+                  {/* Question marks for missing data */}
+                  <text x="50" y="105" fill="#9CA3AF" fontSize="28" fontWeight="700" textAnchor="middle" transform="rotate(90 50 105)" opacity="0.6">?</text>
+                  <text x="150" y="95" fill="#9CA3AF" fontSize="28" fontWeight="700" textAnchor="middle" transform="rotate(90 150 95)" opacity="0.6">?</text>
+                </svg>
+
+                {/* Center label */}
+                <div style={{
+                  position: 'absolute',
+                  top: '50%',
+                  left: '50%',
+                  transform: 'translate(-50%, -50%)',
+                  textAlign: 'center'
+                }}>
+                  <div style={{ fontSize: '48px', fontWeight: '900', color: '#EF4444', marginBottom: '8px' }}>50%</div>
+                  <div style={{ fontSize: '16px', fontWeight: '700', color: '#6B7280' }}>Data Missing</div>
+                </div>
+
+                {/* Labels */}
+                <div style={{ position: 'absolute', top: '-10px', left: '50%', transform: 'translateX(-50%)', fontSize: '13px', fontWeight: '600', color: '#8B5CF6' }}>Marketing ✓</div>
+                <div style={{ position: 'absolute', right: '-40px', top: '50%', transform: 'translateY(-50%)', fontSize: '13px', fontWeight: '600', color: '#3B82F6' }}>Sales ✓</div>
+                <div style={{ position: 'absolute', bottom: '-10px', left: '50%', transform: 'translateX(-50%)', fontSize: '13px', fontWeight: '600', color: '#D1D5DB' }}>Attendees ?</div>
+                <div style={{ position: 'absolute', left: '-50px', top: '50%', transform: 'translateY(-50%)', fontSize: '13px', fontWeight: '600', color: '#D1D5DB' }}>Partners ?</div>
               </div>
             </div>
           </div>
