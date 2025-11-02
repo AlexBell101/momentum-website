@@ -26,21 +26,21 @@ export default function Home() {
       <Script src="https://cdn.tailwindcss.com" strategy="beforeInteractive" />
 
       {/* Navigation */}
-      <header className="sticky top-0 z-40 bg-slate-950/85 backdrop-blur border-b border-slate-900">
-        <div className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between gap-6">
-          <div className="flex items-center gap-2">
-            <div className="h-8 w-8 rounded-md bg-violet-500/90 flex items-center justify-center text-sm font-bold text-white">M</div>
-            <span className="font-semibold tracking-tight text-white">Momentum</span>
+      <header className="sticky top-0 z-40 bg-slate-950/85 backdrop-blur border-b border-slate-900" style={{ position: 'sticky', top: 0, zIndex: 40, backgroundColor: 'rgba(2, 6, 23, 0.85)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgb(15, 23, 42)' }}>
+        <div className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between gap-6" style={{ maxWidth: '72rem', margin: '0 auto', padding: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1.5rem' }}>
+          <div className="flex items-center gap-2" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <div className="h-8 w-8 rounded-md bg-violet-500/90 flex items-center justify-center text-sm font-bold text-white" style={{ height: '2rem', width: '2rem', borderRadius: '0.375rem', backgroundColor: 'rgb(139, 92, 246)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.875rem', fontWeight: 'bold', color: 'white' }}>M</div>
+            <span className="font-semibold tracking-tight text-white" style={{ fontWeight: 600, letterSpacing: '-0.025em', color: 'white' }}>Momentum</span>
           </div>
-          <nav className="hidden md:flex gap-6 text-sm text-slate-200/70">
-            <Link href="/how-it-works" className="hover:text-white">How it works</Link>
-            <a href="#stakeholders" className="hover:text-white">Stakeholders</a>
-            <Link href="/integrations" className="hover:text-white">Integrations</Link>
-            <Link href="/docs" className="hover:text-white">Resources</Link>
+          <nav className="hidden md:flex gap-6 text-sm text-slate-200/70" style={{ display: 'flex', gap: '1.5rem', fontSize: '0.875rem', color: 'rgba(226, 232, 240, 0.7)' }}>
+            <Link href="/how-it-works" className="hover:text-white" style={{ color: 'rgba(226, 232, 240, 0.7)', textDecoration: 'none' }}>How it works</Link>
+            <a href="#stakeholders" className="hover:text-white" style={{ color: 'rgba(226, 232, 240, 0.7)', textDecoration: 'none' }}>Stakeholders</a>
+            <Link href="/integrations" className="hover:text-white" style={{ color: 'rgba(226, 232, 240, 0.7)', textDecoration: 'none' }}>Integrations</Link>
+            <Link href="/docs" className="hover:text-white" style={{ color: 'rgba(226, 232, 240, 0.7)', textDecoration: 'none' }}>Resources</Link>
           </nav>
-          <div className="flex gap-3">
-            <a href="https://fss-app-iota.vercel.app/" className="text-sm text-slate-200/70 hover:text-white">Login</a>
-            <a href="https://fss-app-iota.vercel.app/" className="bg-white text-slate-950 text-sm px-4 py-2 rounded-md font-medium hover:bg-slate-100">
+          <div className="flex gap-3" style={{ display: 'flex', gap: '0.75rem' }}>
+            <a href="https://fss-app-iota.vercel.app/" className="text-sm text-slate-200/70 hover:text-white" style={{ fontSize: '0.875rem', color: 'rgba(226, 232, 240, 0.7)', textDecoration: 'none' }}>Login</a>
+            <a href="https://fss-app-iota.vercel.app/" className="bg-white text-slate-950 text-sm px-4 py-2 rounded-md font-medium hover:bg-slate-100" style={{ backgroundColor: 'white', color: 'rgb(2, 6, 23)', fontSize: '0.875rem', padding: '0.5rem 1rem', borderRadius: '0.375rem', fontWeight: 500, textDecoration: 'none' }}>
               Schedule a walkthrough
             </a>
           </div>
