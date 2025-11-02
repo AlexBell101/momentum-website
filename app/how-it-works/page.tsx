@@ -77,13 +77,13 @@ export default function HowItWorks() {
               display: 'inline-flex',
               alignItems: 'center',
               gap: '8px',
-              background: 'rgba(79, 70, 229, 0.1)',
-              border: '1px solid rgba(79, 70, 229, 0.2)',
+              background: 'rgba(255, 255, 255, 0.15)',
+              border: '1px solid rgba(255, 255, 255, 0.25)',
               padding: '8px 16px',
               borderRadius: '9999px',
               fontSize: '13px',
               fontWeight: '600',
-              color: '#4F46E5',
+              color: 'white',
               marginBottom: '24px',
               letterSpacing: '0.02em'
             }}>
@@ -152,29 +152,29 @@ export default function HowItWorks() {
                 <div className="fss-score-display">FSS: 85</div>
               </div>
 
-              {/* Stakeholders - with white text for purple background */}
-              <div className="stakeholder marketing" style={{ color: 'white' }}>
+              {/* Stakeholders - white boxes with dark text */}
+              <div className="stakeholder marketing">
                 <div className="stakeholder-icon">📊</div>
-                <div className="stakeholder-title" style={{ color: 'white' }}>Marketing</div>
-                <div className="stakeholder-desc" style={{ color: 'rgba(255,255,255,0.9)' }}>Execution & logistics</div>
+                <div className="stakeholder-title">Marketing</div>
+                <div className="stakeholder-desc">Execution & logistics</div>
               </div>
 
-              <div className="stakeholder sales" style={{ color: 'white' }}>
+              <div className="stakeholder sales">
                 <div className="stakeholder-icon">💼</div>
-                <div className="stakeholder-title" style={{ color: 'white' }}>Sales</div>
-                <div className="stakeholder-desc" style={{ color: 'rgba(255,255,255,0.9)' }}>Lead quality & ICP fit</div>
+                <div className="stakeholder-title">Sales</div>
+                <div className="stakeholder-desc">Lead quality & ICP fit</div>
               </div>
 
-              <div className="stakeholder partners" style={{ color: 'white' }}>
+              <div className="stakeholder partners">
                 <div className="stakeholder-icon">🤝</div>
-                <div className="stakeholder-title" style={{ color: 'white' }}>Partners</div>
-                <div className="stakeholder-desc" style={{ color: 'rgba(255,255,255,0.9)' }}>Co-marketing value</div>
+                <div className="stakeholder-title">Partners</div>
+                <div className="stakeholder-desc">Co-marketing value</div>
               </div>
 
-              <div className="stakeholder attendees" style={{ color: 'white' }}>
+              <div className="stakeholder attendees">
                 <div className="stakeholder-icon">👥</div>
-                <div className="stakeholder-title" style={{ color: 'white' }}>Attendees</div>
-                <div className="stakeholder-desc" style={{ color: 'rgba(255,255,255,0.9)' }}>Value delivery & NPS</div>
+                <div className="stakeholder-title">Attendees</div>
+                <div className="stakeholder-desc">Value delivery & NPS</div>
               </div>
             </div>
           </div>
