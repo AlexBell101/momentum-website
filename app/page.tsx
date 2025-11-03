@@ -6,21 +6,43 @@ import Script from 'next/script';
 
 export default function Home() {
   const [headlineIndex, setHeadlineIndex] = useState(0);
+  const [displayedText, setDisplayedText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+
   const headlines = [
     "Know which events to repeat, resize, or pause.",
-    "Capture feedback from every stakeholder in one place.",
-    "Compare cities, formats, and partners side by side.",
+    "Get feedback from all stakeholders in one place.",
+    "Compare cities, formats, and partners instantly.",
     "Prove event value without chasing sales."
   ];
 
   useEffect(() => {
-    // Rotate headlines every 5 seconds
-    const interval = setInterval(() => {
-      setHeadlineIndex((prev) => (prev + 1) % headlines.length);
-    }, 5000);
+    // Typewriter effect
+    const currentHeadline = headlines[headlineIndex];
 
-    return () => clearInterval(interval);
-  }, [headlines.length]);
+    if (!isDeleting && displayedText === currentHeadline) {
+      // Pause at end before deleting
+      const timeout = setTimeout(() => setIsDeleting(true), 2000);
+      return () => clearTimeout(timeout);
+    }
+
+    if (isDeleting && displayedText === '') {
+      // Move to next headline
+      setIsDeleting(false);
+      setHeadlineIndex((prev) => (prev + 1) % headlines.length);
+      return;
+    }
+
+    const timeout = setTimeout(() => {
+      setDisplayedText(
+        isDeleting
+          ? currentHeadline.substring(0, displayedText.length - 1)
+          : currentHeadline.substring(0, displayedText.length + 1)
+      );
+    }, isDeleting ? 30 : 50);
+
+    return () => clearTimeout(timeout);
+  }, [displayedText, isDeleting, headlineIndex, headlines]);
 
   useEffect(() => {
     // Smooth scroll for anchor links
@@ -73,8 +95,11 @@ export default function Home() {
               <p className="inline-flex items-center gap-2 rounded-full bg-violet-500/10 border border-violet-500/30 px-3 py-1 text-xs text-violet-100 mb-5">
                 FIELD & EVENT ANALYTICS
               </p>
-              <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-4">
-                <span className="block transition-opacity duration-500">{headlines[headlineIndex]}</span>
+              <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-4 min-h-[2.5em]">
+                <span className="block">
+                  {displayedText}
+                  <span className="animate-pulse">|</span>
+                </span>
               </h1>
               <p className="text-slate-200/80 mb-6 max-w-xl">
                 Momentum standardizes every event touchpoint — sales follow-up, attendee experience, marketing performance, and partner contribution — and turns it into one score your team can act on.
@@ -102,7 +127,7 @@ export default function Home() {
                 <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
                   <div>
                     <p className="text-sm">Austin Customer Breakfast</p>
-                    <p className="text-xs text-slate-400">Sales follow-up 14/18 • Attendee score 91 • Sponsor score 82</p>
+                    <p className="text-xs text-slate-400">FSS 89 • Sales 88 • Marketing 91 • Attendees 90 • Partners 85</p>
                   </div>
                   <span className="text-xs bg-emerald-500/10 text-emerald-200 px-2 py-1 rounded-md">
                     Run again
@@ -111,7 +136,7 @@ export default function Home() {
                 <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
                   <div>
                     <p className="text-sm">Boston Executive Dinner</p>
-                    <p className="text-xs text-slate-400">Sales follow-up 6/12 • Attendee score 88 • Sponsor score 70</p>
+                    <p className="text-xs text-slate-400">FSS 76 • Sales 72 • Marketing 84 • Attendees 88 • Partners 68</p>
                   </div>
                   <span className="text-xs bg-amber-500/10 text-amber-200 px-2 py-1 rounded-md">
                     Resize
@@ -120,7 +145,7 @@ export default function Home() {
                 <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
                   <div>
                     <p className="text-sm">Partner Roundtable (virtual)</p>
-                    <p className="text-xs text-slate-400">Sales follow-up 3/10 • Attendee score 76 • Sponsor score 60</p>
+                    <p className="text-xs text-slate-400">FSS 62 • Sales 58 • Marketing 71 • Attendees 76</p>
                   </div>
                   <span className="text-xs bg-rose-500/10 text-rose-200 px-2 py-1 rounded-md">
                     Pause
@@ -129,7 +154,7 @@ export default function Home() {
               </ul>
               <div className="border-t border-slate-800 pt-3">
                 <p className="text-xs text-slate-400">
-                  AI insight: events with fast sales follow-up + satisfied sponsors are 2.1× more likely to be re-funded.
+                  AI insight: events scoring 85+ across all stakeholders are 2.3× more likely to drive repeat attendance and partner investment.
                 </p>
               </div>
             </div>
