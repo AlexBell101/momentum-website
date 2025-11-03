@@ -1,10 +1,27 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
 
 export default function Home() {
+  const [headlineIndex, setHeadlineIndex] = useState(0);
+  const headlines = [
+    "Know which events to repeat, resize, or pause.",
+    "Capture feedback from every stakeholder in one place.",
+    "Compare cities, formats, and partners side by side.",
+    "Prove event value without chasing sales."
+  ];
+
+  useEffect(() => {
+    // Rotate headlines every 5 seconds
+    const interval = setInterval(() => {
+      setHeadlineIndex((prev) => (prev + 1) % headlines.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [headlines.length]);
+
   useEffect(() => {
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -57,10 +74,10 @@ export default function Home() {
                 FIELD & EVENT ANALYTICS
               </p>
               <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-4">
-                Know which events to repeat, resize, or pause.
+                <span className="block transition-opacity duration-500">{headlines[headlineIndex]}</span>
               </h1>
               <p className="text-slate-200/80 mb-6 max-w-xl">
-                Momentum collects post-event feedback from sales, attendees, marketing, and partners — then ranks events by pipeline impact, not just registrations.
+                Momentum standardizes every event touchpoint — sales follow-up, attendee experience, marketing performance, and partner contribution — and turns it into one score your team can act on.
               </p>
               <div className="flex flex-wrap gap-4 mb-6">
                 <a href="https://fss-app-iota.vercel.app/" className="bg-violet-500 hover:bg-violet-400 text-sm px-5 py-2.5 rounded-md font-medium inline-block">
@@ -85,7 +102,7 @@ export default function Home() {
                 <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
                   <div>
                     <p className="text-sm">Austin Customer Breakfast</p>
-                    <p className="text-xs text-slate-400">Sales 88 · Attendees 90 · Partners 78</p>
+                    <p className="text-xs text-slate-400">Sales follow-up 14/18 • Attendee score 91 • Sponsor score 82</p>
                   </div>
                   <span className="text-xs bg-emerald-500/10 text-emerald-200 px-2 py-1 rounded-md">
                     Run again
@@ -94,7 +111,7 @@ export default function Home() {
                 <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
                   <div>
                     <p className="text-sm">Boston Executive Dinner</p>
-                    <p className="text-xs text-slate-400">Sales 62 · Attendees 85 · Partners 55</p>
+                    <p className="text-xs text-slate-400">Sales follow-up 6/12 • Attendee score 88 • Sponsor score 70</p>
                   </div>
                   <span className="text-xs bg-amber-500/10 text-amber-200 px-2 py-1 rounded-md">
                     Resize
@@ -102,8 +119,8 @@ export default function Home() {
                 </li>
                 <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
                   <div>
-                    <p className="text-sm">Partner Webinar</p>
-                    <p className="text-xs text-slate-400">Sales 48 · Attendees 74 · Partners 42</p>
+                    <p className="text-sm">Partner Roundtable (virtual)</p>
+                    <p className="text-xs text-slate-400">Sales follow-up 3/10 • Attendee score 76 • Sponsor score 60</p>
                   </div>
                   <span className="text-xs bg-rose-500/10 text-rose-200 px-2 py-1 rounded-md">
                     Pause
@@ -112,7 +129,7 @@ export default function Home() {
               </ul>
               <div className="border-t border-slate-800 pt-3">
                 <p className="text-xs text-slate-400">
-                  AI insight: partner-aligned breakfasts in Austin produced 2.3× co-fundable pipeline. Repeat in Q4.
+                  AI insight: events with fast sales follow-up + satisfied sponsors are 2.1× more likely to be re-funded.
                 </p>
               </div>
             </div>
