@@ -127,7 +127,7 @@ export default function Home() {
                 <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
                   <div>
                     <p className="text-sm">Austin Customer Breakfast</p>
-                    <p className="text-xs text-slate-400">FSS 89 • Sales 88 • Marketing 91 • Attendees 90 • Partners 85</p>
+                    <p className="text-xs text-slate-400">Score 89 • Sales 88 • Marketing 91 • Attendees 90 • Partners 85</p>
                   </div>
                   <span className="text-xs bg-emerald-500/10 text-emerald-200 px-2 py-1 rounded-md">
                     Run again
@@ -136,7 +136,7 @@ export default function Home() {
                 <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
                   <div>
                     <p className="text-sm">Boston Executive Dinner</p>
-                    <p className="text-xs text-slate-400">FSS 76 • Sales 72 • Marketing 84 • Attendees 88 • Partners 68</p>
+                    <p className="text-xs text-slate-400">Score 76 • Sales 72 • Marketing 84 • Attendees 88 • Partners 68</p>
                   </div>
                   <span className="text-xs bg-amber-500/10 text-amber-200 px-2 py-1 rounded-md">
                     Resize
@@ -145,7 +145,7 @@ export default function Home() {
                 <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
                   <div>
                     <p className="text-sm">Partner Roundtable (virtual)</p>
-                    <p className="text-xs text-slate-400">FSS 62 • Sales 58 • Marketing 71 • Attendees 76</p>
+                    <p className="text-xs text-slate-400">Score 62 • Sales 58 • Marketing 71 • Attendees 76</p>
                   </div>
                   <span className="text-xs bg-rose-500/10 text-rose-200 px-2 py-1 rounded-md">
                     Pause
