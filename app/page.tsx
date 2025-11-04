@@ -1,10 +1,12 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
 
 export default function Home() {
+  const scrollContainerRef = useRef<HTMLUListElement>(null);
+
   useEffect(() => {
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -21,9 +23,63 @@ export default function Home() {
     });
   }, []);
 
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    let scrollPos = 0;
+    const scrollSpeed = 0.5; // pixels per frame
+    const itemHeight = 68; // approximate height of each item including gap
+    const totalItems = 8;
+    const totalHeight = itemHeight * totalItems;
+
+    const scroll = () => {
+      scrollPos += scrollSpeed;
+
+      // Reset to beginning when we've scrolled through half the items (since they're duplicated)
+      if (scrollPos >= totalHeight) {
+        scrollPos = 0;
+        container.scrollTop = 0;
+      } else {
+        container.scrollTop = scrollPos;
+      }
+
+      requestAnimationFrame(scroll);
+    };
+
+    const animationId = requestAnimationFrame(scroll);
+
+    // Pause on hover
+    const handleMouseEnter = () => {
+      cancelAnimationFrame(animationId);
+    };
+
+    const handleMouseLeave = () => {
+      requestAnimationFrame(scroll);
+    };
+
+    container.addEventListener('mouseenter', handleMouseEnter);
+    container.addEventListener('mouseleave', handleMouseLeave);
+
+    return () => {
+      cancelAnimationFrame(animationId);
+      container.removeEventListener('mouseenter', handleMouseEnter);
+      container.removeEventListener('mouseleave', handleMouseLeave);
+    };
+  }, []);
+
   return (
     <>
       <Script src="https://cdn.tailwindcss.com" strategy="beforeInteractive" />
+      <style jsx global>{`
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
 
       {/* Navigation */}
       <header>
@@ -81,7 +137,80 @@ export default function Home() {
                 <p className="text-sm font-medium text-slate-50">Q3 field events — AI recommendations</p>
                 <span className="text-xs text-slate-400">Updated 3m ago</span>
               </div>
-              <ul className="space-y-3 max-h-52 overflow-y-auto pr-2">
+              <ul ref={scrollContainerRef} className="space-y-3 max-h-52 overflow-y-auto pr-2 scrollbar-hide">
+                <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
+                  <div>
+                    <p className="text-sm">Austin Customer Breakfast</p>
+                    <p className="text-xs text-slate-400">FSS 92 · 28 attendees · 12 MQLs · $340k pipeline · 6 partners</p>
+                  </div>
+                  <span className="text-xs bg-emerald-500/10 text-emerald-200 px-2 py-1 rounded-md">
+                    Run again
+                  </span>
+                </li>
+                <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
+                  <div>
+                    <p className="text-sm">Boston Executive Dinner</p>
+                    <p className="text-xs text-slate-400">FSS 88 · 18 attendees · 7 MQLs · $180k pipeline · 3 partners</p>
+                  </div>
+                  <span className="text-xs bg-amber-500/10 text-amber-200 px-2 py-1 rounded-md">
+                    Resize
+                  </span>
+                </li>
+                <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
+                  <div>
+                    <p className="text-sm">Partner Webinar</p>
+                    <p className="text-xs text-slate-400">FSS 74 · 142 attendees · 31 MQLs · $220k pipeline · 8 partners</p>
+                  </div>
+                  <span className="text-xs bg-rose-500/10 text-rose-200 px-2 py-1 rounded-md">
+                    Pause
+                  </span>
+                </li>
+                <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
+                  <div>
+                    <p className="text-sm">NYC Product Launch</p>
+                    <p className="text-xs text-slate-400">FSS 96 · 85 attendees · 24 MQLs · $520k pipeline · 4 partners</p>
+                  </div>
+                  <span className="text-xs bg-blue-500/10 text-blue-200 px-2 py-1 rounded-md">
+                    Schedule
+                  </span>
+                </li>
+                <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
+                  <div>
+                    <p className="text-sm">SF Sales Kickoff</p>
+                    <p className="text-xs text-slate-400">FSS 91 · 64 attendees · 18 MQLs · $410k pipeline · 2 partners</p>
+                  </div>
+                  <span className="text-xs bg-violet-500/10 text-violet-200 px-2 py-1 rounded-md">
+                    Expand
+                  </span>
+                </li>
+                <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
+                  <div>
+                    <p className="text-sm">Chicago Industry Conference</p>
+                    <p className="text-xs text-slate-400">FSS 68 · 287 attendees · 45 MQLs · $380k pipeline · 0 partners</p>
+                  </div>
+                  <span className="text-xs bg-indigo-500/10 text-indigo-200 px-2 py-1 rounded-md">
+                    Optimize
+                  </span>
+                </li>
+                <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
+                  <div>
+                    <p className="text-sm">Seattle Executive Roundtable</p>
+                    <p className="text-xs text-slate-400">FSS 94 · 12 attendees · 8 MQLs · $290k pipeline · 2 partners</p>
+                  </div>
+                  <span className="text-xs bg-cyan-500/10 text-cyan-200 px-2 py-1 rounded-md">
+                    Review
+                  </span>
+                </li>
+                <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
+                  <div>
+                    <p className="text-sm">Denver Training Workshop</p>
+                    <p className="text-xs text-slate-400">FSS 79 · 52 attendees · 14 MQLs · $125k pipeline · 0 partners</p>
+                  </div>
+                  <span className="text-xs bg-teal-500/10 text-teal-200 px-2 py-1 rounded-md">
+                    Adjust
+                  </span>
+                </li>
+                {/* Duplicate items for seamless loop */}
                 <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
                   <div>
                     <p className="text-sm">Austin Customer Breakfast</p>
