@@ -28,7 +28,7 @@ export default function Home() {
     if (!container) return;
 
     let scrollPos = 0;
-    const scrollSpeed = 0.5; // pixels per frame
+    const scrollSpeed = 0.25; // pixels per frame - slower, more elegant
     const itemHeight = 68; // approximate height of each item including gap
     const totalItems = 8;
     const totalHeight = itemHeight * totalItems;
