@@ -81,7 +81,7 @@ export default function Home() {
                 <p className="text-sm font-medium text-slate-50">Q3 field events — AI recommendations</p>
                 <span className="text-xs text-slate-400">Updated 3m ago</span>
               </div>
-              <ul className="space-y-3 max-h-80 overflow-y-auto pr-2">
+              <ul className="space-y-3 max-h-52 overflow-y-auto pr-2">
                 <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
                   <div>
                     <p className="text-sm">Austin Customer Breakfast</p>
