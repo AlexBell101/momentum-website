@@ -116,14 +116,11 @@ export default function Home() {
                 Know which events to repeat, resize, or pause.
               </h1>
               <p className="text-slate-200/80 mb-6 max-w-xl">
-                Momentum collects post-event feedback from sales, attendees, marketing, and partners — then ranks events by pipeline impact, not just registrations.
+                Momentum combines pipeline data, MQLs, and feedback from Sales, Marketing, Attendees, and Partners into one holistic Success Score. Get AI recommendations for every event you run.
               </p>
               <div className="flex flex-wrap gap-4 mb-6">
                 <a href="https://fss-app-iota.vercel.app/" className="bg-violet-500 hover:bg-violet-400 text-sm px-5 py-2.5 rounded-md font-medium inline-block">
                   Get started
-                </a>
-                <a href="https://fss-app-iota.vercel.app/" className="text-sm text-slate-100/80 hover:text-white">
-                  View sample event scorecard →
                 </a>
               </div>
               <p className="text-xs text-slate-500">
