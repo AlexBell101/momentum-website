@@ -290,6 +290,104 @@ export default function Home() {
           </div>
         </section>
 
+        {/* AI-Powered Features */}
+        <section className="mx-auto max-w-6xl px-4 py-16">
+          <div className="text-center mb-12">
+            <p className="inline-flex items-center gap-2 rounded-full bg-violet-500/10 border border-violet-500/30 px-3 py-1 text-xs text-violet-100 mb-4">
+              POWERED BY CLAUDE AI
+            </p>
+            <h2 className="text-3xl font-semibold mb-3">Make smarter decisions before and after every event</h2>
+            <p className="text-slate-300/80 max-w-2xl mx-auto">
+              Momentum uses AI to predict event success before you spend budget, and auto-generates executive reports in seconds.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Feature 1: Predictive Score */}
+            <div className="bg-slate-900/40 border border-slate-800 rounded-2xl p-6 flex flex-col">
+              <div className="flex items-start justify-between mb-4">
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">Predictive Event Success Score</h3>
+                  <p className="text-sm text-violet-300">Before the event happens</p>
+                </div>
+                <span className="px-2 py-1 rounded-md bg-violet-500/10 text-violet-200 text-xs font-medium">NEW</span>
+              </div>
+
+              <p className="text-slate-300/90 mb-4">
+                AI analyzes 100+ historical events to predict your FSS score before you spend a dollar. Make data-driven go/no-go decisions with confidence.
+              </p>
+
+              <div className="bg-slate-950/50 rounded-lg p-4 mb-4">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-xs text-slate-400">Predicted FSS for "Chicago Tech Summit"</span>
+                  <span className="text-xs px-2 py-1 rounded-md bg-emerald-500/10 text-emerald-200">High confidence</span>
+                </div>
+                <div className="flex items-baseline gap-2 mb-1">
+                  <span className="text-3xl font-bold text-emerald-300">82</span>
+                  <span className="text-sm text-slate-400">/ 100</span>
+                </div>
+                <p className="text-xs text-slate-400 mt-2">Based on: event type, region, budget, timing, team performance</p>
+              </div>
+
+              <ul className="space-y-2 text-sm text-slate-200/80 flex-grow">
+                <li className="flex gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-violet-400 flex-shrink-0"></span>
+                  Predict success before spending budget
+                </li>
+                <li className="flex gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-violet-400 flex-shrink-0"></span>
+                  Risk assessments with specific recommendations
+                </li>
+                <li className="flex gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-violet-400 flex-shrink-0"></span>
+                  Optimize format, timing, and budget allocation
+                </li>
+              </ul>
+            </div>
+
+            {/* Feature 2: Executive Scorecard */}
+            <div className="bg-slate-900/40 border border-slate-800 rounded-2xl p-6 flex flex-col">
+              <div className="flex items-start justify-between mb-4">
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">Executive Scorecard with AI Narratives</h3>
+                  <p className="text-sm text-violet-300">Board-ready in seconds</p>
+                </div>
+                <span className="px-2 py-1 rounded-md bg-violet-500/10 text-violet-200 text-xs font-medium">NEW</span>
+              </div>
+
+              <p className="text-slate-300/90 mb-4">
+                Claude AI generates executive reports automatically. Get compelling narratives, strategic recommendations, and ROI analysis—ready to present to leadership.
+              </p>
+
+              <div className="bg-slate-950/50 rounded-lg p-4 mb-4">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-xs text-slate-400">Q4 Executive Summary</span>
+                  <span className="text-lg font-bold text-emerald-300">A-</span>
+                </div>
+                <p className="text-xs text-slate-300/80 leading-relaxed mb-2">
+                  "Your field events delivered 2.8× ROI this quarter, with Austin and SF markets significantly outperforming. Partner co-funded events showed 34% higher FSS scores..."
+                </p>
+                <p className="text-xs text-violet-300">+ Strategic recommendations, trend analysis, peer rankings</p>
+              </div>
+
+              <ul className="space-y-2 text-sm text-slate-200/80 flex-grow">
+                <li className="flex gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-violet-400 flex-shrink-0"></span>
+                  Generate reports in seconds, not hours
+                </li>
+                <li className="flex gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-violet-400 flex-shrink-0"></span>
+                  AI-written executive narratives and insights
+                </li>
+                <li className="flex gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-violet-400 flex-shrink-0"></span>
+                  Performance grades, trends, ROI analysis
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
         {/* Four Stakeholders */}
         <section id="stakeholders" className="mx-auto max-w-6xl px-4 py-16">
           <h2 className="text-2xl font-semibold mb-4">One event. Four reports. Zero chasing.</h2>
