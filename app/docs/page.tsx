@@ -357,7 +357,7 @@ export default function Docs() {
                 <li><a href="#" className="hover:text-white">Case Studies</a></li>
                 <li><a href="#" className="hover:text-white">Help Center</a></li>
                 <li><a href="#" className="hover:text-white">Community</a></li>
-                <li><a href="#" className="hover:text-white">Privacy Policy</a></li>
+                <li><Link href="/privacy" className="hover:text-white">Privacy Policy</Link></li>
               </ul>
             </div>
           </div>
