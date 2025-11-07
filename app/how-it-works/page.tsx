@@ -59,7 +59,7 @@ export default function HowItWorks() {
               How Momentum Works
             </h1>
             <p className="text-slate-200/80 max-w-3xl mx-auto">
-              The complete feedback loop: Salesforce data + feedback from Sales, Marketing, Attendees, and Partners—synthesized by AI into your Field Success Score.
+              The complete feedback loop: Salesforce data + feedback from Sales, Marketing, Attendees, and Partners—synthesized by AI into your Success Score.
             </p>
           </div>
         </section>
@@ -71,7 +71,7 @@ export default function HowItWorks() {
               The Complete Feedback Loop
             </h2>
             <p className="text-slate-200/80 max-w-2xl mx-auto">
-              All four perspectives flow into your Field Success Score, with AI analyzing patterns to surface strategic insights.
+              All four perspectives flow into your Success Score, with AI analyzing patterns to surface strategic insights.
             </p>
           </div>
 
@@ -116,7 +116,7 @@ export default function HowItWorks() {
                 EVENT
               </div>
               <div className="text-xs bg-violet-500/10 text-violet-200 px-2 py-1 rounded-md mb-1">✨ AI Analyzing</div>
-              <div className="text-sm font-semibold">FSS: 85</div>
+              <div className="text-sm font-semibold">Success Score: 85</div>
             </div>
 
             {/* Stakeholders */}
@@ -155,11 +155,11 @@ export default function HowItWorks() {
               Field marketing teams are stuck defending MQL counts that don't tell the real story. You hit your numbers, but sales complains about lead quality. Attendees show up, but you don't know if they actually found value. <strong>Partners co-invest but you never ask if the event worked for them.</strong> Leadership wants ROI proof, but all you have are activity metrics.
             </p>
             <p>
-              The Field Success Score solves this by combining hard Salesforce data with real feedback from <strong>all four stakeholders</strong> who matter most: your attendees, sales team, marketing team, <strong>and partners</strong>—then using AI to surface insights you can act on.
+              The Success Score solves this by combining hard Salesforce data with real feedback from <strong>all four stakeholders</strong> who matter most: your attendees, sales team, marketing team, <strong>and partners</strong>—then using AI to surface insights you can act on.
             </p>
           </div>
 
-          <h2 className="text-2xl font-semibold mb-6">How the FSS Works</h2>
+          <h2 className="text-2xl font-semibold mb-6">How the Success Score Works</h2>
 
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-6">
@@ -282,7 +282,7 @@ export default function HowItWorks() {
                   <li>✗ Attendee satisfaction: 5/10</li>
                   <li>✗ <strong>Partner feedback: 4/10</strong></li>
                 </ul>
-                <div className="text-2xl font-semibold text-rose-400">FSS: 48</div>
+                <div className="text-2xl font-semibold text-rose-400">Success Score: 48</div>
               </div>
 
               <div className="bg-slate-950/50 border-2 border-emerald-500/30 rounded-xl p-6">
@@ -294,7 +294,7 @@ export default function HowItWorks() {
                   <li>✓ Attendee satisfaction: 9/10</li>
                   <li>✓ <strong>Partner feedback: 8/10</strong></li>
                 </ul>
-                <div className="text-2xl font-semibold text-emerald-400">FSS: 87</div>
+                <div className="text-2xl font-semibold text-emerald-400">Success Score: 87</div>
               </div>
             </div>
 
@@ -311,7 +311,7 @@ export default function HowItWorks() {
             </div>
 
             <p className="text-sm text-slate-200/80">
-              Traditional metrics say Event A was more successful - double the MQLs. But Event B's high FSS shows it created real value across <strong>all four stakeholders</strong>: engaged prospects, quality leads sales wants to work, partners eager to co-market again, and flawless execution. Six months later, Event B drove 4x the closed-won revenue and strengthened channel relationships.
+              Traditional metrics say Event A was more successful - double the MQLs. But Event B's high Success Score shows it created real value across <strong>all four stakeholders</strong>: engaged prospects, quality leads sales wants to work, partners eager to co-market again, and flawless execution. Six months later, Event B drove 4x the closed-won revenue and strengthened channel relationships.
             </p>
           </div>
         </section>
@@ -355,7 +355,7 @@ export default function HowItWorks() {
               <ul className="space-y-2 text-xs">
                 <li><Link href="/how-it-works" className="hover:text-white">How it works</Link></li>
                 <li><Link href="/integrations" className="hover:text-white">Integrations</Link></li>
-                <li><Link href="/fss-score" className="hover:text-white">FSS Score</Link></li>
+                <li><Link href="/fss-score" className="hover:text-white">Success Score</Link></li>
                 <li><Link href="/docs" className="hover:text-white">Documentation</Link></li>
               </ul>
             </div>

@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Momentum - Measure field marketing success with confidence",
-  description: "MQL, meeting, and pipeline data from Salesforce with real feedback from your attendees and sales partners. Go beyond vanity metrics with the Field Success Score.",
+  description: "MQL, meeting, and pipeline data from Salesforce with real feedback from your attendees and sales partners. Go beyond vanity metrics with the Success Score.",
 };
 
 export default function RootLayout({

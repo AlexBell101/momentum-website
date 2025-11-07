@@ -74,7 +74,7 @@ export default function Integrations() {
               </div>
               <h2 className="text-3xl font-semibold mb-4">Salesforce Integration</h2>
               <p className="text-slate-200/80 mb-6">
-                Momentum connects directly to your Salesforce instance to pull campaign data, track pipeline, and sync Field Success Scores back to Campaign objects.
+                Momentum connects directly to your Salesforce instance to pull campaign data, track pipeline, and sync Success Scores back to Campaign objects.
               </p>
 
               <div className="space-y-4">
@@ -103,8 +103,8 @@ export default function Integrations() {
                     <span className="text-white text-xs font-semibold">✓</span>
                   </div>
                   <div>
-                    <h4 className="font-medium mb-1">FSS Sync Back</h4>
-                    <p className="text-sm text-slate-200/80">Field Success Scores automatically sync to custom Campaign fields for executive dashboards</p>
+                    <h4 className="font-medium mb-1">Success Score Sync Back</h4>
+                    <p className="text-sm text-slate-200/80">Success Scores automatically sync to custom Campaign fields for executive dashboards</p>
                   </div>
                 </div>
 
@@ -129,7 +129,7 @@ export default function Integrations() {
                 </div>
                 <div className="bg-slate-950/50 rounded-xl p-4">
                   <div className="text-xs font-semibold text-slate-400 mb-1">TO SALESFORCE</div>
-                  <div className="text-sm">Field Success Score, Survey Results, Sales Feedback Ratings</div>
+                  <div className="text-sm">Success Score, Survey Results, Sales Feedback Ratings</div>
                 </div>
               </div>
 
@@ -210,7 +210,7 @@ export default function Integrations() {
                   </div>
                   <div>
                     <h4 className="font-medium mb-1">Event Score Alerts</h4>
-                    <p className="text-sm text-slate-200/80">Get notified when Field Success Scores are calculated for your events</p>
+                    <p className="text-sm text-slate-200/80">Get notified when Success Scores are calculated for your events</p>
                   </div>
                 </div>
 
@@ -317,7 +317,7 @@ export default function Integrations() {
               <ul className="space-y-2 text-xs">
                 <li><Link href="/how-it-works" className="hover:text-white">How it works</Link></li>
                 <li><Link href="/integrations" className="hover:text-white">Integrations</Link></li>
-                <li><Link href="/fss-score" className="hover:text-white">FSS Score</Link></li>
+                <li><Link href="/fss-score" className="hover:text-white">Success Score</Link></li>
                 <li><Link href="/docs" className="hover:text-white">Documentation</Link></li>
               </ul>
             </div>

@@ -138,7 +138,7 @@ export default function Home() {
                 <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
                   <div>
                     <p className="text-sm">Austin Customer Breakfast</p>
-                    <p className="text-xs text-slate-400">FSS 92 · 28 attendees · 12 MQLs · $340k pipeline · 6 partners</p>
+                    <p className="text-xs text-slate-400">Score 92 · 28 attendees · 12 MQLs · $340k pipeline · 6 partners</p>
                   </div>
                   <span className="text-xs bg-emerald-500/10 text-emerald-200 px-2 py-1 rounded-md">
                     Run again
@@ -147,7 +147,7 @@ export default function Home() {
                 <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
                   <div>
                     <p className="text-sm">Boston Executive Dinner</p>
-                    <p className="text-xs text-slate-400">FSS 88 · 18 attendees · 7 MQLs · $180k pipeline · 3 partners</p>
+                    <p className="text-xs text-slate-400">Score 88 · 18 attendees · 7 MQLs · $180k pipeline · 3 partners</p>
                   </div>
                   <span className="text-xs bg-amber-500/10 text-amber-200 px-2 py-1 rounded-md">
                     Resize
@@ -156,7 +156,7 @@ export default function Home() {
                 <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
                   <div>
                     <p className="text-sm">Partner Webinar</p>
-                    <p className="text-xs text-slate-400">FSS 74 · 142 attendees · 31 MQLs · $220k pipeline · 8 partners</p>
+                    <p className="text-xs text-slate-400">Score 74 · 142 attendees · 31 MQLs · $220k pipeline · 8 partners</p>
                   </div>
                   <span className="text-xs bg-rose-500/10 text-rose-200 px-2 py-1 rounded-md">
                     Pause
@@ -165,7 +165,7 @@ export default function Home() {
                 <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
                   <div>
                     <p className="text-sm">NYC Product Launch</p>
-                    <p className="text-xs text-slate-400">FSS 96 · 85 attendees · 24 MQLs · $520k pipeline · 4 partners</p>
+                    <p className="text-xs text-slate-400">Score 96 · 85 attendees · 24 MQLs · $520k pipeline · 4 partners</p>
                   </div>
                   <span className="text-xs bg-blue-500/10 text-blue-200 px-2 py-1 rounded-md">
                     Schedule
@@ -174,7 +174,7 @@ export default function Home() {
                 <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
                   <div>
                     <p className="text-sm">SF Sales Kickoff</p>
-                    <p className="text-xs text-slate-400">FSS 91 · 64 attendees · 18 MQLs · $410k pipeline · 2 partners</p>
+                    <p className="text-xs text-slate-400">Score 91 · 64 attendees · 18 MQLs · $410k pipeline · 2 partners</p>
                   </div>
                   <span className="text-xs bg-violet-500/10 text-violet-200 px-2 py-1 rounded-md">
                     Expand
@@ -183,7 +183,7 @@ export default function Home() {
                 <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
                   <div>
                     <p className="text-sm">Chicago Industry Conference</p>
-                    <p className="text-xs text-slate-400">FSS 68 · 287 attendees · 45 MQLs · $380k pipeline · 0 partners</p>
+                    <p className="text-xs text-slate-400">Score 68 · 287 attendees · 45 MQLs · $380k pipeline · 0 partners</p>
                   </div>
                   <span className="text-xs bg-indigo-500/10 text-indigo-200 px-2 py-1 rounded-md">
                     Optimize
@@ -192,7 +192,7 @@ export default function Home() {
                 <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
                   <div>
                     <p className="text-sm">Seattle Executive Roundtable</p>
-                    <p className="text-xs text-slate-400">FSS 94 · 12 attendees · 8 MQLs · $290k pipeline · 2 partners</p>
+                    <p className="text-xs text-slate-400">Score 94 · 12 attendees · 8 MQLs · $290k pipeline · 2 partners</p>
                   </div>
                   <span className="text-xs bg-cyan-500/10 text-cyan-200 px-2 py-1 rounded-md">
                     Review
@@ -201,7 +201,7 @@ export default function Home() {
                 <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
                   <div>
                     <p className="text-sm">Denver Training Workshop</p>
-                    <p className="text-xs text-slate-400">FSS 79 · 52 attendees · 14 MQLs · $125k pipeline · 0 partners</p>
+                    <p className="text-xs text-slate-400">Score 79 · 52 attendees · 14 MQLs · $125k pipeline · 0 partners</p>
                   </div>
                   <span className="text-xs bg-teal-500/10 text-teal-200 px-2 py-1 rounded-md">
                     Adjust
@@ -211,7 +211,7 @@ export default function Home() {
                 <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
                   <div>
                     <p className="text-sm">Austin Customer Breakfast</p>
-                    <p className="text-xs text-slate-400">FSS 92 · 28 attendees · 12 MQLs · $340k pipeline · 6 partners</p>
+                    <p className="text-xs text-slate-400">Score 92 · 28 attendees · 12 MQLs · $340k pipeline · 6 partners</p>
                   </div>
                   <span className="text-xs bg-emerald-500/10 text-emerald-200 px-2 py-1 rounded-md">
                     Run again
@@ -220,7 +220,7 @@ export default function Home() {
                 <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
                   <div>
                     <p className="text-sm">Boston Executive Dinner</p>
-                    <p className="text-xs text-slate-400">FSS 88 · 18 attendees · 7 MQLs · $180k pipeline · 3 partners</p>
+                    <p className="text-xs text-slate-400">Score 88 · 18 attendees · 7 MQLs · $180k pipeline · 3 partners</p>
                   </div>
                   <span className="text-xs bg-amber-500/10 text-amber-200 px-2 py-1 rounded-md">
                     Resize
@@ -229,7 +229,7 @@ export default function Home() {
                 <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
                   <div>
                     <p className="text-sm">Partner Webinar</p>
-                    <p className="text-xs text-slate-400">FSS 74 · 142 attendees · 31 MQLs · $220k pipeline · 8 partners</p>
+                    <p className="text-xs text-slate-400">Score 74 · 142 attendees · 31 MQLs · $220k pipeline · 8 partners</p>
                   </div>
                   <span className="text-xs bg-rose-500/10 text-rose-200 px-2 py-1 rounded-md">
                     Pause
@@ -238,7 +238,7 @@ export default function Home() {
                 <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
                   <div>
                     <p className="text-sm">NYC Product Launch</p>
-                    <p className="text-xs text-slate-400">FSS 96 · 85 attendees · 24 MQLs · $520k pipeline · 4 partners</p>
+                    <p className="text-xs text-slate-400">Score 96 · 85 attendees · 24 MQLs · $520k pipeline · 4 partners</p>
                   </div>
                   <span className="text-xs bg-blue-500/10 text-blue-200 px-2 py-1 rounded-md">
                     Schedule
@@ -247,7 +247,7 @@ export default function Home() {
                 <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
                   <div>
                     <p className="text-sm">SF Sales Kickoff</p>
-                    <p className="text-xs text-slate-400">FSS 91 · 64 attendees · 18 MQLs · $410k pipeline · 2 partners</p>
+                    <p className="text-xs text-slate-400">Score 91 · 64 attendees · 18 MQLs · $410k pipeline · 2 partners</p>
                   </div>
                   <span className="text-xs bg-violet-500/10 text-violet-200 px-2 py-1 rounded-md">
                     Expand
@@ -256,7 +256,7 @@ export default function Home() {
                 <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
                   <div>
                     <p className="text-sm">Chicago Industry Conference</p>
-                    <p className="text-xs text-slate-400">FSS 68 · 287 attendees · 45 MQLs · $380k pipeline · 0 partners</p>
+                    <p className="text-xs text-slate-400">Score 68 · 287 attendees · 45 MQLs · $380k pipeline · 0 partners</p>
                   </div>
                   <span className="text-xs bg-indigo-500/10 text-indigo-200 px-2 py-1 rounded-md">
                     Optimize
@@ -265,7 +265,7 @@ export default function Home() {
                 <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
                   <div>
                     <p className="text-sm">Seattle Executive Roundtable</p>
-                    <p className="text-xs text-slate-400">FSS 94 · 12 attendees · 8 MQLs · $290k pipeline · 2 partners</p>
+                    <p className="text-xs text-slate-400">Score 94 · 12 attendees · 8 MQLs · $290k pipeline · 2 partners</p>
                   </div>
                   <span className="text-xs bg-cyan-500/10 text-cyan-200 px-2 py-1 rounded-md">
                     Review
@@ -274,7 +274,7 @@ export default function Home() {
                 <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
                   <div>
                     <p className="text-sm">Denver Training Workshop</p>
-                    <p className="text-xs text-slate-400">FSS 79 · 52 attendees · 14 MQLs · $125k pipeline · 0 partners</p>
+                    <p className="text-xs text-slate-400">Score 79 · 52 attendees · 14 MQLs · $125k pipeline · 0 partners</p>
                   </div>
                   <span className="text-xs bg-teal-500/10 text-teal-200 px-2 py-1 rounded-md">
                     Adjust
@@ -314,12 +314,12 @@ export default function Home() {
               </div>
 
               <p className="text-slate-300/90 mb-4">
-                AI analyzes 100+ historical events to predict your FSS score before you spend a dollar. Make data-driven go/no-go decisions with confidence.
+                AI analyzes 100+ historical events to predict your Success Score before you spend a dollar. Make data-driven go/no-go decisions with confidence.
               </p>
 
               <div className="bg-slate-950/50 rounded-lg p-4 mb-4">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-xs text-slate-400">Predicted FSS for "Chicago Tech Summit"</span>
+                  <span className="text-xs text-slate-400">Predicted Success Score for "Chicago Tech Summit"</span>
                   <span className="text-xs px-2 py-1 rounded-md bg-emerald-500/10 text-emerald-200">High confidence</span>
                 </div>
                 <div className="flex items-baseline gap-2 mb-1">
@@ -365,7 +365,7 @@ export default function Home() {
                   <span className="text-lg font-bold text-emerald-300">A-</span>
                 </div>
                 <p className="text-xs text-slate-300/80 leading-relaxed mb-2">
-                  "Your field events delivered 2.8× ROI this quarter, with Austin and SF markets significantly outperforming. Partner co-funded events showed 34% higher FSS scores..."
+                  "Your field events delivered 2.8× ROI this quarter, with Austin and SF markets significantly outperforming. Partner co-funded events showed 34% higher Success Scores..."
                 </p>
                 <p className="text-xs text-violet-300">+ Strategic recommendations, trend analysis, peer rankings</p>
               </div>
@@ -546,7 +546,7 @@ export default function Home() {
               <ul className="space-y-2 text-xs">
                 <li><Link href="/how-it-works" className="hover:text-white">How it works</Link></li>
                 <li><Link href="/integrations" className="hover:text-white">Integrations</Link></li>
-                <li><Link href="/fss-score" className="hover:text-white">FSS Score</Link></li>
+                <li><Link href="/fss-score" className="hover:text-white">Success Score</Link></li>
                 <li><Link href="/docs" className="hover:text-white">Documentation</Link></li>
               </ul>
             </div>

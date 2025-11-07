@@ -53,7 +53,7 @@ export default function FSSScore() {
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(124,58,237,0.18),_transparent_55%)]"></div>
           <div className="relative mx-auto max-w-4xl px-4 text-center">
             <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-4">
-              The Field Success Score
+              The Success Score
             </h1>
             <p className="text-slate-200/80 max-w-3xl mx-auto">
               A single metric that shows whether your field marketing events create real value for prospects, sales partners, and your business
@@ -70,11 +70,11 @@ export default function FSSScore() {
               Field marketing teams are stuck defending MQL counts that don't tell the real story. You hit your numbers, but sales complains about lead quality. Attendees show up, but you don't know if they actually found value. Leadership wants ROI proof, but all you have are activity metrics.
             </p>
             <p>
-              The Field Success Score solves this by combining hard Salesforce data with real feedback from the people who matter most: your attendees, sales partners, and field team.
+              The Success Score solves this by combining hard Salesforce data with real feedback from the people who matter most: your attendees, sales partners, and field team.
             </p>
           </div>
 
-          <h2 className="text-2xl font-semibold mb-6">How the FSS Works</h2>
+          <h2 className="text-2xl font-semibold mb-6">How the Success Score Works</h2>
 
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-6">
@@ -171,7 +171,7 @@ export default function FSSScore() {
                   <li>✗ Sales feedback: 3/10</li>
                   <li>✗ Attendee satisfaction: 5/10</li>
                 </ul>
-                <div className="text-2xl font-semibold text-rose-400">FSS: 52</div>
+                <div className="text-2xl font-semibold text-rose-400">Success Score: 52</div>
               </div>
 
               <div className="bg-slate-950/50 border-2 border-emerald-500/30 rounded-xl p-6">
@@ -182,12 +182,12 @@ export default function FSSScore() {
                   <li>✓ Sales feedback: 9/10</li>
                   <li>✓ Attendee satisfaction: 9/10</li>
                 </ul>
-                <div className="text-2xl font-semibold text-emerald-400">FSS: 87</div>
+                <div className="text-2xl font-semibold text-emerald-400">Success Score: 87</div>
               </div>
             </div>
 
             <p className="text-sm text-slate-200/80">
-              Traditional metrics say Event A was more successful - double the MQLs. But Event B's high FSS shows it created real value: engaged prospects, quality leads sales actually wants to work, and a format worth repeating. Six months later, Event B drove 3x the closed-won revenue.
+              Traditional metrics say Event A was more successful - double the MQLs. But Event B's high Success Score shows it created real value: engaged prospects, quality leads sales actually wants to work, and a format worth repeating. Six months later, Event B drove 3x the closed-won revenue.
             </p>
           </div>
         </section>
@@ -231,7 +231,7 @@ export default function FSSScore() {
               <ul className="space-y-2 text-xs">
                 <li><Link href="/how-it-works" className="hover:text-white">How it works</Link></li>
                 <li><Link href="/integrations" className="hover:text-white">Integrations</Link></li>
-                <li><Link href="/fss-score" className="hover:text-white">FSS Score</Link></li>
+                <li><Link href="/fss-score" className="hover:text-white">Success Score</Link></li>
                 <li><Link href="/docs" className="hover:text-white">Documentation</Link></li>
               </ul>
             </div>

@@ -74,7 +74,7 @@ export default function Docs() {
               <div>
                 <h3 className="text-xl font-semibold mb-3">Connect Salesforce</h3>
                 <p className="text-slate-200/80 mb-4">
-                  Click "Connect Salesforce" in your Momentum dashboard and authorize access. Momentum will request read access to Campaigns, Campaign Members, Opportunities, and Accounts, plus write access to sync Field Success Scores back to custom Campaign fields.
+                  Click "Connect Salesforce" in your Momentum dashboard and authorize access. Momentum will request read access to Campaigns, Campaign Members, Opportunities, and Accounts, plus write access to sync Success Scores back to custom Campaign fields.
                 </p>
                 <div className="bg-slate-950/50 rounded-lg p-3 font-mono text-sm mb-2">
                   Settings → Integrations → Salesforce → Authorize
@@ -152,16 +152,16 @@ export default function Docs() {
                 <span className="text-2xl font-bold text-white">4</span>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-3">View Your Field Success Score</h3>
+                <h3 className="text-xl font-semibold mb-3">View Your Success Score</h3>
                 <p className="text-slate-200/80 mb-4">
-                  Once survey responses come in (typically within 3-5 days), Momentum calculates your Field Success Score by combining Salesforce campaign data with feedback scores. The FSS and all underlying metrics automatically sync back to your Salesforce Campaign object.
+                  Once survey responses come in (typically within 3-5 days), Momentum calculates your Success Score by combining Salesforce campaign data with feedback scores. The Success Score and all underlying metrics automatically sync back to your Salesforce Campaign object.
                 </p>
                 <div className="bg-slate-950/50 rounded-lg p-4 mb-2">
                   <div className="text-xs font-semibold text-slate-400 mb-2">WHAT YOU'LL SEE</div>
                   <ul className="space-y-2 text-sm text-slate-200/80">
                     <li className="flex gap-2">
                       <span className="text-violet-400">•</span>
-                      Overall Field Success Score (0-100)
+                      Overall Success Score (0-100)
                     </li>
                     <li className="flex gap-2">
                       <span className="text-violet-400">•</span>
@@ -225,8 +225,8 @@ export default function Docs() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" />
                 </svg>
               </div>
-              <h3 className="font-semibold mb-2">FSS Score Methodology</h3>
-              <p className="text-sm text-slate-200/80 mb-3">Deep dive into how the Field Success Score is calculated, weighted, and benchmarked against your historical events</p>
+              <h3 className="font-semibold mb-2">Success Score Methodology</h3>
+              <p className="text-sm text-slate-200/80 mb-3">Deep dive into how the Success Score is calculated, weighted, and benchmarked against your historical events</p>
               <a href="#" className="text-sm text-violet-400 font-medium hover:text-violet-300">Read docs →</a>
             </div>
 
@@ -338,7 +338,7 @@ export default function Docs() {
               <ul className="space-y-2 text-xs">
                 <li><Link href="/how-it-works" className="hover:text-white">How it works</Link></li>
                 <li><Link href="/integrations" className="hover:text-white">Integrations</Link></li>
-                <li><Link href="/fss-score" className="hover:text-white">FSS Score</Link></li>
+                <li><Link href="/fss-score" className="hover:text-white">Success Score</Link></li>
                 <li><Link href="/docs" className="hover:text-white">Documentation</Link></li>
               </ul>
             </div>
