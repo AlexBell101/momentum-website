@@ -58,13 +58,21 @@ export default function Home() {
       requestAnimationFrame(scroll);
     };
 
+    // Prevent mouse wheel from interfering with auto-scroll
+    const handleWheel = (e: WheelEvent) => {
+      e.preventDefault();
+      e.stopPropagation();
+    };
+
     container.addEventListener('mouseenter', handleMouseEnter);
     container.addEventListener('mouseleave', handleMouseLeave);
+    container.addEventListener('wheel', handleWheel, { passive: false });
 
     return () => {
       cancelAnimationFrame(animationId);
       container.removeEventListener('mouseenter', handleMouseEnter);
       container.removeEventListener('mouseleave', handleMouseLeave);
+      container.removeEventListener('wheel', handleWheel);
     };
   }, []);
 
@@ -473,15 +481,14 @@ export default function Home() {
               <ul className="space-y-2 text-sm text-slate-200/80">
                 <li>✔ Registrations</li>
                 <li>✔ Check-ins</li>
-                <li>✔ Attendee survey / NPS</li>
-                <li>✖ Sales reality</li>
-                <li>✖ Partner ROI</li>
+                <li>✔ MQLs</li>
               </ul>
               <p className="text-xs text-slate-500 mt-4">= 50% of the story</p>
             </div>
             <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-6">
               <h3 className="font-medium mb-3">What Momentum adds</h3>
               <ul className="space-y-2 text-sm text-slate-200/80">
+                <li>✅ Attendee survey</li>
                 <li>✅ Sales feedback (auto-routed)</li>
                 <li>✅ Partner/sponsor value</li>
                 <li>✅ AI recommendation</li>
