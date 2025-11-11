@@ -28,10 +28,10 @@ export default function Privacy() {
       {/* Navigation */}
       <header>
         <div>
-          <div className="logo-container">
-            <div className="logo-icon">M</div>
-            <span className="logo-text">Momentum</span>
-          </div>
+          <Link href="/" className="logo-container">
+            <img src="/favicon.svg" alt="Momentum" className="logo-icon" />
+            <span className="logo-text">MOMENTUM</span>
+          </Link>
           <nav>
             <Link href="/">Home</Link>
             <Link href="/how-it-works">How it works</Link>
@@ -534,8 +534,8 @@ export default function Privacy() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <div className="logo-icon-footer">M</div>
-                <span className="font-semibold">Momentum</span>
+                <img src="/favicon.svg" alt="Momentum" className="h-8 w-8" />
+                <span className="font-bold tracking-tight text-white uppercase" style={{ fontFamily: 'Inter, sans-serif', letterSpacing: '-0.025em' }}>MOMENTUM</span>
               </div>
               <p className="text-xs text-slate-400">
                 Field & event analytics powered by AI

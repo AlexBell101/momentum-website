@@ -28,10 +28,10 @@ export default function Integrations() {
       {/* Navigation */}
       <header>
         <div>
-          <div className="logo-container">
-            <div className="logo-icon">M</div>
-            <span className="logo-text">Momentum</span>
-          </div>
+          <Link href="/" className="logo-container">
+            <img src="/favicon.svg" alt="Momentum" className="logo-icon" />
+            <span className="logo-text">MOMENTUM</span>
+          </Link>
           <nav>
             <Link href="/">Home</Link>
             <Link href="/how-it-works">How it works</Link>
