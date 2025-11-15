@@ -100,6 +100,7 @@ export default function Home() {
             <Link href="/how-it-works">How it works</Link>
             <a href="#stakeholders">Stakeholders</a>
             <Link href="/integrations">Integrations</Link>
+            <Link href="/pricing">Pricing</Link>
             <Link href="/docs">Resources</Link>
           </nav>
           <div className="nav-actions">
