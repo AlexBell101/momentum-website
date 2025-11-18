@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Momentum - Event Success Platform",
-  description: "MQL, meeting, and pipeline data from Salesforce with real feedback from your attendees and sales partners. Go beyond vanity metrics with the Success Score.",
+  title: "Data Karma — The field marketing scorecard",
+  description: "Data Karma builds products for field marketing. Momentum scores every event so you know what to repeat, resize, or pause.",
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
