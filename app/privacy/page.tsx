@@ -29,20 +29,19 @@ export default function Privacy() {
       <header>
         <div>
           <Link href="/" className="logo-container">
-            <img src="/favicon.svg" alt="Momentum" className="logo-icon" />
-            <span className="logo-text">MOMENTUM</span>
+            <img src="/favicon.svg" alt="Data Karma" className="logo-icon" />
+            <span className="logo-text">DATA KARMA</span>
           </Link>
           <nav>
-            <Link href="/">Home</Link>
-            <Link href="/how-it-works">How it works</Link>
-            <Link href="/integrations">Integrations</Link>
-            <Link href="/pricing">Pricing</Link>
-            <Link href="/docs">Resources</Link>
+            <Link href="/momentum">Momentum</Link>
+            <Link href="/momentum/pricing">Pricing</Link>
+            <Link href="/docs/momentum">Docs</Link>
+            <Link href="/trust">Trust</Link>
+            <Link href="/contact">Contact</Link>
           </nav>
           <div className="nav-actions">
-            <a href="https://fss-app-iota.vercel.app/" className="nav-login">Login</a>
             <a href="https://fss-app-iota.vercel.app/" className="nav-cta">
-              Get started
+              Start free
             </a>
           </div>
         </div>
@@ -535,8 +534,8 @@ export default function Privacy() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <img src="/favicon.svg" alt="Momentum" className="h-8 w-8" />
-                <span className="font-bold tracking-tight text-white uppercase" style={{ fontFamily: 'Inter, sans-serif', letterSpacing: '-0.025em' }}>MOMENTUM</span>
+                <img src="/favicon.svg" alt="Data Karma" className="h-8 w-8" />
+                <span className="font-bold tracking-tight text-white uppercase" style={{ fontFamily: 'Inter, sans-serif', letterSpacing: '-0.025em' }}>DATA KARMA</span>
               </div>
               <p className="text-xs text-slate-400">
                 Field & event analytics powered by AI

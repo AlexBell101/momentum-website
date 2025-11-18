@@ -29,20 +29,22 @@ export default function HowItWorks() {
       <header>
         <div>
           <Link href="/" className="logo-container">
-            <img src="/favicon.svg" alt="Momentum" className="logo-icon" />
-            <span className="logo-text">MOMENTUM</span>
+            <img src="/favicon.svg" alt="Data Karma" className="logo-icon" />
+            <span className="logo-text">DATA KARMA</span>
           </Link>
           <nav>
-            <Link href="/">Home</Link>
-            <Link href="/how-it-works">How it works</Link>
-            <Link href="/integrations">Integrations</Link>
-            <Link href="/pricing">Pricing</Link>
-            <Link href="/docs">Resources</Link>
+            
+            <Link href="/momentum">Momentum</Link>
+            <Link href="/momentum/pricing">Pricing</Link>
+            <Link href="/docs/momentum">Docs</Link>
+            <Link href="/trust">Trust</Link>
+            <Link href="/contact">Contact</Link>
           </nav>
           <div className="nav-actions">
-            <a href="https://fss-app-iota.vercel.app/" className="nav-login">Login</a>
+            
             <a href="https://fss-app-iota.vercel.app/" className="nav-cta">
-              Get started
+              
+              Start free
             </a>
           </div>
         </div>
@@ -328,7 +330,7 @@ export default function HowItWorks() {
             </div>
             <div className="flex gap-3 flex-shrink-0 items-center">
               <a href="https://fss-app-iota.vercel.app/" className="bg-white text-slate-950 text-sm px-4 py-2 rounded-md font-medium inline-block hover:bg-slate-100">
-                Get started
+                Start free
               </a>
               <a href="https://fss-app-iota.vercel.app/" className="text-sm text-slate-100/80 hover:text-white whitespace-nowrap">
                 Download sample report →
