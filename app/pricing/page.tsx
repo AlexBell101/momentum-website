@@ -160,7 +160,7 @@ export default function Pricing() {
               </ul>
 
               <a href="https://fss-app-iota.vercel.app/" className="block w-full text-center bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white py-3 rounded-lg font-medium transition-all">
-                Start 14-Day Trial
+                Get Started
               </a>
             </div>
           </div>
@@ -243,11 +243,6 @@ export default function Pricing() {
             </div>
 
             <div className="bg-slate-900/30 border border-slate-800 rounded-xl p-6">
-              <h3 className="font-semibold mb-2">What's included in the 14-day trial?</h3>
-              <p className="text-sm text-slate-300/80">Full Pro access. No credit card required. No automatic charges.</p>
-            </div>
-
-            <div className="bg-slate-900/30 border border-slate-800 rounded-xl p-6">
               <h3 className="font-semibold mb-2">How does Salesforce integration work?</h3>
               <p className="text-sm text-slate-300/80">Connect once, sync automatically. Pull campaign data, opportunities, and contacts directly into Momentum.</p>
             </div>
@@ -274,13 +269,10 @@ export default function Pricing() {
           <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-semibold mb-3">Ready to measure what matters?</h2>
             <p className="text-slate-300/80 mb-6 max-w-2xl mx-auto">
-              Start free or jump into Pro with a 14-day trial. No credit card required.
+              Start free today. Upgrade to Pro when you're ready for advanced features.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <a href="https://fss-app-iota.vercel.app/" className="bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white px-6 py-3 rounded-lg font-medium inline-block transition-all">
-                Start 14-Day Trial
-              </a>
-              <a href="https://fss-app-iota.vercel.app/" className="bg-slate-800 hover:bg-slate-700 text-white px-6 py-3 rounded-lg font-medium inline-block transition-colors">
                 Get Started Free
               </a>
             </div>
