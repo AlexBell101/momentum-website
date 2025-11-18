@@ -4,9 +4,8 @@ import { useEffect } from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
 
-export default function Home() {
+export default function Trust() {
   useEffect(() => {
-    // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', (e) => {
         e.preventDefault();
@@ -48,74 +47,90 @@ export default function Home() {
       </header>
 
       <main className="bg-slate-950 text-slate-50">
-        {/* Hero Section */}
-        <section className="relative overflow-hidden py-20 md:py-28">
+        {/* Hero */}
+        <section className="relative overflow-hidden py-16 md:py-20">
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(124,58,237,0.18),_transparent_55%)]"></div>
-          <div className="relative mx-auto max-w-6xl px-4 text-center">
-            <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-6">
-              The field marketing scorecard
+          <div className="relative mx-auto max-w-6xl px-4">
+            <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-4">
+              Trust & Security
             </h1>
-            <p className="text-xl text-slate-200/80 max-w-3xl mx-auto mb-8">
-              Data Karma builds products that help marketers run fewer, better events. Our flagship, Momentum, combines survey signal, partner feedback, and Salesforce outcomes into one Field Success Score.
+            <p className="text-slate-200/80 text-lg max-w-3xl">
+              Data Karma is built with enterprise security and compliance in mind. We protect your data and respect your privacy.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Link href="/momentum" className="bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white px-6 py-3 rounded-lg font-medium inline-block transition-all">
-                Explore Momentum
-              </Link>
-              <Link href="/contact" className="bg-slate-800 hover:bg-slate-700 text-white px-6 py-3 rounded-lg font-medium inline-block transition-colors">
-                Talk to us
-              </Link>
+          </div>
+        </section>
+
+        {/* Security Features */}
+        <section className="mx-auto max-w-6xl px-4 py-16">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-8">
+              <h3 className="text-xl font-semibold mb-3">SSO & SCIM</h3>
+              <p className="text-slate-300/80 mb-4">
+                Enterprise single sign-on and automated user provisioning for secure, centralized access control.
+              </p>
+              <p className="text-xs text-slate-500">Available as add-on; included in Enterprise</p>
+            </div>
+
+            <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-8">
+              <h3 className="text-xl font-semibold mb-3">Least-privilege Salesforce access</h3>
+              <p className="text-slate-300/80">
+                Our managed Salesforce app requests only the minimum permissions needed. No write access to your core objects without explicit configuration.
+              </p>
+            </div>
+
+            <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-8">
+              <h3 className="text-xl font-semibold mb-3">Data residency</h3>
+              <p className="text-slate-300/80">
+                US-based infrastructure by default. Regional data residency available on request for compliance requirements.
+              </p>
+            </div>
+
+            <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-8">
+              <h3 className="text-xl font-semibold mb-3">Uptime & transparency</h3>
+              <p className="text-slate-300/80 mb-4">
+                Real-time status page, incident history, and proactive notifications for any service impacts.
+              </p>
+              <p className="text-xs text-slate-500">99.9% uptime SLA available</p>
             </div>
           </div>
         </section>
 
-        {/* Why Data Karma */}
+        {/* Compliance */}
         <section className="mx-auto max-w-6xl px-4 py-16">
-          <h2 className="text-3xl font-semibold mb-12 text-center">Why Data Karma</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-8">
-              <h3 className="text-xl font-semibold mb-3">Outcome-first scoring</h3>
-              <p className="text-slate-300/80">
-                Align events to pipeline, influence, and quality—not just registrations.
-              </p>
-            </div>
-            <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-8">
-              <h3 className="text-xl font-semibold mb-3">Integrated where you work</h3>
-              <p className="text-slate-300/80">
-                Salesforce managed app, Marketo patterns, Slack alerts.
-              </p>
-            </div>
-            <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-8">
-              <h3 className="text-xl font-semibold mb-3">Partner-ready</h3>
-              <p className="text-slate-300/80">
-                Capture and weight partner feedback alongside sales and attendee signal.
-              </p>
+          <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-8">
+            <h2 className="text-2xl font-semibold mb-6">Compliance & Legal</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <h3 className="font-semibold mb-2">Data Processing Agreement (DPA)</h3>
+                <p className="text-sm text-slate-300/80 mb-3">
+                  GDPR-compliant DPA available on request. Covers data processing, sub-processors, and security commitments.
+                </p>
+                <Link href="/contact" className="text-violet-400 hover:text-violet-300 text-sm font-medium">
+                  Request DPA →
+                </Link>
+              </div>
+              <div>
+                <h3 className="font-semibold mb-2">Privacy Policy</h3>
+                <p className="text-sm text-slate-300/80 mb-3">
+                  Transparent data practices. We don't sell your data, and we minimize retention.
+                </p>
+                <Link href="/privacy" className="text-violet-400 hover:text-violet-300 text-sm font-medium">
+                  Read Privacy Policy →
+                </Link>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Our Product */}
+        {/* CTA */}
         <section className="mx-auto max-w-6xl px-4 py-16">
-          <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-12 text-center">
-            <h2 className="text-3xl font-semibold mb-4">Momentum — the Field Success Platform</h2>
-            <p className="text-lg text-slate-300/80 mb-8 max-w-2xl mx-auto">
-              Score every event the same way, compare programs apples-to-apples, and know what to repeat, resize, or pause.
+          <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-8 text-center">
+            <h2 className="text-2xl font-semibold mb-3">Security questions?</h2>
+            <p className="text-slate-300/80 mb-6">
+              Our team is happy to answer specific security and compliance questions.
             </p>
-            <Link href="/momentum" className="bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white px-6 py-3 rounded-lg font-medium inline-block transition-all">
-              See Momentum
-            </Link>
-          </div>
-        </section>
-
-        {/* Trust */}
-        <section className="mx-auto max-w-6xl px-4 py-16">
-          <div className="text-center">
-            <h2 className="text-3xl font-semibold mb-4">Security & Trust</h2>
-            <p className="text-lg text-slate-300/80 mb-6 max-w-2xl mx-auto">
-              SSO/SCIM, least-privilege Salesforce scopes, DPA support, uptime transparency.
-            </p>
-            <Link href="/trust" className="text-violet-400 hover:text-violet-300 font-medium">
-              Visit Trust Center →
+            <Link href="/contact" className="bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white px-6 py-3 rounded-lg font-medium inline-block transition-all">
+              Contact us
             </Link>
           </div>
         </section>
