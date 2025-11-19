@@ -42,7 +42,7 @@ export default function FSSScore() {
           </nav>
           <div className="nav-actions">
             
-            <a href="https://fss-app-iota.vercel.app/" className="nav-cta">
+            <a href="https://momentum.datakarma.ai" className="nav-cta">
               
               Start free
             </a>
@@ -205,10 +205,10 @@ export default function FSSScore() {
               </p>
             </div>
             <div className="flex gap-3 flex-shrink-0 items-center">
-              <a href="https://fss-app-iota.vercel.app/" className="bg-white text-slate-950 text-sm px-4 py-2 rounded-md font-medium inline-block hover:bg-slate-100">
+              <a href="https://momentum.datakarma.ai" className="bg-white text-slate-950 text-sm px-4 py-2 rounded-md font-medium inline-block hover:bg-slate-100">
                 Start free
               </a>
-              <a href="https://fss-app-iota.vercel.app/" className="text-sm text-slate-100/80 hover:text-white whitespace-nowrap">
+              <a href="https://momentum.datakarma.ai" className="text-sm text-slate-100/80 hover:text-white whitespace-nowrap">
                 View methodology →
               </a>
             </div>
