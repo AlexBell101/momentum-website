@@ -39,7 +39,7 @@ export default function Contact() {
             <Link href="/contact">Contact</Link>
           </nav>
           <div className="nav-actions">
-            <a href="https://fss-app-iota.vercel.app/" className="nav-cta">
+            <a href="https://momentum.datakarma.ai" className="nav-cta">
               Start free
             </a>
           </div>
@@ -112,7 +112,7 @@ export default function Contact() {
             <p className="text-slate-300/80 mb-6">
               No need to wait for a reply—start free and explore Momentum on your own.
             </p>
-            <a href="https://fss-app-iota.vercel.app/" className="bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white px-6 py-3 rounded-lg font-medium inline-block transition-all">
+            <a href="https://momentum.datakarma.ai" className="bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white px-6 py-3 rounded-lg font-medium inline-block transition-all">
               Start free
             </a>
           </div>
