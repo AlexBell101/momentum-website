@@ -53,7 +53,7 @@ export default function Home() {
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(124,58,237,0.18),_transparent_55%)]"></div>
           <div className="relative mx-auto max-w-6xl px-4 text-center">
             <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-6">
-              The field marketing scorecard — Test Deploy
+              The field marketing scorecard
             </h1>
             <p className="text-xl text-slate-200/80 max-w-3xl mx-auto mb-8">
               Data Karma builds products that help marketers run fewer, better events. Our flagship, Momentum, combines survey signal, partner feedback, and Salesforce outcomes into one Field Success Score.
