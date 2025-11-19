@@ -1,0 +1,73 @@
+# Claude Instructions for momentum-website
+
+## Last Updated: 2025-11-18
+
+## Critical Learnings
+1. **ALWAYS run `npm run build` FIRST** when debugging deployment issues
+2. **I push to a local proxy, not GitHub** - commits must be pulled by user and pushed from their machine
+3. **Vercel webhook issues**: Check vercel.json config validity before assuming webhook is broken
+4. **Domain setup**: Only www.datakarma.ai should be "Production", momentum.datakarma.ai is "Redirect"
+
+## Site Architecture
+- **Root domain**: datakarma.ai (company home)
+- **Product pages**: /momentum, /momentum/pricing, /momentum/how-it-works, etc.
+- **Company pages**: /, /trust, /contact, /privacy
+- **Redirect**: momentum.datakarma.ai → datakarma.ai/momentum (301)
+
+## Current Structure
+```
+/ → Data Karma company home ("The field marketing scorecard")
+/momentum → Momentum product page
+/momentum/pricing → Pricing ($399/mo Pro, Free tier)
+/momentum/how-it-works → How it works
+/momentum/integrations → Integrations
+/momentum/fss-score → Success Score
+/docs/momentum → Documentation
+/trust → Security & compliance
+/contact → Contact (support@datakarma.ai)
+/privacy → Privacy policy
+```
+
+## Branding
+- **Company**: Data Karma (DATA KARMA in logos)
+- **Product**: Momentum
+- **Contact**: support@datakarma.ai
+- **Colors**: #0066FF (blue) → #6E3AED (purple) gradient
+- **Font**: Inter (400, 500, 600, 700)
+- **Favicon**: /public/favicon.svg (blue-purple gradient with M chart)
+
+## Known Issues Fixed
+- Build errors from moved pages → Added redirect pages at old paths
+- vercel.json had both `permanent` and `statusCode` (invalid) → removed `permanent`
+- Multiple Production domains → Set only www.datakarma.ai as Production
+
+## Git Workflow
+1. I commit to branch: `claude/add-events-scroll-list-011CUn7yGjvxHbVyFVySgr34`
+2. User pulls branch, merges to main, pushes to GitHub
+3. Vercel auto-deploys from main branch
+
+## Important Files
+- `vercel.json` - Deployment config, redirects
+- `app/layout.tsx` - Site metadata
+- `app/page.tsx` - Data Karma home
+- `app/momentum/page.tsx` - Momentum product page
+- `app/globals.css` - Global styles, logo styles
+
+## Next Session TODO
+- [ ] Replace favicon with actual Data Karma logo - User confirmed they have one, waiting for file
+  - Will need to replace: /public/favicon.svg and /public/favicon-16.svg
+  - Update any references if logo requires different styling
+- [ ] Update this file with new learnings
+
+## Session 2 Additions (2025-11-19)
+### Logo Decision
+- User has actual Data Karma logo but hasn't uploaded yet
+- Current favicon.svg is a placeholder gradient M chart
+- Recommendation: Replace with actual brand logo when provided for consistency
+
+### SEO Improvements Made
+- Enhanced metadata with comprehensive Open Graph tags
+- Added robots.txt for search engine crawling
+- Added sitemap.xml with all pages
+- Removed "Test Deploy" text from homepage
+- All pages now properly indexed and shareable on social media
