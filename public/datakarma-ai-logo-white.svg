@@ -1,0 +1,6 @@
+<svg viewBox="0 0 280 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main logo text -->
+  <text x="10" y="50" font-family="Arial, sans-serif" font-weight="700" font-size="36" fill="#FFFFFF">
+    <tspan fill="#FFFFFF">Data</tspan><tspan fill="#FFFFFF">Karma</tspan><tspan fill="#E0D0FF" font-size="28">.ai</tspan>
+  </text>
+</svg>

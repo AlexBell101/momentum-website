@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 340">
+  <!-- Background -->
+  <rect width="1200" height="340" fill="#FFFFFF" rx="8" ry="8" />
+  
+  <!-- Flow visual - everything at same vertical level -->
+  <g transform="translate(150, 170)">
+    <!-- Messy Data visualization -->
+    <rect width="200" height="100" rx="8" ry="8" fill="#F8F9FA" stroke="#E9ECEF" stroke-width="2" />
+    
+    <!-- Messy data icon -->
+    <g transform="translate(30, 15)">
+      <rect width="140" height="10" rx="2" ry="2" fill="#CED4DA" />
+      <rect width="90" height="10" rx="2" ry="2" fill="#ADB5BD" transform="translate(0, 20)" />
+      <rect width="120" height="10" rx="2" ry="2" fill="#CED4DA" transform="translate(0, 40)" />
+      <rect width="70" height="10" rx="2" ry="2" fill="#ADB5BD" transform="translate(0, 60)" />
+    </g>
+    
+    <text x="100" y="130" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#495057">Messy Data</text>
+  </g>
+  
+  <!-- Arrow 1 -->
+  <g transform="translate(380, 170)">
+    <line x1="0" y1="50" x2="90" y2="50" stroke="#7B38E0" stroke-width="3" />
+    <polygon points="90,50 80,45 80,55" fill="#7B38E0" />
+  </g>
+  
+  <!-- Data Karma - Using actual logo -->
+  <g transform="translate(500, 170)">
+    <rect width="200" height="100" rx="8" ry="8" fill="#F8F9FA" stroke="#E9ECEF" stroke-width="2" />
+    
+    <!-- Actual logo - centered in the box -->
+    <image x="25" y="15" width="150" height="70" preserveAspectRatio="xMidYMid meet" xlink:href="https://9745683ec8c9eef245309a9dcc19fbd0.cdn.bubble.io/cdn-cgi/image/w=384,h=107,f=auto,dpr=2,fit=contain/f1733137139255x464357823553296400/Data%20karma%20logo.png"/>
+    
+    <text x="100" y="130" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#495057">Data Karma</text>
+  </g>
+  
+  <!-- Arrow 2 -->
+  <g transform="translate(730, 170)">
+    <line x1="0" y1="50" x2="90" y2="50" stroke="#7B38E0" stroke-width="3" />
+    <polygon points="90,50 80,45 80,55" fill="#7B38E0" />
+  </g>
+  
+  <!-- Clean Data visualization -->
+  <g transform="translate(850, 170)">
+    <rect width="200" height="100" rx="8" ry="8" fill="#F8F9FA" stroke="#E9ECEF" stroke-width="2" />
+    
+    <!-- Clean data icon -->
+    <g transform="translate(30, 15)">
+      <rect width="140" height="10" rx="2" ry="2" fill="#7B38E0" opacity="0.8" />
+      <rect width="140" height="10" rx="2" ry="2" fill="#7B38E0" opacity="0.7" transform="translate(0, 20)" />
+      <rect width="140" height="10" rx="2" ry="2" fill="#7B38E0" opacity="0.8" transform="translate(0, 40)" />
+      <rect width="140" height="10" rx="2" ry="2" fill="#7B38E0" opacity="0.7" transform="translate(0, 60)" />
+    </g>
+    
+    <text x="100" y="130" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#495057">Clean Data</text>
+  </g>
+  
+  <!-- Metrics at top -->
+  <g transform="translate(150, 70)">
+    <rect width="200" height="40" rx="20" ry="20" fill="#7B38E0" />
+    <text x="100" y="26" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">95% Less Prep Time</text>
+  </g>
+  
+  <g transform="translate(500, 70)">
+    <rect width="200" height="40" rx="20" ry="20" fill="#7B38E0" />
+    <text x="100" y="26" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">99.8% Data Accuracy</text>
+  </g>
+  
+  <g transform="translate(850, 70)">
+    <rect width="200" height="40" rx="20" ry="20" fill="#7B38E0" />
+    <text x="100" y="26" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">67% More Leads</text>
+  </g>
+</svg>
