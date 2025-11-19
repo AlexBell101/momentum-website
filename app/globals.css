@@ -3324,8 +3324,8 @@ footer {
 }
 
 .logo-icon {
-  width: 32px;
-  height: 32px;
+  width: 64px;
+  height: 64px;
   color: var(--primary);
 }
 
@@ -5745,8 +5745,8 @@ header .logo-container:hover {
 }
 
 header .logo-icon {
-  height: 2rem;
-  width: 2rem;
+  height: 64px;
+  width: auto;
 }
 
 header .logo-text {

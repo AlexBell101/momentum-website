@@ -29,7 +29,7 @@ export default function Docs() {
       <header>
         <div>
           <Link href="/" className="logo-container">
-            <img src="/datakarma-ai-logo-white.svg" alt="Data Karma" className="logo-icon" style={{ height: "48px" }} />
+            <img src="/datakarma-ai-logo-white.svg" alt="Data Karma" className="logo-icon" />
             
           </Link>
           <nav>

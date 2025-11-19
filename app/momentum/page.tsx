@@ -32,6 +32,7 @@ export default function Home() {
     const itemHeight = 68; // approximate height of each item including gap
     const totalItems = 8;
     const totalHeight = itemHeight * totalItems;
+    let animationId: number | null = null;
 
     const scroll = () => {
       scrollPos += scrollSpeed;
@@ -44,35 +45,39 @@ export default function Home() {
         container.scrollTop = scrollPos;
       }
 
-      requestAnimationFrame(scroll);
+      animationId = requestAnimationFrame(scroll);
     };
 
-    const animationId = requestAnimationFrame(scroll);
+    // Start the animation
+    animationId = requestAnimationFrame(scroll);
 
-    // Pause on hover
-    const handleMouseEnter = () => {
-      cancelAnimationFrame(animationId);
-    };
-
-    const handleMouseLeave = () => {
-      requestAnimationFrame(scroll);
-    };
-
-    // Prevent mouse wheel from interfering with auto-scroll
+    // Prevent ALL mouse interactions from interfering with auto-scroll
     const handleWheel = (e: WheelEvent) => {
       e.preventDefault();
       e.stopPropagation();
     };
 
-    container.addEventListener('mouseenter', handleMouseEnter);
-    container.addEventListener('mouseleave', handleMouseLeave);
+    const handleMouseDown = (e: MouseEvent) => {
+      e.preventDefault();
+      e.stopPropagation();
+    };
+
+    const handleTouchStart = (e: TouchEvent) => {
+      e.preventDefault();
+      e.stopPropagation();
+    };
+
     container.addEventListener('wheel', handleWheel, { passive: false });
+    container.addEventListener('mousedown', handleMouseDown);
+    container.addEventListener('touchstart', handleTouchStart, { passive: false });
 
     return () => {
-      cancelAnimationFrame(animationId);
-      container.removeEventListener('mouseenter', handleMouseEnter);
-      container.removeEventListener('mouseleave', handleMouseLeave);
+      if (animationId) {
+        cancelAnimationFrame(animationId);
+      }
       container.removeEventListener('wheel', handleWheel);
+      container.removeEventListener('mousedown', handleMouseDown);
+      container.removeEventListener('touchstart', handleTouchStart);
     };
   }, []);
 
@@ -87,13 +92,20 @@ export default function Home() {
         .scrollbar-hide::-webkit-scrollbar {
           display: none;
         }
+        .no-pointer-events {
+          pointer-events: none;
+          user-select: none;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+        }
       `}</style>
 
       {/* Navigation */}
       <header>
         <div>
           <Link href="/" className="logo-container">
-            <img src="/datakarma-ai-logo-white.svg" alt="Data Karma" className="logo-icon" style={{ height: "48px" }} />
+            <img src="/datakarma-ai-logo-white.svg" alt="Data Karma" className="logo-icon" />
           </Link>
           <nav>
             <Link href="/momentum">Momentum</Link>
@@ -141,7 +153,7 @@ export default function Home() {
                 <p className="text-sm font-medium text-slate-50">Q3 field events — AI recommendations</p>
                 <span className="text-xs text-slate-400">Updated 3m ago</span>
               </div>
-              <ul ref={scrollContainerRef} className="space-y-3 max-h-52 overflow-y-auto pr-2 scrollbar-hide">
+              <ul ref={scrollContainerRef} className="space-y-3 max-h-52 overflow-y-auto pr-2 scrollbar-hide no-pointer-events">
                 <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
                   <div>
                     <p className="text-sm">Austin Customer Breakfast</p>
@@ -539,7 +551,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
             <div className="flex items-center gap-2">
-              <img src="/datakarma-ai-logo-white.svg" alt="Data Karma" style={{ height: "36px" }} />
+              <img src="/datakarma-ai-logo-white.svg" alt="Data Karma" className="logo-icon" />
             </div>
             <nav className="flex flex-wrap gap-6 text-xs">
               <Link href="/momentum" className="hover:text-white">Momentum</Link>
