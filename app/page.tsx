@@ -29,7 +29,7 @@ export default function Home() {
       <header>
         <div>
           <Link href="/" className="logo-container">
-            <img src="/datakarma-ai-logo-white.svg" alt="Data Karma" className="logo-icon" style={{ height: "40px" }} />
+            <img src="/datakarma-ai-logo-white.svg" alt="Data Karma" className="logo-icon" style={{ height: "48px" }} />
           </Link>
           <nav>
             <Link href="/momentum">Momentum</Link>
@@ -111,7 +111,7 @@ export default function Home() {
           <div className="text-center">
             <h2 className="text-3xl font-semibold mb-4">Security & Trust</h2>
             <p className="text-lg text-slate-300/80 mb-6 max-w-2xl mx-auto">
-              SSO/SCIM, least-privilege Salesforce scopes, DPA support, uptime transparency.
+              Enterprise SSO, least-privilege Salesforce scopes, DPA support, uptime transparency.
             </p>
             <Link href="/trust" className="text-violet-400 hover:text-violet-300 font-medium">
               Visit Trust Center →
@@ -125,7 +125,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
             <div className="flex items-center gap-2">
-              <img src="/datakarma-ai-logo-white.svg" alt="Data Karma" style={{ height: "32px" }} />
+              <img src="/datakarma-ai-logo-white.svg" alt="Data Karma" style={{ height: "36px" }} />
             </div>
             <nav className="flex flex-wrap gap-6 text-xs">
               <Link href="/momentum" className="hover:text-white">Momentum</Link>

@@ -28,7 +28,7 @@ export default function Trust() {
       <header>
         <div>
           <Link href="/" className="logo-container">
-            <img src="/datakarma-ai-logo-white.svg" alt="Data Karma" className="logo-icon" style={{ height: "40px" }} />
+            <img src="/datakarma-ai-logo-white.svg" alt="Data Karma" className="logo-icon" style={{ height: "48px" }} />
             
           </Link>
           <nav>
@@ -64,9 +64,9 @@ export default function Trust() {
         <section className="mx-auto max-w-6xl px-4 py-16">
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-8">
-              <h3 className="text-xl font-semibold mb-3">SSO & SCIM</h3>
+              <h3 className="text-xl font-semibold mb-3">Enterprise SSO</h3>
               <p className="text-slate-300/80 mb-4">
-                Enterprise single sign-on and automated user provisioning for secure, centralized access control.
+                Single sign-on with your identity provider for secure, centralized access control.
               </p>
               <p className="text-xs text-slate-500">Available as add-on; included in Enterprise</p>
             </div>
@@ -141,7 +141,7 @@ export default function Trust() {
         <div className="mx-auto max-w-6xl px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
             <div className="flex items-center gap-2">
-              <img src="/datakarma-ai-logo-white.svg" alt="Data Karma" style={{ height: "32px" }} />
+              <img src="/datakarma-ai-logo-white.svg" alt="Data Karma" style={{ height: "36px" }} />
               
             </div>
             <nav className="flex flex-wrap gap-6 text-xs">
