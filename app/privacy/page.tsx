@@ -29,7 +29,7 @@ export default function Privacy() {
       <header>
         <div>
           <Link href="/" className="logo-container">
-            <img src="/datakarma-ai-logo-white.svg" alt="Data Karma" className="logo-icon" />
+            <img src="/datakarma-ai-logo-white.svg" alt="Data Karma" className="logo-icon" style={{ height: "40px" }} />
             
           </Link>
           <nav>
@@ -534,7 +534,7 @@ export default function Privacy() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <img src="/datakarma-ai-logo-white.svg" alt="Data Karma" className="h-8" />
+                <img src="/datakarma-ai-logo-white.svg" alt="Data Karma" style={{ height: "32px" }} />
                 
               </div>
               <p className="text-xs text-slate-400">

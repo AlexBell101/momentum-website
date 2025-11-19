@@ -29,7 +29,7 @@ export default function Home() {
       <header>
         <div>
           <Link href="/" className="logo-container">
-            <img src="/datakarma-ai-logo-white.svg" alt="Data Karma" className="logo-icon" />
+            <img src="/datakarma-ai-logo-white.svg" alt="Data Karma" className="logo-icon" style={{ height: "40px" }} />
           </Link>
           <nav>
             <Link href="/momentum">Momentum</Link>
@@ -125,7 +125,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
             <div className="flex items-center gap-2">
-              <img src="/datakarma-ai-logo-white.svg" alt="Data Karma" className="h-8" />
+              <img src="/datakarma-ai-logo-white.svg" alt="Data Karma" style={{ height: "32px" }} />
             </div>
             <nav className="flex flex-wrap gap-6 text-xs">
               <Link href="/momentum" className="hover:text-white">Momentum</Link>
