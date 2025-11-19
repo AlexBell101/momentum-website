@@ -29,8 +29,8 @@ export default function Pricing() {
       <header>
         <div>
           <Link href="/" className="logo-container">
-            <img src="/favicon.svg" alt="Data Karma" className="logo-icon" />
-            <span className="logo-text">DATA KARMA</span>
+            <img src="/datakarma-ai-logo-white.svg" alt="Data Karma" className="logo-icon" />
+            
           </Link>
           <nav>
             <Link href="/momentum">Momentum</Link>
