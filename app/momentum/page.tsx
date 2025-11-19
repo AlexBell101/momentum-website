@@ -128,14 +128,17 @@ export default function Home() {
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(124,58,237,0.18),_transparent_55%)]"></div>
           <div className="relative mx-auto max-w-6xl px-4 grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="inline-flex items-center gap-2 rounded-full bg-violet-500/10 border border-violet-500/30 px-3 py-1 text-xs text-violet-100 mb-5">
-                EVENT ANALYTICS
-              </p>
-              <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-4">
-                Know which events to repeat, resize, or pause.
+              <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-3">
+                Momentum
               </h1>
-              <p className="text-slate-200/80 mb-6 max-w-xl">
-                Momentum combines pipeline data, MQLs, and feedback from Sales, Marketing, Attendees, and Partners into one holistic Success Score. Get AI recommendations for every event you run.
+              <p className="text-xl md:text-2xl text-violet-300 mb-6">
+                The Event Success Platform
+              </p>
+              <p className="text-lg text-slate-200 mb-4 max-w-xl">
+                Know which events to repeat, resize, or pause.
+              </p>
+              <p className="text-slate-300/80 mb-6 max-w-xl">
+                Combines pipeline data, MQLs, and feedback from Sales, Marketing, Attendees, and Partners into one holistic Success Score. Get AI recommendations for every event you run.
               </p>
               <div className="flex flex-wrap gap-4 mb-6">
                 <a href="https://fss-app-iota.vercel.app/" className="bg-violet-500 hover:bg-violet-400 text-sm px-5 py-2.5 rounded-md font-medium inline-block">
