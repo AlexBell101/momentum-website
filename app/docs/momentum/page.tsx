@@ -59,7 +59,7 @@ export default function Docs() {
               Documentation
             </h1>
             <p className="text-slate-200/80 max-w-3xl mx-auto">
-              Everything you need to get started with Momentum and measure field marketing success
+              Everything you need to get started with Momentum and measure event marketing success
             </p>
           </div>
         </section>
@@ -94,7 +94,7 @@ export default function Docs() {
               <div>
                 <h3 className="text-xl font-semibold mb-3">Create Your First Event</h3>
                 <p className="text-slate-200/80 mb-4">
-                  Create a new event in Momentum and link it to your Salesforce Campaign. Set your event date, choose which surveys to send (attendees, sales partners, field team), and configure survey timing.
+                  Create a new event in Momentum and link it to your Salesforce Campaign. Set your event date, choose which surveys to send (attendees, sales partners, event team), and configure survey timing.
                 </p>
                 <ul className="space-y-2 text-sm text-slate-200/80 mb-2">
                   <li className="flex gap-2">
@@ -126,7 +126,7 @@ export default function Docs() {
               <div>
                 <h3 className="text-xl font-semibold mb-3">Collect Feedback</h3>
                 <p className="text-slate-200/80 mb-4">
-                  After your event, Momentum automatically sends surveys to attendees, sales partners, and your field team. Survey links are sent via email with customizable timing and reminders.
+                  After your event, Momentum automatically sends surveys to attendees, sales partners, and your event team. Survey links are sent via email with customizable timing and reminders.
                 </p>
                 <div className="grid md:grid-cols-3 gap-3 mb-2">
                   <div className="bg-slate-950/50 rounded-lg p-3 text-center">
@@ -140,7 +140,7 @@ export default function Docs() {
                     <div className="text-xs text-slate-400">~2 min survey</div>
                   </div>
                   <div className="bg-slate-950/50 rounded-lg p-3 text-center">
-                    <div className="text-xs font-semibold text-slate-400 mb-1">FIELD TEAM</div>
+                    <div className="text-xs font-semibold text-slate-400 mb-1">EVENT TEAM</div>
                     <div className="text-lg font-bold text-violet-400">5 questions</div>
                     <div className="text-xs text-slate-400">~2 min survey</div>
                   </div>
@@ -176,7 +176,7 @@ export default function Docs() {
                     </li>
                     <li className="flex gap-2">
                       <span className="text-violet-400">•</span>
-                      Field Team Score
+                      Event Team Score
                     </li>
                     <li className="flex gap-2">
                       <span className="text-violet-400">•</span>
@@ -274,7 +274,7 @@ export default function Docs() {
           <div className="text-center mb-12">
             <h2 className="text-2xl font-semibold mb-4">Need Help?</h2>
             <p className="text-slate-200/80 max-w-2xl mx-auto">
-              Our team is here to help you measure field marketing success with confidence
+              Our team is here to help you measure event marketing success with confidence
             </p>
           </div>
 
@@ -365,7 +365,7 @@ export default function Docs() {
             </div>
           </div>
           <div className="pt-8 border-t border-slate-900">
-            © 2025 Momentum. Built for field & event marketing teams.
+            © 2025 Momentum. Built for event marketing teams.
           </div>
         </div>
       </footer>

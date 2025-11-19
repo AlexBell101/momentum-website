@@ -129,7 +129,7 @@ export default function Home() {
           <div className="relative mx-auto max-w-6xl px-4 grid md:grid-cols-2 gap-12 items-center">
             <div>
               <p className="inline-flex items-center gap-2 rounded-full bg-violet-500/10 border border-violet-500/30 px-3 py-1 text-xs text-violet-100 mb-5">
-                FIELD & EVENT ANALYTICS
+                EVENT ANALYTICS
               </p>
               <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-4">
                 Know which events to repeat, resize, or pause.
@@ -143,14 +143,14 @@ export default function Home() {
                 </a>
               </div>
               <p className="text-xs text-slate-500">
-                Built for field & event marketing teams at B2B SaaS, cybersecurity, and data companies.
+                Built for event marketing teams at B2B SaaS, cybersecurity, and data companies.
               </p>
             </div>
 
             {/* Hero Mock Panel */}
             <div className="bg-slate-900/40 border border-slate-800 rounded-2xl p-5 shadow-xl space-y-4">
               <div className="flex items-center justify-between">
-                <p className="text-sm font-medium text-slate-50">Q3 field events — AI recommendations</p>
+                <p className="text-sm font-medium text-slate-50">Q3 events — AI recommendations</p>
                 <span className="text-xs text-slate-400">Updated 3m ago</span>
               </div>
               <ul ref={scrollContainerRef} className="space-y-3 max-h-52 overflow-y-auto pr-2 scrollbar-hide no-pointer-events">
@@ -384,7 +384,7 @@ export default function Home() {
                   <span className="text-lg font-bold text-emerald-300">A-</span>
                 </div>
                 <p className="text-xs text-slate-300/80 leading-relaxed mb-2">
-                  "Your field events delivered 2.8× ROI this quarter, with Austin and SF markets significantly outperforming. Partner co-funded events showed 34% higher Success Scores..."
+                  "Your events delivered 2.8× ROI this quarter, with Austin and SF markets significantly outperforming. Partner co-funded events showed 34% higher Success Scores..."
                 </p>
                 <p className="text-xs text-violet-300">+ Strategic recommendations, trend analysis, peer rankings</p>
               </div>
@@ -564,7 +564,7 @@ export default function Home() {
           </div>
           <div className="text-center pt-6 border-t border-slate-900">
             <p className="text-xs">Momentum is a Data Karma product.</p>
-            <p className="text-xs mt-2">© 2025 Data Karma. Built for field & event marketing teams.</p>
+            <p className="text-xs mt-2">© 2025 Data Karma. Built for event marketing teams.</p>
           </div>
         </div>
       </footer>

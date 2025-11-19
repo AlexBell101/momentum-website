@@ -68,7 +68,7 @@ export default function Privacy() {
             {/* Introduction */}
             <div className="mb-12">
               <p className="text-slate-200/80 mb-4">
-                DataKarma, Inc. ("Momentum," "we," "us," or "our") operates the Momentum platform at momentum.com and related services. This Privacy Policy explains how we collect, use, disclose, and protect your personal information when you use our field and event marketing analytics platform.
+                DataKarma, Inc. ("Momentum," "we," "us," or "our") operates the Momentum platform at momentum.com and related services. This Privacy Policy explains how we collect, use, disclose, and protect your personal information when you use our event marketing analytics platform.
               </p>
               <p className="text-slate-200/80 mb-4">
                 We are committed to protecting your privacy and complying with applicable data protection laws, including the General Data Protection Regulation (GDPR), California Consumer Privacy Act (CCPA), and other privacy regulations.
@@ -538,7 +538,7 @@ export default function Privacy() {
                 
               </div>
               <p className="text-xs text-slate-400">
-                Field & event analytics powered by AI
+                Event analytics powered by AI
               </p>
             </div>
             <div>

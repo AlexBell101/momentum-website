@@ -59,7 +59,7 @@ export default function FSSScore() {
               The Success Score
             </h1>
             <p className="text-slate-200/80 max-w-3xl mx-auto">
-              A single metric that shows whether your field marketing events create real value for prospects, sales partners, and your business
+              A single metric that shows whether your event marketing programs create real value for prospects, sales partners, and your business
             </p>
           </div>
         </section>
@@ -70,10 +70,10 @@ export default function FSSScore() {
 
           <div className="space-y-4 mb-12 text-slate-200/80">
             <p>
-              Field marketing teams are stuck defending MQL counts that don't tell the real story. You hit your numbers, but sales complains about lead quality. Attendees show up, but you don't know if they actually found value. Leadership wants ROI proof, but all you have are activity metrics.
+              Event marketing teams are stuck defending MQL counts that don't tell the real story. You hit your numbers, but sales complains about lead quality. Attendees show up, but you don't know if they actually found value. Leadership wants ROI proof, but all you have are activity metrics.
             </p>
             <p>
-              The Success Score solves this by combining hard Salesforce data with real feedback from the people who matter most: your attendees, sales partners, and field team.
+              The Success Score solves this by combining hard Salesforce data with real feedback from the people who matter most: your attendees, sales partners, and event team.
             </p>
           </div>
 
@@ -122,9 +122,9 @@ export default function FSSScore() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
                 </svg>
               </div>
-              <h3 className="font-semibold mb-3">4. Field Team Score</h3>
+              <h3 className="font-semibold mb-3">4. Event Team Score</h3>
               <p className="text-sm text-slate-200/80">
-                Your field marketing team's assessment of execution quality, logistics, and whether the event achieved its strategic goals. This captures operational excellence and provides context that numbers alone can't show.
+                Your event marketing team's assessment of execution quality, logistics, and whether the event achieved its strategic goals. This captures operational excellence and provides context that numbers alone can't show.
               </p>
             </div>
           </div>
@@ -258,7 +258,7 @@ export default function FSSScore() {
             </div>
           </div>
           <div className="pt-8 border-t border-slate-900">
-            © 2025 Momentum. Built for field & event marketing teams.
+            © 2025 Momentum. Built for event marketing teams.
           </div>
         </div>
       </footer>

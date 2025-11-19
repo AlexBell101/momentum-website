@@ -344,7 +344,7 @@ export default function Integrations() {
             </div>
           </div>
           <div className="pt-8 border-t border-slate-900">
-            © 2025 Momentum. Built for field & event marketing teams.
+            © 2025 Momentum. Built for event marketing teams.
           </div>
         </div>
       </footer>

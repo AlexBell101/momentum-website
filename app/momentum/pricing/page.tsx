@@ -56,7 +56,7 @@ export default function Pricing() {
               Simple, Transparent Pricing
             </h1>
             <p className="text-slate-200/80 text-lg max-w-2xl mx-auto">
-              Stop guessing if your field marketing works. Start measuring what matters.
+              Stop guessing if your event marketing works. Start measuring what matters.
             </p>
           </div>
         </section>
@@ -112,7 +112,7 @@ export default function Pricing() {
                 <span className="text-4xl font-bold">$399</span>
                 <span className="text-slate-400">/month</span>
               </div>
-              <p className="text-sm text-slate-300/80 mb-2">For serious field marketing teams</p>
+              <p className="text-sm text-slate-300/80 mb-2">For serious event marketing teams</p>
               <p className="text-xs text-violet-300 mb-6">Annual: $3,990/year (save $798)</p>
 
               <ul className="space-y-3 mb-8 text-sm">
@@ -198,7 +198,7 @@ export default function Pricing() {
                 <ul className="space-y-2 text-sm text-slate-300/80">
                   <li className="flex items-start gap-2">
                     <span className="text-green-400">✅</span>
-                    <span>Single source of truth for field marketing</span>
+                    <span>Single source of truth for event marketing</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-400">✅</span>
@@ -321,7 +321,7 @@ export default function Pricing() {
             </div>
           </div>
           <div className="pt-8 border-t border-slate-900">
-            © 2025 Momentum. Built for field & event marketing teams.
+            © 2025 Momentum. Built for event marketing teams.
           </div>
         </div>
       </footer>

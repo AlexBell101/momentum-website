@@ -52,10 +52,10 @@ export default function Home() {
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(124,58,237,0.18),_transparent_55%)]"></div>
           <div className="relative mx-auto max-w-6xl px-4 text-center">
             <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-6">
-              The field marketing scorecard
+              The event marketing scorecard
             </h1>
             <p className="text-xl text-slate-200/80 max-w-3xl mx-auto mb-8">
-              Data Karma builds products that help marketers run fewer, better events. Our flagship, Momentum, combines survey signal, partner feedback, and Salesforce outcomes into one Field Success Score.
+              Data Karma builds products that help marketers run fewer, better events. Our flagship, Momentum, combines survey signal, partner feedback, and Salesforce outcomes into one Event Success Score.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link href="/momentum" className="bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white px-6 py-3 rounded-lg font-medium inline-block transition-all">
@@ -96,7 +96,7 @@ export default function Home() {
         {/* Our Product */}
         <section className="mx-auto max-w-6xl px-4 py-16">
           <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-12 text-center">
-            <h2 className="text-3xl font-semibold mb-4">Momentum — the Field Success Platform</h2>
+            <h2 className="text-3xl font-semibold mb-4">Momentum — the Event Success Platform</h2>
             <p className="text-lg text-slate-300/80 mb-8 max-w-2xl mx-auto">
               Score every event the same way, compare programs apples-to-apples, and know what to repeat, resize, or pause.
             </p>
@@ -138,7 +138,7 @@ export default function Home() {
           </div>
           <div className="text-center pt-6 border-t border-slate-900">
             <p className="text-xs">Momentum is a Data Karma product.</p>
-            <p className="text-xs mt-2">© 2025 Data Karma. Built for field & event marketing teams.</p>
+            <p className="text-xs mt-2">© 2025 Data Karma. Built for event marketing teams.</p>
           </div>
         </div>
       </footer>

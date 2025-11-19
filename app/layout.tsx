@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Data Karma — The field marketing scorecard",
-  description: "Data Karma builds products for field marketing. Momentum scores every event so you know what to repeat, resize, or pause.",
-  keywords: ["field marketing", "event analytics", "marketing scorecard", "event ROI", "Salesforce integration", "marketing automation", "event success score", "B2B events", "pipeline tracking"],
+  title: "Data Karma — The event marketing scorecard",
+  description: "Data Karma builds products for event marketing. Momentum scores every event so you know what to repeat, resize, or pause.",
+  keywords: ["event marketing", "event analytics", "marketing scorecard", "event ROI", "Salesforce integration", "marketing automation", "event success score", "B2B events", "pipeline tracking"],
   authors: [{ name: "Data Karma" }],
   creator: "Data Karma",
   publisher: "Data Karma",
@@ -17,21 +17,21 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.datakarma.ai",
     siteName: "Data Karma",
-    title: "Data Karma — The field marketing scorecard",
-    description: "Data Karma builds products for field marketing. Momentum scores every event so you know what to repeat, resize, or pause.",
+    title: "Data Karma — The event marketing scorecard",
+    description: "Data Karma builds products for event marketing. Momentum scores every event so you know what to repeat, resize, or pause.",
     images: [
       {
         url: "/favicon.svg",
         width: 1200,
         height: 630,
-        alt: "Data Karma - Field Marketing Scorecard",
+        alt: "Data Karma - Event Marketing Scorecard",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Data Karma — The field marketing scorecard",
-    description: "Data Karma builds products for field marketing. Momentum scores every event so you know what to repeat, resize, or pause.",
+    title: "Data Karma — The event marketing scorecard",
+    description: "Data Karma builds products for event marketing. Momentum scores every event so you know what to repeat, resize, or pause.",
     images: ["/favicon.svg"],
   },
   robots: {

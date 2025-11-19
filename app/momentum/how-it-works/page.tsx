@@ -155,7 +155,7 @@ export default function HowItWorks() {
 
           <div className="space-y-4 mb-12 text-slate-200/80">
             <p>
-              Field marketing teams are stuck defending MQL counts that don't tell the real story. You hit your numbers, but sales complains about lead quality. Attendees show up, but you don't know if they actually found value. <strong>Partners co-invest but you never ask if the event worked for them.</strong> Leadership wants ROI proof, but all you have are activity metrics.
+              Event marketing teams are stuck defending MQL counts that don't tell the real story. You hit your numbers, but sales complains about lead quality. Attendees show up, but you don't know if they actually found value. <strong>Partners co-invest but you never ask if the event worked for them.</strong> Leadership wants ROI proof, but all you have are activity metrics.
             </p>
             <p>
               The Success Score solves this by combining hard Salesforce data with real feedback from <strong>all four stakeholders</strong> who matter most: your attendees, sales team, marketing team, <strong>and partners</strong>—then using AI to surface insights you can act on.
@@ -382,7 +382,7 @@ export default function HowItWorks() {
             </div>
           </div>
           <div className="pt-8 border-t border-slate-900">
-            © 2025 Momentum. Built for field & event marketing teams.
+            © 2025 Momentum. Built for event marketing teams.
           </div>
         </div>
       </footer>
