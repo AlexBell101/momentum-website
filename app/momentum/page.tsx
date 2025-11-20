@@ -152,14 +152,21 @@ export default function Home() {
 
             {/* Demo Video */}
             <div className="bg-slate-900/40 border border-slate-800 rounded-2xl overflow-hidden shadow-xl">
-              <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
-                <iframe
-                  src="https://www.loom.com/embed/15555b2cb28547a68d95b83f4ad4fa72?sid=&hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true&autoplay=1&loop=1"
-                  frameBorder="0"
-                  allowFullScreen
-                  style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-                />
-              </div>
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+                style={{ display: 'block' }}
+                onLoadedMetadata={(e) => {
+                  const video = e.target as HTMLVideoElement;
+                  video.playbackRate = 1.25; // Speed up slightly for snappier demo
+                }}
+              >
+                <source src="/momentumvid.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
 
             {/* Optional: Keep event list below video or remove */}
