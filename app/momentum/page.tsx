@@ -150,8 +150,20 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Hero Mock Panel */}
-            <div className="bg-slate-900/40 border border-slate-800 rounded-2xl p-5 shadow-xl space-y-4">
+            {/* Demo Video */}
+            <div className="bg-slate-900/40 border border-slate-800 rounded-2xl overflow-hidden shadow-xl">
+              <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
+                <iframe
+                  src="https://www.loom.com/embed/15555b2cb28547a68d95b83f4ad4fa72?sid=&hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true&autoplay=1&loop=1"
+                  frameBorder="0"
+                  allowFullScreen
+                  style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                />
+              </div>
+            </div>
+
+            {/* Optional: Keep event list below video or remove */}
+            <div className="hidden bg-slate-900/40 border border-slate-800 rounded-2xl p-5 shadow-xl space-y-4">
               <div className="flex items-center justify-between">
                 <p className="text-sm font-medium text-slate-50">Q3 events — AI recommendations</p>
                 <span className="text-xs text-slate-400">Updated 3m ago</span>
