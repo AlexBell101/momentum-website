@@ -132,13 +132,13 @@ export default function Home() {
                 Momentum
               </h1>
               <p className="text-xl md:text-2xl text-violet-300 mb-6">
-                The Event Success Platform
+                Event Ops for B2B Teams
               </p>
               <p className="text-lg text-slate-200 mb-4 max-w-xl">
-                Know which events to repeat, resize, or pause.
+                Registration. Check-in. Salesforce. Done.
               </p>
               <p className="text-slate-300/80 mb-6 max-w-xl">
-                Combines pipeline data, MQLs, and feedback from Sales, Marketing, Attendees, and Partners into one holistic Success Score. Get AI recommendations for every event you run.
+                The full-funnel event operations platform. Handle registration, QR check-in, walk-in capture, and publish to Salesforce—no spreadsheets, no manual syncs.
               </p>
               <div className="flex flex-wrap gap-4 mb-6">
                 <a href="https://momentum.datakarma.ai" className="bg-violet-500 hover:bg-violet-400 text-sm px-5 py-2.5 rounded-md font-medium inline-block">
@@ -146,7 +146,7 @@ export default function Home() {
                 </a>
               </div>
               <p className="text-xs text-slate-500">
-                Built for event marketing teams at B2B SaaS, cybersecurity, and data companies.
+                Built for B2B event teams at SaaS, cybersecurity, and data companies.
               </p>
             </div>
 
@@ -331,98 +331,172 @@ export default function Home() {
           </div>
         </section>
 
-        {/* AI-Powered Features */}
+        {/* Event Lifecycle Features */}
         <section className="mx-auto max-w-6xl px-4 py-16">
           <div className="text-center mb-12">
             <p className="inline-flex items-center gap-2 rounded-full bg-violet-500/10 border border-violet-500/30 px-3 py-1 text-xs text-violet-100 mb-4">
-              POWERED BY CLAUDE AI
+              FULL EVENT LIFECYCLE
             </p>
-            <h2 className="text-3xl font-semibold mb-3">Make smarter decisions before and after every event</h2>
+            <h2 className="text-3xl font-semibold mb-3">One platform from registration to Salesforce</h2>
             <p className="text-slate-300/80 max-w-2xl mx-auto">
-              Momentum uses AI to predict event success before you spend budget, and auto-generates executive reports in seconds.
+              Stop juggling spreadsheets and manual syncs. Momentum handles the entire event lifecycle with native Salesforce integration.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Feature 1: Predictive Score */}
-            <div className="bg-slate-900/40 border border-slate-800 rounded-2xl p-6 flex flex-col">
-              <div className="flex items-start justify-between mb-4">
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Predictive Event Success Score</h3>
-                  <p className="text-sm text-violet-300">Before the event happens</p>
-                </div>
-                <span className="px-2 py-1 rounded-md bg-violet-500/10 text-violet-200 text-xs font-medium">NEW</span>
-              </div>
-
-              <p className="text-slate-300/90 mb-4">
-                AI analyzes 100+ historical events to predict your Success Score before you spend a dollar. Make data-driven go/no-go decisions with confidence.
-              </p>
-
-              <div className="bg-slate-950/50 rounded-lg p-4 mb-4">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-xs text-slate-400">Predicted Success Score for "Chicago Tech Summit"</span>
-                  <span className="text-xs px-2 py-1 rounded-md bg-emerald-500/10 text-emerald-200">High confidence</span>
-                </div>
-                <div className="flex items-baseline gap-2 mb-1">
-                  <span className="text-3xl font-bold text-emerald-300">82</span>
-                  <span className="text-sm text-slate-400">/ 100</span>
-                </div>
-                <p className="text-xs text-slate-400 mt-2">Based on: event type, region, budget, timing, team performance</p>
-              </div>
-
-              <ul className="space-y-2 text-sm text-slate-200/80 flex-grow">
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            {/* Pre-Event */}
+            <div className="bg-slate-900/40 border border-slate-800 rounded-2xl p-6">
+              <p className="text-xs text-violet-400 font-medium mb-3">PRE-EVENT</p>
+              <h3 className="text-xl font-semibold mb-3">Registration & Lead Capture</h3>
+              <ul className="space-y-2 text-sm text-slate-200/80">
                 <li className="flex gap-2">
                   <span className="mt-1 h-1.5 w-1.5 rounded-full bg-violet-400 flex-shrink-0"></span>
-                  Predict success before spending budget
+                  Branded registration pages
                 </li>
                 <li className="flex gap-2">
                   <span className="mt-1 h-1.5 w-1.5 rounded-full bg-violet-400 flex-shrink-0"></span>
-                  Risk assessments with specific recommendations
+                  Session signup and email passes
                 </li>
                 <li className="flex gap-2">
                   <span className="mt-1 h-1.5 w-1.5 rounded-full bg-violet-400 flex-shrink-0"></span>
-                  Optimize format, timing, and budget allocation
+                  Lead capture forms
+                </li>
+                <li className="flex gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-violet-400 flex-shrink-0"></span>
+                  Auto-sync to Salesforce Campaigns
                 </li>
               </ul>
             </div>
 
-            {/* Feature 2: Executive Scorecard */}
+            {/* At-Event */}
+            <div className="bg-slate-900/40 border border-slate-800 rounded-2xl p-6">
+              <p className="text-xs text-emerald-400 font-medium mb-3">AT-EVENT</p>
+              <h3 className="text-xl font-semibold mb-3">QR Check-In Module</h3>
+              <ul className="space-y-2 text-sm text-slate-200/80">
+                <li className="flex gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  QR scanner for staff
+                </li>
+                <li className="flex gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  Kiosk self-service check-in
+                </li>
+                <li className="flex gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  Walk-in capture on the spot
+                </li>
+                <li className="flex gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  Works offline, syncs when back online
+                </li>
+              </ul>
+            </div>
+
+            {/* Post-Event */}
+            <div className="bg-slate-900/40 border border-slate-800 rounded-2xl p-6">
+              <p className="text-xs text-blue-400 font-medium mb-3">POST-EVENT</p>
+              <h3 className="text-xl font-semibold mb-3">Publish to Salesforce</h3>
+              <ul className="space-y-2 text-sm text-slate-200/80">
+                <li className="flex gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-blue-400 flex-shrink-0"></span>
+                  Update Campaign Members directly
+                </li>
+                <li className="flex gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-blue-400 flex-shrink-0"></span>
+                  MQL routing and attribution
+                </li>
+                <li className="flex gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-blue-400 flex-shrink-0"></span>
+                  Guardrails before publishing
+                </li>
+                <li className="flex gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-blue-400 flex-shrink-0"></span>
+                  Business email validation
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Feature 1: Check-In Module */}
             <div className="bg-slate-900/40 border border-slate-800 rounded-2xl p-6 flex flex-col">
               <div className="flex items-start justify-between mb-4">
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Executive Scorecard with AI Narratives</h3>
-                  <p className="text-sm text-violet-300">Board-ready in seconds</p>
+                  <h3 className="text-xl font-semibold mb-2">Event Check-In Module</h3>
+                  <p className="text-sm text-emerald-300">Works offline, syncs automatically</p>
                 </div>
-                <span className="px-2 py-1 rounded-md bg-violet-500/10 text-violet-200 text-xs font-medium">NEW</span>
+                <span className="px-2 py-1 rounded-md bg-emerald-500/10 text-emerald-200 text-xs font-medium">NEW</span>
               </div>
 
               <p className="text-slate-300/90 mb-4">
-                Claude AI generates executive reports automatically. Get compelling narratives, strategic recommendations, and ROI analysis—ready to present to leadership.
+                QR code check-in for staff, self-service kiosk mode for attendees, and instant walk-in capture. No WiFi? No problem—works offline and syncs when you're back online.
               </p>
 
               <div className="bg-slate-950/50 rounded-lg p-4 mb-4">
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-xs text-slate-400">Q4 Executive Summary</span>
-                  <span className="text-lg font-bold text-emerald-300">A-</span>
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-xs text-slate-400">Chicago Tech Summit Check-Ins</span>
+                  <span className="text-xs px-2 py-1 rounded-md bg-emerald-500/10 text-emerald-200">Live</span>
                 </div>
-                <p className="text-xs text-slate-300/80 leading-relaxed mb-2">
-                  "Your events delivered 2.8× ROI this quarter, with Austin and SF markets significantly outperforming. Partner co-funded events showed 34% higher Success Scores..."
-                </p>
-                <p className="text-xs text-violet-300">+ Strategic recommendations, trend analysis, peer rankings</p>
+                <div className="flex items-baseline gap-2 mb-1">
+                  <span className="text-3xl font-bold text-emerald-300">247</span>
+                  <span className="text-sm text-slate-400">checked in</span>
+                </div>
+                <p className="text-xs text-slate-400 mt-2">34 walk-ins captured · 0 duplicates · Ready to publish</p>
               </div>
 
               <ul className="space-y-2 text-sm text-slate-200/80 flex-grow">
                 <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-violet-400 flex-shrink-0"></span>
-                  Generate reports in seconds, not hours
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  Scan QR codes or search by name
                 </li>
                 <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-violet-400 flex-shrink-0"></span>
-                  AI-written executive narratives and insights
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  Capture walk-ins with business email validation
                 </li>
                 <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-violet-400 flex-shrink-0"></span>
-                  Performance grades, trends, ROI analysis
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  Session-level attendance tracking
+                </li>
+              </ul>
+            </div>
+
+            {/* Feature 2: Salesforce Publishing */}
+            <div className="bg-slate-900/40 border border-slate-800 rounded-2xl p-6 flex flex-col">
+              <div className="flex items-start justify-between mb-4">
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">Native Salesforce Integration</h3>
+                  <p className="text-sm text-blue-300">Updates Campaign Members directly</p>
+                </div>
+                <span className="px-2 py-1 rounded-md bg-blue-500/10 text-blue-200 text-xs font-medium">NATIVE</span>
+              </div>
+
+              <p className="text-slate-300/90 mb-4">
+                Publish attendees directly to Salesforce Campaign Members. Built-in guardrails validate business emails, check session counts, and prevent duplicates before anything hits your CRM.
+              </p>
+
+              <div className="bg-slate-950/50 rounded-lg p-4 mb-4">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-xs text-slate-400">Ready to Publish</span>
+                  <span className="text-xs px-2 py-1 rounded-md bg-blue-500/10 text-blue-200">Guardrails passed</span>
+                </div>
+                <p className="text-xs text-slate-300/80 leading-relaxed mb-2">
+                  247 attendees ready • 34 walk-ins validated • 12 flagged for review (personal emails)
+                </p>
+                <p className="text-xs text-blue-300">One click to update Campaign Members →</p>
+              </div>
+
+              <ul className="space-y-2 text-sm text-slate-200/80 flex-grow">
+                <li className="flex gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-blue-400 flex-shrink-0"></span>
+                  No spreadsheets or manual imports
+                </li>
+                <li className="flex gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-blue-400 flex-shrink-0"></span>
+                  MQL routing based on engagement
+                </li>
+                <li className="flex gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-blue-400 flex-shrink-0"></span>
+                  Full attribution in campaign reports
                 </li>
               </ul>
             </div>

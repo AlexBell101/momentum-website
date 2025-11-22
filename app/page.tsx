@@ -52,10 +52,10 @@ export default function Home() {
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(124,58,237,0.18),_transparent_55%)]"></div>
           <div className="relative mx-auto max-w-6xl px-4 text-center">
             <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-6">
-              The event marketing scorecard
+              The full-funnel event operations platform
             </h1>
             <p className="text-xl text-slate-200/80 max-w-3xl mx-auto mb-8">
-              Data Karma builds products that help marketers run fewer, better events. Our flagship, Momentum, combines survey signal, partner feedback, and Salesforce outcomes into one Event Success Score.
+              Data Karma builds Momentum—event ops software that handles registration, check-in, and Salesforce publishing. No spreadsheets, no manual syncs.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link href="/momentum" className="bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white px-6 py-3 rounded-lg font-medium inline-block transition-all">
@@ -68,26 +68,32 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Why Data Karma */}
+        {/* Event Lifecycle */}
         <section className="mx-auto max-w-6xl px-4 py-16">
-          <h2 className="text-3xl font-semibold mb-12 text-center">Why Data Karma</h2>
+          <h2 className="text-3xl font-semibold mb-4 text-center">One platform. Entire event lifecycle.</h2>
+          <p className="text-slate-300/80 text-center mb-12 max-w-2xl mx-auto">
+            From registration to Salesforce—Momentum covers every step so you can focus on running great events.
+          </p>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-8">
-              <h3 className="text-xl font-semibold mb-3">Outcome-first scoring</h3>
+              <p className="text-xs text-violet-400 font-medium mb-3">PRE-EVENT</p>
+              <h3 className="text-xl font-semibold mb-3">Registration & Lead Capture</h3>
               <p className="text-slate-300/80">
-                Align events to pipeline, influence, and quality—not just registrations.
+                Branded registration pages, session signup, email passes, and lead capture forms—all synced to Salesforce Campaigns.
               </p>
             </div>
             <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-8">
-              <h3 className="text-xl font-semibold mb-3">Integrated where you work</h3>
+              <p className="text-xs text-violet-400 font-medium mb-3">AT-EVENT</p>
+              <h3 className="text-xl font-semibold mb-3">QR Check-In & Walk-Ins</h3>
               <p className="text-slate-300/80">
-                Salesforce managed app, Marketo patterns, Slack alerts.
+                QR scanner for staff, kiosk self-service, walk-in capture. Works offline and syncs when you're back online.
               </p>
             </div>
             <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-8">
-              <h3 className="text-xl font-semibold mb-3">Partner-ready</h3>
+              <p className="text-xs text-violet-400 font-medium mb-3">POST-EVENT</p>
+              <h3 className="text-xl font-semibold mb-3">Publish to Salesforce</h3>
               <p className="text-slate-300/80">
-                Capture and weight partner feedback alongside sales and attendee signal.
+                Update Campaign Members directly. MQL routing, attribution, and guardrails before publishing—business email validation, session count, and more.
               </p>
             </div>
           </div>
@@ -96,9 +102,9 @@ export default function Home() {
         {/* Our Product */}
         <section className="mx-auto max-w-6xl px-4 py-16">
           <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-12 text-center">
-            <h2 className="text-3xl font-semibold mb-4">Momentum — the Event Success Platform</h2>
+            <h2 className="text-3xl font-semibold mb-4">Momentum — Event Ops for B2B Teams</h2>
             <p className="text-lg text-slate-300/80 mb-8 max-w-2xl mx-auto">
-              Score every event the same way, compare programs apples-to-apples, and know what to repeat, resize, or pause.
+              Native Salesforce integration. No spreadsheets. No manual syncs. Know which events to repeat, resize, or pause.
             </p>
             <Link href="/momentum" className="bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white px-6 py-3 rounded-lg font-medium inline-block transition-all">
               See Momentum
