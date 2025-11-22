@@ -40,7 +40,7 @@ export default function Privacy() {
             <Link href="/contact">Contact</Link>
           </nav>
           <div className="nav-actions">
-            <a href="https://momentum.datakarma.ai" className="nav-cta">
+            <a href="https://event.datakarma.ai" className="nav-cta">
               Start free
             </a>
           </div>

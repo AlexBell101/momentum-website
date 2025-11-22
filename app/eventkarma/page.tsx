@@ -115,7 +115,7 @@ export default function Home() {
             <Link href="/contact">Contact</Link>
           </nav>
           <div className="nav-actions">
-            <a href="https://momentum.datakarma.ai" className="nav-cta">
+            <a href="https://event.datakarma.ai" className="nav-cta">
               Start free
             </a>
           </div>
@@ -141,7 +141,7 @@ export default function Home() {
                 The full-funnel event operations platform. Handle registration, QR check-in, walk-in capture, and publish to Salesforce—no spreadsheets, no manual syncs.
               </p>
               <div className="flex flex-wrap gap-4 mb-6">
-                <a href="https://momentum.datakarma.ai" className="bg-violet-500 hover:bg-violet-400 text-sm px-5 py-2.5 rounded-md font-medium inline-block">
+                <a href="https://event.datakarma.ai" className="bg-violet-500 hover:bg-violet-400 text-sm px-5 py-2.5 rounded-md font-medium inline-block">
                   Get started
                 </a>
               </div>
@@ -631,10 +631,10 @@ export default function Home() {
               </p>
             </div>
             <div className="flex gap-3 flex-shrink-0 items-center">
-              <a href="https://momentum.datakarma.ai" className="bg-white text-slate-950 text-sm px-4 py-2 rounded-md font-medium inline-block hover:bg-slate-100">
+              <a href="https://event.datakarma.ai" className="bg-white text-slate-950 text-sm px-4 py-2 rounded-md font-medium inline-block hover:bg-slate-100">
                 Get started
               </a>
-              <a href="https://momentum.datakarma.ai" className="text-sm text-slate-100/80 hover:text-white whitespace-nowrap">
+              <a href="https://event.datakarma.ai" className="text-sm text-slate-100/80 hover:text-white whitespace-nowrap">
                 Download sample report →
               </a>
             </div>

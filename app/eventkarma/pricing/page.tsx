@@ -40,7 +40,7 @@ export default function Pricing() {
             <Link href="/contact">Contact</Link>
           </nav>
           <div className="nav-actions">
-            <a href="https://momentum.datakarma.ai" className="nav-cta">
+            <a href="https://event.datakarma.ai" className="nav-cta">
               Start free
             </a>
           </div>
@@ -96,7 +96,7 @@ export default function Pricing() {
                 </li>
               </ul>
 
-              <a href="https://momentum.datakarma.ai" className="block w-full text-center bg-slate-800 hover:bg-slate-700 text-white py-3 rounded-lg font-medium transition-colors">
+              <a href="https://event.datakarma.ai" className="block w-full text-center bg-slate-800 hover:bg-slate-700 text-white py-3 rounded-lg font-medium transition-colors">
                 Get Started Free
               </a>
             </div>
@@ -158,7 +158,7 @@ export default function Pricing() {
                 </li>
               </ul>
 
-              <a href="https://momentum.datakarma.ai" className="block w-full text-center bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white py-3 rounded-lg font-medium transition-all">
+              <a href="https://event.datakarma.ai" className="block w-full text-center bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white py-3 rounded-lg font-medium transition-all">
                 Get Started
               </a>
             </div>
@@ -271,7 +271,7 @@ export default function Pricing() {
               Start free today. Upgrade to Pro when you're ready for advanced features.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <a href="https://momentum.datakarma.ai" className="bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white px-6 py-3 rounded-lg font-medium inline-block transition-all">
+              <a href="https://event.datakarma.ai" className="bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white px-6 py-3 rounded-lg font-medium inline-block transition-all">
                 Get Started Free
               </a>
             </div>
