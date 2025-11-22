@@ -93,7 +93,7 @@ export default function Home() {
               <p className="text-xs text-violet-400 font-medium mb-3">POST-EVENT</p>
               <h3 className="text-xl font-semibold mb-3">Publish to Salesforce</h3>
               <p className="text-slate-300/80">
-                Update Campaign Members directly. MQL routing, attribution, and guardrails before publishing—business email validation, session count, and more.
+                Update Campaign Members directly. Guardrails before publishing—business email validation, session count, and more.
               </p>
             </div>
           </div>

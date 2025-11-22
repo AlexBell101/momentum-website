@@ -403,11 +403,11 @@ export default function Home() {
                 </li>
                 <li className="flex gap-2">
                   <span className="mt-1 h-1.5 w-1.5 rounded-full bg-blue-400 flex-shrink-0"></span>
-                  MQL routing and attribution
+                  Create new leads for walk-ins
                 </li>
                 <li className="flex gap-2">
                   <span className="mt-1 h-1.5 w-1.5 rounded-full bg-blue-400 flex-shrink-0"></span>
-                  Guardrails before publishing
+                  Assign notes as tasks for follow-up
                 </li>
                 <li className="flex gap-2">
                   <span className="mt-1 h-1.5 w-1.5 rounded-full bg-blue-400 flex-shrink-0"></span>
@@ -492,11 +492,7 @@ export default function Home() {
                 </li>
                 <li className="flex gap-2">
                   <span className="mt-1 h-1.5 w-1.5 rounded-full bg-blue-400 flex-shrink-0"></span>
-                  MQL routing based on engagement
-                </li>
-                <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-blue-400 flex-shrink-0"></span>
-                  Full attribution in campaign reports
+                  Assign notes as tasks for follow-up
                 </li>
               </ul>
             </div>
