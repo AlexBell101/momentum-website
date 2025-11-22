@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Data Karma — The event marketing scorecard",
-  description: "Data Karma builds products for event marketing. Momentum scores every event so you know what to repeat, resize, or pause.",
+  description: "Data Karma builds products for event marketing. Event Karma scores every event so you know what to repeat, resize, or pause.",
   keywords: ["event marketing", "event analytics", "marketing scorecard", "event ROI", "Salesforce integration", "marketing automation", "event success score", "B2B events", "pipeline tracking"],
   authors: [{ name: "Data Karma" }],
   creator: "Data Karma",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     url: "https://www.datakarma.ai",
     siteName: "Data Karma",
     title: "Data Karma — The event marketing scorecard",
-    description: "Data Karma builds products for event marketing. Momentum scores every event so you know what to repeat, resize, or pause.",
+    description: "Data Karma builds products for event marketing. Event Karma scores every event so you know what to repeat, resize, or pause.",
     images: [
       {
         url: "/favicon.svg",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Data Karma — The event marketing scorecard",
-    description: "Data Karma builds products for event marketing. Momentum scores every event so you know what to repeat, resize, or pause.",
+    description: "Data Karma builds products for event marketing. Event Karma scores every event so you know what to repeat, resize, or pause.",
     images: ["/favicon.svg"],
   },
   robots: {

@@ -33,9 +33,9 @@ export default function Pricing() {
             
           </Link>
           <nav>
-            <Link href="/momentum">Momentum</Link>
-            <Link href="/momentum/pricing">Pricing</Link>
-            <Link href="/docs/momentum">Docs</Link>
+            <Link href="/eventkarma">Event Karma</Link>
+            <Link href="/eventkarma/pricing">Pricing</Link>
+            <Link href="/docs/eventkarma">Docs</Link>
             <Link href="/trust">Trust</Link>
             <Link href="/contact">Contact</Link>
           </nav>
@@ -243,7 +243,7 @@ export default function Pricing() {
 
             <div className="bg-slate-900/30 border border-slate-800 rounded-xl p-6">
               <h3 className="font-semibold mb-2">How does Salesforce integration work?</h3>
-              <p className="text-sm text-slate-300/80">Connect once, sync automatically. Pull campaign data, opportunities, and contacts directly into Momentum.</p>
+              <p className="text-sm text-slate-300/80">Connect once, sync automatically. Pull campaign data, opportunities, and contacts directly into Event Karma.</p>
             </div>
 
             <div className="bg-slate-900/30 border border-slate-800 rounded-xl p-6">
@@ -285,8 +285,8 @@ export default function Pricing() {
           <div className="grid md:grid-cols-4 gap-8 mb-8 text-left">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <img src="/favicon.svg" alt="Momentum" className="h-8 w-8" />
-                <span className="font-bold tracking-tight text-white uppercase" style={{ fontFamily: 'Inter, sans-serif', letterSpacing: '-0.025em' }}>MOMENTUM</span>
+                <img src="/favicon.svg" alt="Event Karma" className="h-8 w-8" />
+                <span className="font-bold tracking-tight text-white uppercase" style={{ fontFamily: 'Inter, sans-serif', letterSpacing: '-0.025em' }}>EVENT KARMA</span>
               </div>
               <p className="text-xs text-slate-400">
                 The only platform with complete event intelligence. Feedback from Sales, Marketing, Attendees, and Partners—powered by AI.
@@ -321,7 +321,7 @@ export default function Pricing() {
             </div>
           </div>
           <div className="pt-8 border-t border-slate-900">
-            © 2025 Momentum. Built for event marketing teams.
+            © 2025 Event Karma. Built for event marketing teams.
           </div>
         </div>
       </footer>

@@ -32,9 +32,9 @@ export default function Home() {
             <img src="/datakarma-ai-logo-white.svg" alt="Data Karma" className="logo-icon" />
           </Link>
           <nav>
-            <Link href="/momentum">Momentum</Link>
-            <Link href="/momentum/pricing">Pricing</Link>
-            <Link href="/docs/momentum">Docs</Link>
+            <Link href="/eventkarma">Event Karma</Link>
+            <Link href="/eventkarma/pricing">Pricing</Link>
+            <Link href="/docs/eventkarma">Docs</Link>
             <Link href="/trust">Trust</Link>
             <Link href="/contact">Contact</Link>
           </nav>
@@ -55,11 +55,11 @@ export default function Home() {
               The full-funnel event operations platform
             </h1>
             <p className="text-xl text-slate-200/80 max-w-3xl mx-auto mb-8">
-              Data Karma builds Momentum—event ops software that handles registration, check-in, and Salesforce publishing. No spreadsheets, no manual syncs.
+              Data Karma builds Event Karma—event ops software that handles registration, check-in, and Salesforce publishing. No spreadsheets, no manual syncs.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Link href="/momentum" className="bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white px-6 py-3 rounded-lg font-medium inline-block transition-all">
-                Explore Momentum
+              <Link href="/eventkarma" className="bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white px-6 py-3 rounded-lg font-medium inline-block transition-all">
+                Explore Event Karma
               </Link>
               <Link href="/contact" className="bg-slate-800 hover:bg-slate-700 text-white px-6 py-3 rounded-lg font-medium inline-block transition-colors">
                 Talk to us
@@ -72,7 +72,7 @@ export default function Home() {
         <section className="mx-auto max-w-6xl px-4 py-16">
           <h2 className="text-3xl font-semibold mb-4 text-center">One platform. Entire event lifecycle.</h2>
           <p className="text-slate-300/80 text-center mb-12 max-w-2xl mx-auto">
-            From registration to Salesforce—Momentum covers every step so you can focus on running great events.
+            From registration to Salesforce—Event Karma covers every step so you can focus on running great events.
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-8">
@@ -102,12 +102,12 @@ export default function Home() {
         {/* Our Product */}
         <section className="mx-auto max-w-6xl px-4 py-16">
           <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-12 text-center">
-            <h2 className="text-3xl font-semibold mb-4">Momentum — Event Ops for B2B Teams</h2>
+            <h2 className="text-3xl font-semibold mb-4">Event Karma — Event Ops for B2B Teams</h2>
             <p className="text-lg text-slate-300/80 mb-8 max-w-2xl mx-auto">
               Native Salesforce integration. No spreadsheets. No manual syncs. Know which events to repeat, resize, or pause.
             </p>
-            <Link href="/momentum" className="bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white px-6 py-3 rounded-lg font-medium inline-block transition-all">
-              See Momentum
+            <Link href="/eventkarma" className="bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white px-6 py-3 rounded-lg font-medium inline-block transition-all">
+              See Event Karma
             </Link>
           </div>
         </section>
@@ -134,16 +134,16 @@ export default function Home() {
               <img src="/datakarma-ai-logo-white.svg" alt="Data Karma" className="logo-icon" />
             </div>
             <nav className="flex flex-wrap gap-6 text-xs">
-              <Link href="/momentum" className="hover:text-white">Momentum</Link>
-              <Link href="/momentum/pricing" className="hover:text-white">Pricing</Link>
-              <Link href="/docs/momentum" className="hover:text-white">Docs</Link>
+              <Link href="/eventkarma" className="hover:text-white">Event Karma</Link>
+              <Link href="/eventkarma/pricing" className="hover:text-white">Pricing</Link>
+              <Link href="/docs/eventkarma" className="hover:text-white">Docs</Link>
               <Link href="/trust" className="hover:text-white">Trust</Link>
               <Link href="/contact" className="hover:text-white">Contact</Link>
               <Link href="/privacy" className="hover:text-white">Privacy</Link>
             </nav>
           </div>
           <div className="text-center pt-6 border-t border-slate-900">
-            <p className="text-xs">Momentum is a Data Karma product.</p>
+            <p className="text-xs">Event Karma is a Data Karma product.</p>
             <p className="text-xs mt-2">© 2025 Data Karma. Built for event marketing teams.</p>
           </div>
         </div>

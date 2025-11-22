@@ -32,9 +32,9 @@ export default function Contact() {
             
           </Link>
           <nav>
-            <Link href="/momentum">Momentum</Link>
-            <Link href="/momentum/pricing">Pricing</Link>
-            <Link href="/docs/momentum">Docs</Link>
+            <Link href="/eventkarma">Event Karma</Link>
+            <Link href="/eventkarma/pricing">Pricing</Link>
+            <Link href="/docs/eventkarma">Docs</Link>
             <Link href="/trust">Trust</Link>
             <Link href="/contact">Contact</Link>
           </nav>
@@ -55,7 +55,7 @@ export default function Contact() {
               Get in Touch
             </h1>
             <p className="text-slate-200/80 text-lg max-w-2xl mx-auto">
-              Questions about Momentum? Want to talk about your event measurement challenges? We're here to help.
+              Questions about Event Karma? Want to talk about your event measurement challenges? We're here to help.
             </p>
           </div>
         </section>
@@ -66,7 +66,7 @@ export default function Contact() {
             <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-8">
               <h3 className="text-xl font-semibold mb-3">General Inquiries</h3>
               <p className="text-slate-300/80 mb-4">
-                Questions about Momentum, pricing, or how Data Karma works.
+                Questions about Event Karma, pricing, or how Data Karma works.
               </p>
               <a href="mailto:support@datakarma.ai" className="text-violet-400 hover:text-violet-300 font-medium">
                 support@datakarma.ai
@@ -76,7 +76,7 @@ export default function Contact() {
             <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-8">
               <h3 className="text-xl font-semibold mb-3">Sales & Demos</h3>
               <p className="text-slate-300/80 mb-4">
-                Want to see Momentum in action or discuss enterprise needs?
+                Want to see Event Karma in action or discuss enterprise needs?
               </p>
               <a href="mailto:support@datakarma.ai" className="text-violet-400 hover:text-violet-300 font-medium">
                 support@datakarma.ai
@@ -110,7 +110,7 @@ export default function Contact() {
           <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-semibold mb-3">Ready to get started?</h2>
             <p className="text-slate-300/80 mb-6">
-              No need to wait for a reply—start free and explore Momentum on your own.
+              No need to wait for a reply—start free and explore Event Karma on your own.
             </p>
             <a href="https://momentum.datakarma.ai" className="bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white px-6 py-3 rounded-lg font-medium inline-block transition-all">
               Start free
@@ -128,16 +128,16 @@ export default function Contact() {
               
             </div>
             <nav className="flex flex-wrap gap-6 text-xs">
-              <Link href="/momentum" className="hover:text-white">Momentum</Link>
-              <Link href="/momentum/pricing" className="hover:text-white">Pricing</Link>
-              <Link href="/docs/momentum" className="hover:text-white">Docs</Link>
+              <Link href="/eventkarma" className="hover:text-white">Event Karma</Link>
+              <Link href="/eventkarma/pricing" className="hover:text-white">Pricing</Link>
+              <Link href="/docs/eventkarma" className="hover:text-white">Docs</Link>
               <Link href="/trust" className="hover:text-white">Trust</Link>
               <Link href="/contact" className="hover:text-white">Contact</Link>
               <Link href="/privacy" className="hover:text-white">Privacy</Link>
             </nav>
           </div>
           <div className="text-center pt-6 border-t border-slate-900">
-            <p className="text-xs">Momentum is a Data Karma product.</p>
+            <p className="text-xs">Event Karma is a Data Karma product.</p>
             <p className="text-xs mt-2">© 2025 Data Karma. Built for event marketing teams.</p>
           </div>
         </div>

@@ -108,9 +108,9 @@ export default function Home() {
             <img src="/datakarma-ai-logo-white.svg" alt="Data Karma" className="logo-icon" />
           </Link>
           <nav>
-            <Link href="/momentum">Momentum</Link>
-            <Link href="/momentum/pricing">Pricing</Link>
-            <Link href="/docs/momentum">Docs</Link>
+            <Link href="/eventkarma">Event Karma</Link>
+            <Link href="/eventkarma/pricing">Pricing</Link>
+            <Link href="/docs/eventkarma">Docs</Link>
             <Link href="/trust">Trust</Link>
             <Link href="/contact">Contact</Link>
           </nav>
@@ -129,7 +129,7 @@ export default function Home() {
           <div className="relative mx-auto max-w-6xl px-4 grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-3">
-                Momentum
+                Event Karma
               </h1>
               <p className="text-xl md:text-2xl text-violet-300 mb-6">
                 Event Ops for B2B Teams
@@ -339,7 +339,7 @@ export default function Home() {
             </p>
             <h2 className="text-3xl font-semibold mb-3">One platform from registration to Salesforce</h2>
             <p className="text-slate-300/80 max-w-2xl mx-auto">
-              Stop juggling spreadsheets and manual syncs. Momentum handles the entire event lifecycle with native Salesforce integration.
+              Stop juggling spreadsheets and manual syncs. Event Karma handles the entire event lifecycle with native Salesforce integration.
             </p>
           </div>
 
@@ -507,7 +507,7 @@ export default function Home() {
         <section id="stakeholders" className="mx-auto max-w-6xl px-4 py-16">
           <h2 className="text-2xl font-semibold mb-4">One event. Four reports. Zero chasing.</h2>
           <p className="text-slate-300/80 mb-8 max-w-3xl">
-            Sales, attendees, marketing, and partners all see the event differently. Momentum centralizes their feedback and turns it into a single event score.
+            Sales, attendees, marketing, and partners all see the event differently. Event Karma centralizes their feedback and turns it into a single event score.
           </p>
           <div className="grid md:grid-cols-4 gap-4">
             <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-5 flex flex-col gap-3">
@@ -539,7 +539,7 @@ export default function Home() {
             <div>
               <h2 className="text-2xl font-semibold mb-4">AI that tells you what to run next.</h2>
               <p className="text-slate-300/80 mb-4">
-                Momentum analyzes stakeholder feedback across location, audience, and partner alignment to recommend what to scale and what to adjust.
+                Event Karma analyzes stakeholder feedback across location, audience, and partner alignment to recommend what to scale and what to adjust.
               </p>
               <ul className="space-y-3 text-sm text-slate-200/80">
                 <li className="flex gap-2">
@@ -593,7 +593,7 @@ export default function Home() {
               <p className="text-xs text-slate-500 mt-4">= 50% of the story</p>
             </div>
             <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-6">
-              <h3 className="font-medium mb-3">What Momentum adds</h3>
+              <h3 className="font-medium mb-3">What Event Karma adds</h3>
               <ul className="space-y-2 text-sm text-slate-200/80">
                 <li>✅ Attendee survey</li>
                 <li>✅ Sales feedback (auto-routed)</li>
@@ -650,16 +650,16 @@ export default function Home() {
               <img src="/datakarma-ai-logo-white.svg" alt="Data Karma" className="logo-icon" />
             </div>
             <nav className="flex flex-wrap gap-6 text-xs">
-              <Link href="/momentum" className="hover:text-white">Momentum</Link>
-              <Link href="/momentum/pricing" className="hover:text-white">Pricing</Link>
-              <Link href="/docs/momentum" className="hover:text-white">Docs</Link>
+              <Link href="/eventkarma" className="hover:text-white">Event Karma</Link>
+              <Link href="/eventkarma/pricing" className="hover:text-white">Pricing</Link>
+              <Link href="/docs/eventkarma" className="hover:text-white">Docs</Link>
               <Link href="/trust" className="hover:text-white">Trust</Link>
               <Link href="/contact" className="hover:text-white">Contact</Link>
               <Link href="/privacy" className="hover:text-white">Privacy</Link>
             </nav>
           </div>
           <div className="text-center pt-6 border-t border-slate-900">
-            <p className="text-xs">Momentum is a Data Karma product.</p>
+            <p className="text-xs">Event Karma is a Data Karma product.</p>
             <p className="text-xs mt-2">© 2025 Data Karma. Built for event marketing teams.</p>
           </div>
         </div>

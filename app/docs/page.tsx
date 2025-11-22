@@ -7,7 +7,7 @@ export default function DocsRedirect() {
   const router = useRouter();
 
   useEffect(() => {
-    router.replace('/docs/momentum');
+    router.replace('/docs/eventkarma');
   }, [router]);
 
   return null;

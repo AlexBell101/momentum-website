@@ -34,9 +34,9 @@ export default function Docs() {
           </Link>
           <nav>
             
-            <Link href="/momentum">Momentum</Link>
-            <Link href="/momentum/pricing">Pricing</Link>
-            <Link href="/docs/momentum">Docs</Link>
+            <Link href="/eventkarma">Event Karma</Link>
+            <Link href="/eventkarma/pricing">Pricing</Link>
+            <Link href="/docs/eventkarma">Docs</Link>
             <Link href="/trust">Trust</Link>
             <Link href="/contact">Contact</Link>
           </nav>
@@ -59,7 +59,7 @@ export default function Docs() {
               Documentation
             </h1>
             <p className="text-slate-200/80 max-w-3xl mx-auto">
-              Everything you need to get started with Momentum and measure event marketing success
+              Everything you need to get started with Event Karma and measure event marketing success
             </p>
           </div>
         </section>
@@ -77,7 +77,7 @@ export default function Docs() {
               <div>
                 <h3 className="text-xl font-semibold mb-3">Connect Salesforce</h3>
                 <p className="text-slate-200/80 mb-4">
-                  Click "Connect Salesforce" in your Momentum dashboard and authorize access. Momentum will request read access to Campaigns, Campaign Members, Opportunities, and Accounts, plus write access to sync Success Scores back to custom Campaign fields.
+                  Click "Connect Salesforce" in your Event Karma dashboard and authorize access. Event Karma will request read access to Campaigns, Campaign Members, Opportunities, and Accounts, plus write access to sync Success Scores back to custom Campaign fields.
                 </p>
                 <div className="bg-slate-950/50 rounded-lg p-3 font-mono text-sm mb-2">
                   Settings → Integrations → Salesforce → Authorize
@@ -94,7 +94,7 @@ export default function Docs() {
               <div>
                 <h3 className="text-xl font-semibold mb-3">Create Your First Event</h3>
                 <p className="text-slate-200/80 mb-4">
-                  Create a new event in Momentum and link it to your Salesforce Campaign. Set your event date, choose which surveys to send (attendees, sales partners, event team), and configure survey timing.
+                  Create a new event in Event Karma and link it to your Salesforce Campaign. Set your event date, choose which surveys to send (attendees, sales partners, event team), and configure survey timing.
                 </p>
                 <ul className="space-y-2 text-sm text-slate-200/80 mb-2">
                   <li className="flex gap-2">
@@ -126,7 +126,7 @@ export default function Docs() {
               <div>
                 <h3 className="text-xl font-semibold mb-3">Collect Feedback</h3>
                 <p className="text-slate-200/80 mb-4">
-                  After your event, Momentum automatically sends surveys to attendees, sales partners, and your event team. Survey links are sent via email with customizable timing and reminders.
+                  After your event, Event Karma automatically sends surveys to attendees, sales partners, and your event team. Survey links are sent via email with customizable timing and reminders.
                 </p>
                 <div className="grid md:grid-cols-3 gap-3 mb-2">
                   <div className="bg-slate-950/50 rounded-lg p-3 text-center">
@@ -157,7 +157,7 @@ export default function Docs() {
               <div>
                 <h3 className="text-xl font-semibold mb-3">View Your Success Score</h3>
                 <p className="text-slate-200/80 mb-4">
-                  Once survey responses come in (typically within 3-5 days), Momentum calculates your Success Score by combining Salesforce campaign data with feedback scores. The Success Score and all underlying metrics automatically sync back to your Salesforce Campaign object.
+                  Once survey responses come in (typically within 3-5 days), Event Karma calculates your Success Score by combining Salesforce campaign data with feedback scores. The Success Score and all underlying metrics automatically sync back to your Salesforce Campaign object.
                 </p>
                 <div className="bg-slate-950/50 rounded-lg p-4 mb-2">
                   <div className="text-xs font-semibold text-slate-400 mb-2">WHAT YOU'LL SEE</div>
@@ -329,8 +329,8 @@ export default function Docs() {
           <div className="grid md:grid-cols-4 gap-8 mb-8 text-left">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <div className="h-8 w-8 rounded-md bg-violet-500/90 flex items-center justify-center text-sm font-bold">M</div>
-                <span className="font-semibold tracking-tight text-white">Momentum</span>
+                <div className="h-8 w-8 rounded-md bg-violet-500/90 flex items-center justify-center text-sm font-bold">EK</div>
+                <span className="font-semibold tracking-tight text-white">Event Karma</span>
               </div>
               <p className="text-xs text-slate-400">
                 The only platform with complete event intelligence. Feedback from Sales, Marketing, Attendees, and Partners—powered by AI.
@@ -365,7 +365,7 @@ export default function Docs() {
             </div>
           </div>
           <div className="pt-8 border-t border-slate-900">
-            © 2025 Momentum. Built for event marketing teams.
+            © 2025 Event Karma. Built for event marketing teams.
           </div>
         </div>
       </footer>

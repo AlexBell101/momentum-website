@@ -33,9 +33,9 @@ export default function Privacy() {
             
           </Link>
           <nav>
-            <Link href="/momentum">Momentum</Link>
-            <Link href="/momentum/pricing">Pricing</Link>
-            <Link href="/docs/momentum">Docs</Link>
+            <Link href="/eventkarma">Event Karma</Link>
+            <Link href="/eventkarma/pricing">Pricing</Link>
+            <Link href="/docs/eventkarma">Docs</Link>
             <Link href="/trust">Trust</Link>
             <Link href="/contact">Contact</Link>
           </nav>
@@ -68,7 +68,7 @@ export default function Privacy() {
             {/* Introduction */}
             <div className="mb-12">
               <p className="text-slate-200/80 mb-4">
-                DataKarma, Inc. ("Momentum," "we," "us," or "our") operates the Momentum platform at momentum.com and related services. This Privacy Policy explains how we collect, use, disclose, and protect your personal information when you use our event marketing analytics platform.
+                DataKarma, Inc. ("Event Karma," "we," "us," or "our") operates the Event Karma platform at datakarma.ai and related services. This Privacy Policy explains how we collect, use, disclose, and protect your personal information when you use our event marketing analytics platform.
               </p>
               <p className="text-slate-200/80 mb-4">
                 We are committed to protecting your privacy and complying with applicable data protection laws, including the General Data Protection Regulation (GDPR), California Consumer Privacy Act (CCPA), and other privacy regulations.
@@ -82,7 +82,7 @@ export default function Privacy() {
                 <p><strong>Company:</strong> DataKarma, Inc.</p>
                 <p><strong>Address:</strong> 440 Strafer St, Cincinnati, OH 45226</p>
                 <p><strong>Email:</strong> <a href="mailto:support@datakarma.ai" className="text-violet-400 hover:text-violet-300">support@datakarma.ai</a></p>
-                <p><strong>Website:</strong> <a href="https://momentum.com" className="text-violet-400 hover:text-violet-300">momentum.com</a></p>
+                <p><strong>Website:</strong> <a href="https://www.datakarma.ai" className="text-violet-400 hover:text-violet-300">datakarma.ai</a></p>
               </div>
             </div>
 
@@ -232,7 +232,7 @@ export default function Privacy() {
             <div id="third-party" className="mb-12">
               <h2 className="text-2xl font-semibold mb-6">5. Third-Party Integrations</h2>
               <p className="text-slate-200/80 mb-4">
-                Momentum integrates with the following third-party services. Each integration is governed by that service's privacy policy:
+                Event Karma integrates with the following third-party services. Each integration is governed by that service's privacy policy:
               </p>
 
               <div className="grid md:grid-cols-2 gap-4 mb-6">

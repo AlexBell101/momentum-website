@@ -26,42 +26,42 @@
     <priority>0.5</priority>
   </url>
 
-  <!-- Momentum Product Pages -->
+  <!-- Event Karma Product Pages -->
   <url>
-    <loc>https://www.datakarma.ai/momentum</loc>
-    <lastmod>2025-11-19</lastmod>
+    <loc>https://www.datakarma.ai/eventkarma</loc>
+    <lastmod>2025-11-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.datakarma.ai/momentum/pricing</loc>
-    <lastmod>2025-11-19</lastmod>
+    <loc>https://www.datakarma.ai/eventkarma/pricing</loc>
+    <lastmod>2025-11-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.datakarma.ai/momentum/how-it-works</loc>
-    <lastmod>2025-11-19</lastmod>
+    <loc>https://www.datakarma.ai/eventkarma/how-it-works</loc>
+    <lastmod>2025-11-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.datakarma.ai/momentum/integrations</loc>
-    <lastmod>2025-11-19</lastmod>
+    <loc>https://www.datakarma.ai/eventkarma/integrations</loc>
+    <lastmod>2025-11-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.datakarma.ai/momentum/fss-score</loc>
-    <lastmod>2025-11-19</lastmod>
+    <loc>https://www.datakarma.ai/eventkarma/fss-score</loc>
+    <lastmod>2025-11-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Documentation -->
   <url>
-    <loc>https://www.datakarma.ai/docs/momentum</loc>
-    <lastmod>2025-11-19</lastmod>
+    <loc>https://www.datakarma.ai/docs/eventkarma</loc>
+    <lastmod>2025-11-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

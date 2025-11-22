@@ -34,9 +34,9 @@ export default function Integrations() {
           </Link>
           <nav>
             
-            <Link href="/momentum">Momentum</Link>
-            <Link href="/momentum/pricing">Pricing</Link>
-            <Link href="/docs/momentum">Docs</Link>
+            <Link href="/eventkarma">Event Karma</Link>
+            <Link href="/eventkarma/pricing">Pricing</Link>
+            <Link href="/docs/eventkarma">Docs</Link>
             <Link href="/trust">Trust</Link>
             <Link href="/contact">Contact</Link>
           </nav>
@@ -59,7 +59,7 @@ export default function Integrations() {
               Integrations
             </h1>
             <p className="text-slate-200/80 max-w-3xl mx-auto">
-              Connect Momentum with your existing marketing and sales tools to measure event success automatically
+              Connect Event Karma with your existing marketing and sales tools to measure event success automatically
             </p>
           </div>
         </section>
@@ -77,7 +77,7 @@ export default function Integrations() {
               </div>
               <h2 className="text-3xl font-semibold mb-4">Salesforce Integration</h2>
               <p className="text-slate-200/80 mb-6">
-                Momentum connects directly to your Salesforce instance to pull campaign data, track pipeline, and sync Success Scores back to Campaign objects.
+                Event Karma connects directly to your Salesforce instance to pull campaign data, track pipeline, and sync Success Scores back to Campaign objects.
               </p>
 
               <div className="space-y-4">
@@ -158,7 +158,7 @@ export default function Integrations() {
                           <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
                         </svg>
                       </div>
-                      <span className="font-medium text-sm">Momentum</span>
+                      <span className="font-medium text-sm">Event Karma</span>
                       <span className="text-xs text-slate-400 ml-auto">10:34 AM</span>
                     </div>
                     <div className="text-sm leading-relaxed">
@@ -174,7 +174,7 @@ export default function Integrations() {
                           <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
                         </svg>
                       </div>
-                      <span className="font-medium text-sm">Momentum</span>
+                      <span className="font-medium text-sm">Event Karma</span>
                       <span className="text-xs text-slate-400 ml-auto">Yesterday</span>
                     </div>
                     <div className="text-sm leading-relaxed">
@@ -308,8 +308,8 @@ export default function Integrations() {
           <div className="grid md:grid-cols-4 gap-8 mb-8 text-left">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <div className="h-8 w-8 rounded-md bg-violet-500/90 flex items-center justify-center text-sm font-bold">M</div>
-                <span className="font-semibold tracking-tight text-white">Momentum</span>
+                <div className="h-8 w-8 rounded-md bg-violet-500/90 flex items-center justify-center text-sm font-bold">EK</div>
+                <span className="font-semibold tracking-tight text-white">Event Karma</span>
               </div>
               <p className="text-xs text-slate-400">
                 The only platform with complete event intelligence. Feedback from Sales, Marketing, Attendees, and Partners—powered by AI.
@@ -344,7 +344,7 @@ export default function Integrations() {
             </div>
           </div>
           <div className="pt-8 border-t border-slate-900">
-            © 2025 Momentum. Built for event marketing teams.
+            © 2025 Event Karma. Built for event marketing teams.
           </div>
         </div>
       </footer>

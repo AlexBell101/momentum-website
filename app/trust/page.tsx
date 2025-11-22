@@ -32,9 +32,9 @@ export default function Trust() {
             
           </Link>
           <nav>
-            <Link href="/momentum">Momentum</Link>
-            <Link href="/momentum/pricing">Pricing</Link>
-            <Link href="/docs/momentum">Docs</Link>
+            <Link href="/eventkarma">Event Karma</Link>
+            <Link href="/eventkarma/pricing">Pricing</Link>
+            <Link href="/docs/eventkarma">Docs</Link>
             <Link href="/trust">Trust</Link>
             <Link href="/contact">Contact</Link>
           </nav>
@@ -145,16 +145,16 @@ export default function Trust() {
               
             </div>
             <nav className="flex flex-wrap gap-6 text-xs">
-              <Link href="/momentum" className="hover:text-white">Momentum</Link>
-              <Link href="/momentum/pricing" className="hover:text-white">Pricing</Link>
-              <Link href="/docs/momentum" className="hover:text-white">Docs</Link>
+              <Link href="/eventkarma" className="hover:text-white">Event Karma</Link>
+              <Link href="/eventkarma/pricing" className="hover:text-white">Pricing</Link>
+              <Link href="/docs/eventkarma" className="hover:text-white">Docs</Link>
               <Link href="/trust" className="hover:text-white">Trust</Link>
               <Link href="/contact" className="hover:text-white">Contact</Link>
               <Link href="/privacy" className="hover:text-white">Privacy</Link>
             </nav>
           </div>
           <div className="text-center pt-6 border-t border-slate-900">
-            <p className="text-xs">Momentum is a Data Karma product.</p>
+            <p className="text-xs">Event Karma is a Data Karma product.</p>
             <p className="text-xs mt-2">© 2025 Data Karma. Built for event marketing teams.</p>
           </div>
         </div>
