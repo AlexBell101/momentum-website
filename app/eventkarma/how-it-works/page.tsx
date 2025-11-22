@@ -36,7 +36,7 @@ export default function HowItWorks() {
             
             <Link href="/eventkarma">Event Karma</Link>
             <Link href="/eventkarma/pricing">Pricing</Link>
-            <Link href="/docs/eventkarma">Docs</Link>
+            <a href="https://docs.event.datakarma.ai">Docs</a>
             <Link href="/trust">Trust</Link>
             <Link href="/contact">Contact</Link>
           </nav>

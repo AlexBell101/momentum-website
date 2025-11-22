@@ -1,14 +1,11 @@
 'use client';
 
 import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 
 export default function DocsRedirect() {
-  const router = useRouter();
-
   useEffect(() => {
-    router.replace('/docs/eventkarma');
-  }, [router]);
+    window.location.href = 'https://docs.event.datakarma.ai';
+  }, []);
 
   return null;
 }

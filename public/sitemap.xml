@@ -58,9 +58,9 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Documentation -->
+  <!-- Documentation (external) -->
   <url>
-    <loc>https://www.datakarma.ai/docs/eventkarma</loc>
+    <loc>https://docs.event.datakarma.ai</loc>
     <lastmod>2025-11-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
