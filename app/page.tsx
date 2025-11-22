@@ -57,13 +57,17 @@ export default function Home() {
             <p className="text-xl text-slate-200/80 max-w-3xl mx-auto mb-8">
               Data Karma builds Event Karma—event ops software that handles registration, check-in, and Salesforce publishing. No spreadsheets, no manual syncs.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-4 justify-center mb-12">
               <Link href="/eventkarma" className="bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white px-6 py-3 rounded-lg font-medium inline-block transition-all">
                 Explore Event Karma
               </Link>
               <Link href="/contact" className="bg-slate-800 hover:bg-slate-700 text-white px-6 py-3 rounded-lg font-medium inline-block transition-colors">
                 Talk to us
               </Link>
+            </div>
+            {/* Event Flow Diagram */}
+            <div className="max-w-3xl mx-auto">
+              <img src="/event-flow-diagram.svg" alt="Event Karma Flow: Registration to Check-in to Salesforce" className="w-full h-auto" />
             </div>
           </div>
         </section>

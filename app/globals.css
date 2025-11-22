@@ -5764,9 +5764,10 @@ header nav {
 }
 
 header nav a {
-  color: rgba(226, 232, 240, 0.7);
+  color: rgba(248, 250, 252, 0.9);
   text-decoration: none;
   transition: color 0.2s;
+  font-weight: 500;
 }
 
 header nav a:hover {
