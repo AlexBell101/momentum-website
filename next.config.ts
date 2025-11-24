@@ -1,7 +1,30 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Remove standalone for Vercel - let it handle defaults
+  async rewrites() {
+    return [
+      {
+        source: '/:path*',
+        destination: '/eventkarma/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'eventkarma.ai',
+          },
+        ],
+      },
+      {
+        source: '/:path*',
+        destination: '/eventkarma/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.eventkarma.ai',
+          },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;
