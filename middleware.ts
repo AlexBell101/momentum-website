@@ -3,11 +3,15 @@ import type { NextRequest } from 'next/server';
 
 export function middleware(request: NextRequest) {
   const hostname = request.headers.get('host') || '';
+  const url = request.nextUrl.clone();
+
+  // Skip middleware for static files (anything with a file extension)
+  if (url.pathname.match(/\.\w+$/)) {
+    return NextResponse.next();
+  }
 
   // Check if the request is coming from eventkarma.ai
   if (hostname === 'eventkarma.ai' || hostname === 'www.eventkarma.ai') {
-    const url = request.nextUrl.clone();
-
     // If the path doesn't already start with /eventkarma, rewrite it
     if (!url.pathname.startsWith('/eventkarma')) {
       // Handle root path
@@ -32,8 +36,8 @@ export const config = {
      * - api (API routes)
      * - _next/static (static files)
      * - _next/image (image optimization files)
-     * - favicon.ico (favicon file)
+     * Static files are handled by the extension check in the middleware function
      */
-    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+    '/((?!api|_next/static|_next/image).*)',
   ],
 };
