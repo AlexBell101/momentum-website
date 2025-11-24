@@ -103,7 +103,7 @@ function PassDemoContent() {
       // Generate pass data
       (async () => {
         const token = await buildDemoToken(emailLower, eventParam);
-        const qr = `https://chart.googleapis.com/chart?cht=qr&chs=256x256&chl=${encodeURIComponent(token)}`;
+        const qr = `https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=${encodeURIComponent(token)}`;
         const ics = buildICS(eventParam, emailLower);
 
         setMaskedEmail(maskEmail(emailLower));
