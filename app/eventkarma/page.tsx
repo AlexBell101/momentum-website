@@ -94,6 +94,27 @@ export default function EventKarma() {
           pointer-events: none;
           user-select: none;
         }
+        .ek-gradient-bg {
+          background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(168, 85, 247, 0.12) 50%, rgba(236, 72, 153, 0.1) 100%);
+        }
+        .ek-gradient-text {
+          background: linear-gradient(135deg, #8B5CF6 0%, #A855F7 50%, #EC4899 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+        .ek-gradient-border {
+          border-image: linear-gradient(135deg, #8B5CF6, #A855F7, #EC4899) 1;
+        }
+        .ek-glow {
+          box-shadow: 0 0 40px rgba(168, 85, 247, 0.3);
+        }
+        .ek-btn-gradient {
+          background: linear-gradient(135deg, #8B5CF6 0%, #A855F7 50%, #EC4899 100%);
+        }
+        .ek-btn-gradient:hover {
+          background: linear-gradient(135deg, #9D6FFA 0%, #B96AF9 50%, #F084A8 100%);
+        }
       `}</style>
 
       {/* Navigation */}
@@ -117,54 +138,56 @@ export default function EventKarma() {
         </div>
       </header>
 
-      <main className="bg-slate-950 text-slate-50">
-        {/* Hero Section - B1 */}
-        <section className="relative overflow-hidden py-16 md:py-20">
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(124,58,237,0.18),_transparent_55%)]"></div>
+      <main className="bg-[#0f0a1a] text-slate-50">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden py-16 md:py-24">
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(139,92,246,0.2),_rgba(168,85,247,0.1)_40%,_transparent_70%)]"></div>
           <div className="relative mx-auto max-w-6xl px-4 grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-3">
-                Event Karma
-              </h1>
-              <p className="text-xl md:text-2xl text-violet-300 mb-6">
-                The Event GTM OS
+              {/* Logo + Wordmark */}
+              <div className="flex items-center gap-4 mb-6">
+                <img src="/eventkarma-logo.svg" alt="Event Karma" className="w-14 h-14 ek-glow rounded-full" />
+                <h1 className="text-4xl md:text-5xl font-bold tracking-tight ek-gradient-text">
+                  Event Karma
+                </h1>
+              </div>
+
+              <p className="text-lg md:text-xl text-purple-200 mb-4 font-medium">
+                From registration to revenue insight.
               </p>
-              <p className="text-lg text-slate-200 mb-4 max-w-xl">
-                From invite to impact.
-              </p>
-              <p className="text-slate-300/80 mb-6 max-w-xl">
-                UPL passes, QR check-in, Salesforce updates, notes & surveys, and AI insights—so you know what to repeat, resize, or skip.
+              <p className="text-slate-300/90 mb-6 max-w-xl text-lg">
+                Every check-in, every conversation, every follow-up—connected and measured. Finally know which events drive pipeline.
               </p>
               <div className="flex flex-wrap gap-4 mb-6">
                 <a
                   href="#book-demo"
                   onClick={() => trackEvent('ek_cta_demo_click')}
-                  className="bg-violet-500 hover:bg-violet-400 text-sm px-5 py-2.5 rounded-md font-medium inline-block"
+                  className="ek-btn-gradient text-white text-sm px-6 py-3 rounded-lg font-medium inline-block transition-all"
                 >
                   Book a demo
                 </a>
                 <Link
                   href="/pass-demo?event=ek-demo&e=alex%40example.com"
                   onClick={() => trackEvent('ek_cta_pass_click')}
-                  className="bg-slate-800 hover:bg-slate-700 text-sm px-5 py-2.5 rounded-md font-medium inline-block border border-slate-700"
+                  className="bg-white/10 hover:bg-white/20 backdrop-blur text-sm px-6 py-3 rounded-lg font-medium inline-block border border-purple-500/30"
                 >
                   See a live event pass
                 </Link>
                 <Link
                   href="/eventkarma/pricing"
                   onClick={() => trackEvent('ek_cta_pricing_click')}
-                  className="text-sm px-5 py-2.5 rounded-md font-medium inline-block text-slate-300 hover:text-white"
+                  className="text-sm px-5 py-3 rounded-lg font-medium inline-block text-purple-200 hover:text-white"
                 >
                   Pricing &rarr;
                 </Link>
               </div>
               <p className="text-xs text-slate-500">
-                Built for B2B event teams at SaaS, cybersecurity, and data companies.
+                Built for B2B event teams who need clarity, not complexity.
               </p>
             </div>
 
             {/* Demo Video */}
-            <div className="bg-slate-900/40 border border-slate-800 rounded-2xl overflow-hidden shadow-xl">
+            <div className="bg-[#1a0d2e]/60 border border-purple-500/20 rounded-2xl overflow-hidden ek-glow">
               <video
                 autoPlay
                 loop
@@ -184,309 +207,290 @@ export default function EventKarma() {
           </div>
         </section>
 
-        {/* From Invite to Impact Spine - B2 */}
+        {/* Transformation Message */}
+        <section className="mx-auto max-w-4xl px-4 py-16 text-center">
+          <p className="inline-flex items-center gap-2 rounded-full bg-purple-500/10 border border-purple-500/30 px-4 py-1.5 text-sm text-purple-200 mb-6">
+            The transformation
+          </p>
+          <h2 className="text-3xl md:text-4xl font-semibold mb-4 leading-tight">
+            Stop chasing spreadsheets.<br />
+            <span className="ek-gradient-text">Start knowing what works.</span>
+          </h2>
+          <p className="text-slate-400 max-w-2xl mx-auto text-lg">
+            Event Karma captures every interaction—from the first registration to the final follow-up—and connects it all to Salesforce. No manual syncs. No guessing.
+          </p>
+        </section>
+
+        {/* How It Works - Visual Flow */}
         <section className="mx-auto max-w-6xl px-4 py-16">
           <div className="text-center mb-12">
-            <p className="inline-flex items-center gap-2 rounded-full bg-violet-500/10 border border-violet-500/30 px-3 py-1 text-xs text-violet-100 mb-4">
-              FROM INVITE TO IMPACT
-            </p>
-            <h2 className="text-3xl font-semibold mb-3">The complete event lifecycle, connected</h2>
-            <p className="text-slate-300/80 max-w-2xl mx-auto">
-              Six steps from registration to AI recommendations. No spreadsheets, no manual syncs.
+            <h2 className="text-2xl font-semibold mb-3">The complete event lifecycle</h2>
+            <p className="text-slate-400 max-w-2xl mx-auto">
+              Six steps from invite to insight. Each one connected, measured, and ready for Salesforce.
             </p>
           </div>
 
           <div className="grid md:grid-cols-6 gap-4 mb-12">
-            {/* Step 1: Registration */}
-            <div className="bg-slate-900/40 border border-slate-800 rounded-xl p-4 text-center">
-              <div className="w-10 h-10 rounded-full bg-violet-500/20 flex items-center justify-center mx-auto mb-3">
-                <svg className="w-5 h-5 text-violet-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            {/* Step 1: Invite */}
+            <div className="bg-[#1a0d2e]/40 border border-purple-500/20 rounded-xl p-4 text-center hover:border-purple-500/40 transition-colors">
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/20 flex items-center justify-center mx-auto mb-3">
+                <svg className="w-5 h-5 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
-              <p className="text-xs text-violet-400 font-medium mb-1">1</p>
-              <h3 className="text-sm font-semibold mb-1">Registration</h3>
-              <p className="text-xs text-slate-400">Send Universal Pass Links from Marketo/HubSpot.</p>
+              <p className="text-xs text-purple-400 font-medium mb-1">1</p>
+              <h3 className="text-sm font-semibold mb-1">Invite</h3>
+              <p className="text-xs text-slate-400">Send personalized passes via email</p>
             </div>
 
-            {/* Step 2: Event Pass */}
-            <div className="bg-slate-900/40 border border-slate-800 rounded-xl p-4 text-center">
-              <div className="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center mx-auto mb-3">
-                <svg className="w-5 h-5 text-emerald-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
-                </svg>
-              </div>
-              <p className="text-xs text-emerald-400 font-medium mb-1">2</p>
-              <h3 className="text-sm font-semibold mb-1">Event Pass</h3>
-              <p className="text-xs text-slate-400">Renders a short-lived QR—no PII in code.</p>
-            </div>
-
-            {/* Step 3: QR Check-in */}
-            <div className="bg-slate-900/40 border border-slate-800 rounded-xl p-4 text-center">
-              <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center mx-auto mb-3">
-                <svg className="w-5 h-5 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            {/* Step 2: Register */}
+            <div className="bg-[#1a0d2e]/40 border border-purple-500/20 rounded-xl p-4 text-center hover:border-purple-500/40 transition-colors">
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/20 flex items-center justify-center mx-auto mb-3">
+                <svg className="w-5 h-5 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <p className="text-xs text-blue-400 font-medium mb-1">3</p>
-              <h3 className="text-sm font-semibold mb-1">QR Check-in</h3>
-              <p className="text-xs text-slate-400">PWA scanner, offline-tolerant, kiosk-friendly.</p>
+              <p className="text-xs text-purple-400 font-medium mb-1">2</p>
+              <h3 className="text-sm font-semibold mb-1">Register</h3>
+              <p className="text-xs text-slate-400">Capture signups, sync to CRM</p>
             </div>
 
-            {/* Step 4: Publish Gate */}
-            <div className="bg-slate-900/40 border border-slate-800 rounded-xl p-4 text-center">
-              <div className="w-10 h-10 rounded-full bg-amber-500/20 flex items-center justify-center mx-auto mb-3">
-                <svg className="w-5 h-5 text-amber-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            {/* Step 3: Check In */}
+            <div className="bg-[#1a0d2e]/40 border border-purple-500/20 rounded-xl p-4 text-center hover:border-purple-500/40 transition-colors">
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/20 flex items-center justify-center mx-auto mb-3">
+                <svg className="w-5 h-5 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
                 </svg>
               </div>
-              <p className="text-xs text-amber-400 font-medium mb-1">4</p>
-              <h3 className="text-sm font-semibold mb-1">Publish Gate</h3>
-              <p className="text-xs text-slate-400">Local fields first; you decide when to publish.</p>
+              <p className="text-xs text-purple-400 font-medium mb-1">3</p>
+              <h3 className="text-sm font-semibold mb-1">Check In</h3>
+              <p className="text-xs text-slate-400">Scan passes, capture walk-ins</p>
             </div>
 
-            {/* Step 5: Notes & Surveys */}
-            <div className="bg-slate-900/40 border border-slate-800 rounded-xl p-4 text-center">
-              <div className="w-10 h-10 rounded-full bg-rose-500/20 flex items-center justify-center mx-auto mb-3">
-                <svg className="w-5 h-5 text-rose-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            {/* Step 4: Engage */}
+            <div className="bg-[#1a0d2e]/40 border border-purple-500/20 rounded-xl p-4 text-center hover:border-purple-500/40 transition-colors">
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/20 flex items-center justify-center mx-auto mb-3">
+                <svg className="w-5 h-5 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                 </svg>
               </div>
-              <p className="text-xs text-rose-400 font-medium mb-1">5</p>
-              <h3 className="text-sm font-semibold mb-1">Notes & Surveys</h3>
-              <p className="text-xs text-slate-400">Pulse questions + rep notes stitched to CM.</p>
+              <p className="text-xs text-purple-400 font-medium mb-1">4</p>
+              <h3 className="text-sm font-semibold mb-1">Engage</h3>
+              <p className="text-xs text-slate-400">Notes, surveys, conversations</p>
             </div>
 
-            {/* Step 6: AI Insights */}
-            <div className="bg-slate-900/40 border border-slate-800 rounded-xl p-4 text-center">
-              <div className="w-10 h-10 rounded-full bg-cyan-500/20 flex items-center justify-center mx-auto mb-3">
-                <svg className="w-5 h-5 text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            {/* Step 5: Publish */}
+            <div className="bg-[#1a0d2e]/40 border border-purple-500/20 rounded-xl p-4 text-center hover:border-purple-500/40 transition-colors">
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/20 flex items-center justify-center mx-auto mb-3">
+                <svg className="w-5 h-5 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+                </svg>
+              </div>
+              <p className="text-xs text-purple-400 font-medium mb-1">5</p>
+              <h3 className="text-sm font-semibold mb-1">Publish</h3>
+              <p className="text-xs text-slate-400">Push to Salesforce when ready</p>
+            </div>
+
+            {/* Step 6: Learn */}
+            <div className="bg-[#1a0d2e]/40 border border-purple-500/20 rounded-xl p-4 text-center hover:border-purple-500/40 transition-colors">
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/20 flex items-center justify-center mx-auto mb-3">
+                <svg className="w-5 h-5 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                 </svg>
               </div>
-              <p className="text-xs text-cyan-400 font-medium mb-1">6</p>
-              <h3 className="text-sm font-semibold mb-1">AI Insights</h3>
-              <p className="text-xs text-slate-400">Forecasts, momentum score, next-best actions.</p>
+              <p className="text-xs text-purple-400 font-medium mb-1">6</p>
+              <h3 className="text-sm font-semibold mb-1">Learn</h3>
+              <p className="text-xs text-slate-400">AI insights, repeat winners</p>
             </div>
           </div>
         </section>
 
-        {/* Ops & Trust Rows - B3 */}
+        {/* Value Props */}
         <section className="mx-auto max-w-6xl px-4 py-16">
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
-            {/* Salesforce-first */}
-            <div className="bg-slate-900/40 border border-slate-800 rounded-2xl p-6">
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* Connected */}
+            <div className="bg-[#1a0d2e]/40 border border-purple-500/20 rounded-2xl p-6 hover:border-purple-500/40 transition-colors">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center">
-                  <svg className="w-5 h-5 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
+                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500/30 to-pink-500/20 flex items-center justify-center">
+                  <svg className="w-5 h-5 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-semibold">Salesforce-first</h3>
+                <h3 className="text-lg font-semibold">Connected</h3>
               </div>
-              <p className="text-slate-300/80 text-sm mb-4">
-                CM status updates, timestamp stamps, consent fields; identity resolution and audit logs.
+              <p className="text-slate-400 text-sm mb-4">
+                Every touchpoint flows to Salesforce. Campaign Members update automatically. No spreadsheets, no imports, no gaps.
               </p>
-              <ul className="space-y-2 text-sm text-slate-200/80">
+              <ul className="space-y-2 text-sm text-slate-300">
                 <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-blue-400 flex-shrink-0"></span>
-                  Update Campaign Members directly
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-purple-400 flex-shrink-0"></span>
+                  Native Salesforce integration
                 </li>
                 <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-blue-400 flex-shrink-0"></span>
-                  Create new leads for walk-ins
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-purple-400 flex-shrink-0"></span>
+                  Real-time Campaign Member updates
                 </li>
                 <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-blue-400 flex-shrink-0"></span>
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-purple-400 flex-shrink-0"></span>
                   Full audit trail
                 </li>
               </ul>
             </div>
 
-            {/* Control */}
-            <div className="bg-slate-900/40 border border-slate-800 rounded-2xl p-6">
+            {/* Controlled */}
+            <div className="bg-[#1a0d2e]/40 border border-purple-500/20 rounded-2xl p-6 hover:border-purple-500/40 transition-colors">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-lg bg-amber-500/20 flex items-center justify-center">
-                  <svg className="w-5 h-5 text-amber-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500/30 to-pink-500/20 flex items-center justify-center">
+                  <svg className="w-5 h-5 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-semibold">Control</h3>
+                <h3 className="text-lg font-semibold">Controlled</h3>
               </div>
-              <p className="text-slate-300/80 text-sm mb-4">
-                Publish Gate prevents premature MQLs. You choose when follow-ups trigger.
+              <p className="text-slate-400 text-sm mb-4">
+                You decide when data goes live. Review attendees, validate emails, and publish when you&apos;re ready—not before.
               </p>
-              <ul className="space-y-2 text-sm text-slate-200/80">
+              <ul className="space-y-2 text-sm text-slate-300">
                 <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-amber-400 flex-shrink-0"></span>
-                  Local fields until you&apos;re ready
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-pink-400 flex-shrink-0"></span>
+                  Publish Gate prevents accidents
                 </li>
                 <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-amber-400 flex-shrink-0"></span>
-                  Review before publishing
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-pink-400 flex-shrink-0"></span>
+                  Review before syncing
                 </li>
                 <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-amber-400 flex-shrink-0"></span>
-                  No accidental automation triggers
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-pink-400 flex-shrink-0"></span>
+                  No premature automation triggers
                 </li>
               </ul>
             </div>
 
-            {/* Privacy */}
-            <div className="bg-slate-900/40 border border-slate-800 rounded-2xl p-6">
+            {/* Clear */}
+            <div className="bg-[#1a0d2e]/40 border border-purple-500/20 rounded-2xl p-6 hover:border-purple-500/40 transition-colors">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-lg bg-emerald-500/20 flex items-center justify-center">
-                  <svg className="w-5 h-5 text-emerald-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500/30 to-pink-500/20 flex items-center justify-center">
+                  <svg className="w-5 h-5 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-semibold">Privacy</h3>
+                <h3 className="text-lg font-semibold">Clear</h3>
               </div>
-              <p className="text-slate-300/80 text-sm mb-4">
-                No PII in QR codes. HTTPS everywhere. GDPR-aware consent for onsite lookups.
+              <p className="text-slate-400 text-sm mb-4">
+                AI analyzes every event and tells you what to repeat, resize, or skip. No more guessing which events drive pipeline.
               </p>
-              <ul className="space-y-2 text-sm text-slate-200/80">
+              <ul className="space-y-2 text-sm text-slate-300">
                 <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
-                  Short-lived tokens only
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-purple-400 flex-shrink-0"></span>
+                  Event success scoring
                 </li>
                 <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
-                  Referrer policy enforced
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-purple-400 flex-shrink-0"></span>
+                  AI-powered recommendations
                 </li>
                 <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
-                  SOC 2 compliant infrastructure
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-purple-400 flex-shrink-0"></span>
+                  Pipeline attribution
                 </li>
               </ul>
             </div>
           </div>
         </section>
 
-        {/* Results Row - B4 */}
+        {/* Results */}
         <section className="mx-auto max-w-6xl px-4 py-16">
-          <div className="bg-gradient-to-r from-violet-500/10 to-blue-500/10 border border-slate-800 rounded-2xl p-8">
+          <div className="ek-gradient-bg border border-purple-500/20 rounded-2xl p-8">
             <h2 className="text-2xl font-semibold mb-6 text-center">Results teams are seeing</h2>
             <div className="grid md:grid-cols-3 gap-8 text-center">
               <div>
-                <p className="text-4xl font-bold text-violet-300 mb-2">10–20 hrs</p>
-                <p className="text-slate-300/80">Saved per month on reporting</p>
+                <p className="text-4xl font-bold ek-gradient-text mb-2">10–20 hrs</p>
+                <p className="text-slate-400">Saved per month on reporting</p>
               </div>
               <div>
-                <p className="text-4xl font-bold text-emerald-300 mb-2">10–25%</p>
-                <p className="text-slate-300/80">Lift in show rate with UPL + reminders</p>
+                <p className="text-4xl font-bold ek-gradient-text mb-2">10–25%</p>
+                <p className="text-slate-400">Higher show rates with digital passes</p>
               </div>
               <div>
-                <p className="text-4xl font-bold text-blue-300 mb-2">Faster</p>
-                <p className="text-slate-300/80">Opp creation from cleaner follow-ups</p>
+                <p className="text-4xl font-bold ek-gradient-text mb-2">Faster</p>
+                <p className="text-slate-400">Follow-up from cleaner data</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Four Stakeholders */}
-        <section id="stakeholders" className="mx-auto max-w-6xl px-4 py-16">
-          <h2 className="text-2xl font-semibold mb-4">One event. Four reports. Zero chasing.</h2>
-          <p className="text-slate-300/80 mb-8 max-w-3xl">
-            Sales, attendees, marketing, and partners all see the event differently. Event Karma centralizes their feedback and turns it into a single event score.
-          </p>
-          <div className="grid md:grid-cols-4 gap-4">
-            <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-5 flex flex-col gap-3">
-              <span className="text-xs px-2 py-1 rounded-full bg-slate-950/50 text-slate-200/70 w-fit">Auto-sent to AE/SE</span>
-              <h3 className="font-medium">Sales</h3>
-              <p className="text-sm text-slate-300/80">Were the leads ICP? Did the event help active opps at this account?</p>
-            </div>
-            <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-5 flex flex-col gap-3">
-              <span className="text-xs px-2 py-1 rounded-full bg-slate-950/50 text-slate-200/70 w-fit">Branded survey</span>
-              <h3 className="font-medium">Attendees</h3>
-              <p className="text-sm text-slate-300/80">Experience, topic interest, who else to invite next time.</p>
-            </div>
-            <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-5 flex flex-col gap-3">
-              <span className="text-xs px-2 py-1 rounded-full bg-slate-950/50 text-slate-200/70 w-fit">Ops-friendly</span>
-              <h3 className="font-medium">Marketing</h3>
-              <p className="text-sm text-slate-300/80">Promo, list quality, campaign member updates — no more manual cleanup.</p>
-            </div>
-            <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-5 flex flex-col gap-3">
-              <span className="text-xs px-2 py-1 rounded-full bg-slate-950/50 text-slate-200/70 w-fit">Predicts renewals</span>
-              <h3 className="font-medium">Partners</h3>
-              <p className="text-sm text-slate-300/80">Was it worth the co-investment or sponsorship? Should we co-fund again?</p>
-            </div>
-          </div>
-        </section>
-
-        {/* AI / Decisions */}
-        <section id="how" className="mx-auto max-w-6xl px-4 py-16">
+        {/* AI Insights */}
+        <section className="mx-auto max-w-6xl px-4 py-16">
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div>
-              <h2 className="text-2xl font-semibold mb-4">AI that tells you what to run next.</h2>
-              <p className="text-slate-300/80 mb-4">
-                Event Karma analyzes stakeholder feedback across location, audience, and partner alignment to recommend what to scale and what to adjust.
+              <h2 className="text-2xl font-semibold mb-4">Know what to run next.</h2>
+              <p className="text-slate-400 mb-6">
+                Event Karma doesn&apos;t just collect data—it tells you what to do with it. AI analyzes attendance, engagement, and outcomes to recommend your next move.
               </p>
-              <ul className="space-y-3 text-sm text-slate-200/80">
-                <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
-                  See which event formats generate pipeline, not just attendance.
+              <ul className="space-y-3 text-slate-300">
+                <li className="flex gap-3">
+                  <span className="mt-1 h-2 w-2 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 flex-shrink-0"></span>
+                  See which event formats generate pipeline, not just attendance
                 </li>
-                <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
-                  Spot partner events worth repeating and co-funding.
+                <li className="flex gap-3">
+                  <span className="mt-1 h-2 w-2 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 flex-shrink-0"></span>
+                  Spot partner events worth repeating and co-funding
                 </li>
-                <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
-                  Compare cities, audiences, and hosting teams.
+                <li className="flex gap-3">
+                  <span className="mt-1 h-2 w-2 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 flex-shrink-0"></span>
+                  Compare cities, audiences, and hosting teams
                 </li>
               </ul>
             </div>
-            <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-5">
-              <p className="text-sm font-medium mb-3 text-slate-50">AI Insight: Exec Card</p>
-              <p className="text-sm text-slate-200/80 mb-3">
-                Austin events scored higher because sales follow-up was 32% faster and partner target accounts were present. Recommendation: Repeat in Q4 roadshow.
+            <div className="bg-[#1a0d2e]/60 border border-purple-500/20 rounded-2xl p-6">
+              <p className="text-sm font-medium mb-3 text-purple-200">AI Recommendation</p>
+              <p className="text-sm text-slate-300 mb-4">
+                Austin events scored higher because sales follow-up was 32% faster and partner target accounts were present.
               </p>
               <div className="grid grid-cols-3 gap-3 text-sm">
-                <div className="bg-slate-950/30 rounded-lg p-3 text-center">
-                  <p className="text-2xl font-semibold text-emerald-300">88</p>
-                  <p className="text-xs text-emerald-200 mt-1">Repeat</p>
+                <div className="bg-[#0f0a1a] rounded-lg p-3 text-center border border-emerald-500/20">
+                  <p className="text-2xl font-semibold text-emerald-400">88</p>
+                  <p className="text-xs text-emerald-300 mt-1">Repeat</p>
                 </div>
-                <div className="bg-slate-950/30 rounded-lg p-3 text-center">
-                  <p className="text-2xl font-semibold text-amber-300">62</p>
-                  <p className="text-xs text-amber-200 mt-1">Resize</p>
+                <div className="bg-[#0f0a1a] rounded-lg p-3 text-center border border-amber-500/20">
+                  <p className="text-2xl font-semibold text-amber-400">62</p>
+                  <p className="text-xs text-amber-300 mt-1">Resize</p>
                 </div>
-                <div className="bg-slate-950/30 rounded-lg p-3 text-center">
-                  <p className="text-2xl font-semibold text-rose-300">34</p>
-                  <p className="text-xs text-rose-200 mt-1">Skip</p>
+                <div className="bg-[#0f0a1a] rounded-lg p-3 text-center border border-rose-500/20">
+                  <p className="text-2xl font-semibold text-rose-400">34</p>
+                  <p className="text-xs text-rose-300 mt-1">Skip</p>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Pricing Teaser - B5 */}
+        {/* Pricing Teaser */}
         <section id="pricing" className="mx-auto max-w-6xl px-4 py-16">
-          <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-semibold mb-4">Simple pricing</h2>
+          <div className="bg-[#1a0d2e]/40 border border-purple-500/20 rounded-2xl p-8 text-center">
+            <h2 className="text-2xl font-semibold mb-4">Simple, transparent pricing</h2>
             <div className="mb-6">
-              <p className="text-4xl font-bold text-slate-50 mb-2">
-                <span className="text-violet-300">$9,999</span>/yr
+              <p className="text-4xl font-bold mb-2">
+                <span className="ek-gradient-text">$9,999</span><span className="text-slate-50">/yr</span>
                 <span className="text-lg font-normal text-slate-400 ml-2">or $999/mo</span>
               </p>
-              <p className="text-slate-300/80">
-                Unlimited events, unlimited check-ins, unlimited users.
+              <p className="text-slate-400">
+                Unlimited events. Unlimited check-ins. Unlimited users.
               </p>
             </div>
-            <p className="text-sm text-violet-300 mb-6">
+            <p className="text-sm text-purple-300 mb-6">
               Founding customers: $7,500 for year one.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
                 href="#book-demo"
                 onClick={() => trackEvent('ek_cta_demo_click')}
-                className="bg-violet-500 hover:bg-violet-400 text-sm px-6 py-2.5 rounded-md font-medium inline-block"
+                className="ek-btn-gradient text-white text-sm px-6 py-3 rounded-lg font-medium inline-block transition-all"
               >
                 Book a demo
               </a>
               <Link
                 href="/eventkarma/pricing"
-                className="text-sm px-6 py-2.5 rounded-md font-medium inline-block text-slate-300 hover:text-white border border-slate-700 hover:border-slate-600"
+                className="text-sm px-6 py-3 rounded-lg font-medium inline-block text-slate-300 hover:text-white border border-purple-500/30 hover:border-purple-500/50"
               >
                 See full pricing details
               </Link>
@@ -496,61 +500,56 @@ export default function EventKarma() {
 
         {/* Integrations */}
         <section id="integrations" className="mx-auto max-w-6xl px-4 py-16">
-          <h2 className="text-2xl font-semibold mb-4">Works with your event and GTM stack.</h2>
-          <p className="text-slate-300/80 mb-6 max-w-3xl">
-            Fast to connect, predictable to maintain. Export to where your sales and ops teams already live.
+          <h2 className="text-2xl font-semibold mb-4">Works with your stack</h2>
+          <p className="text-slate-400 mb-6 max-w-3xl">
+            Connect to the tools your team already uses. Fast to set up, predictable to maintain.
           </p>
           <div className="flex flex-wrap gap-3">
-            <span className="px-4 py-2 rounded-full bg-slate-900/50 border border-slate-800 text-sm">Salesforce</span>
-            <span className="px-4 py-2 rounded-full bg-slate-900/50 border border-slate-800 text-sm">Marketo</span>
-            <span className="px-4 py-2 rounded-full bg-slate-900/50 border border-slate-800 text-sm">HubSpot</span>
-            <span className="px-4 py-2 rounded-full bg-slate-900/50 border border-slate-800 text-sm">Cvent / Splash</span>
-            <span className="px-4 py-2 rounded-full bg-slate-900/50 border border-slate-800 text-sm">Slack</span>
-            <span className="px-4 py-2 rounded-full bg-slate-900/50 border border-slate-800 text-sm">Sheets / CSV</span>
+            <span className="px-4 py-2 rounded-full bg-[#1a0d2e]/60 border border-purple-500/20 text-sm">Salesforce</span>
+            <span className="px-4 py-2 rounded-full bg-[#1a0d2e]/60 border border-purple-500/20 text-sm">Marketo</span>
+            <span className="px-4 py-2 rounded-full bg-[#1a0d2e]/60 border border-purple-500/20 text-sm">HubSpot</span>
+            <span className="px-4 py-2 rounded-full bg-[#1a0d2e]/60 border border-purple-500/20 text-sm">Cvent / Splash</span>
+            <span className="px-4 py-2 rounded-full bg-[#1a0d2e]/60 border border-purple-500/20 text-sm">Slack</span>
+            <span className="px-4 py-2 rounded-full bg-[#1a0d2e]/60 border border-purple-500/20 text-sm">Sheets / CSV</span>
           </div>
         </section>
 
-        {/* CTA Strip - B6 */}
+        {/* CTA Strip */}
         <section id="book-demo" className="mx-auto max-w-6xl px-4 py-16">
-          <div className="bg-gradient-to-r from-violet-600/20 to-blue-600/20 border border-violet-500/30 rounded-2xl p-8 flex flex-col md:flex-row justify-between gap-6 items-center">
+          <div className="ek-gradient-bg border border-purple-500/30 rounded-2xl p-8 flex flex-col md:flex-row justify-between gap-6 items-center">
             <div>
-              <h2 className="text-xl font-semibold mb-2">Ready to see what events actually drive pipeline?</h2>
-              <p className="text-slate-300/80">
-                We&apos;ll walk you through UPL passes, QR check-in, the Publish Gate, and how we export to Salesforce.
+              <h2 className="text-xl font-semibold mb-2">Ready for event enlightenment?</h2>
+              <p className="text-slate-400">
+                See how Event Karma connects every touchpoint and finally answers: which events drive pipeline?
               </p>
             </div>
             <div className="flex gap-3 flex-shrink-0 items-center flex-wrap">
               <a
                 href="https://event.datakarma.ai"
                 onClick={() => trackEvent('ek_cta_demo_click')}
-                className="bg-violet-500 hover:bg-violet-400 text-sm px-5 py-2.5 rounded-md font-medium inline-block"
+                className="ek-btn-gradient text-white text-sm px-6 py-3 rounded-lg font-medium inline-block transition-all"
               >
                 Book a demo
               </a>
               <Link
                 href="/pass-demo?event=ek-demo&e=alex%40example.com"
                 onClick={() => trackEvent('ek_cta_pass_click')}
-                className="bg-slate-800 hover:bg-slate-700 text-sm px-5 py-2.5 rounded-md font-medium inline-block border border-slate-700"
+                className="bg-white/10 hover:bg-white/20 backdrop-blur text-sm px-6 py-3 rounded-lg font-medium inline-block border border-purple-500/30"
               >
                 See a live pass
               </Link>
-              <a
-                href="https://event.datakarma.ai"
-                className="text-sm text-slate-100/80 hover:text-white whitespace-nowrap"
-              >
-                Start free &rarr;
-              </a>
             </div>
           </div>
         </section>
       </main>
 
       {/* Footer */}
-      <footer className="bg-slate-950 py-12 border-t border-slate-900 text-sm text-slate-500">
+      <footer className="bg-[#0f0a1a] py-12 border-t border-purple-500/10 text-sm text-slate-500">
         <div className="mx-auto max-w-6xl px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
-            <div className="flex items-center gap-2">
-              <img src="/datakarma-ai-logo-white.svg" alt="Data Karma" className="logo-icon" />
+            <div className="flex items-center gap-3">
+              <img src="/eventkarma-logo.svg" alt="Event Karma" className="w-8 h-8" />
+              <span className="text-slate-300 font-medium">Event Karma</span>
             </div>
             <nav className="flex flex-wrap gap-6 text-xs">
               <Link href="/eventkarma" className="hover:text-white">Event Karma</Link>
@@ -561,9 +560,9 @@ export default function EventKarma() {
               <Link href="/privacy" className="hover:text-white">Privacy</Link>
             </nav>
           </div>
-          <div className="text-center pt-6 border-t border-slate-900">
+          <div className="text-center pt-6 border-t border-purple-500/10">
             <p className="text-xs">Event Karma is a Data Karma product.</p>
-            <p className="text-xs mt-2">© 2025 Data Karma. Built for event marketing teams.</p>
+            <p className="text-xs mt-2">© 2025 Data Karma. Calm, clear data & event enlightenment.</p>
           </div>
         </div>
       </footer>

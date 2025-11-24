@@ -71,10 +71,10 @@ function trackEvent(eventName: string) {
 // Loading skeleton component
 function PassDemoSkeleton() {
   return (
-    <div className="bg-slate-900/40 border border-slate-800 rounded-2xl p-8">
+    <div className="bg-[#1a0d2e]/60 border border-purple-500/20 rounded-2xl p-8">
       <div className="animate-pulse">
-        <div className="h-8 bg-slate-700 rounded w-3/4 mx-auto mb-4"></div>
-        <div className="h-64 bg-slate-700 rounded mb-4"></div>
+        <div className="h-8 bg-purple-900/30 rounded w-3/4 mx-auto mb-4"></div>
+        <div className="h-64 bg-purple-900/30 rounded mb-4"></div>
       </div>
     </div>
   );
@@ -144,7 +144,7 @@ function PassDemoContent() {
 
   if (showForm) {
     return (
-      <div className="bg-slate-900/40 border border-slate-800 rounded-2xl p-8">
+      <div className="bg-[#1a0d2e]/60 border border-purple-500/20 rounded-2xl p-8">
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-slate-200 mb-2 text-left">
@@ -156,13 +156,13 @@ function PassDemoContent() {
               value={inputEmail}
               onChange={(e) => setInputEmail(e.target.value)}
               placeholder="alex@example.com"
-              className="w-full px-4 py-3 rounded-lg bg-slate-950 border border-slate-700 text-slate-50 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent"
+              className="w-full px-4 py-3 rounded-lg bg-[#0f0a1a] border border-purple-500/30 text-slate-50 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               required
             />
           </div>
           <button
             type="submit"
-            className="w-full bg-violet-500 hover:bg-violet-400 text-white font-medium py-3 px-6 rounded-lg transition-colors"
+            className="w-full ek-btn-gradient text-white font-medium py-3 px-6 rounded-lg transition-all"
           >
             Generate my pass
           </button>
@@ -174,10 +174,10 @@ function PassDemoContent() {
   return (
     <>
       {/* Pass Card */}
-      <div className="bg-slate-900/40 border border-slate-800 rounded-2xl p-8">
+      <div className="bg-[#1a0d2e]/60 border border-purple-500/20 rounded-2xl p-8 ek-glow">
         <div className="mb-6">
-          <p className="text-xs text-violet-400 font-medium mb-2">EVENT</p>
-          <h2 className="text-2xl font-semibold">Event Karma Demo</h2>
+          <p className="text-xs text-purple-400 font-medium mb-2">EVENT</p>
+          <h2 className="text-2xl font-semibold ek-gradient-text">Event Karma Demo</h2>
         </div>
 
         <div className="mb-6">
@@ -206,7 +206,7 @@ function PassDemoContent() {
         {/* Add to Calendar Button */}
         <button
           onClick={handleDownloadICS}
-          className="w-full bg-slate-800 hover:bg-slate-700 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+          className="w-full bg-white/10 hover:bg-white/20 backdrop-blur text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2 border border-purple-500/30"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -221,7 +221,7 @@ function PassDemoContent() {
             setInputEmail('');
             router.push('/pass-demo');
           }}
-          className="mt-4 text-sm text-violet-400 hover:text-violet-300 transition-colors"
+          className="mt-4 text-sm text-purple-400 hover:text-purple-300 transition-colors"
         >
           Try another email
         </button>
@@ -245,19 +245,19 @@ function PassDemoContent() {
         </button>
 
         {accordionOpen && (
-          <div className="mt-4 bg-slate-900/30 border border-slate-800 rounded-xl p-6 text-left text-sm text-slate-300/80">
+          <div className="mt-4 bg-[#1a0d2e]/40 border border-purple-500/20 rounded-xl p-6 text-left text-sm text-slate-300/80">
             <ul className="space-y-3">
               <li className="flex gap-3">
-                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-violet-500/20 text-violet-300 flex items-center justify-center text-xs font-medium">1</span>
-                <span><strong>Universal Pass Links (UPL)</strong> are emailed to registrants from your marketing automation (Marketo, HubSpot).</span>
+                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/20 text-purple-300 flex items-center justify-center text-xs font-medium">1</span>
+                <span><strong>Personalized passes</strong> are emailed to registrants from your marketing automation (Marketo, HubSpot).</span>
               </li>
               <li className="flex gap-3">
-                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-violet-500/20 text-violet-300 flex items-center justify-center text-xs font-medium">2</span>
-                <span><strong>The QR code</strong> contains a short-lived, non-PII token. Staff scan it at the event using our PWA.</span>
+                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/20 text-purple-300 flex items-center justify-center text-xs font-medium">2</span>
+                <span><strong>The QR code</strong> contains a short-lived, non-PII token. Staff scan it at the event using our app.</span>
               </li>
               <li className="flex gap-3">
-                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-violet-500/20 text-violet-300 flex items-center justify-center text-xs font-medium">3</span>
-                <span><strong>Check-in data</strong> syncs to Salesforce Campaign Members after you approve via the Publish Gate.</span>
+                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/20 text-purple-300 flex items-center justify-center text-xs font-medium">3</span>
+                <span><strong>Attendance data</strong> syncs to Salesforce Campaign Members when you publish.</span>
               </li>
             </ul>
           </div>
@@ -271,6 +271,26 @@ export default function PassDemo() {
   return (
     <>
       <Script src="https://cdn.tailwindcss.com" strategy="beforeInteractive" />
+      <style jsx global>{`
+        .ek-gradient-bg {
+          background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(168, 85, 247, 0.12) 50%, rgba(236, 72, 153, 0.1) 100%);
+        }
+        .ek-gradient-text {
+          background: linear-gradient(135deg, #8B5CF6 0%, #A855F7 50%, #EC4899 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+        .ek-glow {
+          box-shadow: 0 0 40px rgba(168, 85, 247, 0.3);
+        }
+        .ek-btn-gradient {
+          background: linear-gradient(135deg, #8B5CF6 0%, #A855F7 50%, #EC4899 100%);
+        }
+        .ek-btn-gradient:hover {
+          background: linear-gradient(135deg, #9D6FFA 0%, #B96AF9 50%, #F084A8 100%);
+        }
+      `}</style>
 
       {/* Navigation */}
       <header>
@@ -293,16 +313,19 @@ export default function PassDemo() {
         </div>
       </header>
 
-      <main className="bg-slate-950 text-slate-50 min-h-screen">
+      <main className="bg-[#0f0a1a] text-slate-50 min-h-screen">
         {/* Hero Section */}
         <section className="relative overflow-hidden py-16 md:py-20">
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(124,58,237,0.18),_transparent_55%)]"></div>
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(139,92,246,0.2),_rgba(168,85,247,0.1)_40%,_transparent_70%)]"></div>
           <div className="relative mx-auto max-w-xl px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-3">
-              Your Event Pass
-            </h1>
-            <p className="text-slate-300/80 mb-8">
-              This is a live demo. Use any email address to see how Universal Pass Links work.
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <img src="/eventkarma-logo.svg" alt="Event Karma" className="w-10 h-10" />
+              <h1 className="text-3xl md:text-4xl font-bold tracking-tight ek-gradient-text">
+                Your Event Pass
+              </h1>
+            </div>
+            <p className="text-slate-400 mb-8">
+              This is a live demo. Use any email address to see how digital passes work.
             </p>
 
             <Suspense fallback={<PassDemoSkeleton />}>
@@ -313,7 +336,7 @@ export default function PassDemo() {
             <div className="mt-12">
               <Link
                 href="/eventkarma"
-                className="text-sm text-slate-400 hover:text-white transition-colors"
+                className="text-sm text-purple-400 hover:text-white transition-colors"
               >
                 &larr; Back to Event Karma
               </Link>
@@ -323,11 +346,12 @@ export default function PassDemo() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-slate-950 py-12 border-t border-slate-900 text-sm text-slate-500">
+      <footer className="bg-[#0f0a1a] py-12 border-t border-purple-500/10 text-sm text-slate-500">
         <div className="mx-auto max-w-6xl px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
-            <div className="flex items-center gap-2">
-              <img src="/datakarma-ai-logo-white.svg" alt="Data Karma" className="logo-icon" />
+            <div className="flex items-center gap-3">
+              <img src="/eventkarma-logo.svg" alt="Event Karma" className="w-8 h-8" />
+              <span className="text-slate-300 font-medium">Event Karma</span>
             </div>
             <nav className="flex flex-wrap gap-6 text-xs">
               <Link href="/eventkarma" className="hover:text-white">Event Karma</Link>
@@ -338,9 +362,9 @@ export default function PassDemo() {
               <Link href="/privacy" className="hover:text-white">Privacy</Link>
             </nav>
           </div>
-          <div className="text-center pt-6 border-t border-slate-900">
+          <div className="text-center pt-6 border-t border-purple-500/10">
             <p className="text-xs">Event Karma is a Data Karma product.</p>
-            <p className="text-xs mt-2">© 2025 Data Karma. Built for event marketing teams.</p>
+            <p className="text-xs mt-2">© 2025 Data Karma. Calm, clear data & event enlightenment.</p>
           </div>
         </div>
       </footer>
