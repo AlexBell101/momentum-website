@@ -227,6 +227,84 @@ function PassDemoContent() {
         </button>
       </div>
 
+      {/* What happens when scanned */}
+      <div className="mt-10">
+        <p className="text-center text-sm text-slate-400 mb-4">
+          When your pass is scanned, you&apos;ll see:
+        </p>
+
+        {/* Entry Question Demo */}
+        <div className="bg-[#1a0d2e]/60 border border-purple-500/20 rounded-2xl p-6 mb-4">
+          <div className="flex items-center gap-2 mb-4">
+            <div className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center">
+              <svg className="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <p className="text-emerald-400 text-sm font-medium">You&apos;re checked in!</p>
+          </div>
+
+          <p className="text-slate-200 font-medium mb-4">What do you most want from today?</p>
+
+          <div className="space-y-2">
+            {[
+              'Learn new strategies',
+              'Network with peers',
+              'Evaluate solutions',
+              'Support a relationship',
+              'Just exploring'
+            ].map((option, i) => (
+              <label key={i} className="flex items-center gap-3 p-3 rounded-lg bg-[#0f0a1a]/60 border border-purple-500/10 hover:border-purple-500/30 cursor-pointer transition-colors">
+                <div className="w-4 h-4 rounded-full border-2 border-purple-400/50"></div>
+                <span className="text-sm text-slate-300">{option}</span>
+              </label>
+            ))}
+          </div>
+
+          <div className="flex gap-3 mt-4">
+            <button className="flex-1 text-sm py-2 px-4 rounded-lg text-slate-400 hover:text-slate-300 transition-colors">
+              Skip
+            </button>
+            <button className="flex-1 ek-btn-gradient text-white text-sm py-2 px-4 rounded-lg font-medium">
+              Continue
+            </button>
+          </div>
+        </div>
+
+        {/* Exit Question Demo */}
+        <div className="bg-[#1a0d2e]/60 border border-purple-500/20 rounded-2xl p-6">
+          <p className="text-xs text-purple-400 mb-2 font-medium">AT EXIT</p>
+          <p className="text-slate-200 font-medium mb-4">Did you get what you came for?</p>
+
+          <div className="flex justify-center gap-4 mb-4">
+            {[1, 2, 3, 4, 5].map((n) => (
+              <button
+                key={n}
+                className={`w-12 h-12 rounded-full border-2 text-lg font-medium transition-all ${
+                  n === 4
+                    ? 'bg-purple-500/30 border-purple-400 text-purple-200'
+                    : 'border-purple-500/30 text-slate-400 hover:border-purple-500/50'
+                }`}
+              >
+                {n}
+              </button>
+            ))}
+          </div>
+          <div className="flex justify-between text-xs text-slate-500 px-2">
+            <span>Not at all</span>
+            <span>Absolutely</span>
+          </div>
+
+          <button className="w-full ek-btn-gradient text-white text-sm py-2 px-4 rounded-lg font-medium mt-4">
+            Submit
+          </button>
+        </div>
+
+        <p className="text-center text-xs text-slate-500 mt-4">
+          Responses feed directly into your event&apos;s Success Score.
+        </p>
+      </div>
+
       {/* How this works accordion */}
       <div className="mt-8">
         <button
@@ -253,11 +331,15 @@ function PassDemoContent() {
               </li>
               <li className="flex gap-3">
                 <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/20 text-purple-300 flex items-center justify-center text-xs font-medium">2</span>
-                <span><strong>The QR code</strong> contains a short-lived, non-PII token. Staff scan it at the event using our app.</span>
+                <span><strong>On scan</strong>, attendees answer one quick question about their goals. This takes 5 seconds.</span>
               </li>
               <li className="flex gap-3">
                 <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/20 text-purple-300 flex items-center justify-center text-xs font-medium">3</span>
-                <span><strong>Attendance data</strong> syncs to Salesforce Campaign Members when you publish.</span>
+                <span><strong>At exit</strong>, a quick rating captures if they got what they came for. Instant Success Score input.</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/20 text-purple-300 flex items-center justify-center text-xs font-medium">4</span>
+                <span><strong>Attendance + feedback</strong> syncs to Salesforce Campaign Members when you publish.</span>
               </li>
             </ul>
           </div>
