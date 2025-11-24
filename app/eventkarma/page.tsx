@@ -4,7 +4,14 @@ import { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
 
-export default function Home() {
+// Track GA event
+function trackEvent(eventName: string) {
+  if (typeof window !== 'undefined' && (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
+    (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', eventName);
+  }
+}
+
+export default function EventKarma() {
   const scrollContainerRef = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
@@ -28,40 +35,33 @@ export default function Home() {
     if (!container) return;
 
     let scrollPos = 0;
-    const scrollSpeed = 0.25; // pixels per frame - slower, more elegant
-    const itemHeight = 68; // approximate height of each item including gap
+    const scrollSpeed = 0.25;
+    const itemHeight = 68;
     const totalItems = 8;
     const totalHeight = itemHeight * totalItems;
     let animationId: number | null = null;
 
     const scroll = () => {
       scrollPos += scrollSpeed;
-
-      // Reset to beginning when we've scrolled through half the items (since they're duplicated)
       if (scrollPos >= totalHeight) {
         scrollPos = 0;
         container.scrollTop = 0;
       } else {
         container.scrollTop = scrollPos;
       }
-
       animationId = requestAnimationFrame(scroll);
     };
 
-    // Start the animation
     animationId = requestAnimationFrame(scroll);
 
-    // Prevent ALL mouse interactions from interfering with auto-scroll
     const handleWheel = (e: WheelEvent) => {
       e.preventDefault();
       e.stopPropagation();
     };
-
     const handleMouseDown = (e: MouseEvent) => {
       e.preventDefault();
       e.stopPropagation();
     };
-
     const handleTouchStart = (e: TouchEvent) => {
       e.preventDefault();
       e.stopPropagation();
@@ -72,9 +72,7 @@ export default function Home() {
     container.addEventListener('touchstart', handleTouchStart, { passive: false });
 
     return () => {
-      if (animationId) {
-        cancelAnimationFrame(animationId);
-      }
+      if (animationId) cancelAnimationFrame(animationId);
       container.removeEventListener('wheel', handleWheel);
       container.removeEventListener('mousedown', handleMouseDown);
       container.removeEventListener('touchstart', handleTouchStart);
@@ -95,9 +93,6 @@ export default function Home() {
         .no-pointer-events {
           pointer-events: none;
           user-select: none;
-          -webkit-user-select: none;
-          -moz-user-select: none;
-          -ms-user-select: none;
         }
       `}</style>
 
@@ -123,7 +118,7 @@ export default function Home() {
       </header>
 
       <main className="bg-slate-950 text-slate-50">
-        {/* Hero Section */}
+        {/* Hero Section - B1 */}
         <section className="relative overflow-hidden py-16 md:py-20">
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(124,58,237,0.18),_transparent_55%)]"></div>
           <div className="relative mx-auto max-w-6xl px-4 grid md:grid-cols-2 gap-12 items-center">
@@ -132,18 +127,36 @@ export default function Home() {
                 Event Karma
               </h1>
               <p className="text-xl md:text-2xl text-violet-300 mb-6">
-                Event Ops for B2B Teams
+                The Event GTM OS
               </p>
               <p className="text-lg text-slate-200 mb-4 max-w-xl">
-                Registration. Check-in. Salesforce. Done.
+                From invite to impact.
               </p>
               <p className="text-slate-300/80 mb-6 max-w-xl">
-                The full-funnel event operations platform. Handle registration, QR check-in, walk-in capture, and publish to Salesforce—no spreadsheets, no manual syncs.
+                UPL passes, QR check-in, Salesforce updates, notes & surveys, and AI insights—so you know what to repeat, resize, or skip.
               </p>
               <div className="flex flex-wrap gap-4 mb-6">
-                <a href="https://event.datakarma.ai" className="bg-violet-500 hover:bg-violet-400 text-sm px-5 py-2.5 rounded-md font-medium inline-block">
-                  Get started
+                <a
+                  href="#book-demo"
+                  onClick={() => trackEvent('ek_cta_demo_click')}
+                  className="bg-violet-500 hover:bg-violet-400 text-sm px-5 py-2.5 rounded-md font-medium inline-block"
+                >
+                  Book a demo
                 </a>
+                <Link
+                  href="/pass-demo?event=ek-demo&e=alex%40example.com"
+                  onClick={() => trackEvent('ek_cta_pass_click')}
+                  className="bg-slate-800 hover:bg-slate-700 text-sm px-5 py-2.5 rounded-md font-medium inline-block border border-slate-700"
+                >
+                  See a live event pass
+                </Link>
+                <Link
+                  href="/eventkarma/pricing"
+                  onClick={() => trackEvent('ek_cta_pricing_click')}
+                  className="text-sm px-5 py-2.5 rounded-md font-medium inline-block text-slate-300 hover:text-white"
+                >
+                  Pricing &rarr;
+                </Link>
               </div>
               <p className="text-xs text-slate-500">
                 Built for B2B event teams at SaaS, cybersecurity, and data companies.
@@ -161,241 +174,119 @@ export default function Home() {
                 style={{ display: 'block' }}
                 onLoadedMetadata={(e) => {
                   const video = e.target as HTMLVideoElement;
-                  video.playbackRate = 1.25; // Speed up slightly for snappier demo
+                  video.playbackRate = 1.25;
                 }}
               >
                 <source src="/momentumvid.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
+          </div>
+        </section>
 
-            {/* Optional: Keep event list below video or remove */}
-            <div className="hidden bg-slate-900/40 border border-slate-800 rounded-2xl p-5 shadow-xl space-y-4">
-              <div className="flex items-center justify-between">
-                <p className="text-sm font-medium text-slate-50">Q3 events — AI recommendations</p>
-                <span className="text-xs text-slate-400">Updated 3m ago</span>
+        {/* From Invite to Impact Spine - B2 */}
+        <section className="mx-auto max-w-6xl px-4 py-16">
+          <div className="text-center mb-12">
+            <p className="inline-flex items-center gap-2 rounded-full bg-violet-500/10 border border-violet-500/30 px-3 py-1 text-xs text-violet-100 mb-4">
+              FROM INVITE TO IMPACT
+            </p>
+            <h2 className="text-3xl font-semibold mb-3">The complete event lifecycle, connected</h2>
+            <p className="text-slate-300/80 max-w-2xl mx-auto">
+              Six steps from registration to AI recommendations. No spreadsheets, no manual syncs.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-6 gap-4 mb-12">
+            {/* Step 1: Registration */}
+            <div className="bg-slate-900/40 border border-slate-800 rounded-xl p-4 text-center">
+              <div className="w-10 h-10 rounded-full bg-violet-500/20 flex items-center justify-center mx-auto mb-3">
+                <svg className="w-5 h-5 text-violet-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
               </div>
-              <ul ref={scrollContainerRef} className="space-y-3 max-h-52 overflow-y-auto pr-2 scrollbar-hide no-pointer-events">
-                <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
-                  <div>
-                    <p className="text-sm">Austin Customer Breakfast</p>
-                    <p className="text-xs text-slate-400">Score 92 · 28 attendees · 12 MQLs · $340k pipeline · 6 partners</p>
-                  </div>
-                  <span className="text-xs bg-emerald-500/10 text-emerald-200 px-2 py-1 rounded-md">
-                    Run again
-                  </span>
-                </li>
-                <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
-                  <div>
-                    <p className="text-sm">Boston Executive Dinner</p>
-                    <p className="text-xs text-slate-400">Score 88 · 18 attendees · 7 MQLs · $180k pipeline · 3 partners</p>
-                  </div>
-                  <span className="text-xs bg-amber-500/10 text-amber-200 px-2 py-1 rounded-md">
-                    Resize
-                  </span>
-                </li>
-                <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
-                  <div>
-                    <p className="text-sm">Partner Webinar</p>
-                    <p className="text-xs text-slate-400">Score 74 · 142 attendees · 31 MQLs · $220k pipeline · 8 partners</p>
-                  </div>
-                  <span className="text-xs bg-rose-500/10 text-rose-200 px-2 py-1 rounded-md">
-                    Pause
-                  </span>
-                </li>
-                <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
-                  <div>
-                    <p className="text-sm">NYC Product Launch</p>
-                    <p className="text-xs text-slate-400">Score 96 · 85 attendees · 24 MQLs · $520k pipeline · 4 partners</p>
-                  </div>
-                  <span className="text-xs bg-blue-500/10 text-blue-200 px-2 py-1 rounded-md">
-                    Schedule
-                  </span>
-                </li>
-                <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
-                  <div>
-                    <p className="text-sm">SF Sales Kickoff</p>
-                    <p className="text-xs text-slate-400">Score 91 · 64 attendees · 18 MQLs · $410k pipeline · 2 partners</p>
-                  </div>
-                  <span className="text-xs bg-violet-500/10 text-violet-200 px-2 py-1 rounded-md">
-                    Expand
-                  </span>
-                </li>
-                <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
-                  <div>
-                    <p className="text-sm">Chicago Industry Conference</p>
-                    <p className="text-xs text-slate-400">Score 68 · 287 attendees · 45 MQLs · $380k pipeline · 0 partners</p>
-                  </div>
-                  <span className="text-xs bg-indigo-500/10 text-indigo-200 px-2 py-1 rounded-md">
-                    Optimize
-                  </span>
-                </li>
-                <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
-                  <div>
-                    <p className="text-sm">Seattle Executive Roundtable</p>
-                    <p className="text-xs text-slate-400">Score 94 · 12 attendees · 8 MQLs · $290k pipeline · 2 partners</p>
-                  </div>
-                  <span className="text-xs bg-cyan-500/10 text-cyan-200 px-2 py-1 rounded-md">
-                    Review
-                  </span>
-                </li>
-                <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
-                  <div>
-                    <p className="text-sm">Denver Training Workshop</p>
-                    <p className="text-xs text-slate-400">Score 79 · 52 attendees · 14 MQLs · $125k pipeline · 0 partners</p>
-                  </div>
-                  <span className="text-xs bg-teal-500/10 text-teal-200 px-2 py-1 rounded-md">
-                    Adjust
-                  </span>
-                </li>
-                {/* Duplicate items for seamless loop */}
-                <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
-                  <div>
-                    <p className="text-sm">Austin Customer Breakfast</p>
-                    <p className="text-xs text-slate-400">Score 92 · 28 attendees · 12 MQLs · $340k pipeline · 6 partners</p>
-                  </div>
-                  <span className="text-xs bg-emerald-500/10 text-emerald-200 px-2 py-1 rounded-md">
-                    Run again
-                  </span>
-                </li>
-                <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
-                  <div>
-                    <p className="text-sm">Boston Executive Dinner</p>
-                    <p className="text-xs text-slate-400">Score 88 · 18 attendees · 7 MQLs · $180k pipeline · 3 partners</p>
-                  </div>
-                  <span className="text-xs bg-amber-500/10 text-amber-200 px-2 py-1 rounded-md">
-                    Resize
-                  </span>
-                </li>
-                <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
-                  <div>
-                    <p className="text-sm">Partner Webinar</p>
-                    <p className="text-xs text-slate-400">Score 74 · 142 attendees · 31 MQLs · $220k pipeline · 8 partners</p>
-                  </div>
-                  <span className="text-xs bg-rose-500/10 text-rose-200 px-2 py-1 rounded-md">
-                    Pause
-                  </span>
-                </li>
-                <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
-                  <div>
-                    <p className="text-sm">NYC Product Launch</p>
-                    <p className="text-xs text-slate-400">Score 96 · 85 attendees · 24 MQLs · $520k pipeline · 4 partners</p>
-                  </div>
-                  <span className="text-xs bg-blue-500/10 text-blue-200 px-2 py-1 rounded-md">
-                    Schedule
-                  </span>
-                </li>
-                <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
-                  <div>
-                    <p className="text-sm">SF Sales Kickoff</p>
-                    <p className="text-xs text-slate-400">Score 91 · 64 attendees · 18 MQLs · $410k pipeline · 2 partners</p>
-                  </div>
-                  <span className="text-xs bg-violet-500/10 text-violet-200 px-2 py-1 rounded-md">
-                    Expand
-                  </span>
-                </li>
-                <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
-                  <div>
-                    <p className="text-sm">Chicago Industry Conference</p>
-                    <p className="text-xs text-slate-400">Score 68 · 287 attendees · 45 MQLs · $380k pipeline · 0 partners</p>
-                  </div>
-                  <span className="text-xs bg-indigo-500/10 text-indigo-200 px-2 py-1 rounded-md">
-                    Optimize
-                  </span>
-                </li>
-                <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
-                  <div>
-                    <p className="text-sm">Seattle Executive Roundtable</p>
-                    <p className="text-xs text-slate-400">Score 94 · 12 attendees · 8 MQLs · $290k pipeline · 2 partners</p>
-                  </div>
-                  <span className="text-xs bg-cyan-500/10 text-cyan-200 px-2 py-1 rounded-md">
-                    Review
-                  </span>
-                </li>
-                <li className="flex items-center justify-between bg-slate-950/30 rounded-lg px-3 py-2">
-                  <div>
-                    <p className="text-sm">Denver Training Workshop</p>
-                    <p className="text-xs text-slate-400">Score 79 · 52 attendees · 14 MQLs · $125k pipeline · 0 partners</p>
-                  </div>
-                  <span className="text-xs bg-teal-500/10 text-teal-200 px-2 py-1 rounded-md">
-                    Adjust
-                  </span>
-                </li>
-              </ul>
-              <div className="border-t border-slate-800 pt-3">
-                <p className="text-xs text-slate-400">
-                  AI insight: partner-aligned breakfasts in Austin produced 2.3× co-fundable pipeline. Repeat in Q4.
-                </p>
+              <p className="text-xs text-violet-400 font-medium mb-1">1</p>
+              <h3 className="text-sm font-semibold mb-1">Registration</h3>
+              <p className="text-xs text-slate-400">Send Universal Pass Links from Marketo/HubSpot.</p>
+            </div>
+
+            {/* Step 2: Event Pass */}
+            <div className="bg-slate-900/40 border border-slate-800 rounded-xl p-4 text-center">
+              <div className="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center mx-auto mb-3">
+                <svg className="w-5 h-5 text-emerald-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
+                </svg>
               </div>
+              <p className="text-xs text-emerald-400 font-medium mb-1">2</p>
+              <h3 className="text-sm font-semibold mb-1">Event Pass</h3>
+              <p className="text-xs text-slate-400">Renders a short-lived QR—no PII in code.</p>
+            </div>
+
+            {/* Step 3: QR Check-in */}
+            <div className="bg-slate-900/40 border border-slate-800 rounded-xl p-4 text-center">
+              <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center mx-auto mb-3">
+                <svg className="w-5 h-5 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <p className="text-xs text-blue-400 font-medium mb-1">3</p>
+              <h3 className="text-sm font-semibold mb-1">QR Check-in</h3>
+              <p className="text-xs text-slate-400">PWA scanner, offline-tolerant, kiosk-friendly.</p>
+            </div>
+
+            {/* Step 4: Publish Gate */}
+            <div className="bg-slate-900/40 border border-slate-800 rounded-xl p-4 text-center">
+              <div className="w-10 h-10 rounded-full bg-amber-500/20 flex items-center justify-center mx-auto mb-3">
+                <svg className="w-5 h-5 text-amber-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <p className="text-xs text-amber-400 font-medium mb-1">4</p>
+              <h3 className="text-sm font-semibold mb-1">Publish Gate</h3>
+              <p className="text-xs text-slate-400">Local fields first; you decide when to publish.</p>
+            </div>
+
+            {/* Step 5: Notes & Surveys */}
+            <div className="bg-slate-900/40 border border-slate-800 rounded-xl p-4 text-center">
+              <div className="w-10 h-10 rounded-full bg-rose-500/20 flex items-center justify-center mx-auto mb-3">
+                <svg className="w-5 h-5 text-rose-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                </svg>
+              </div>
+              <p className="text-xs text-rose-400 font-medium mb-1">5</p>
+              <h3 className="text-sm font-semibold mb-1">Notes & Surveys</h3>
+              <p className="text-xs text-slate-400">Pulse questions + rep notes stitched to CM.</p>
+            </div>
+
+            {/* Step 6: AI Insights */}
+            <div className="bg-slate-900/40 border border-slate-800 rounded-xl p-4 text-center">
+              <div className="w-10 h-10 rounded-full bg-cyan-500/20 flex items-center justify-center mx-auto mb-3">
+                <svg className="w-5 h-5 text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+              </div>
+              <p className="text-xs text-cyan-400 font-medium mb-1">6</p>
+              <h3 className="text-sm font-semibold mb-1">AI Insights</h3>
+              <p className="text-xs text-slate-400">Forecasts, momentum score, next-best actions.</p>
             </div>
           </div>
         </section>
 
-        {/* Event Lifecycle Features */}
+        {/* Ops & Trust Rows - B3 */}
         <section className="mx-auto max-w-6xl px-4 py-16">
-          <div className="text-center mb-12">
-            <p className="inline-flex items-center gap-2 rounded-full bg-violet-500/10 border border-violet-500/30 px-3 py-1 text-xs text-violet-100 mb-4">
-              FULL EVENT LIFECYCLE
-            </p>
-            <h2 className="text-3xl font-semibold mb-3">One platform from registration to Salesforce</h2>
-            <p className="text-slate-300/80 max-w-2xl mx-auto">
-              Stop juggling spreadsheets and manual syncs. Event Karma handles the entire event lifecycle with native Salesforce integration.
-            </p>
-          </div>
-
           <div className="grid md:grid-cols-3 gap-6 mb-12">
-            {/* Pre-Event */}
+            {/* Salesforce-first */}
             <div className="bg-slate-900/40 border border-slate-800 rounded-2xl p-6">
-              <p className="text-xs text-violet-400 font-medium mb-3">PRE-EVENT</p>
-              <h3 className="text-xl font-semibold mb-3">Registration & Lead Capture</h3>
-              <ul className="space-y-2 text-sm text-slate-200/80">
-                <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-violet-400 flex-shrink-0"></span>
-                  Branded registration pages
-                </li>
-                <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-violet-400 flex-shrink-0"></span>
-                  Session signup and email passes
-                </li>
-                <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-violet-400 flex-shrink-0"></span>
-                  Lead capture forms
-                </li>
-                <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-violet-400 flex-shrink-0"></span>
-                  Auto-sync to Salesforce Campaigns
-                </li>
-              </ul>
-            </div>
-
-            {/* At-Event */}
-            <div className="bg-slate-900/40 border border-slate-800 rounded-2xl p-6">
-              <p className="text-xs text-emerald-400 font-medium mb-3">AT-EVENT</p>
-              <h3 className="text-xl font-semibold mb-3">QR Check-In Module</h3>
-              <ul className="space-y-2 text-sm text-slate-200/80">
-                <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
-                  QR scanner for staff
-                </li>
-                <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
-                  Kiosk self-service check-in
-                </li>
-                <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
-                  Walk-in capture on the spot
-                </li>
-                <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
-                  Works offline, syncs when back online
-                </li>
-              </ul>
-            </div>
-
-            {/* Post-Event */}
-            <div className="bg-slate-900/40 border border-slate-800 rounded-2xl p-6">
-              <p className="text-xs text-blue-400 font-medium mb-3">POST-EVENT</p>
-              <h3 className="text-xl font-semibold mb-3">Publish to Salesforce</h3>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center">
+                  <svg className="w-5 h-5 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold">Salesforce-first</h3>
+              </div>
+              <p className="text-slate-300/80 text-sm mb-4">
+                CM status updates, timestamp stamps, consent fields; identity resolution and audit logs.
+              </p>
               <ul className="space-y-2 text-sm text-slate-200/80">
                 <li className="flex gap-2">
                   <span className="mt-1 h-1.5 w-1.5 rounded-full bg-blue-400 flex-shrink-0"></span>
@@ -407,94 +298,88 @@ export default function Home() {
                 </li>
                 <li className="flex gap-2">
                   <span className="mt-1 h-1.5 w-1.5 rounded-full bg-blue-400 flex-shrink-0"></span>
-                  Assign notes as tasks for follow-up
+                  Full audit trail
+                </li>
+              </ul>
+            </div>
+
+            {/* Control */}
+            <div className="bg-slate-900/40 border border-slate-800 rounded-2xl p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-lg bg-amber-500/20 flex items-center justify-center">
+                  <svg className="w-5 h-5 text-amber-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold">Control</h3>
+              </div>
+              <p className="text-slate-300/80 text-sm mb-4">
+                Publish Gate prevents premature MQLs. You choose when follow-ups trigger.
+              </p>
+              <ul className="space-y-2 text-sm text-slate-200/80">
+                <li className="flex gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-amber-400 flex-shrink-0"></span>
+                  Local fields until you&apos;re ready
                 </li>
                 <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-blue-400 flex-shrink-0"></span>
-                  Business email validation
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-amber-400 flex-shrink-0"></span>
+                  Review before publishing
+                </li>
+                <li className="flex gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-amber-400 flex-shrink-0"></span>
+                  No accidental automation triggers
+                </li>
+              </ul>
+            </div>
+
+            {/* Privacy */}
+            <div className="bg-slate-900/40 border border-slate-800 rounded-2xl p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-lg bg-emerald-500/20 flex items-center justify-center">
+                  <svg className="w-5 h-5 text-emerald-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold">Privacy</h3>
+              </div>
+              <p className="text-slate-300/80 text-sm mb-4">
+                No PII in QR codes. HTTPS everywhere. GDPR-aware consent for onsite lookups.
+              </p>
+              <ul className="space-y-2 text-sm text-slate-200/80">
+                <li className="flex gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  Short-lived tokens only
+                </li>
+                <li className="flex gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  Referrer policy enforced
+                </li>
+                <li className="flex gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                  SOC 2 compliant infrastructure
                 </li>
               </ul>
             </div>
           </div>
+        </section>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Feature 1: Check-In Module */}
-            <div className="bg-slate-900/40 border border-slate-800 rounded-2xl p-6 flex flex-col">
-              <div className="flex items-start justify-between mb-4">
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Event Check-In Module</h3>
-                  <p className="text-sm text-emerald-300">Works offline, syncs automatically</p>
-                </div>
-                <span className="px-2 py-1 rounded-md bg-emerald-500/10 text-emerald-200 text-xs font-medium">NEW</span>
+        {/* Results Row - B4 */}
+        <section className="mx-auto max-w-6xl px-4 py-16">
+          <div className="bg-gradient-to-r from-violet-500/10 to-blue-500/10 border border-slate-800 rounded-2xl p-8">
+            <h2 className="text-2xl font-semibold mb-6 text-center">Results teams are seeing</h2>
+            <div className="grid md:grid-cols-3 gap-8 text-center">
+              <div>
+                <p className="text-4xl font-bold text-violet-300 mb-2">10–20 hrs</p>
+                <p className="text-slate-300/80">Saved per month on reporting</p>
               </div>
-
-              <p className="text-slate-300/90 mb-4">
-                QR code check-in for staff, self-service kiosk mode for attendees, and instant walk-in capture. No WiFi? No problem—works offline and syncs when you're back online.
-              </p>
-
-              <div className="bg-slate-950/50 rounded-lg p-4 mb-4">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-xs text-slate-400">Chicago Tech Summit Check-Ins</span>
-                  <span className="text-xs px-2 py-1 rounded-md bg-emerald-500/10 text-emerald-200">Live</span>
-                </div>
-                <div className="flex items-baseline gap-2 mb-1">
-                  <span className="text-3xl font-bold text-emerald-300">247</span>
-                  <span className="text-sm text-slate-400">checked in</span>
-                </div>
-                <p className="text-xs text-slate-400 mt-2">34 walk-ins captured · 0 duplicates · Ready to publish</p>
+              <div>
+                <p className="text-4xl font-bold text-emerald-300 mb-2">10–25%</p>
+                <p className="text-slate-300/80">Lift in show rate with UPL + reminders</p>
               </div>
-
-              <ul className="space-y-2 text-sm text-slate-200/80 flex-grow">
-                <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
-                  Scan QR codes or search by name
-                </li>
-                <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
-                  Capture walk-ins with business email validation
-                </li>
-                <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
-                  Session-level attendance tracking
-                </li>
-              </ul>
-            </div>
-
-            {/* Feature 2: Salesforce Publishing */}
-            <div className="bg-slate-900/40 border border-slate-800 rounded-2xl p-6 flex flex-col">
-              <div className="flex items-start justify-between mb-4">
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Native Salesforce Integration</h3>
-                  <p className="text-sm text-blue-300">Updates Campaign Members directly</p>
-                </div>
-                <span className="px-2 py-1 rounded-md bg-blue-500/10 text-blue-200 text-xs font-medium">NATIVE</span>
+              <div>
+                <p className="text-4xl font-bold text-blue-300 mb-2">Faster</p>
+                <p className="text-slate-300/80">Opp creation from cleaner follow-ups</p>
               </div>
-
-              <p className="text-slate-300/90 mb-4">
-                Publish attendees directly to Salesforce Campaign Members. Built-in guardrails validate business emails, check session counts, and prevent duplicates before anything hits your CRM.
-              </p>
-
-              <div className="bg-slate-950/50 rounded-lg p-4 mb-4">
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-xs text-slate-400">Ready to Publish</span>
-                  <span className="text-xs px-2 py-1 rounded-md bg-blue-500/10 text-blue-200">Guardrails passed</span>
-                </div>
-                <p className="text-xs text-slate-300/80 leading-relaxed mb-2">
-                  247 attendees ready • 34 walk-ins validated • 12 flagged for review (personal emails)
-                </p>
-                <p className="text-xs text-blue-300">One click to update Campaign Members →</p>
-              </div>
-
-              <ul className="space-y-2 text-sm text-slate-200/80 flex-grow">
-                <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-blue-400 flex-shrink-0"></span>
-                  No spreadsheets or manual imports
-                </li>
-                <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-blue-400 flex-shrink-0"></span>
-                  Assign notes as tasks for follow-up
-                </li>
-              </ul>
             </div>
           </div>
         </section>
@@ -553,50 +438,58 @@ export default function Home() {
               </ul>
             </div>
             <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-5">
-              <p className="text-sm font-medium mb-3 text-slate-50">Insight: Austin vs. Boston events</p>
+              <p className="text-sm font-medium mb-3 text-slate-50">AI Insight: Exec Card</p>
               <p className="text-sm text-slate-200/80 mb-3">
-                Austin events scored higher because sales follow-up was 32% faster and partner target accounts were present. Replicate for Q4 roadshow.
+                Austin events scored higher because sales follow-up was 32% faster and partner target accounts were present. Recommendation: Repeat in Q4 roadshow.
               </p>
-              <div className="grid grid-cols-2 gap-3 text-sm">
-                <div className="bg-slate-950/30 rounded-lg p-3">
-                  <p className="text-xs text-slate-400 mb-1">Austin</p>
-                  <p className="text-2xl font-semibold">88</p>
-                  <p className="text-xs text-emerald-300 mt-1">Run again</p>
+              <div className="grid grid-cols-3 gap-3 text-sm">
+                <div className="bg-slate-950/30 rounded-lg p-3 text-center">
+                  <p className="text-2xl font-semibold text-emerald-300">88</p>
+                  <p className="text-xs text-emerald-200 mt-1">Repeat</p>
                 </div>
-                <div className="bg-slate-950/30 rounded-lg p-3">
-                  <p className="text-xs text-slate-400 mb-1">Boston</p>
-                  <p className="text-2xl font-semibold">62</p>
+                <div className="bg-slate-950/30 rounded-lg p-3 text-center">
+                  <p className="text-2xl font-semibold text-amber-300">62</p>
                   <p className="text-xs text-amber-200 mt-1">Resize</p>
                 </div>
+                <div className="bg-slate-950/30 rounded-lg p-3 text-center">
+                  <p className="text-2xl font-semibold text-rose-300">34</p>
+                  <p className="text-xs text-rose-200 mt-1">Skip</p>
+                </div>
               </div>
-              <p className="text-xs text-slate-500 mt-4">
-                Explanation available inside the app for stakeholders. Exportable to Salesforce / Sheets.
-              </p>
             </div>
           </div>
         </section>
 
-        {/* 50% Story */}
-        <section className="mx-auto max-w-6xl px-4 py-16">
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-6">
-              <h3 className="font-medium mb-3">How most teams measure events today</h3>
-              <ul className="space-y-2 text-sm text-slate-200/80">
-                <li>✔ Registrations</li>
-                <li>✔ Check-ins</li>
-                <li>✔ MQLs</li>
-              </ul>
-              <p className="text-xs text-slate-500 mt-4">= 50% of the story</p>
+        {/* Pricing Teaser - B5 */}
+        <section id="pricing" className="mx-auto max-w-6xl px-4 py-16">
+          <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-8 text-center">
+            <h2 className="text-2xl font-semibold mb-4">Simple pricing</h2>
+            <div className="mb-6">
+              <p className="text-4xl font-bold text-slate-50 mb-2">
+                <span className="text-violet-300">$9,999</span>/yr
+                <span className="text-lg font-normal text-slate-400 ml-2">or $999/mo</span>
+              </p>
+              <p className="text-slate-300/80">
+                Unlimited events, unlimited check-ins, unlimited users.
+              </p>
             </div>
-            <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-6">
-              <h3 className="font-medium mb-3">What Event Karma adds</h3>
-              <ul className="space-y-2 text-sm text-slate-200/80">
-                <li>✅ Attendee survey</li>
-                <li>✅ Sales feedback (auto-routed)</li>
-                <li>✅ Partner/sponsor value</li>
-                <li>✅ AI recommendation</li>
-              </ul>
-              <p className="text-xs text-slate-500 mt-4">= full view for repeat / resize / pause</p>
+            <p className="text-sm text-violet-300 mb-6">
+              Founding customers: $7,500 for year one.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a
+                href="#book-demo"
+                onClick={() => trackEvent('ek_cta_demo_click')}
+                className="bg-violet-500 hover:bg-violet-400 text-sm px-6 py-2.5 rounded-md font-medium inline-block"
+              >
+                Book a demo
+              </a>
+              <Link
+                href="/eventkarma/pricing"
+                className="text-sm px-6 py-2.5 rounded-md font-medium inline-block text-slate-300 hover:text-white border border-slate-700 hover:border-slate-600"
+              >
+                See full pricing details
+              </Link>
             </div>
           </div>
         </section>
@@ -617,21 +510,35 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CTA / Resources */}
-        <section id="resources" className="mx-auto max-w-6xl px-4 py-16">
-          <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-8 flex flex-col md:flex-row justify-between gap-6 items-center">
+        {/* CTA Strip - B6 */}
+        <section id="book-demo" className="mx-auto max-w-6xl px-4 py-16">
+          <div className="bg-gradient-to-r from-violet-600/20 to-blue-600/20 border border-violet-500/30 rounded-2xl p-8 flex flex-col md:flex-row justify-between gap-6 items-center">
             <div>
-              <h2 className="text-xl font-semibold mb-2">Ready to show which events actually drive pipeline?</h2>
+              <h2 className="text-xl font-semibold mb-2">Ready to see what events actually drive pipeline?</h2>
               <p className="text-slate-300/80">
-                We'll walk you through the event scorecard, stakeholder surveys, and how we export to Salesforce.
+                We&apos;ll walk you through UPL passes, QR check-in, the Publish Gate, and how we export to Salesforce.
               </p>
             </div>
-            <div className="flex gap-3 flex-shrink-0 items-center">
-              <a href="https://event.datakarma.ai" className="bg-white text-slate-950 text-sm px-4 py-2 rounded-md font-medium inline-block hover:bg-slate-100">
-                Get started
+            <div className="flex gap-3 flex-shrink-0 items-center flex-wrap">
+              <a
+                href="https://event.datakarma.ai"
+                onClick={() => trackEvent('ek_cta_demo_click')}
+                className="bg-violet-500 hover:bg-violet-400 text-sm px-5 py-2.5 rounded-md font-medium inline-block"
+              >
+                Book a demo
               </a>
-              <a href="https://event.datakarma.ai" className="text-sm text-slate-100/80 hover:text-white whitespace-nowrap">
-                Download sample report →
+              <Link
+                href="/pass-demo?event=ek-demo&e=alex%40example.com"
+                onClick={() => trackEvent('ek_cta_pass_click')}
+                className="bg-slate-800 hover:bg-slate-700 text-sm px-5 py-2.5 rounded-md font-medium inline-block border border-slate-700"
+              >
+                See a live pass
+              </Link>
+              <a
+                href="https://event.datakarma.ai"
+                className="text-sm text-slate-100/80 hover:text-white whitespace-nowrap"
+              >
+                Start free &rarr;
               </a>
             </div>
           </div>

@@ -7,7 +7,7 @@ export default function HowItWorksRedirect() {
   const router = useRouter();
 
   useEffect(() => {
-    router.replace('/momentum/how-it-works');
+    router.replace('/eventkarma/how-it-works');
   }, [router]);
 
   return null;

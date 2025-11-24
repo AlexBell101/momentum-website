@@ -7,7 +7,7 @@ export default function IntegrationsRedirect() {
   const router = useRouter();
 
   useEffect(() => {
-    router.replace('/momentum/integrations');
+    router.replace('/eventkarma/integrations');
   }, [router]);
 
   return null;

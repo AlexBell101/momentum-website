@@ -7,7 +7,7 @@ export default function PricingRedirect() {
   const router = useRouter();
 
   useEffect(() => {
-    router.replace('/momentum/pricing');
+    router.replace('/eventkarma/pricing');
   }, [router]);
 
   return null;

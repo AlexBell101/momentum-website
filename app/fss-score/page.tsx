@@ -7,7 +7,7 @@ export default function FSSScoreRedirect() {
   const router = useRouter();
 
   useEffect(() => {
-    router.replace('/momentum/fss-score');
+    router.replace('/eventkarma/fss-score');
   }, [router]);
 
   return null;

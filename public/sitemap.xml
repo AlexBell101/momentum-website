@@ -29,9 +29,15 @@
   <!-- Event Karma Product Pages -->
   <url>
     <loc>https://www.datakarma.ai/eventkarma</loc>
-    <lastmod>2025-11-22</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.datakarma.ai/pass-demo</loc>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.datakarma.ai/eventkarma/pricing</loc>

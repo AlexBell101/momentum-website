@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Data Karma — The event marketing scorecard",
-  description: "Data Karma builds products for event marketing. Event Karma scores every event so you know what to repeat, resize, or pause.",
-  keywords: ["event marketing", "event analytics", "marketing scorecard", "event ROI", "Salesforce integration", "marketing automation", "event success score", "B2B events", "pipeline tracking"],
+  title: "Event Karma — The Event GTM OS by Data Karma",
+  description: "Event Karma connects invites, UPL passes, QR check-in, surveys, and Salesforce to forecast outcomes and drive pipeline from every event.",
+  keywords: ["event marketing", "event GTM", "event check-in", "QR check-in", "Salesforce integration", "marketing automation", "event success score", "B2B events", "pipeline tracking", "UPL passes", "event ops"],
   authors: [{ name: "Data Karma" }],
   creator: "Data Karma",
   publisher: "Data Karma",
@@ -17,21 +17,21 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.datakarma.ai",
     siteName: "Data Karma",
-    title: "Data Karma — The event marketing scorecard",
-    description: "Data Karma builds products for event marketing. Event Karma scores every event so you know what to repeat, resize, or pause.",
+    title: "Event Karma — Event GTM OS",
+    description: "From invite to impact with forecasts, check-in, and buying-group activation.",
     images: [
       {
         url: "/favicon.svg",
         width: 1200,
         height: 630,
-        alt: "Data Karma - Event Marketing Scorecard",
+        alt: "Event Karma by Data Karma",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Data Karma — The event marketing scorecard",
-    description: "Data Karma builds products for event marketing. Event Karma scores every event so you know what to repeat, resize, or pause.",
+    title: "Event Karma — Event GTM OS",
+    description: "From invite to impact with forecasts, check-in, and buying-group activation.",
     images: ["/favicon.svg"],
   },
   robots: {
