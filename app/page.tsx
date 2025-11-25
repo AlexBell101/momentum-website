@@ -124,11 +124,18 @@ export default function EventKarma() {
             <div className="flex items-center gap-3">
               <img src="/eventkarma-logo.svg" alt="Event Karma" className="w-10 h-10" />
               <span className="text-lg font-semibold text-white">Event Karma</span>
-              {/* Karmic decorative element - concentric rings */}
-              <svg className="w-5 h-5 ml-1" viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="2" fill="#EC4899" opacity="0.9" />
-                <circle cx="12" cy="12" r="5" fill="none" stroke="#EC4899" strokeWidth="1.5" opacity="0.6" />
-                <circle cx="12" cy="12" r="8" fill="none" stroke="#EC4899" strokeWidth="1" opacity="0.35" />
+              {/* Karmic flourish - flowing spiral */}
+              <svg className="w-4 h-4 ml-1.5 opacity-70" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 3c0 4.97-4.03 9-9 9 4.97 0 9 4.03 9 9 0-4.97 4.03-9 9-9-4.97 0-9-4.03-9-9z"
+                  fill="url(#karmaGrad)"
+                />
+                <defs>
+                  <linearGradient id="karmaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#A855F7" />
+                    <stop offset="100%" stopColor="#EC4899" />
+                  </linearGradient>
+                </defs>
               </svg>
             </div>
           </Link>
