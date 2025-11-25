@@ -391,12 +391,28 @@ export default function EventKarma() {
           </div>
 
           {/* Event Page Screenshot */}
-          <div className="mt-12 bg-[#1a0d2e]/40 border border-purple-500/20 rounded-2xl p-4 overflow-hidden ek-glow">
+          <div className="mt-12 bg-[#1a0d2e]/40 border border-purple-500/20 rounded-2xl p-4 overflow-hidden ek-glow relative">
             <img
               src="/Event Karma Home Page.png"
               alt="Event Karma event management interface"
               className="w-full rounded-lg"
             />
+            {/* Floating sparkles */}
+            <svg className="absolute top-6 right-8 w-4 h-4 animate-sparkle" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2l0 4M12 18l0 4M2 12l4 0M18 12l4 0M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8" stroke="#EC4899" strokeWidth="2" strokeLinecap="round"/>
+            </svg>
+            <svg className="absolute top-12 left-10 w-3 h-3 animate-sparkle-delayed" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2l0 4M12 18l0 4M2 12l4 0M18 12l4 0" stroke="#A855F7" strokeWidth="2" strokeLinecap="round"/>
+            </svg>
+            <svg className="absolute bottom-10 right-16 w-3 h-3 animate-sparkle" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2l0 4M12 18l0 4M2 12l4 0M18 12l4 0" stroke="#8B5CF6" strokeWidth="2" strokeLinecap="round"/>
+            </svg>
+            <svg className="absolute bottom-16 left-20 w-4 h-4 animate-sparkle-delayed" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2l0 4M12 18l0 4M2 12l4 0M18 12l4 0M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8" stroke="#EC4899" strokeWidth="2" strokeLinecap="round"/>
+            </svg>
+            <svg className="absolute top-1/2 right-6 w-2 h-2 animate-sparkle" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2l0 4M12 18l0 4M2 12l4 0M18 12l4 0" stroke="#A855F7" strokeWidth="2" strokeLinecap="round"/>
+            </svg>
           </div>
         </section>
 
