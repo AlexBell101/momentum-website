@@ -123,7 +123,13 @@ export default function EventKarma() {
           <Link href="/" className="logo-container">
             <div className="flex items-center gap-3">
               <img src="/eventkarma-logo.svg" alt="Event Karma" className="w-10 h-10" />
-              <span className="text-lg font-semibold text-white">Event Karma</span>
+              <span className="text-lg font-semibold ek-gradient-text">Event Karma</span>
+              {/* Karmic decorative element */}
+              <svg className="w-5 h-5 text-purple-400/60 ml-1" viewBox="0 0 24 24" fill="currentColor">
+                <circle cx="12" cy="12" r="2" opacity="0.8" />
+                <circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" strokeWidth="1" opacity="0.5" />
+                <circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" strokeWidth="0.5" opacity="0.3" />
+              </svg>
             </div>
           </Link>
           <nav>
@@ -148,11 +154,11 @@ export default function EventKarma() {
           <div className="relative mx-auto max-w-6xl px-4 grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold tracking-tight ek-gradient-text mb-6">
-                From registration to revenue insight.
+                From registration to performance insight.
               </h1>
 
-              <p className="text-lg text-slate-300/90 mb-6 max-w-xl">
-                Every check-in, every conversation, every follow-up—connected and measured. Finally know which events drive pipeline.
+              <p className="text-lg text-purple-100 mb-6 max-w-xl">
+                Take your targets and goals, mix in real time feedback from your attendees. Pipeline driving events: served.
               </p>
               <div className="flex flex-wrap gap-4 mb-6">
                 <a
@@ -177,8 +183,8 @@ export default function EventKarma() {
                   Pricing &rarr;
                 </Link>
               </div>
-              <p className="text-xs text-slate-500">
-                Built for B2B event teams who need clarity, not complexity.
+              <p className="text-xs text-purple-300/80">
+                Built for B2B event teams who seek enlightenment.
               </p>
             </div>
 
