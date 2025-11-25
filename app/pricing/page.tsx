@@ -29,8 +29,10 @@ export default function Pricing() {
       <header>
         <div>
           <Link href="/" className="logo-container">
-            <img src="/datakarma-ai-logo-white.svg" alt="Data Karma" className="logo-icon" />
-            
+            <div className="flex items-center gap-3">
+              <img src="/eventkarma-logo.svg" alt="Event Karma" className="w-10 h-10" />
+              <span className="text-lg font-semibold text-white">Event Karma</span>
+            </div>
           </Link>
           <nav>
             <Link href="/">Event Karma</Link>

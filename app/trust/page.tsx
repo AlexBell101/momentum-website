@@ -28,8 +28,10 @@ export default function Trust() {
       <header>
         <div>
           <Link href="/" className="logo-container">
-            <img src="/datakarma-ai-logo-white.svg" alt="Data Karma" className="logo-icon" />
-            
+            <div className="flex items-center gap-3">
+              <img src="/eventkarma-logo.svg" alt="Event Karma" className="w-10 h-10" />
+              <span className="text-lg font-semibold text-white">Event Karma</span>
+            </div>
           </Link>
           <nav>
             <Link href="/">Event Karma</Link>
@@ -140,9 +142,9 @@ export default function Trust() {
       <footer className="bg-slate-950 py-12 border-t border-slate-900 text-sm text-slate-500">
         <div className="mx-auto max-w-6xl px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
-            <div className="flex items-center gap-2">
-              <img src="/datakarma-ai-logo-white.svg" alt="Data Karma" className="logo-icon" />
-              
+            <div className="flex items-center gap-3">
+              <img src="/eventkarma-logo.svg" alt="Event Karma" className="w-8 h-8" />
+              <span className="text-slate-300 font-medium">Event Karma</span>
             </div>
             <nav className="flex flex-wrap gap-6 text-xs">
               <Link href="/" className="hover:text-white">Event Karma</Link>
