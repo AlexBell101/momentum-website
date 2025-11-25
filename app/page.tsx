@@ -123,12 +123,12 @@ export default function EventKarma() {
           <Link href="/" className="logo-container">
             <div className="flex items-center gap-3">
               <img src="/eventkarma-logo.svg" alt="Event Karma" className="w-10 h-10" />
-              <span className="text-lg font-semibold ek-gradient-text">Event Karma</span>
-              {/* Karmic decorative element */}
-              <svg className="w-5 h-5 text-purple-400/60 ml-1" viewBox="0 0 24 24" fill="currentColor">
-                <circle cx="12" cy="12" r="2" opacity="0.8" />
-                <circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" strokeWidth="1" opacity="0.5" />
-                <circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" strokeWidth="0.5" opacity="0.3" />
+              <span className="text-lg font-semibold text-white">Event Karma</span>
+              {/* Karmic decorative element - concentric rings */}
+              <svg className="w-5 h-5 ml-1" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="2" fill="#EC4899" opacity="0.9" />
+                <circle cx="12" cy="12" r="5" fill="none" stroke="#EC4899" strokeWidth="1.5" opacity="0.6" />
+                <circle cx="12" cy="12" r="8" fill="none" stroke="#EC4899" strokeWidth="1" opacity="0.35" />
               </svg>
             </div>
           </Link>
