@@ -190,13 +190,14 @@ export default function EventKarma() {
                 From registration to performance insight.
               </h1>
 
-              <p className="text-lg text-purple-100 mb-4 max-w-xl">
-                Take your targets and goals, mix in real time feedback from your attendees. Pipeline driving events: served.
-              </p>
+              {/* Subtitle + Karma Platter side by side */}
+              <div className="flex items-center gap-6 mb-6">
+                <p className="text-lg text-purple-100 max-w-xs">
+                  Take your targets and goals, mix in real time feedback from your attendees. Pipeline driving events: served.
+                </p>
 
-              {/* Karma Platter Illustration */}
-              <div className="my-6">
-                <svg width="200" height="120" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="line-drawing">
+                {/* Karma Platter Illustration */}
+                <svg width="180" height="110" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="line-drawing flex-shrink-0">
                   {/* Magical wisps rising */}
                   <path d="M80 45 Q85 35, 78 25 Q82 15, 75 5" stroke="url(#heroGrad)" strokeWidth="1.5" fill="none" className="animate-wisp"/>
                   <path d="M100 40 Q105 28, 98 18 Q103 8, 100 0" stroke="url(#heroGrad)" strokeWidth="1.5" fill="none" className="animate-wisp-delayed"/>
