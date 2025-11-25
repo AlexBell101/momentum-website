@@ -1,8 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { Resend } from 'resend';
 
 export async function POST(request: NextRequest) {
-  // Initialize Resend at runtime to avoid build errors
+  // Dynamic import to avoid build-time initialization
+  const { Resend } = await import('resend');
+
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
     console.error('RESEND_API_KEY not configured');
@@ -11,7 +12,9 @@ export async function POST(request: NextRequest) {
       { status: 500 }
     );
   }
+
   const resend = new Resend(apiKey);
+
   try {
     const body = await request.json();
     const { name, email, company, message, type } = body;
@@ -32,7 +35,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Send email via Resend
-    const { data, error } = await resend.emails.send({
+    const { error } = await resend.emails.send({
       from: 'Event Karma <noreply@eventkarma.ai>',
       to: ['support@datakarma.ai'],
       replyTo: email,
@@ -85,7 +88,7 @@ export async function POST(request: NextRequest) {
       message: 'Message sent successfully'
     });
 
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Error processing contact form:', error);
     return NextResponse.json(
       { error: 'Failed to process request' },
