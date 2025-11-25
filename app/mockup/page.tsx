@@ -103,11 +103,14 @@ export default function Mockup() {
                   {/* Plate */}
                   <ellipse cx="100" cy="100" rx="60" ry="12" stroke="url(#lineGradA)" strokeWidth="2" fill="none"/>
 
-                  {/* Data on plate */}
+                  {/* Data bar graph on plate */}
                   <g opacity="0.9">
-                    <path d="M75 95 L75 88 L82 92 L89 85 L96 90" stroke="#EC4899" strokeWidth="1.5" fill="none"/>
-                    <path d="M110 95 Q110 88, 115 88 Q120 88, 120 95" stroke="#A855F7" strokeWidth="1.5" fill="none"/>
-                    <circle cx="115" cy="85" r="1.5" fill="#A855F7"/>
+                    <rect x="70" y="90" width="6" height="8" rx="1" fill="#8B5CF6"/>
+                    <rect x="80" y="86" width="6" height="12" rx="1" fill="#A855F7"/>
+                    <rect x="90" y="82" width="6" height="16" rx="1" fill="#EC4899"/>
+                    <rect x="100" y="85" width="6" height="13" rx="1" fill="#A855F7"/>
+                    <rect x="110" y="88" width="6" height="10" rx="1" fill="#8B5CF6"/>
+                    <rect x="120" y="91" width="6" height="7" rx="1" fill="#EC4899" opacity="0.8"/>
                   </g>
 
                   <defs>
@@ -169,14 +172,15 @@ export default function Mockup() {
                   <ellipse cx="100" cy="100" rx="55" ry="10" stroke="url(#lineGradB)" strokeWidth="2" fill="none"/>
                   <ellipse cx="100" cy="98" rx="45" ry="6" stroke="#6b4d8a" strokeWidth="1" fill="none" opacity="0.4"/>
 
-                  {/* Insights bursting out */}
-                  <g className="animate-float">
-                    <path d="M90 85 l-3 -8 l6 0 z" stroke="#EC4899" strokeWidth="1" fill="none"/>
+                  {/* Data bar graph on plate */}
+                  <g opacity="0.9">
+                    <rect x="70" y="90" width="6" height="7" rx="1" fill="#8B5CF6"/>
+                    <rect x="80" y="86" width="6" height="11" rx="1" fill="#A855F7"/>
+                    <rect x="90" y="81" width="6" height="16" rx="1" fill="#EC4899"/>
+                    <rect x="100" y="84" width="6" height="13" rx="1" fill="#A855F7"/>
+                    <rect x="110" y="88" width="6" height="9" rx="1" fill="#8B5CF6"/>
+                    <rect x="120" y="91" width="6" height="6" rx="1" fill="#EC4899" opacity="0.8"/>
                   </g>
-                  <g className="animate-float-delayed">
-                    <path d="M110 83 l-3 -8 l6 0 z" stroke="#A855F7" strokeWidth="1" fill="none"/>
-                  </g>
-                  <circle cx="100" cy="80" r="3" stroke="#8B5CF6" strokeWidth="1" fill="none" className="animate-sparkle"/>
 
                   <defs>
                     <linearGradient id="lineGradB" x1="0%" y1="100%" x2="100%" y2="0%">
