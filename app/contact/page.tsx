@@ -113,7 +113,7 @@ export default function Contact() {
                       </svg>
                     </div>
                     <h3 className="text-xl font-semibold mb-2">Message sent!</h3>
-                    <p className="text-slate-400 mb-6">We'll get back to you within 24 hours.</p>
+                    <p className="text-slate-300 mb-6">We'll get back to you within 24 hours.</p>
                     <button
                       onClick={() => setStatus('idle')}
                       className="text-purple-400 hover:text-purple-300 text-sm font-medium"
@@ -254,7 +254,7 @@ export default function Contact() {
                   </div>
                   <h3 className="font-semibold">Documentation</h3>
                 </div>
-                <p className="text-sm text-slate-400 mb-3">
+                <p className="text-sm text-slate-300 mb-3">
                   Check out our docs for integration guides and API reference.
                 </p>
                 <a href="https://docs.eventkarma.ai" className="text-purple-400 hover:text-purple-300 text-sm font-medium">
@@ -271,7 +271,7 @@ export default function Contact() {
                   </div>
                   <h3 className="font-semibold">Security questions?</h3>
                 </div>
-                <p className="text-sm text-slate-400 mb-3">
+                <p className="text-sm text-slate-300 mb-3">
                   DPA requests, security questionnaires, or compliance inquiries.
                 </p>
                 <Link href="/trust" className="text-purple-400 hover:text-purple-300 text-sm font-medium">

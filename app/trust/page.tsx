@@ -56,7 +56,7 @@ export default function Trust() {
             <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-4">
               Trust & Security
             </h1>
-            <p className="text-slate-200/80 text-lg max-w-3xl">
+            <p className="text-slate-200 text-lg max-w-3xl">
               Data Karma is built with enterprise security and compliance in mind. We protect your data and respect your privacy.
             </p>
           </div>
@@ -67,7 +67,7 @@ export default function Trust() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-8">
               <h3 className="text-xl font-semibold mb-3">Enterprise SSO</h3>
-              <p className="text-slate-300/80 mb-4">
+              <p className="text-slate-200 mb-4">
                 Single sign-on with your identity provider for secure, centralized access control.
               </p>
               <p className="text-xs text-slate-500">Available as add-on; included in Enterprise</p>
@@ -75,21 +75,21 @@ export default function Trust() {
 
             <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-8">
               <h3 className="text-xl font-semibold mb-3">Least-privilege Salesforce access</h3>
-              <p className="text-slate-300/80">
+              <p className="text-slate-200">
                 Our managed Salesforce app requests only the minimum permissions needed. No write access to your core objects without explicit configuration.
               </p>
             </div>
 
             <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-8">
               <h3 className="text-xl font-semibold mb-3">Data residency</h3>
-              <p className="text-slate-300/80">
+              <p className="text-slate-200">
                 US-based infrastructure by default. Regional data residency available on request for compliance requirements.
               </p>
             </div>
 
             <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-8">
               <h3 className="text-xl font-semibold mb-3">Uptime & transparency</h3>
-              <p className="text-slate-300/80 mb-4">
+              <p className="text-slate-200 mb-4">
                 Real-time status page, incident history, and proactive notifications for any service impacts.
               </p>
               <p className="text-xs text-slate-500">99.9% uptime SLA available</p>
@@ -104,7 +104,7 @@ export default function Trust() {
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <h3 className="font-semibold mb-2">Data Processing Agreement (DPA)</h3>
-                <p className="text-sm text-slate-300/80 mb-3">
+                <p className="text-sm text-slate-200 mb-3">
                   GDPR-compliant DPA available on request. Covers data processing, sub-processors, and security commitments.
                 </p>
                 <Link href="/contact" className="text-violet-400 hover:text-violet-300 text-sm font-medium">
@@ -113,7 +113,7 @@ export default function Trust() {
               </div>
               <div>
                 <h3 className="font-semibold mb-2">Privacy Policy</h3>
-                <p className="text-sm text-slate-300/80 mb-3">
+                <p className="text-sm text-slate-200 mb-3">
                   Transparent data practices. We don't sell your data, and we minimize retention.
                 </p>
                 <Link href="/privacy" className="text-violet-400 hover:text-violet-300 text-sm font-medium">
@@ -128,7 +128,7 @@ export default function Trust() {
         <section className="mx-auto max-w-6xl px-4 py-16">
           <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-semibold mb-3">Security questions?</h2>
-            <p className="text-slate-300/80 mb-6">
+            <p className="text-slate-200 mb-6">
               Our team is happy to answer specific security and compliance questions.
             </p>
             <Link href="/contact" className="bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white px-6 py-3 rounded-lg font-medium inline-block transition-all">

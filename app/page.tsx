@@ -225,7 +225,7 @@ export default function EventKarma() {
             Stop chasing spreadsheets.<br />
             <span className="ek-gradient-text">Start knowing what works.</span>
           </h2>
-          <p className="text-slate-400 max-w-2xl mx-auto text-lg">
+          <p className="text-slate-300 max-w-2xl mx-auto text-lg">
             Event Karma captures every interaction—from the first registration to the final follow-up—and connects it all to Salesforce. No manual syncs. No guessing.
           </p>
         </section>
@@ -234,7 +234,7 @@ export default function EventKarma() {
         <section className="mx-auto max-w-6xl px-4 py-16">
           <div className="text-center mb-12">
             <h2 className="text-2xl font-semibold mb-3">The complete event lifecycle</h2>
-            <p className="text-slate-400 max-w-2xl mx-auto">
+            <p className="text-slate-300 max-w-2xl mx-auto">
               Six steps from invite to insight. Each one connected, measured, and ready for Salesforce.
             </p>
           </div>
@@ -249,7 +249,7 @@ export default function EventKarma() {
               </div>
               <p className="text-xs text-purple-400 font-medium mb-1">1</p>
               <h3 className="text-sm font-semibold mb-1">Invite</h3>
-              <p className="text-xs text-slate-400">Send personalized passes via email</p>
+              <p className="text-xs text-slate-300">Send personalized passes via email</p>
             </div>
 
             {/* Step 2: Register */}
@@ -261,7 +261,7 @@ export default function EventKarma() {
               </div>
               <p className="text-xs text-purple-400 font-medium mb-1">2</p>
               <h3 className="text-sm font-semibold mb-1">Register</h3>
-              <p className="text-xs text-slate-400">Capture signups, sync to CRM</p>
+              <p className="text-xs text-slate-300">Capture signups, sync to CRM</p>
             </div>
 
             {/* Step 3: Check In + Capture */}
@@ -273,7 +273,7 @@ export default function EventKarma() {
               </div>
               <p className="text-xs text-purple-400 font-medium mb-1">3</p>
               <h3 className="text-sm font-semibold mb-1">Scan + Ask</h3>
-              <p className="text-xs text-slate-400">Instant intent capture on entry</p>
+              <p className="text-xs text-slate-300">Instant intent capture on entry</p>
             </div>
 
             {/* Step 4: Rate */}
@@ -285,7 +285,7 @@ export default function EventKarma() {
               </div>
               <p className="text-xs text-purple-400 font-medium mb-1">4</p>
               <h3 className="text-sm font-semibold mb-1">Rate</h3>
-              <p className="text-xs text-slate-400">Exit feedback in 5 seconds</p>
+              <p className="text-xs text-slate-300">Exit feedback in 5 seconds</p>
             </div>
 
             {/* Step 5: Publish */}
@@ -297,7 +297,7 @@ export default function EventKarma() {
               </div>
               <p className="text-xs text-purple-400 font-medium mb-1">5</p>
               <h3 className="text-sm font-semibold mb-1">Publish</h3>
-              <p className="text-xs text-slate-400">Push to Salesforce when ready</p>
+              <p className="text-xs text-slate-300">Push to Salesforce when ready</p>
             </div>
 
             {/* Step 6: Learn */}
@@ -309,7 +309,7 @@ export default function EventKarma() {
               </div>
               <p className="text-xs text-purple-400 font-medium mb-1">6</p>
               <h3 className="text-sm font-semibold mb-1">Learn</h3>
-              <p className="text-xs text-slate-400">AI insights, repeat winners</p>
+              <p className="text-xs text-slate-300">AI insights, repeat winners</p>
             </div>
           </div>
         </section>
@@ -327,7 +327,7 @@ export default function EventKarma() {
                 </div>
                 <h3 className="text-lg font-semibold">Connected</h3>
               </div>
-              <p className="text-slate-400 text-sm mb-4">
+              <p className="text-slate-300 text-sm mb-4">
                 Every touchpoint flows to Salesforce. Campaign Members update automatically. No spreadsheets, no imports, no gaps.
               </p>
               <ul className="space-y-2 text-sm text-slate-300">
@@ -356,7 +356,7 @@ export default function EventKarma() {
                 </div>
                 <h3 className="text-lg font-semibold">Controlled</h3>
               </div>
-              <p className="text-slate-400 text-sm mb-4">
+              <p className="text-slate-300 text-sm mb-4">
                 You decide when data goes live. Review attendees, validate emails, and publish when you&apos;re ready—not before.
               </p>
               <ul className="space-y-2 text-sm text-slate-300">
@@ -385,7 +385,7 @@ export default function EventKarma() {
                 </div>
                 <h3 className="text-lg font-semibold">Clear</h3>
               </div>
-              <p className="text-slate-400 text-sm mb-4">
+              <p className="text-slate-300 text-sm mb-4">
                 AI analyzes every event and tells you what to repeat, resize, or skip. No more guessing which events drive pipeline.
               </p>
               <ul className="space-y-2 text-sm text-slate-300">
@@ -413,15 +413,15 @@ export default function EventKarma() {
             <div className="grid md:grid-cols-3 gap-8 text-center">
               <div>
                 <p className="text-4xl font-bold ek-gradient-text mb-2">10–20 hrs</p>
-                <p className="text-slate-400">Saved per month on reporting</p>
+                <p className="text-slate-300">Saved per month on reporting</p>
               </div>
               <div>
                 <p className="text-4xl font-bold ek-gradient-text mb-2">10–25%</p>
-                <p className="text-slate-400">Higher show rates with digital passes</p>
+                <p className="text-slate-300">Higher show rates with digital passes</p>
               </div>
               <div>
                 <p className="text-4xl font-bold ek-gradient-text mb-2">Faster</p>
-                <p className="text-slate-400">Follow-up from cleaner data</p>
+                <p className="text-slate-300">Follow-up from cleaner data</p>
               </div>
             </div>
           </div>
@@ -432,7 +432,7 @@ export default function EventKarma() {
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div>
               <h2 className="text-2xl font-semibold mb-4">Know what to run next.</h2>
-              <p className="text-slate-400 mb-6">
+              <p className="text-slate-300 mb-6">
                 Event Karma doesn&apos;t just collect data—it tells you what to do with it. AI analyzes attendance, engagement, and outcomes to recommend your next move.
               </p>
               <ul className="space-y-3 text-slate-300">
@@ -480,9 +480,9 @@ export default function EventKarma() {
             <div className="mb-6">
               <p className="text-4xl font-bold mb-2">
                 <span className="ek-gradient-text">$9,999</span><span className="text-slate-50">/yr</span>
-                <span className="text-lg font-normal text-slate-400 ml-2">or $999/mo</span>
+                <span className="text-lg font-normal text-slate-300 ml-2">or $999/mo</span>
               </p>
-              <p className="text-slate-400">
+              <p className="text-slate-300">
                 Unlimited events. Unlimited check-ins. Unlimited users.
               </p>
             </div>
@@ -510,7 +510,7 @@ export default function EventKarma() {
         {/* Integrations */}
         <section id="integrations" className="mx-auto max-w-6xl px-4 py-16">
           <h2 className="text-2xl font-semibold mb-4">Works with your stack</h2>
-          <p className="text-slate-400 mb-6 max-w-3xl">
+          <p className="text-slate-300 mb-6 max-w-3xl">
             Connect to the tools your team already uses. Fast to set up, predictable to maintain.
           </p>
           <div className="flex flex-wrap gap-3">
@@ -528,7 +528,7 @@ export default function EventKarma() {
           <div className="ek-gradient-bg border border-purple-500/30 rounded-2xl p-8 flex flex-col md:flex-row justify-between gap-6 items-center">
             <div>
               <h2 className="text-xl font-semibold mb-2">Ready for event enlightenment?</h2>
-              <p className="text-slate-400">
+              <p className="text-slate-300">
                 See how Event Karma connects every touchpoint and finally answers: which events drive pipeline?
               </p>
             </div>

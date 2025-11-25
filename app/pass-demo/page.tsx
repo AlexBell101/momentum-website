@@ -181,7 +181,7 @@ function PassDemoContent() {
         </div>
 
         <div className="mb-6">
-          <p className="text-xs text-slate-400 mb-1">ATTENDEE</p>
+          <p className="text-xs text-slate-300 mb-1">ATTENDEE</p>
           <p className="text-lg text-slate-200">{maskedEmail}</p>
         </div>
 
@@ -229,7 +229,7 @@ function PassDemoContent() {
 
       {/* What happens when scanned */}
       <div className="mt-10">
-        <p className="text-center text-sm text-slate-400 mb-4">
+        <p className="text-center text-sm text-slate-300 mb-4">
           When your pass is scanned, you&apos;ll see:
         </p>
 
@@ -262,7 +262,7 @@ function PassDemoContent() {
           </div>
 
           <div className="flex gap-3 mt-4">
-            <button className="flex-1 text-sm py-2 px-4 rounded-lg text-slate-400 hover:text-slate-300 transition-colors">
+            <button className="flex-1 text-sm py-2 px-4 rounded-lg text-slate-300 hover:text-slate-300 transition-colors">
               Skip
             </button>
             <button className="flex-1 ek-btn-gradient text-white text-sm py-2 px-4 rounded-lg font-medium">
@@ -283,7 +283,7 @@ function PassDemoContent() {
                 className={`w-12 h-12 rounded-full border-2 text-lg font-medium transition-all ${
                   n === 4
                     ? 'bg-purple-500/30 border-purple-400 text-purple-200'
-                    : 'border-purple-500/30 text-slate-400 hover:border-purple-500/50'
+                    : 'border-purple-500/30 text-slate-300 hover:border-purple-500/50'
                 }`}
               >
                 {n}
@@ -309,7 +309,7 @@ function PassDemoContent() {
       <div className="mt-8">
         <button
           onClick={() => setAccordionOpen(!accordionOpen)}
-          className="flex items-center justify-center gap-2 text-sm text-slate-400 hover:text-slate-300 mx-auto transition-colors"
+          className="flex items-center justify-center gap-2 text-sm text-slate-300 hover:text-slate-300 mx-auto transition-colors"
         >
           <span>How this works</span>
           <svg
@@ -409,7 +409,7 @@ export default function PassDemo() {
                 Your Event Pass
               </h1>
             </div>
-            <p className="text-slate-400 mb-8">
+            <p className="text-slate-300 mb-8">
               This is a live demo. Use any email address to see how digital passes work.
             </p>
 

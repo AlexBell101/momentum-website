@@ -71,9 +71,9 @@ export default function Pricing() {
               <h3 className="text-2xl font-semibold mb-2">Free</h3>
               <div className="mb-4">
                 <span className="text-4xl font-bold">$0</span>
-                <span className="text-slate-400">/month</span>
+                <span className="text-slate-300">/month</span>
               </div>
-              <p className="text-sm text-slate-300/80 mb-6">Perfect for testing</p>
+              <p className="text-sm text-slate-200 mb-6">Perfect for testing</p>
 
               <ul className="space-y-3 mb-8 text-sm">
                 <li className="flex items-start gap-2">
@@ -112,9 +112,9 @@ export default function Pricing() {
               <h3 className="text-2xl font-semibold mb-2">Pro</h3>
               <div className="mb-4">
                 <span className="text-4xl font-bold">$399</span>
-                <span className="text-slate-400">/month</span>
+                <span className="text-slate-300">/month</span>
               </div>
-              <p className="text-sm text-slate-300/80 mb-2">For serious event marketing teams</p>
+              <p className="text-sm text-slate-200 mb-2">For serious event marketing teams</p>
               <p className="text-xs text-violet-300 mb-6">Annual: $3,990/year (save $798)</p>
 
               <ul className="space-y-3 mb-8 text-sm">
@@ -175,7 +175,7 @@ export default function Pricing() {
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h3 className="font-medium mb-4 text-rose-300">Replaces:</h3>
-                <ul className="space-y-2 text-sm text-slate-300/80">
+                <ul className="space-y-2 text-sm text-slate-200">
                   <li className="flex items-start gap-2">
                     <span className="text-rose-400">❌</span>
                     <span>Survey tools ($99/mo)</span>
@@ -197,7 +197,7 @@ export default function Pricing() {
 
               <div>
                 <h3 className="font-medium mb-4 text-green-300">Delivers:</h3>
-                <ul className="space-y-2 text-sm text-slate-300/80">
+                <ul className="space-y-2 text-sm text-slate-200">
                   <li className="flex items-start gap-2">
                     <span className="text-green-400">✅</span>
                     <span>Single source of truth for event marketing</span>
@@ -220,12 +220,12 @@ export default function Pricing() {
 
             <div className="mt-8 pt-8 border-t border-slate-800 grid md:grid-cols-2 gap-6 text-center">
               <div>
-                <p className="text-sm text-slate-400">Time Saved</p>
+                <p className="text-sm text-slate-300">Time Saved</p>
                 <p className="text-2xl font-semibold text-violet-300">10-20 hours/month</p>
                 <p className="text-xs text-slate-500">on reporting</p>
               </div>
               <div>
-                <p className="text-sm text-slate-400">ROI</p>
+                <p className="text-sm text-slate-300">ROI</p>
                 <p className="text-2xl font-semibold text-violet-300">Optimize your budget</p>
                 <p className="text-xs text-slate-500">$50k-500k/year event spend</p>
               </div>
@@ -240,27 +240,27 @@ export default function Pricing() {
           <div className="space-y-6">
             <div className="bg-slate-900/30 border border-slate-800 rounded-xl p-6">
               <h3 className="font-semibold mb-2">Can I start with Free and upgrade later?</h3>
-              <p className="text-sm text-slate-300/80">Yes! Start free, upgrade anytime. All your data comes with you.</p>
+              <p className="text-sm text-slate-200">Yes! Start free, upgrade anytime. All your data comes with you.</p>
             </div>
 
             <div className="bg-slate-900/30 border border-slate-800 rounded-xl p-6">
               <h3 className="font-semibold mb-2">How does Salesforce integration work?</h3>
-              <p className="text-sm text-slate-300/80">Connect once, sync automatically. Pull campaign data, opportunities, and contacts directly into Event Karma.</p>
+              <p className="text-sm text-slate-200">Connect once, sync automatically. Pull campaign data, opportunities, and contacts directly into Event Karma.</p>
             </div>
 
             <div className="bg-slate-900/30 border border-slate-800 rounded-xl p-6">
               <h3 className="font-semibold mb-2">Do you offer annual pricing?</h3>
-              <p className="text-sm text-slate-300/80">Yes! Save $798/year with annual billing ($3,990/year vs $4,788/year monthly).</p>
+              <p className="text-sm text-slate-200">Yes! Save $798/year with annual billing ($3,990/year vs $4,788/year monthly).</p>
             </div>
 
             <div className="bg-slate-900/30 border border-slate-800 rounded-xl p-6">
               <h3 className="font-semibold mb-2">What if I need custom features or enterprise support?</h3>
-              <p className="text-sm text-slate-300/80">Contact us for custom pricing, SSO, SLA, and dedicated support.</p>
+              <p className="text-sm text-slate-200">Contact us for custom pricing, SSO, SLA, and dedicated support.</p>
             </div>
 
             <div className="bg-slate-900/30 border border-slate-800 rounded-xl p-6">
               <h3 className="font-semibold mb-2">Can I cancel anytime?</h3>
-              <p className="text-sm text-slate-300/80">Yes. No contracts, cancel anytime from your billing page.</p>
+              <p className="text-sm text-slate-200">Yes. No contracts, cancel anytime from your billing page.</p>
             </div>
           </div>
         </section>
@@ -269,7 +269,7 @@ export default function Pricing() {
         <section className="mx-auto max-w-6xl px-4 py-16">
           <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-semibold mb-3">Ready to measure what matters?</h2>
-            <p className="text-slate-300/80 mb-6 max-w-2xl mx-auto">
+            <p className="text-slate-200 mb-6 max-w-2xl mx-auto">
               Start free today. Upgrade to Pro when you're ready for advanced features.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
@@ -290,7 +290,7 @@ export default function Pricing() {
                 <img src="/favicon.svg" alt="Event Karma" className="h-8 w-8" />
                 <span className="font-bold tracking-tight text-white uppercase" style={{ fontFamily: 'Inter, sans-serif', letterSpacing: '-0.025em' }}>EVENT KARMA</span>
               </div>
-              <p className="text-xs text-slate-400">
+              <p className="text-xs text-slate-300">
                 The only platform with complete event intelligence. Feedback from Sales, Marketing, Attendees, and Partners—powered by AI.
               </p>
             </div>
