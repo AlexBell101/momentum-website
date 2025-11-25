@@ -32,14 +32,14 @@ export default function Home() {
             <img src="/datakarma-ai-logo-white.svg" alt="Data Karma" className="logo-icon" />
           </Link>
           <nav>
-            <Link href="/eventkarma">Event Karma</Link>
-            <Link href="/eventkarma/pricing">Pricing</Link>
-            <a href="https://docs.event.datakarma.ai">Docs</a>
+            <a href="https://eventkarma.ai">Event Karma</a>
+            <a href="https://eventkarma.ai/pricing">Pricing</a>
+            <a href="https://docs.eventkarma.ai">Docs</a>
             <Link href="/trust">Trust</Link>
             <Link href="/contact">Contact</Link>
           </nav>
           <div className="nav-actions">
-            <a href="https://event.datakarma.ai" className="nav-cta">
+            <a href="https://app.eventkarma.ai" className="nav-cta">
               Start free
             </a>
           </div>
@@ -58,9 +58,9 @@ export default function Home() {
               Data Karma builds Event Karma—event ops software that handles registration, check-in, and Salesforce publishing. No spreadsheets, no manual syncs.
             </p>
             <div className="flex flex-wrap gap-4 justify-center mb-12">
-              <Link href="/eventkarma" className="bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white px-6 py-3 rounded-lg font-medium inline-block transition-all">
+              <a href="https://eventkarma.ai" className="bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white px-6 py-3 rounded-lg font-medium inline-block transition-all">
                 Explore Event Karma
-              </Link>
+              </a>
               <Link href="/contact" className="bg-slate-800 hover:bg-slate-700 text-white px-6 py-3 rounded-lg font-medium inline-block transition-colors">
                 Talk to us
               </Link>
@@ -110,9 +110,9 @@ export default function Home() {
             <p className="text-lg text-slate-300/80 mb-8 max-w-2xl mx-auto">
               Native Salesforce integration. No spreadsheets. No manual syncs. Know which events to repeat, resize, or pause.
             </p>
-            <Link href="/eventkarma" className="bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white px-6 py-3 rounded-lg font-medium inline-block transition-all">
+            <a href="https://eventkarma.ai" className="bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white px-6 py-3 rounded-lg font-medium inline-block transition-all">
               See Event Karma
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -138,9 +138,9 @@ export default function Home() {
               <img src="/datakarma-ai-logo-white.svg" alt="Data Karma" className="logo-icon" />
             </div>
             <nav className="flex flex-wrap gap-6 text-xs">
-              <Link href="/eventkarma" className="hover:text-white">Event Karma</Link>
-              <Link href="/eventkarma/pricing" className="hover:text-white">Pricing</Link>
-              <a href="https://docs.event.datakarma.ai" className="hover:text-white">Docs</a>
+              <a href="https://eventkarma.ai" className="hover:text-white">Event Karma</a>
+              <a href="https://eventkarma.ai/pricing" className="hover:text-white">Pricing</a>
+              <a href="https://docs.eventkarma.ai" className="hover:text-white">Docs</a>
               <Link href="/trust" className="hover:text-white">Trust</Link>
               <Link href="/contact" className="hover:text-white">Contact</Link>
               <Link href="/privacy" className="hover:text-white">Privacy</Link>

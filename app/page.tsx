@@ -121,10 +121,13 @@ export default function EventKarma() {
       <header>
         <div>
           <Link href="/" className="logo-container">
-            <img src="/datakarma-ai-logo-white.svg" alt="Data Karma" className="logo-icon" />
+            <div className="flex items-center gap-3">
+              <img src="/eventkarma-logo.svg" alt="Event Karma" className="w-10 h-10" />
+              <span className="text-lg font-semibold text-white">Event Karma</span>
+            </div>
           </Link>
           <nav>
-            <Link href="/">Event Karma</Link>
+            <Link href="/">Home</Link>
             <Link href="/pricing">Pricing</Link>
             <a href="https://docs.eventkarma.ai">Docs</a>
             <Link href="/trust">Trust</Link>

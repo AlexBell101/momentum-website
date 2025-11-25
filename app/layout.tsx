@@ -8,20 +8,20 @@ export const metadata: Metadata = {
   authors: [{ name: "Data Karma" }],
   creator: "Data Karma",
   publisher: "Data Karma",
-  metadataBase: new URL("https://www.datakarma.ai"),
+  metadataBase: new URL("https://eventkarma.ai"),
   alternates: {
-    canonical: "https://www.datakarma.ai",
+    canonical: "https://eventkarma.ai",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.datakarma.ai",
-    siteName: "Data Karma",
+    url: "https://eventkarma.ai",
+    siteName: "Event Karma",
     title: "Event Karma — Event GTM OS",
     description: "From invite to impact with forecasts, check-in, and buying-group activation.",
     images: [
       {
-        url: "/favicon.svg",
+        url: "/eventkarma-logo.svg",
         width: 1200,
         height: 630,
         alt: "Event Karma by Data Karma",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Event Karma — Event GTM OS",
     description: "From invite to impact with forecasts, check-in, and buying-group activation.",
-    images: ["/favicon.svg"],
+    images: ["/eventkarma-logo.svg"],
   },
   robots: {
     index: true,
@@ -47,10 +47,10 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon-16.svg", type: "image/svg+xml", sizes: "16x16" },
+      { url: "/eventkarma-logo.svg", type: "image/svg+xml" },
+      { url: "/eventkarma-logo.svg", type: "image/svg+xml", sizes: "16x16" },
     ],
-    apple: { url: "/favicon.svg", sizes: "180x180" },
+    apple: { url: "/eventkarma-logo.svg", sizes: "180x180" },
   },
   themeColor: "#0066FF",
 };
