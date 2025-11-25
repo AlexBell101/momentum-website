@@ -16,22 +16,23 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // Check if the request is coming from eventkarma.ai
-  if (hostname === 'eventkarma.ai' || hostname === 'www.eventkarma.ai') {
-    // If the path doesn't already start with /eventkarma, rewrite it
-    if (!url.pathname.startsWith('/eventkarma')) {
+  // Check if the request is coming from datakarma.ai (should show holding page)
+  if (hostname === 'datakarma.ai' || hostname === 'www.datakarma.ai') {
+    // If the path doesn't already start with /datakarma, rewrite it
+    if (!url.pathname.startsWith('/datakarma')) {
       // Handle root path
       if (url.pathname === '/') {
-        url.pathname = '/eventkarma';
+        url.pathname = '/datakarma';
       } else {
-        // Handle all other paths
-        url.pathname = `/eventkarma${url.pathname}`;
+        // Handle all other paths - redirect to holding page
+        url.pathname = '/datakarma';
       }
 
       return NextResponse.rewrite(url);
     }
   }
 
+  // eventkarma.ai requests go through normally (pages are now at root)
   return NextResponse.next();
 }
 

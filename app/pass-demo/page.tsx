@@ -381,14 +381,14 @@ export default function PassDemo() {
             <img src="/datakarma-ai-logo-white.svg" alt="Data Karma" className="logo-icon" />
           </Link>
           <nav>
-            <Link href="/eventkarma">Event Karma</Link>
-            <Link href="/eventkarma/pricing">Pricing</Link>
-            <a href="https://docs.event.datakarma.ai">Docs</a>
+            <Link href="/">Event Karma</Link>
+            <Link href="/pricing">Pricing</Link>
+            <a href="https://docs.app.eventkarma.ai">Docs</a>
             <Link href="/trust">Trust</Link>
             <Link href="/contact">Contact</Link>
           </nav>
           <div className="nav-actions">
-            <a href="https://event.datakarma.ai" className="nav-cta">
+            <a href="https://app.eventkarma.ai" className="nav-cta">
               Start free
             </a>
           </div>
@@ -417,7 +417,7 @@ export default function PassDemo() {
             {/* Back to Event Karma */}
             <div className="mt-12">
               <Link
-                href="/eventkarma"
+                href="/"
                 className="text-sm text-purple-400 hover:text-white transition-colors"
               >
                 &larr; Back to Event Karma
@@ -436,9 +436,9 @@ export default function PassDemo() {
               <span className="text-slate-300 font-medium">Event Karma</span>
             </div>
             <nav className="flex flex-wrap gap-6 text-xs">
-              <Link href="/eventkarma" className="hover:text-white">Event Karma</Link>
-              <Link href="/eventkarma/pricing" className="hover:text-white">Pricing</Link>
-              <a href="https://docs.event.datakarma.ai" className="hover:text-white">Docs</a>
+              <Link href="/" className="hover:text-white">Event Karma</Link>
+              <Link href="/pricing" className="hover:text-white">Pricing</Link>
+              <a href="https://docs.app.eventkarma.ai" className="hover:text-white">Docs</a>
               <Link href="/trust" className="hover:text-white">Trust</Link>
               <Link href="/contact" className="hover:text-white">Contact</Link>
               <Link href="/privacy" className="hover:text-white">Privacy</Link>

@@ -36,13 +36,13 @@ export default function Integrations() {
             
             <Link href="/eventkarma">Event Karma</Link>
             <Link href="/eventkarma/pricing">Pricing</Link>
-            <a href="https://docs.event.datakarma.ai">Docs</a>
+            <a href="https://docs.eventkarma.ai">Docs</a>
             <Link href="/trust">Trust</Link>
             <Link href="/contact">Contact</Link>
           </nav>
           <div className="nav-actions">
             
-            <a href="https://event.datakarma.ai" className="nav-cta">
+            <a href="https://app.eventkarma.ai" className="nav-cta">
               
               Start free
             </a>
@@ -291,10 +291,10 @@ export default function Integrations() {
               </p>
             </div>
             <div className="flex gap-3 flex-shrink-0 items-center">
-              <a href="https://event.datakarma.ai" className="bg-white text-slate-950 text-sm px-4 py-2 rounded-md font-medium inline-block hover:bg-slate-100">
+              <a href="https://app.eventkarma.ai" className="bg-white text-slate-950 text-sm px-4 py-2 rounded-md font-medium inline-block hover:bg-slate-100">
                 Start free
               </a>
-              <a href="https://event.datakarma.ai" className="text-sm text-slate-100/80 hover:text-white whitespace-nowrap">
+              <a href="https://app.eventkarma.ai" className="text-sm text-slate-100/80 hover:text-white whitespace-nowrap">
                 View integrations →
               </a>
             </div>

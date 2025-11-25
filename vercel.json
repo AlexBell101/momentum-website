@@ -5,7 +5,7 @@
   "redirects": [
     {
       "source": "/(.*)",
-      "destination": "https://www.datakarma.ai/eventkarma/$1",
+      "destination": "https://eventkarma.ai/$1",
       "has": [
         {
           "type": "host",
@@ -16,12 +16,22 @@
     },
     {
       "source": "/momentum",
-      "destination": "/eventkarma",
+      "destination": "/",
       "statusCode": 301
     },
     {
       "source": "/momentum/:path*",
-      "destination": "/eventkarma/:path*",
+      "destination": "/:path*",
+      "statusCode": 301
+    },
+    {
+      "source": "/eventkarma",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/eventkarma/:path*",
+      "destination": "/:path*",
       "statusCode": 301
     }
   ]

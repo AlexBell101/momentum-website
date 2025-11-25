@@ -32,14 +32,14 @@ export default function Contact() {
             
           </Link>
           <nav>
-            <Link href="/eventkarma">Event Karma</Link>
-            <Link href="/eventkarma/pricing">Pricing</Link>
-            <a href="https://docs.event.datakarma.ai">Docs</a>
+            <Link href="/">Event Karma</Link>
+            <Link href="/pricing">Pricing</Link>
+            <a href="https://docs.app.eventkarma.ai">Docs</a>
             <Link href="/trust">Trust</Link>
             <Link href="/contact">Contact</Link>
           </nav>
           <div className="nav-actions">
-            <a href="https://event.datakarma.ai" className="nav-cta">
+            <a href="https://app.eventkarma.ai" className="nav-cta">
               Start free
             </a>
           </div>
@@ -112,7 +112,7 @@ export default function Contact() {
             <p className="text-slate-300/80 mb-6">
               No need to wait for a reply—start free and explore Event Karma on your own.
             </p>
-            <a href="https://event.datakarma.ai" className="bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white px-6 py-3 rounded-lg font-medium inline-block transition-all">
+            <a href="https://app.eventkarma.ai" className="bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white px-6 py-3 rounded-lg font-medium inline-block transition-all">
               Start free
             </a>
           </div>
@@ -128,9 +128,9 @@ export default function Contact() {
               
             </div>
             <nav className="flex flex-wrap gap-6 text-xs">
-              <Link href="/eventkarma" className="hover:text-white">Event Karma</Link>
-              <Link href="/eventkarma/pricing" className="hover:text-white">Pricing</Link>
-              <a href="https://docs.event.datakarma.ai" className="hover:text-white">Docs</a>
+              <Link href="/" className="hover:text-white">Event Karma</Link>
+              <Link href="/pricing" className="hover:text-white">Pricing</Link>
+              <a href="https://docs.app.eventkarma.ai" className="hover:text-white">Docs</a>
               <Link href="/trust" className="hover:text-white">Trust</Link>
               <Link href="/contact" className="hover:text-white">Contact</Link>
               <Link href="/privacy" className="hover:text-white">Privacy</Link>

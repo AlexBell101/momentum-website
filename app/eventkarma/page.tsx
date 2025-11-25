@@ -126,12 +126,12 @@ export default function EventKarma() {
           <nav>
             <Link href="/eventkarma">Event Karma</Link>
             <Link href="/eventkarma/pricing">Pricing</Link>
-            <a href="https://docs.event.datakarma.ai">Docs</a>
+            <a href="https://docs.eventkarma.ai">Docs</a>
             <Link href="/trust">Trust</Link>
             <Link href="/contact">Contact</Link>
           </nav>
           <div className="nav-actions">
-            <a href="https://event.datakarma.ai" className="nav-cta">
+            <a href="https://app.eventkarma.ai" className="nav-cta">
               Start free
             </a>
           </div>
@@ -525,7 +525,7 @@ export default function EventKarma() {
             </div>
             <div className="flex gap-3 flex-shrink-0 items-center flex-wrap">
               <a
-                href="https://event.datakarma.ai"
+                href="https://app.eventkarma.ai"
                 onClick={() => trackEvent('ek_cta_demo_click')}
                 className="ek-btn-gradient text-white text-sm px-6 py-3 rounded-lg font-medium inline-block transition-all"
               >
@@ -554,7 +554,7 @@ export default function EventKarma() {
             <nav className="flex flex-wrap gap-6 text-xs">
               <Link href="/eventkarma" className="hover:text-white">Event Karma</Link>
               <Link href="/eventkarma/pricing" className="hover:text-white">Pricing</Link>
-              <a href="https://docs.event.datakarma.ai" className="hover:text-white">Docs</a>
+              <a href="https://docs.eventkarma.ai" className="hover:text-white">Docs</a>
               <Link href="/trust" className="hover:text-white">Trust</Link>
               <Link href="/contact" className="hover:text-white">Contact</Link>
               <Link href="/privacy" className="hover:text-white">Privacy</Link>
