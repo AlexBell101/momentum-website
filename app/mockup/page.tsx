@@ -245,12 +245,13 @@ export default function Mockup() {
                     <ellipse cx="130" cy="73" rx="45" ry="8" stroke="#6b4d8a" strokeWidth="1" fill="none" opacity="0.4"/>
                   </g>
 
-                  {/* Data/insights on plate */}
+                  {/* Data bar graph on plate */}
                   <g className="animate-subtle-float" opacity="0.9">
-                    <rect x="105" y="68" width="8" height="3" rx="1" stroke="#8B5CF6" strokeWidth="1" fill="none"/>
-                    <rect x="118" y="65" width="8" height="6" rx="1" stroke="#A855F7" strokeWidth="1" fill="none"/>
-                    <rect x="131" y="62" width="8" height="9" rx="1" stroke="#EC4899" strokeWidth="1" fill="none"/>
-                    <rect x="144" y="66" width="8" height="5" rx="1" stroke="#A855F7" strokeWidth="1" fill="none"/>
+                    <rect x="105" y="67" width="7" height="6" rx="1" fill="#8B5CF6"/>
+                    <rect x="117" y="63" width="7" height="10" rx="1" fill="#A855F7"/>
+                    <rect x="129" y="58" width="7" height="15" rx="1" fill="#EC4899"/>
+                    <rect x="141" y="61" width="7" height="12" rx="1" fill="#A855F7"/>
+                    <rect x="153" y="65" width="7" height="8" rx="1" fill="#8B5CF6"/>
                   </g>
 
                   <defs>
@@ -328,16 +329,14 @@ export default function Mockup() {
                     <path d="M95 75 Q125 68, 155 67 Q185 68, 215 75" stroke="url(#lineGradD)" strokeWidth="1" fill="none" opacity="0.3"/>
                   </g>
 
-                  {/* Insights/data rising from plate - more elaborate */}
-                  <g className="animate-subtle-float">
-                    {/* Chart icon */}
-                    <path d="M125 68 L125 58 L135 63 L145 55 L155 60 L155 68" stroke="#EC4899" strokeWidth="1.5" fill="none"/>
-                    {/* Lightbulb icon */}
-                    <path d="M170 68 Q168 60, 175 58 Q182 60, 180 68" stroke="#A855F7" strokeWidth="1.5" fill="none"/>
-                    <path d="M172 68 L178 68" stroke="#A855F7" strokeWidth="1.5"/>
-                    <path d="M175 55 l0 -4" stroke="#A855F7" strokeWidth="1"/>
-                    <path d="M168 57 l-2 -2" stroke="#A855F7" strokeWidth="1"/>
-                    <path d="M182 57 l2 -2" stroke="#A855F7" strokeWidth="1"/>
+                  {/* Data bar graph on plate */}
+                  <g className="animate-subtle-float" opacity="0.9">
+                    <rect x="120" y="67" width="8" height="6" rx="1" fill="#8B5CF6"/>
+                    <rect x="133" y="62" width="8" height="11" rx="1" fill="#A855F7"/>
+                    <rect x="146" y="56" width="8" height="17" rx="1" fill="#EC4899"/>
+                    <rect x="159" y="60" width="8" height="13" rx="1" fill="#A855F7"/>
+                    <rect x="172" y="64" width="8" height="9" rx="1" fill="#8B5CF6"/>
+                    <rect x="185" y="66" width="8" height="7" rx="1" fill="#EC4899" opacity="0.7"/>
                   </g>
 
                   <defs>
