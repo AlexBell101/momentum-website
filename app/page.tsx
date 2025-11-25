@@ -286,7 +286,7 @@ export default function EventKarma() {
                   video.playbackRate = 1.25;
                 }}
               >
-                <source src="/momentumvid.mp4" type="video/mp4" />
+                <source src="/EventKarma-App.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
