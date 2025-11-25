@@ -147,18 +147,11 @@ export default function EventKarma() {
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(139,92,246,0.2),_rgba(168,85,247,0.1)_40%,_transparent_70%)]"></div>
           <div className="relative mx-auto max-w-6xl px-4 grid md:grid-cols-2 gap-12 items-center">
             <div>
-              {/* Logo + Wordmark */}
-              <div className="flex items-center gap-4 mb-6">
-                <img src="/eventkarma-logo.svg" alt="Event Karma" className="w-14 h-14 ek-glow rounded-full" />
-                <h1 className="text-4xl md:text-5xl font-bold tracking-tight ek-gradient-text">
-                  Event Karma
-                </h1>
-              </div>
-
-              <p className="text-lg md:text-xl text-purple-200 mb-4 font-medium">
+              <h1 className="text-4xl md:text-5xl font-bold tracking-tight ek-gradient-text mb-6">
                 From registration to revenue insight.
-              </p>
-              <p className="text-slate-300/90 mb-6 max-w-xl text-lg">
+              </h1>
+
+              <p className="text-lg text-slate-300/90 mb-6 max-w-xl">
                 Every check-in, every conversation, every follow-up—connected and measured. Finally know which events drive pipeline.
               </p>
               <div className="flex flex-wrap gap-4 mb-6">
