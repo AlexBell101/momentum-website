@@ -10,6 +10,12 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
+  // Paths that should NOT be rewritten (shared across domains)
+  const sharedPaths = ['/trust', '/contact', '/privacy', '/api'];
+  if (sharedPaths.some(path => url.pathname.startsWith(path))) {
+    return NextResponse.next();
+  }
+
   // Check if the request is coming from eventkarma.ai
   if (hostname === 'eventkarma.ai' || hostname === 'www.eventkarma.ai') {
     // If the path doesn't already start with /eventkarma, rewrite it
