@@ -115,6 +115,32 @@ export default function EventKarma() {
         .ek-btn-gradient:hover {
           background: linear-gradient(135deg, #9D6FFA 0%, #B96AF9 50%, #F084A8 100%);
         }
+
+        /* Karma Platter Animations */
+        @keyframes gentle-bob {
+          0%, 100% { transform: translateY(0) rotate(-15deg); }
+          50% { transform: translateY(-3px) rotate(-15deg); }
+        }
+        @keyframes wisp {
+          0% { transform: translateY(0) translateX(0); opacity: 0.6; }
+          50% { transform: translateY(-10px) translateX(3px); opacity: 0.3; }
+          100% { transform: translateY(-20px) translateX(-2px); opacity: 0; }
+        }
+        @keyframes sparkle {
+          0%, 100% { opacity: 0.4; transform: scale(1); }
+          50% { opacity: 1; transform: scale(1.3); }
+        }
+        .animate-bob { animation: gentle-bob 4s ease-in-out infinite; }
+        .animate-wisp { animation: wisp 3s ease-out infinite; }
+        .animate-wisp-delayed { animation: wisp 3s ease-out infinite 1s; }
+        .animate-wisp-delayed-2 { animation: wisp 3s ease-out infinite 2s; }
+        .animate-sparkle { animation: sparkle 2s ease-in-out infinite; }
+        .animate-sparkle-delayed { animation: sparkle 2s ease-in-out infinite 0.7s; }
+
+        .line-drawing {
+          stroke-linecap: round;
+          stroke-linejoin: round;
+        }
       `}</style>
 
       {/* Navigation */}
@@ -164,9 +190,59 @@ export default function EventKarma() {
                 From registration to performance insight.
               </h1>
 
-              <p className="text-lg text-purple-100 mb-6 max-w-xl">
+              <p className="text-lg text-purple-100 mb-4 max-w-xl">
                 Take your targets and goals, mix in real time feedback from your attendees. Pipeline driving events: served.
               </p>
+
+              {/* Karma Platter Illustration */}
+              <div className="my-6">
+                <svg width="200" height="120" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="line-drawing">
+                  {/* Magical wisps rising */}
+                  <path d="M80 45 Q85 35, 78 25 Q82 15, 75 5" stroke="url(#heroGrad)" strokeWidth="1.5" fill="none" className="animate-wisp"/>
+                  <path d="M100 40 Q105 28, 98 18 Q103 8, 100 0" stroke="url(#heroGrad)" strokeWidth="1.5" fill="none" className="animate-wisp-delayed"/>
+                  <path d="M120 45 Q115 35, 122 25 Q118 15, 125 5" stroke="url(#heroGrad)" strokeWidth="1.5" fill="none" className="animate-wisp-delayed-2"/>
+
+                  {/* Sparkle stars */}
+                  <g className="animate-sparkle">
+                    <path d="M90 30 l0 -5 M90 30 l0 5 M90 30 l-4 0 M90 30 l4 0" stroke="#EC4899" strokeWidth="1.5"/>
+                  </g>
+                  <g className="animate-sparkle-delayed">
+                    <path d="M110 25 l0 -4 M110 25 l0 4 M110 25 l-4 0 M110 25 l4 0" stroke="#A855F7" strokeWidth="1"/>
+                  </g>
+
+                  {/* Cloche - lifted and tilted */}
+                  <g className="animate-bob" style={{transformOrigin: '100px 60px'}}>
+                    <g transform="translate(15, -5) rotate(-12, 85, 60)">
+                      <path d="M45 75 Q45 45, 85 45 Q125 45, 125 75" stroke="url(#heroGrad)" strokeWidth="2" fill="none"/>
+                      <circle cx="85" cy="42" r="5" stroke="url(#heroGrad)" strokeWidth="2" fill="none"/>
+                      <circle cx="85" cy="42" r="2" fill="#A855F7"/>
+                      <ellipse cx="85" cy="75" rx="40" ry="8" stroke="url(#heroGrad)" strokeWidth="2" fill="none"/>
+                    </g>
+                  </g>
+
+                  {/* Plate */}
+                  <ellipse cx="100" cy="100" rx="60" ry="12" stroke="url(#heroGrad)" strokeWidth="2" fill="none"/>
+
+                  {/* Data bar graph on plate */}
+                  <g opacity="0.9">
+                    <rect x="70" y="90" width="6" height="8" rx="1" fill="#8B5CF6"/>
+                    <rect x="80" y="86" width="6" height="12" rx="1" fill="#A855F7"/>
+                    <rect x="90" y="82" width="6" height="16" rx="1" fill="#EC4899"/>
+                    <rect x="100" y="85" width="6" height="13" rx="1" fill="#A855F7"/>
+                    <rect x="110" y="88" width="6" height="10" rx="1" fill="#8B5CF6"/>
+                    <rect x="120" y="91" width="6" height="7" rx="1" fill="#EC4899" opacity="0.8"/>
+                  </g>
+
+                  <defs>
+                    <linearGradient id="heroGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                      <stop offset="0%" stopColor="#8B5CF6"/>
+                      <stop offset="50%" stopColor="#A855F7"/>
+                      <stop offset="100%" stopColor="#EC4899"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+
               <div className="flex flex-wrap gap-4 mb-6">
                 <a
                   href="#book-demo"
