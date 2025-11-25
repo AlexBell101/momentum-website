@@ -383,7 +383,7 @@ export default function PassDemo() {
           <nav>
             <Link href="/">Event Karma</Link>
             <Link href="/pricing">Pricing</Link>
-            <a href="https://docs.app.eventkarma.ai">Docs</a>
+            <a href="https://docs.eventkarma.ai">Docs</a>
             <Link href="/trust">Trust</Link>
             <Link href="/contact">Contact</Link>
           </nav>
@@ -438,7 +438,7 @@ export default function PassDemo() {
             <nav className="flex flex-wrap gap-6 text-xs">
               <Link href="/" className="hover:text-white">Event Karma</Link>
               <Link href="/pricing" className="hover:text-white">Pricing</Link>
-              <a href="https://docs.app.eventkarma.ai" className="hover:text-white">Docs</a>
+              <a href="https://docs.eventkarma.ai" className="hover:text-white">Docs</a>
               <Link href="/trust" className="hover:text-white">Trust</Link>
               <Link href="/contact" className="hover:text-white">Contact</Link>
               <Link href="/privacy" className="hover:text-white">Privacy</Link>

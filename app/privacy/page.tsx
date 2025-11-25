@@ -35,7 +35,7 @@ export default function Privacy() {
           <nav>
             <Link href="/">Event Karma</Link>
             <Link href="/pricing">Pricing</Link>
-            <a href="https://docs.app.eventkarma.ai">Docs</a>
+            <a href="https://docs.eventkarma.ai">Docs</a>
             <Link href="/trust">Trust</Link>
             <Link href="/contact">Contact</Link>
           </nav>
