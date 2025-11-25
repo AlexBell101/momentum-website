@@ -389,6 +389,15 @@ export default function EventKarma() {
               <p className="text-xs text-slate-300">AI insights, repeat winners</p>
             </div>
           </div>
+
+          {/* Event Page Screenshot */}
+          <div className="mt-12 bg-[#1a0d2e]/40 border border-purple-500/20 rounded-2xl p-4 overflow-hidden ek-glow">
+            <img
+              src="/Event Karma Home Page.png"
+              alt="Event Karma event management interface"
+              className="w-full rounded-lg"
+            />
+          </div>
         </section>
 
         {/* Value Props */}
@@ -527,25 +536,17 @@ export default function EventKarma() {
                 </li>
               </ul>
             </div>
-            <div className="bg-[#1a0d2e]/60 border border-purple-500/20 rounded-2xl p-6">
-              <p className="text-sm font-medium mb-3 text-purple-200">AI Recommendation</p>
-              <p className="text-sm text-slate-300 mb-4">
-                Austin events scored higher because sales follow-up was 32% faster and partner target accounts were present.
-              </p>
-              <div className="grid grid-cols-3 gap-3 text-sm">
-                <div className="bg-[#0f0a1a] rounded-lg p-3 text-center border border-emerald-500/20">
-                  <p className="text-2xl font-semibold text-emerald-400">88</p>
-                  <p className="text-xs text-emerald-300 mt-1">Repeat</p>
-                </div>
-                <div className="bg-[#0f0a1a] rounded-lg p-3 text-center border border-amber-500/20">
-                  <p className="text-2xl font-semibold text-amber-400">62</p>
-                  <p className="text-xs text-amber-300 mt-1">Resize</p>
-                </div>
-                <div className="bg-[#0f0a1a] rounded-lg p-3 text-center border border-rose-500/20">
-                  <p className="text-2xl font-semibold text-rose-400">34</p>
-                  <p className="text-xs text-rose-300 mt-1">Skip</p>
-                </div>
-              </div>
+            <div className="bg-[#1a0d2e]/60 border border-purple-500/20 rounded-2xl overflow-hidden">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+                style={{ display: 'block' }}
+              >
+                <source src="/Salesforce-Integration.mp4" type="video/mp4" />
+              </video>
             </div>
           </div>
         </section>
