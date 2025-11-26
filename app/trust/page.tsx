@@ -57,7 +57,7 @@ export default function Trust() {
               Trust & Security
             </h1>
             <p className="text-slate-200 text-lg max-w-3xl">
-              Data Karma is built with enterprise security and compliance in mind. We protect your data and respect your privacy.
+              Event Karma is built with enterprise security and compliance in mind. We protect your data and respect your privacy.
             </p>
           </div>
         </section>
@@ -131,7 +131,7 @@ export default function Trust() {
             <p className="text-slate-200 mb-6">
               Our team is happy to answer specific security and compliance questions.
             </p>
-            <Link href="/contact" className="bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white px-6 py-3 rounded-lg font-medium inline-block transition-all">
+            <Link href="/contact" className="bg-gradient-to-r from-purple-600 via-violet-600 to-pink-600 hover:from-purple-500 hover:via-violet-500 hover:to-pink-500 text-white px-6 py-3 rounded-lg font-medium inline-block transition-all">
               Contact us
             </Link>
           </div>

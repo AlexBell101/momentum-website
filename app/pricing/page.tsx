@@ -98,7 +98,7 @@ export default function Pricing() {
                 </li>
               </ul>
 
-              <a href="https://app.eventkarma.ai" className="block w-full text-center bg-slate-800 hover:bg-slate-700 text-white py-3 rounded-lg font-medium transition-colors">
+              <a href="https://app.eventkarma.ai" className="block w-full text-center bg-purple-600/20 hover:bg-purple-600/30 text-purple-100 py-3 rounded-lg font-medium transition-colors border border-purple-500/30">
                 Get Started Free
               </a>
             </div>
@@ -160,7 +160,7 @@ export default function Pricing() {
                 </li>
               </ul>
 
-              <a href="https://app.eventkarma.ai" className="block w-full text-center bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white py-3 rounded-lg font-medium transition-all">
+              <a href="https://app.eventkarma.ai" className="block w-full text-center bg-gradient-to-r from-purple-600 via-violet-600 to-pink-600 hover:from-purple-500 hover:via-violet-500 hover:to-pink-500 text-white py-3 rounded-lg font-medium transition-all">
                 Get Started
               </a>
             </div>
@@ -273,7 +273,7 @@ export default function Pricing() {
               Start free today. Upgrade to Pro when you're ready for advanced features.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <a href="https://app.eventkarma.ai" className="bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white px-6 py-3 rounded-lg font-medium inline-block transition-all">
+              <a href="https://app.eventkarma.ai" className="bg-gradient-to-r from-purple-600 via-violet-600 to-pink-600 hover:from-purple-500 hover:via-violet-500 hover:to-pink-500 text-white px-6 py-3 rounded-lg font-medium inline-block transition-all">
                 Get Started Free
               </a>
             </div>
@@ -297,27 +297,20 @@ export default function Pricing() {
             <div>
               <h4 className="text-white font-semibold mb-3 text-sm">Product</h4>
               <ul className="space-y-2 text-xs">
-                <li><Link href="/how-it-works" className="hover:text-white">How it works</Link></li>
-                <li><Link href="/integrations" className="hover:text-white">Integrations</Link></li>
-                <li><Link href="/fss-score" className="hover:text-white">Success Score</Link></li>
-                <li><Link href="/docs" className="hover:text-white">Documentation</Link></li>
+                <li><a href="https://docs.eventkarma.ai" className="hover:text-white">Documentation</a></li>
+                <li><Link href="/pricing" className="hover:text-white">Pricing</Link></li>
               </ul>
             </div>
             <div>
               <h4 className="text-white font-semibold mb-3 text-sm">Company</h4>
               <ul className="space-y-2 text-xs">
-                <li><Link href="/pricing" className="hover:text-white">Pricing</Link></li>
-                <li><a href="#" className="hover:text-white">About</a></li>
-                <li><a href="#" className="hover:text-white">Blog</a></li>
-                <li><a href="#" className="hover:text-white">Contact</a></li>
+                <li><Link href="/trust" className="hover:text-white">Trust & Security</Link></li>
+                <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
               </ul>
             </div>
             <div>
-              <h4 className="text-white font-semibold mb-3 text-sm">Resources</h4>
+              <h4 className="text-white font-semibold mb-3 text-sm">Legal</h4>
               <ul className="space-y-2 text-xs">
-                <li><a href="#" className="hover:text-white">Case Studies</a></li>
-                <li><a href="#" className="hover:text-white">Help Center</a></li>
-                <li><a href="#" className="hover:text-white">Community</a></li>
                 <li><Link href="/privacy" className="hover:text-white">Privacy Policy</Link></li>
               </ul>
             </div>

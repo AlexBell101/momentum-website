@@ -587,7 +587,7 @@ export default function EventKarma() {
             </div>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="#book-demo"
+                href="/contact"
                 onClick={() => trackEvent('ek_cta_demo_click')}
                 className="ek-btn-gradient text-white text-sm px-6 py-3 rounded-lg font-medium inline-block transition-all"
               >
