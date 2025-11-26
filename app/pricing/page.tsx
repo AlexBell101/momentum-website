@@ -312,6 +312,9 @@ export default function Pricing() {
               <h4 className="text-white font-semibold mb-3 text-sm">Legal</h4>
               <ul className="space-y-2 text-xs">
                 <li><Link href="/privacy" className="hover:text-white">Privacy Policy</Link></li>
+                <li><Link href="/terms" className="hover:text-white">Terms of Service</Link></li>
+                <li><Link href="/cookies" className="hover:text-white">Cookie Policy</Link></li>
+                <li><Link href="/dpa" className="hover:text-white">DPA</Link></li>
               </ul>
             </div>
           </div>
