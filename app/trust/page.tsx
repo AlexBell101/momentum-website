@@ -57,7 +57,7 @@ export default function Trust() {
               Trust & Security
             </h1>
             <p className="text-slate-200 text-lg max-w-3xl">
-              Event Karma is built with enterprise security and compliance in mind. We protect your data and respect your privacy.
+              We take security seriously. Event Karma is built on trusted, enterprise-grade cloud infrastructure with industry-standard protections.
             </p>
           </div>
         </section>
@@ -66,33 +66,31 @@ export default function Trust() {
         <section className="mx-auto max-w-6xl px-4 py-16">
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-8">
-              <h3 className="text-xl font-semibold mb-3">Enterprise SSO</h3>
-              <p className="text-slate-200 mb-4">
-                Single sign-on with your identity provider for secure, centralized access control.
-              </p>
-              <p className="text-xs text-slate-500">Available as add-on; included in Enterprise</p>
-            </div>
-
-            <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-8">
-              <h3 className="text-xl font-semibold mb-3">Least-privilege Salesforce access</h3>
+              <h3 className="text-xl font-semibold mb-3">Encrypted in transit & at rest</h3>
               <p className="text-slate-200">
-                Our managed Salesforce app requests only the minimum permissions needed. No write access to your core objects without explicit configuration.
+                All data is encrypted using TLS 1.2+ in transit and AES-256 at rest. Your event data is protected end-to-end.
               </p>
             </div>
 
             <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-8">
-              <h3 className="text-xl font-semibold mb-3">Data residency</h3>
+              <h3 className="text-xl font-semibold mb-3">SOC 2 compliant infrastructure</h3>
               <p className="text-slate-200">
-                US-based infrastructure by default. Regional data residency available on request for compliance requirements.
+                Event Karma runs on cloud infrastructure that maintains SOC 2 Type II certification, ensuring rigorous security controls and auditing.
               </p>
             </div>
 
             <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-8">
-              <h3 className="text-xl font-semibold mb-3">Uptime & transparency</h3>
-              <p className="text-slate-200 mb-4">
-                Real-time status page, incident history, and proactive notifications for any service impacts.
+              <h3 className="text-xl font-semibold mb-3">Secure Salesforce integration</h3>
+              <p className="text-slate-200">
+                We use OAuth 2.0 for Salesforce connections. You control exactly which permissions to grant, and you can revoke access at any time.
               </p>
-              <p className="text-xs text-slate-500">99.9% uptime SLA available</p>
+            </div>
+
+            <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-8">
+              <h3 className="text-xl font-semibold mb-3">US-based data hosting</h3>
+              <p className="text-slate-200">
+                All data is stored in US-based data centers with enterprise-grade physical and network security.
+              </p>
             </div>
           </div>
         </section>
@@ -105,7 +103,7 @@ export default function Trust() {
               <div>
                 <h3 className="font-semibold mb-2">Data Processing Agreement (DPA)</h3>
                 <p className="text-sm text-slate-200 mb-3">
-                  GDPR-compliant DPA available on request. Covers data processing, sub-processors, and security commitments.
+                  Need a DPA for compliance? We're happy to provide one. Just reach out.
                 </p>
                 <Link href="/contact" className="text-violet-400 hover:text-violet-300 text-sm font-medium">
                   Request DPA →
@@ -114,7 +112,7 @@ export default function Trust() {
               <div>
                 <h3 className="font-semibold mb-2">Privacy Policy</h3>
                 <p className="text-sm text-slate-200 mb-3">
-                  Transparent data practices. We don't sell your data, and we minimize retention.
+                  We don't sell your data. Period. Read our privacy policy for full details on how we handle your information.
                 </p>
                 <Link href="/privacy" className="text-violet-400 hover:text-violet-300 text-sm font-medium">
                   Read Privacy Policy →
@@ -129,7 +127,7 @@ export default function Trust() {
           <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-semibold mb-3">Security questions?</h2>
             <p className="text-slate-200 mb-6">
-              Our team is happy to answer specific security and compliance questions.
+              We're happy to answer questions about our security practices or complete your security questionnaire.
             </p>
             <Link href="/contact" className="bg-gradient-to-r from-purple-600 via-violet-600 to-pink-600 hover:from-purple-500 hover:via-violet-500 hover:to-pink-500 text-white px-6 py-3 rounded-lg font-medium inline-block transition-all">
               Contact us
