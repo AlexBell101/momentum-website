@@ -192,9 +192,14 @@ export default function EventKarma() {
 
               {/* Subtitle + Karma Platter side by side */}
               <div className="flex items-center gap-6 mb-6">
-                <p className="text-lg text-purple-100 max-w-xs">
-                  Take your targets and goals, mix in real time feedback from your attendees. Pipeline driving events: served.
-                </p>
+                <div className="max-w-xs">
+                  <p className="text-lg text-purple-100 mb-3">
+                    Take your targets and goals, mix in real time feedback from your attendees.
+                  </p>
+                  <p className="text-xl font-semibold ek-gradient-text">
+                    Pipeline driving events: served.
+                  </p>
+                </div>
 
                 {/* Karma Platter Illustration */}
                 <svg width="180" height="110" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="line-drawing flex-shrink-0">
