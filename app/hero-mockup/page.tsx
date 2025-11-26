@@ -106,19 +106,18 @@ export default function HeroMockup() {
             </p>
 
             {/* Main headline - Bold and clear */}
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 leading-tight">
-              Finally know which events<br />
-              <span className="ek-gradient-text">drive pipeline.</span>
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tight ek-gradient-text mb-6 leading-tight">
+              From registration to performance insight.
             </h1>
 
             {/* Subtitle */}
-            <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-4">
-              Event Karma captures every touchpoint—from registration to feedback—and syncs it all to Salesforce. No spreadsheets. No guessing.
+            <p className="text-xl text-purple-100 max-w-2xl mx-auto mb-4">
+              Take your targets and goals, mix in real time feedback from your attendees.
             </p>
 
             {/* Tagline with karma platter */}
             <div className="flex items-center justify-center gap-4 mb-8">
-              <p className="text-lg font-semibold ek-gradient-text">
+              <p className="text-xl font-semibold ek-gradient-text">
                 Pipeline driving events: served.
               </p>
               {/* Small Karma Platter Icon */}
@@ -152,39 +151,36 @@ export default function HeroMockup() {
             </div>
 
             {/* CTAs - Prominent and centered */}
-            <div className="flex flex-wrap justify-center gap-4 mb-10">
-              <a
-                href="https://app.eventkarma.ai"
-                className="ek-btn-gradient text-white px-8 py-4 rounded-lg font-semibold inline-block transition-all text-base"
-              >
-                Start free
-              </a>
+            <div className="flex flex-wrap justify-center gap-4 mb-6">
               <a
                 href="/contact"
-                className="bg-white/10 hover:bg-white/15 backdrop-blur px-8 py-4 rounded-lg font-semibold inline-block border border-purple-500/30 text-base"
+                className="ek-btn-gradient text-white text-sm px-6 py-3 rounded-lg font-medium inline-block transition-all"
               >
                 Book a demo
               </a>
+              <Link
+                href="/pass-demo?event=ek-demo&e=alex%40example.com"
+                className="bg-white/10 hover:bg-white/20 backdrop-blur text-sm px-6 py-3 rounded-lg font-medium inline-block border border-purple-500/30"
+              >
+                See a live event pass
+              </Link>
+              <Link
+                href="/pricing"
+                className="text-sm px-5 py-3 rounded-lg font-medium inline-block text-purple-200 hover:text-white"
+              >
+                Pricing &rarr;
+              </Link>
             </div>
 
-            {/* Social proof - Trust indicators */}
-            <div className="flex flex-col items-center gap-3">
-              <p className="text-xs text-slate-500 uppercase tracking-wider">Trusted by B2B event teams at</p>
-              <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-                {/* Placeholder company logos - text for now */}
-                <span className="text-slate-400 text-sm font-medium">SaaS Companies</span>
-                <span className="text-slate-500">•</span>
-                <span className="text-slate-400 text-sm font-medium">Tech Startups</span>
-                <span className="text-slate-500">•</span>
-                <span className="text-slate-400 text-sm font-medium">Enterprise Teams</span>
-              </div>
-            </div>
+            <p className="text-xs text-purple-300/80">
+              Built for B2B event teams who seek enlightenment.
+            </p>
           </div>
         </section>
 
         {/* Product Screenshot - Hero visual */}
-        <section className="mx-auto max-w-6xl px-4 -mt-4 mb-8">
-          <div className="bg-[#1a0d2e]/40 border border-purple-500/20 rounded-2xl p-4 overflow-hidden ek-glow relative">
+        <section className="mx-auto max-w-4xl px-4 -mt-4 mb-8">
+          <div className="bg-[#1a0d2e]/40 border border-purple-500/20 rounded-2xl p-3 overflow-hidden ek-glow relative">
             <img
               src="/Event Karma Home Page.png"
               alt="Event Karma dashboard showing event analytics and ROI metrics"
