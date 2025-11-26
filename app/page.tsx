@@ -181,120 +181,110 @@ export default function EventKarma() {
       </header>
 
       <main className="bg-[#0f0a1a] text-slate-50">
-        {/* Hero Section */}
-        <section className="relative overflow-hidden py-16 md:py-24">
+        {/* Hero Section - Clean, Typography-Focused */}
+        <section className="relative overflow-hidden py-20 md:py-28">
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(139,92,246,0.2),_rgba(168,85,247,0.1)_40%,_transparent_70%)]"></div>
-          <div className="relative mx-auto max-w-6xl px-4 grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl md:text-5xl font-bold tracking-tight ek-gradient-text mb-6">
-                From registration to performance insight.
-              </h1>
+          <div className="relative mx-auto max-w-5xl px-4 text-center">
+            {/* Small badge */}
+            <p className="inline-flex items-center gap-2 rounded-full bg-purple-500/10 border border-purple-500/30 px-4 py-1.5 text-sm text-purple-200 mb-8">
+              <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+              Event analytics for B2B teams
+            </p>
 
-              {/* Subtitle + Karma Platter side by side */}
-              <div className="flex items-center gap-6 mb-6">
-                <div className="max-w-xs">
-                  <p className="text-lg text-purple-100 mb-3">
-                    Take your targets and goals, mix in real time feedback from your attendees.
-                  </p>
-                  <p className="text-xl font-semibold ek-gradient-text">
-                    Pipeline driving events: served.
-                  </p>
-                </div>
+            {/* Main headline - Bold and clear */}
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tight ek-gradient-text mb-6 leading-tight">
+              From registration to performance insight.
+            </h1>
 
-                {/* Karma Platter Illustration */}
-                <svg width="180" height="110" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="line-drawing flex-shrink-0">
-                  {/* Magical wisps rising */}
-                  <path d="M80 45 Q85 35, 78 25 Q82 15, 75 5" stroke="url(#heroGrad)" strokeWidth="1.5" fill="none" className="animate-wisp"/>
-                  <path d="M100 40 Q105 28, 98 18 Q103 8, 100 0" stroke="url(#heroGrad)" strokeWidth="1.5" fill="none" className="animate-wisp-delayed"/>
-                  <path d="M120 45 Q115 35, 122 25 Q118 15, 125 5" stroke="url(#heroGrad)" strokeWidth="1.5" fill="none" className="animate-wisp-delayed-2"/>
+            {/* Subtitle */}
+            <p className="text-xl text-purple-100 max-w-2xl mx-auto mb-4">
+              Take your targets and goals, mix in real time feedback from your attendees.
+            </p>
 
-                  {/* Sparkle stars */}
-                  <g className="animate-sparkle">
-                    <path d="M90 30 l0 -5 M90 30 l0 5 M90 30 l-4 0 M90 30 l4 0" stroke="#EC4899" strokeWidth="1.5"/>
-                  </g>
-                  <g className="animate-sparkle-delayed">
-                    <path d="M110 25 l0 -4 M110 25 l0 4 M110 25 l-4 0 M110 25 l4 0" stroke="#A855F7" strokeWidth="1"/>
-                  </g>
-
-                  {/* Cloche - lifted and tilted */}
-                  <g className="animate-bob" style={{transformOrigin: '100px 60px'}}>
-                    <g transform="translate(15, -5) rotate(-12, 85, 60)">
-                      <path d="M45 75 Q45 45, 85 45 Q125 45, 125 75" stroke="url(#heroGrad)" strokeWidth="2" fill="none"/>
-                      <circle cx="85" cy="42" r="5" stroke="url(#heroGrad)" strokeWidth="2" fill="none"/>
-                      <circle cx="85" cy="42" r="2" fill="#A855F7"/>
-                      <ellipse cx="85" cy="75" rx="40" ry="8" stroke="url(#heroGrad)" strokeWidth="2" fill="none"/>
-                    </g>
-                  </g>
-
-                  {/* Plate */}
-                  <ellipse cx="100" cy="100" rx="60" ry="12" stroke="url(#heroGrad)" strokeWidth="2" fill="none"/>
-
-                  {/* Data bar graph on plate */}
-                  <g opacity="0.9">
-                    <rect x="70" y="90" width="6" height="8" rx="1" fill="#8B5CF6"/>
-                    <rect x="80" y="86" width="6" height="12" rx="1" fill="#A855F7"/>
-                    <rect x="90" y="82" width="6" height="16" rx="1" fill="#EC4899"/>
-                    <rect x="100" y="85" width="6" height="13" rx="1" fill="#A855F7"/>
-                    <rect x="110" y="88" width="6" height="10" rx="1" fill="#8B5CF6"/>
-                    <rect x="120" y="91" width="6" height="7" rx="1" fill="#EC4899" opacity="0.8"/>
-                  </g>
-
-                  <defs>
-                    <linearGradient id="heroGrad" x1="0%" y1="100%" x2="100%" y2="0%">
-                      <stop offset="0%" stopColor="#8B5CF6"/>
-                      <stop offset="50%" stopColor="#A855F7"/>
-                      <stop offset="100%" stopColor="#EC4899"/>
-                    </linearGradient>
-                  </defs>
-                </svg>
-              </div>
-
-              <div className="flex flex-wrap gap-4 mb-6">
-                <a
-                  href="/contact"
-                  onClick={() => trackEvent('ek_cta_demo_click')}
-                  className="ek-btn-gradient text-white text-sm px-6 py-3 rounded-lg font-medium inline-block transition-all"
-                >
-                  Book a demo
-                </a>
-                <Link
-                  href="/pass-demo?event=ek-demo&e=alex%40example.com"
-                  onClick={() => trackEvent('ek_cta_pass_click')}
-                  className="bg-white/10 hover:bg-white/20 backdrop-blur text-sm px-6 py-3 rounded-lg font-medium inline-block border border-purple-500/30"
-                >
-                  See a live event pass
-                </Link>
-                <Link
-                  href="/pricing"
-                  onClick={() => trackEvent('ek_cta_pricing_click')}
-                  className="text-sm px-5 py-3 rounded-lg font-medium inline-block text-purple-200 hover:text-white"
-                >
-                  Pricing &rarr;
-                </Link>
-              </div>
-              <p className="text-xs text-purple-300/80">
-                Built for B2B event teams who seek enlightenment.
+            {/* Tagline with karma platter */}
+            <div className="flex items-center justify-center gap-4 mb-8">
+              <p className="text-xl font-semibold ek-gradient-text">
+                Pipeline driving events: served.
               </p>
+              {/* Small Karma Platter Icon */}
+              <svg width="50" height="35" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="line-drawing">
+                {/* Wisps */}
+                <path d="M100 40 Q105 28, 98 18" stroke="url(#heroGrad)" strokeWidth="2" fill="none" className="animate-wisp"/>
+                {/* Cloche lifted */}
+                <g className="animate-bob" style={{transformOrigin: '100px 60px'}}>
+                  <g transform="translate(15, 0) rotate(-10, 85, 60)">
+                    <path d="M50 75 Q50 50, 85 50 Q120 50, 120 75" stroke="url(#heroGrad)" strokeWidth="3" fill="none"/>
+                    <circle cx="85" cy="47" r="4" fill="#A855F7"/>
+                  </g>
+                </g>
+                {/* Plate */}
+                <ellipse cx="100" cy="100" rx="55" ry="10" stroke="url(#heroGrad)" strokeWidth="3" fill="none"/>
+                {/* Bar graph */}
+                <g opacity="0.9">
+                  <rect x="75" y="88" width="8" height="10" rx="1" fill="#8B5CF6"/>
+                  <rect x="88" y="82" width="8" height="16" rx="1" fill="#EC4899"/>
+                  <rect x="101" y="85" width="8" height="13" rx="1" fill="#A855F7"/>
+                  <rect x="114" y="89" width="8" height="9" rx="1" fill="#8B5CF6"/>
+                </g>
+                <defs>
+                  <linearGradient id="heroGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                    <stop offset="0%" stopColor="#8B5CF6"/>
+                    <stop offset="50%" stopColor="#A855F7"/>
+                    <stop offset="100%" stopColor="#EC4899"/>
+                  </linearGradient>
+                </defs>
+              </svg>
             </div>
 
-            {/* Demo Video */}
-            <div className="bg-[#1a0d2e]/60 border border-purple-500/20 rounded-2xl overflow-hidden ek-glow">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-full object-cover"
-                style={{ display: 'block' }}
-                onLoadedMetadata={(e) => {
-                  const video = e.target as HTMLVideoElement;
-                  video.playbackRate = 1.25;
-                }}
+            {/* CTAs - Prominent and centered */}
+            <div className="flex flex-wrap justify-center gap-4 mb-6">
+              <a
+                href="/contact"
+                onClick={() => trackEvent('ek_cta_demo_click')}
+                className="ek-btn-gradient text-white text-sm px-6 py-3 rounded-lg font-medium inline-block transition-all"
               >
-                <source src="/EventKarma-App.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+                Book a demo
+              </a>
+              <Link
+                href="/pass-demo?event=ek-demo&e=alex%40example.com"
+                onClick={() => trackEvent('ek_cta_pass_click')}
+                className="bg-white/10 hover:bg-white/20 backdrop-blur text-sm px-6 py-3 rounded-lg font-medium inline-block border border-purple-500/30"
+              >
+                See a live event pass
+              </Link>
+              <Link
+                href="/pricing"
+                onClick={() => trackEvent('ek_cta_pricing_click')}
+                className="text-sm px-5 py-3 rounded-lg font-medium inline-block text-purple-200 hover:text-white"
+              >
+                Pricing &rarr;
+              </Link>
             </div>
+
+            <p className="text-xs text-purple-300/80">
+              Built for B2B event teams who seek enlightenment.
+            </p>
+          </div>
+        </section>
+
+        {/* Product Screenshot */}
+        <section className="mx-auto max-w-4xl px-4 -mt-4 mb-8">
+          <div className="bg-[#1a0d2e]/40 border border-purple-500/20 rounded-2xl p-3 overflow-hidden ek-glow relative">
+            <img
+              src="/Event Karma Home Page.png"
+              alt="Event Karma dashboard showing event analytics and ROI metrics"
+              className="w-full rounded-lg"
+            />
+            {/* Floating sparkles */}
+            <svg className="absolute top-6 right-8 w-4 h-4 animate-sparkle" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2l0 4M12 18l0 4M2 12l4 0M18 12l4 0M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8" stroke="#EC4899" strokeWidth="2" strokeLinecap="round"/>
+            </svg>
+            <svg className="absolute top-12 left-10 w-3 h-3 animate-sparkle-delayed" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2l0 4M12 18l0 4M2 12l4 0M18 12l4 0" stroke="#A855F7" strokeWidth="2" strokeLinecap="round"/>
+            </svg>
+            <svg className="absolute bottom-10 right-16 w-3 h-3 animate-sparkle" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2l0 4M12 18l0 4M2 12l4 0M18 12l4 0" stroke="#8B5CF6" strokeWidth="2" strokeLinecap="round"/>
+            </svg>
           </div>
         </section>
 
@@ -395,30 +385,6 @@ export default function EventKarma() {
             </div>
           </div>
 
-          {/* Event Page Screenshot */}
-          <div className="mt-12 bg-[#1a0d2e]/40 border border-purple-500/20 rounded-2xl p-4 overflow-hidden ek-glow relative">
-            <img
-              src="/Event Karma Home Page.png"
-              alt="Event Karma event management interface"
-              className="w-full rounded-lg"
-            />
-            {/* Floating sparkles */}
-            <svg className="absolute top-6 right-8 w-4 h-4 animate-sparkle" viewBox="0 0 24 24" fill="none">
-              <path d="M12 2l0 4M12 18l0 4M2 12l4 0M18 12l4 0M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8" stroke="#EC4899" strokeWidth="2" strokeLinecap="round"/>
-            </svg>
-            <svg className="absolute top-12 left-10 w-3 h-3 animate-sparkle-delayed" viewBox="0 0 24 24" fill="none">
-              <path d="M12 2l0 4M12 18l0 4M2 12l4 0M18 12l4 0" stroke="#A855F7" strokeWidth="2" strokeLinecap="round"/>
-            </svg>
-            <svg className="absolute bottom-10 right-16 w-3 h-3 animate-sparkle" viewBox="0 0 24 24" fill="none">
-              <path d="M12 2l0 4M12 18l0 4M2 12l4 0M18 12l4 0" stroke="#8B5CF6" strokeWidth="2" strokeLinecap="round"/>
-            </svg>
-            <svg className="absolute bottom-16 left-20 w-4 h-4 animate-sparkle-delayed" viewBox="0 0 24 24" fill="none">
-              <path d="M12 2l0 4M12 18l0 4M2 12l4 0M18 12l4 0M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8" stroke="#EC4899" strokeWidth="2" strokeLinecap="round"/>
-            </svg>
-            <svg className="absolute top-1/2 right-6 w-2 h-2 animate-sparkle" viewBox="0 0 24 24" fill="none">
-              <path d="M12 2l0 4M12 18l0 4M2 12l4 0M18 12l4 0" stroke="#A855F7" strokeWidth="2" strokeLinecap="round"/>
-            </svg>
-          </div>
         </section>
 
         {/* Value Props */}
@@ -531,6 +497,33 @@ export default function EventKarma() {
                 <p className="text-slate-300">Follow-up from cleaner data</p>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* See it in action - Product Demo Video */}
+        <section className="mx-auto max-w-6xl px-4 py-16">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-semibold mb-3">See Event Karma in action</h2>
+            <p className="text-slate-300 max-w-2xl mx-auto">
+              Watch how easy it is to manage events, capture feedback, and sync everything to Salesforce.
+            </p>
+          </div>
+          <div className="bg-[#1a0d2e]/60 border border-purple-500/20 rounded-2xl overflow-hidden ek-glow max-w-4xl mx-auto">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+              style={{ display: 'block' }}
+              onLoadedMetadata={(e) => {
+                const video = e.target as HTMLVideoElement;
+                video.playbackRate = 1.25;
+              }}
+            >
+              <source src="/EventKarma-App.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </section>
 
