@@ -294,7 +294,7 @@ export default function EventKarma() {
             The transformation
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold mb-4 leading-tight">
-            Stop chasing spreadsheets.<br />
+            Stop chasing MQLs.<br />
             <span className="ek-gradient-text">Start knowing what works.</span>
           </h2>
           <p className="text-slate-300 max-w-2xl mx-auto text-lg">
