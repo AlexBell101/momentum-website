@@ -573,16 +573,13 @@ export default function EventKarma() {
             <h2 className="text-2xl font-semibold mb-4">Simple, transparent pricing</h2>
             <div className="mb-6">
               <p className="text-4xl font-bold mb-2">
-                <span className="ek-gradient-text">$9,999</span><span className="text-slate-50">/yr</span>
-                <span className="text-lg font-normal text-slate-300 ml-2">or $999/mo</span>
+                <span className="ek-gradient-text">$199</span><span className="text-slate-50">/mo</span>
+                <span className="text-lg font-normal text-slate-300 ml-2">or $1,999/yr</span>
               </p>
               <p className="text-slate-300">
                 Unlimited events. Unlimited check-ins. Unlimited users.
               </p>
             </div>
-            <p className="text-sm text-purple-300 mb-6">
-              Founding customers: $7,500 for year one.
-            </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
                 href="#book-demo"

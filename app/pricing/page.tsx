@@ -111,11 +111,11 @@ export default function Pricing() {
 
               <h3 className="text-2xl font-semibold mb-2">Pro</h3>
               <div className="mb-4">
-                <span className="text-4xl font-bold">$399</span>
+                <span className="text-4xl font-bold">$199</span>
                 <span className="text-slate-300">/month</span>
               </div>
               <p className="text-sm text-slate-200 mb-2">For serious event marketing teams</p>
-              <p className="text-xs text-violet-300 mb-6">Annual: $3,990/year (save $798)</p>
+              <p className="text-xs text-violet-300 mb-6">Annual: $1,999/year (save 2 months)</p>
 
               <ul className="space-y-3 mb-8 text-sm">
                 <li className="flex items-start gap-2">
@@ -170,7 +170,7 @@ export default function Pricing() {
         {/* Value Proposition */}
         <section className="mx-auto max-w-6xl px-4 py-16">
           <div className="bg-slate-900/30 border border-slate-800 rounded-2xl p-8">
-            <h2 className="text-2xl font-semibold mb-6 text-center">Why $399/month is a no-brainer</h2>
+            <h2 className="text-2xl font-semibold mb-6 text-center">Why $199/month is a no-brainer</h2>
 
             <div className="grid md:grid-cols-2 gap-8">
               <div>
@@ -250,7 +250,7 @@ export default function Pricing() {
 
             <div className="bg-slate-900/30 border border-slate-800 rounded-xl p-6">
               <h3 className="font-semibold mb-2">Do you offer annual pricing?</h3>
-              <p className="text-sm text-slate-200">Yes! Save $798/year with annual billing ($3,990/year vs $4,788/year monthly).</p>
+              <p className="text-sm text-slate-200">Yes! Save 2 months with annual billing ($1,999/year vs $2,388/year monthly).</p>
             </div>
 
             <div className="bg-slate-900/30 border border-slate-800 rounded-xl p-6">
