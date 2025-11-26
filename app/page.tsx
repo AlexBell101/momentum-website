@@ -251,7 +251,7 @@ export default function EventKarma() {
 
               <div className="flex flex-wrap gap-4 mb-6">
                 <a
-                  href="#book-demo"
+                  href="/contact"
                   onClick={() => trackEvent('ek_cta_demo_click')}
                   className="ek-btn-gradient text-white text-sm px-6 py-3 rounded-lg font-medium inline-block transition-all"
                 >
@@ -630,7 +630,7 @@ export default function EventKarma() {
             </div>
             <div className="flex gap-3 flex-shrink-0 items-center flex-wrap">
               <a
-                href="https://app.eventkarma.ai"
+                href="/contact"
                 onClick={() => trackEvent('ek_cta_demo_click')}
                 className="ek-btn-gradient text-white text-sm px-6 py-3 rounded-lg font-medium inline-block transition-all"
               >
