@@ -107,7 +107,8 @@ export default function HeroMockup() {
 
             {/* Main headline - Bold and clear */}
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 leading-tight">
-              From registration <span className="ek-gradient-text">to performance insight.</span>
+              From registration<br />
+              <span className="ek-gradient-text">to performance insight.</span>
             </h1>
 
             {/* Subtitle */}
