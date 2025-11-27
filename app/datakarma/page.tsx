@@ -148,7 +148,7 @@ export default function Home() {
           </div>
           <div className="text-center pt-6 border-t border-slate-900">
             <p className="text-xs">Event Karma is a Data Karma product.</p>
-            <p className="text-xs mt-2">© 2025 Data Karma. Built for event marketing teams.</p>
+            <p className="text-xs mt-2">© 2025 Data Karma AI LLC. Built for event marketing teams.</p>
           </div>
         </div>
       </footer>

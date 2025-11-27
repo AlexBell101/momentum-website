@@ -562,7 +562,7 @@ export default function EventKarma() {
           </div>
           <div className="text-center pt-6 border-t border-purple-500/10">
             <p className="text-xs">Event Karma is a Data Karma product.</p>
-            <p className="text-xs mt-2">© 2025 Data Karma. Calm, clear data & event enlightenment.</p>
+            <p className="text-xs mt-2">© 2025 Data Karma AI LLC. Calm, clear data & event enlightenment.</p>
           </div>
         </div>
       </footer>
