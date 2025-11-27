@@ -192,8 +192,8 @@ export default function EventKarma() {
             </p>
 
             {/* Main headline - Bold and clear */}
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight ek-gradient-text mb-6 leading-tight">
-              From registration to performance insight.
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 leading-tight">
+              From registration <span className="ek-gradient-text">to performance insight.</span>
             </h1>
 
             {/* Subtitle */}
