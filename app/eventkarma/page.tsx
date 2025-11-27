@@ -156,7 +156,7 @@ export default function EventKarma() {
                 From registration to revenue insight.
               </p>
               <p className="text-slate-300/90 mb-6 max-w-xl text-lg">
-                Every check-in, every conversation, every follow-up—connected and measured. Finally know which events drive pipeline.
+                Every check-in, every conversation, every follow-up—connected and measured. Finally know which events <span className="ek-gradient-text font-semibold">drive pipeline.</span>
               </p>
               <div className="flex flex-wrap gap-4 mb-6">
                 <a
