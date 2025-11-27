@@ -213,7 +213,7 @@ export default function EventKarma() {
             The transformation
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold mb-4 leading-tight">
-            Stop chasing spreadsheets.<br />
+            Stop chasing MQLs.<br />
             <span className="ek-gradient-text">Start knowing what works.</span>
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto text-lg">
@@ -300,7 +300,7 @@ export default function EventKarma() {
               </div>
               <p className="text-xs text-purple-400 font-medium mb-1">6</p>
               <h3 className="text-sm font-semibold mb-1">Learn</h3>
-              <p className="text-xs text-slate-400">AI insights, repeat winners</p>
+              <p className="text-xs text-slate-400">Series trends, AI scorecards</p>
             </div>
           </div>
         </section>
@@ -377,20 +377,20 @@ export default function EventKarma() {
                 <h3 className="text-lg font-semibold">Clear</h3>
               </div>
               <p className="text-slate-400 text-sm mb-4">
-                AI analyzes every event and tells you what to repeat, resize, or skip. No more guessing which events drive pipeline.
+                AI analyzes every event and tells you what to repeat, resize, or skip. Executive scorecards grade performance A–F so leadership gets clarity instantly.
               </p>
               <ul className="space-y-2 text-sm text-slate-300">
                 <li className="flex gap-2">
                   <span className="mt-1 h-1.5 w-1.5 rounded-full bg-purple-400 flex-shrink-0"></span>
-                  Event success scoring
+                  Executive scorecards with letter grades
                 </li>
                 <li className="flex gap-2">
                   <span className="mt-1 h-1.5 w-1.5 rounded-full bg-purple-400 flex-shrink-0"></span>
-                  AI-powered recommendations
+                  Side-by-side event comparison
                 </li>
                 <li className="flex gap-2">
                   <span className="mt-1 h-1.5 w-1.5 rounded-full bg-purple-400 flex-shrink-0"></span>
-                  Pipeline attribution
+                  Survey analytics &amp; NPS tracking
                 </li>
               </ul>
             </div>
@@ -422,22 +422,22 @@ export default function EventKarma() {
         <section className="mx-auto max-w-6xl px-4 py-16">
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div>
-              <h2 className="text-2xl font-semibold mb-4">Know what to run next.</h2>
+              <h2 className="text-2xl font-semibold mb-4">Measure what matters—across your entire event series.</h2>
               <p className="text-slate-400 mb-6">
-                Event Karma doesn&apos;t just collect data—it tells you what to do with it. AI analyzes attendance, engagement, and outcomes to recommend your next move.
+                Group events under parent campaigns for aggregated analytics. One-click AI analysis surfaces categorized insights—performance, ROI, sentiment, attendance—with actionable recommendations and trend forecasting.
               </p>
               <ul className="space-y-3 text-slate-300">
                 <li className="flex gap-3">
                   <span className="mt-1 h-2 w-2 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 flex-shrink-0"></span>
-                  See which event formats generate pipeline, not just attendance
+                  Campaign series reporting with AI-generated executive summaries
                 </li>
                 <li className="flex gap-3">
                   <span className="mt-1 h-2 w-2 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 flex-shrink-0"></span>
-                  Spot partner events worth repeating and co-funding
+                  Portfolio KPI dashboards with regional performance charts
                 </li>
                 <li className="flex gap-3">
                   <span className="mt-1 h-2 w-2 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 flex-shrink-0"></span>
-                  Compare cities, audiences, and hosting teams
+                  Compare up to 5 events side-by-side with radar visualizations
                 </li>
               </ul>
             </div>
