@@ -39,6 +39,9 @@ export default function Home() {
             <Link href="/contact">Contact</Link>
           </nav>
           <div className="nav-actions">
+            <a href="https://app.eventkarma.ai" className="nav-login">
+              Log in
+            </a>
             <a href="https://app.eventkarma.ai" className="nav-cta">
               Start free
             </a>
