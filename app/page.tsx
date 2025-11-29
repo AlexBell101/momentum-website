@@ -541,16 +541,16 @@ export default function EventKarma() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 items-center">
-            {/* Check-in Screenshot */}
+            {/* Entry Survey Screenshot */}
             <div className="flex flex-col items-center">
               <div className="bg-[#1a0d2e]/60 border border-purple-500/20 rounded-3xl p-2 overflow-hidden shadow-2xl">
                 <img
-                  src="/checkinhomescreenios.png"
-                  alt="Event Karma iOS app check-in screen"
+                  src="/surveyscreenshotios.png"
+                  alt="Event Karma iOS app entry survey"
                   className="w-full rounded-2xl"
                 />
               </div>
-              <p className="text-sm text-slate-400 mt-4">Scanner, Kiosk &amp; Lookup modes</p>
+              <p className="text-sm text-slate-400 mt-4">Entry survey</p>
             </div>
 
             {/* Video in center */}
@@ -570,16 +570,16 @@ export default function EventKarma() {
               <p className="text-sm text-slate-400 mt-4">Find attendees &amp; add notes</p>
             </div>
 
-            {/* Survey Screenshot */}
+            {/* Exit Survey Screenshot */}
             <div className="flex flex-col items-center">
               <div className="bg-[#1a0d2e]/60 border border-purple-500/20 rounded-3xl p-2 overflow-hidden shadow-2xl">
                 <img
-                  src="/surveyscreenshotios.png"
-                  alt="Event Karma iOS app entry survey"
+                  src="/exitsurvey.png"
+                  alt="Event Karma iOS app exit survey"
                   className="w-full rounded-2xl"
                 />
               </div>
-              <p className="text-sm text-slate-400 mt-4">Entry &amp; exit surveys</p>
+              <p className="text-sm text-slate-400 mt-4">Exit survey</p>
             </div>
           </div>
         </section>
