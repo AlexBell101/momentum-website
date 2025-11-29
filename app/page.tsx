@@ -528,6 +528,62 @@ export default function EventKarma() {
           </div>
         </section>
 
+        {/* iOS Mobile App */}
+        <section className="mx-auto max-w-6xl px-4 py-16">
+          <div className="text-center mb-10">
+            <p className="inline-flex items-center gap-2 rounded-full bg-purple-500/10 border border-purple-500/30 px-4 py-1.5 text-sm text-purple-200 mb-4">
+              Native iOS App
+            </p>
+            <h2 className="text-2xl font-semibold mb-3">Check in anywhere. Capture everything.</h2>
+            <p className="text-slate-300 max-w-2xl mx-auto">
+              The Event Karma iOS app puts QR scanning, attendee lookup, and real-time surveys in your pocket. Works offline, syncs instantly.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 items-center">
+            {/* Check-in Screenshot */}
+            <div className="flex flex-col items-center">
+              <div className="bg-[#1a0d2e]/60 border border-purple-500/20 rounded-3xl p-2 overflow-hidden shadow-2xl">
+                <img
+                  src="/checkinhomescreenios.png"
+                  alt="Event Karma iOS app check-in screen"
+                  className="w-full rounded-2xl"
+                />
+              </div>
+              <p className="text-sm text-slate-400 mt-4">Scanner, Kiosk &amp; Lookup modes</p>
+            </div>
+
+            {/* Video in center */}
+            <div className="flex flex-col items-center">
+              <div className="bg-[#1a0d2e]/60 border border-purple-500/20 rounded-3xl p-2 overflow-hidden shadow-2xl">
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full rounded-2xl"
+                  style={{ display: 'block' }}
+                >
+                  <source src="/ios_findandadduserwithnotes.mov" type="video/mp4" />
+                </video>
+              </div>
+              <p className="text-sm text-slate-400 mt-4">Find attendees &amp; add notes</p>
+            </div>
+
+            {/* Survey Screenshot */}
+            <div className="flex flex-col items-center">
+              <div className="bg-[#1a0d2e]/60 border border-purple-500/20 rounded-3xl p-2 overflow-hidden shadow-2xl">
+                <img
+                  src="/surveyscreenshotios.png"
+                  alt="Event Karma iOS app entry survey"
+                  className="w-full rounded-2xl"
+                />
+              </div>
+              <p className="text-sm text-slate-400 mt-4">Entry &amp; exit surveys</p>
+            </div>
+          </div>
+        </section>
+
         {/* AI Insights */}
         <section className="mx-auto max-w-6xl px-4 py-16">
           <div className="grid md:grid-cols-2 gap-10 items-center">
