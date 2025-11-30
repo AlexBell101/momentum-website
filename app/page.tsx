@@ -187,7 +187,7 @@ export default function EventKarma() {
         {/* Hero Section - Clean, Typography-Focused */}
         <section className="relative overflow-hidden py-20 md:py-28">
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(139,92,246,0.2),_rgba(168,85,247,0.1)_40%,_transparent_70%)]"></div>
-          <div className="relative mx-auto max-w-5xl px-4 text-center">
+          <div className="relative mx-auto max-w-6xl px-4 text-center">
             {/* Small badge */}
             <p className="inline-flex items-center gap-2 rounded-full bg-purple-500/10 border border-purple-500/30 px-4 py-1.5 text-sm text-purple-200 mb-8">
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
