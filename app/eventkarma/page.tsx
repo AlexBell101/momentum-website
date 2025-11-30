@@ -322,20 +322,20 @@ export default function EventKarma() {
                 <h3 className="text-lg font-semibold">Connected</h3>
               </div>
               <p className="text-slate-400 text-sm mb-4">
-                Every touchpoint flows to Salesforce. Campaign Members update automatically. No spreadsheets, no imports, no gaps.
+                Every touchpoint flows to your CRM. Campaign Members update automatically. No spreadsheets, no imports, no gaps.
               </p>
               <ul className="space-y-2 text-sm text-slate-300">
                 <li className="flex gap-2">
                   <span className="mt-1 h-1.5 w-1.5 rounded-full bg-purple-400 flex-shrink-0"></span>
-                  Native Salesforce integration
+                  Salesforce or HubSpot as your CRM
                 </li>
                 <li className="flex gap-2">
                   <span className="mt-1 h-1.5 w-1.5 rounded-full bg-purple-400 flex-shrink-0"></span>
-                  Real-time Campaign Member updates
+                  HubSpot marketing + Salesforce CRM
                 </li>
                 <li className="flex gap-2">
                   <span className="mt-1 h-1.5 w-1.5 rounded-full bg-purple-400 flex-shrink-0"></span>
-                  Full audit trail
+                  Real-time sync with full audit trail
                 </li>
               </ul>
             </div>
@@ -505,12 +505,12 @@ export default function EventKarma() {
         <section id="integrations" className="mx-auto max-w-6xl px-4 py-16">
           <h2 className="text-2xl font-semibold mb-4">Works with your stack</h2>
           <p className="text-slate-400 mb-6 max-w-3xl">
-            Connect to the tools your team already uses. Fast to set up, predictable to maintain.
+            Connect Salesforce or HubSpot as your CRM. Use HubSpot as a marketing integration alongside Salesforce too.
           </p>
           <div className="flex flex-wrap gap-3">
             <span className="px-4 py-2 rounded-full bg-[#1a0d2e]/60 border border-purple-500/20 text-sm">Salesforce</span>
-            <span className="px-4 py-2 rounded-full bg-[#1a0d2e]/60 border border-purple-500/20 text-sm">Marketo</span>
             <span className="px-4 py-2 rounded-full bg-[#1a0d2e]/60 border border-purple-500/20 text-sm">HubSpot</span>
+            <span className="px-4 py-2 rounded-full bg-[#1a0d2e]/60 border border-purple-500/20 text-sm">Marketo</span>
             <span className="px-4 py-2 rounded-full bg-[#1a0d2e]/60 border border-purple-500/20 text-sm">Cvent / Splash</span>
             <span className="px-4 py-2 rounded-full bg-[#1a0d2e]/60 border border-purple-500/20 text-sm">Slack</span>
             <span className="px-4 py-2 rounded-full bg-[#1a0d2e]/60 border border-purple-500/20 text-sm">Sheets / CSV</span>
