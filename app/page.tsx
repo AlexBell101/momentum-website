@@ -317,27 +317,6 @@ export default function EventKarma() {
           </div>
         </section>
 
-        {/* Product Screenshot */}
-        <section className="mx-auto max-w-4xl px-4 -mt-4 mb-8">
-          <div className="bg-[#1a0d2e]/40 border border-purple-500/20 rounded-2xl p-3 overflow-hidden ek-glow relative">
-            <img
-              src="/Event Karma Home Page.png"
-              alt="Event Karma dashboard showing event analytics and ROI metrics"
-              className="w-full rounded-lg"
-            />
-            {/* Floating sparkles */}
-            <svg className="absolute top-6 right-8 w-4 h-4 animate-sparkle" viewBox="0 0 24 24" fill="none">
-              <path d="M12 2l0 4M12 18l0 4M2 12l4 0M18 12l4 0M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8" stroke="#EC4899" strokeWidth="2" strokeLinecap="round"/>
-            </svg>
-            <svg className="absolute top-12 left-10 w-3 h-3 animate-sparkle-delayed" viewBox="0 0 24 24" fill="none">
-              <path d="M12 2l0 4M12 18l0 4M2 12l4 0M18 12l4 0" stroke="#A855F7" strokeWidth="2" strokeLinecap="round"/>
-            </svg>
-            <svg className="absolute bottom-10 right-16 w-3 h-3 animate-sparkle" viewBox="0 0 24 24" fill="none">
-              <path d="M12 2l0 4M12 18l0 4M2 12l4 0M18 12l4 0" stroke="#8B5CF6" strokeWidth="2" strokeLinecap="round"/>
-            </svg>
-          </div>
-        </section>
-
         {/* Transformation Message */}
         <section className="mx-auto max-w-4xl px-4 py-16 text-center">
           <p className="inline-flex items-center gap-2 rounded-full bg-purple-500/10 border border-purple-500/30 px-4 py-1.5 text-sm text-purple-200 mb-6">
@@ -352,89 +331,116 @@ export default function EventKarma() {
           </p>
         </section>
 
-        {/* How It Works - Visual Flow */}
-        <section className="mx-auto max-w-6xl px-4 py-16">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl font-semibold mb-3">The complete event lifecycle</h2>
-            <p className="text-slate-300 max-w-2xl mx-auto">
-              Six steps from invite to insight. Each one connected, measured, and ready for Salesforce.
+        {/* How It Works - 4 Steps */}
+        <section className="mx-auto max-w-5xl px-4 py-16">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl font-semibold mb-3">How Event Karma works</h2>
+            <p className="text-purple-200 max-w-2xl mx-auto">
+              Works alongside Splash, Cvent, HubSpot, or any registration tool. We handle what happens next.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-6 gap-4 mb-12">
-            {/* Step 1: Invite */}
-            <div className="bg-[#1a0d2e]/40 border border-purple-500/20 rounded-xl p-4 text-center hover:border-purple-500/40 transition-colors">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/20 flex items-center justify-center mx-auto mb-3">
-                <svg className="w-5 h-5 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <p className="text-xs text-purple-400 font-medium mb-1">1</p>
-              <h3 className="text-sm font-semibold mb-1">Invite</h3>
-              <p className="text-xs text-slate-300">Send personalized passes via email</p>
-            </div>
-
-            {/* Step 2: Register */}
-            <div className="bg-[#1a0d2e]/40 border border-purple-500/20 rounded-xl p-4 text-center hover:border-purple-500/40 transition-colors">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/20 flex items-center justify-center mx-auto mb-3">
-                <svg className="w-5 h-5 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <p className="text-xs text-purple-400 font-medium mb-1">2</p>
-              <h3 className="text-sm font-semibold mb-1">Register</h3>
-              <p className="text-xs text-slate-300">Capture signups, sync to CRM</p>
-            </div>
-
-            {/* Step 3: Check In + Capture */}
-            <div className="bg-[#1a0d2e]/40 border border-purple-500/20 rounded-xl p-4 text-center hover:border-purple-500/40 transition-colors">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/20 flex items-center justify-center mx-auto mb-3">
-                <svg className="w-5 h-5 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="grid md:grid-cols-4 gap-6">
+            {/* Step 1: Capture */}
+            <div className="bg-[#1a0d2e]/40 border border-purple-500/20 rounded-xl p-5 text-center hover:border-purple-500/40 transition-colors">
+              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/20 flex items-center justify-center mx-auto mb-4">
+                <svg className="w-6 h-6 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
                 </svg>
               </div>
-              <p className="text-xs text-purple-400 font-medium mb-1">3</p>
-              <h3 className="text-sm font-semibold mb-1">Scan + Ask</h3>
-              <p className="text-xs text-slate-300">Instant intent capture on entry</p>
+              <h3 className="text-base font-semibold mb-2">Capture</h3>
+              <p className="text-sm text-purple-200">Registrations, check-ins, badge scans—all synced to your CRM in real time</p>
             </div>
 
-            {/* Step 4: Rate */}
-            <div className="bg-[#1a0d2e]/40 border border-purple-500/20 rounded-xl p-4 text-center hover:border-purple-500/40 transition-colors">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/20 flex items-center justify-center mx-auto mb-3">
-                <svg className="w-5 h-5 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            {/* Step 2: Survey */}
+            <div className="bg-[#1a0d2e]/40 border border-purple-500/20 rounded-xl p-5 text-center hover:border-purple-500/40 transition-colors">
+              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/20 flex items-center justify-center mx-auto mb-4">
+                <svg className="w-6 h-6 text-pink-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
                 </svg>
               </div>
-              <p className="text-xs text-purple-400 font-medium mb-1">4</p>
-              <h3 className="text-sm font-semibold mb-1">Rate</h3>
-              <p className="text-xs text-slate-300">Exit feedback in 5 seconds</p>
+              <h3 className="text-base font-semibold mb-2">Survey</h3>
+              <p className="text-sm text-purple-200">Entry intent + exit feedback captured in seconds on any device</p>
             </div>
 
-            {/* Step 5: Publish */}
-            <div className="bg-[#1a0d2e]/40 border border-purple-500/20 rounded-xl p-4 text-center hover:border-purple-500/40 transition-colors">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/20 flex items-center justify-center mx-auto mb-3">
-                <svg className="w-5 h-5 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+            {/* Step 3: Sync */}
+            <div className="bg-[#1a0d2e]/40 border border-purple-500/20 rounded-xl p-5 text-center hover:border-purple-500/40 transition-colors">
+              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/20 flex items-center justify-center mx-auto mb-4">
+                <svg className="w-6 h-6 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                 </svg>
               </div>
-              <p className="text-xs text-purple-400 font-medium mb-1">5</p>
-              <h3 className="text-sm font-semibold mb-1">Publish</h3>
-              <p className="text-xs text-slate-300">Push to Salesforce when ready</p>
+              <h3 className="text-base font-semibold mb-2">Sync</h3>
+              <p className="text-sm text-purple-200">Push to Salesforce or HubSpot when you&apos;re ready—with full control</p>
             </div>
 
-            {/* Step 6: Learn */}
-            <div className="bg-[#1a0d2e]/40 border border-purple-500/20 rounded-xl p-4 text-center hover:border-purple-500/40 transition-colors">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/20 flex items-center justify-center mx-auto mb-3">
-                <svg className="w-5 h-5 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            {/* Step 4: Score */}
+            <div className="bg-[#1a0d2e]/40 border border-purple-500/20 rounded-xl p-5 text-center hover:border-purple-500/40 transition-colors">
+              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/20 flex items-center justify-center mx-auto mb-4">
+                <svg className="w-6 h-6 text-pink-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 </svg>
               </div>
-              <p className="text-xs text-purple-400 font-medium mb-1">6</p>
-              <h3 className="text-sm font-semibold mb-1">Learn</h3>
-              <p className="text-xs text-slate-300">Series trends, AI scorecards</p>
+              <h3 className="text-base font-semibold mb-2">Score</h3>
+              <p className="text-sm text-purple-200">Success Score + series analytics tell you what&apos;s actually working</p>
             </div>
           </div>
+        </section>
 
+        {/* iOS Mobile App */}
+        <section className="mx-auto max-w-6xl px-4 py-16">
+          <div className="text-center mb-10">
+            <p className="inline-flex items-center gap-2 rounded-full bg-purple-500/10 border border-purple-500/30 px-4 py-1.5 text-sm text-purple-200 mb-4">
+              Native iOS App
+            </p>
+            <h2 className="text-2xl font-semibold mb-3">Check in anywhere. Capture everything.</h2>
+            <p className="text-purple-200 max-w-2xl mx-auto">
+              The Event Karma iOS app puts QR scanning, attendee lookup, and real-time surveys in your pocket. Works offline, syncs instantly.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 items-center">
+            {/* Entry Survey Screenshot */}
+            <div className="flex flex-col items-center">
+              <div className="bg-[#1a0d2e]/60 border border-purple-500/20 rounded-3xl p-2 overflow-hidden shadow-2xl">
+                <img
+                  src="/surveyscreenshotios.png"
+                  alt="Event Karma iOS app entry survey"
+                  className="w-full rounded-2xl"
+                />
+              </div>
+              <p className="text-sm text-purple-300 mt-4">Entry survey</p>
+            </div>
+
+            {/* Video in center */}
+            <div className="flex flex-col items-center">
+              <div className="bg-[#1a0d2e]/60 border border-purple-500/20 rounded-3xl p-2 overflow-hidden shadow-2xl">
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full rounded-2xl"
+                  style={{ display: 'block' }}
+                >
+                  <source src="/ios_findandadduserwithnotes.mov" type="video/mp4" />
+                </video>
+              </div>
+              <p className="text-sm text-purple-300 mt-4">Find attendees &amp; add notes</p>
+            </div>
+
+            {/* Exit Survey Screenshot */}
+            <div className="flex flex-col items-center">
+              <div className="bg-[#1a0d2e]/60 border border-purple-500/20 rounded-3xl p-2 overflow-hidden shadow-2xl">
+                <img
+                  src="/exitsurvey.png"
+                  alt="Event Karma iOS app exit survey"
+                  className="w-full rounded-2xl"
+                />
+              </div>
+              <p className="text-sm text-purple-300 mt-4">Exit survey</p>
+            </div>
+          </div>
         </section>
 
         {/* Value Props */}
@@ -574,62 +580,6 @@ export default function EventKarma() {
               <source src="/EventKarma-App.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-          </div>
-        </section>
-
-        {/* iOS Mobile App */}
-        <section className="mx-auto max-w-6xl px-4 py-16">
-          <div className="text-center mb-10">
-            <p className="inline-flex items-center gap-2 rounded-full bg-purple-500/10 border border-purple-500/30 px-4 py-1.5 text-sm text-purple-200 mb-4">
-              Native iOS App
-            </p>
-            <h2 className="text-2xl font-semibold mb-3">Check in anywhere. Capture everything.</h2>
-            <p className="text-slate-300 max-w-2xl mx-auto">
-              The Event Karma iOS app puts QR scanning, attendee lookup, and real-time surveys in your pocket. Works offline, syncs instantly.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 items-center">
-            {/* Entry Survey Screenshot */}
-            <div className="flex flex-col items-center">
-              <div className="bg-[#1a0d2e]/60 border border-purple-500/20 rounded-3xl p-2 overflow-hidden shadow-2xl">
-                <img
-                  src="/surveyscreenshotios.png"
-                  alt="Event Karma iOS app entry survey"
-                  className="w-full rounded-2xl"
-                />
-              </div>
-              <p className="text-sm text-slate-400 mt-4">Entry survey</p>
-            </div>
-
-            {/* Video in center */}
-            <div className="flex flex-col items-center">
-              <div className="bg-[#1a0d2e]/60 border border-purple-500/20 rounded-3xl p-2 overflow-hidden shadow-2xl">
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full rounded-2xl"
-                  style={{ display: 'block' }}
-                >
-                  <source src="/ios_findandadduserwithnotes.mov" type="video/mp4" />
-                </video>
-              </div>
-              <p className="text-sm text-slate-400 mt-4">Find attendees &amp; add notes</p>
-            </div>
-
-            {/* Exit Survey Screenshot */}
-            <div className="flex flex-col items-center">
-              <div className="bg-[#1a0d2e]/60 border border-purple-500/20 rounded-3xl p-2 overflow-hidden shadow-2xl">
-                <img
-                  src="/exitsurvey.png"
-                  alt="Event Karma iOS app exit survey"
-                  className="w-full rounded-2xl"
-                />
-              </div>
-              <p className="text-sm text-slate-400 mt-4">Exit survey</p>
-            </div>
           </div>
         </section>
 
