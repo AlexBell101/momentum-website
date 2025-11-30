@@ -345,7 +345,7 @@ export default function EventKarma() {
                 <h3 className="text-lg font-semibold">Connected</h3>
               </div>
               <p className="text-purple-200 text-sm mb-4">
-                Every touchpoint flows to your CRM. Campaign Members update automatically. No spreadsheets, no imports, no gaps.
+                Every touchpoint flows to <span className="text-white">your CRM</span>. Campaign Members update automatically. <span className="text-white">No spreadsheets</span>, no imports, no gaps.
               </p>
               <ul className="space-y-2 text-sm text-purple-200">
                 <li className="flex gap-2">
@@ -374,7 +374,7 @@ export default function EventKarma() {
                 <h3 className="text-lg font-semibold">Controlled</h3>
               </div>
               <p className="text-purple-200 text-sm mb-4">
-                You decide when data goes live. Review attendees, validate emails, and publish when you&apos;re ready—not before.
+                <span className="text-white">You decide</span> when data goes live. Review attendees, validate emails, and <span className="text-white">publish when you&apos;re ready</span>—not before.
               </p>
               <ul className="space-y-2 text-sm text-purple-200">
                 <li className="flex gap-2">
@@ -403,7 +403,7 @@ export default function EventKarma() {
                 <h3 className="text-lg font-semibold">Clear</h3>
               </div>
               <p className="text-purple-200 text-sm mb-4">
-                AI analyzes every event and tells you what to repeat, resize, or skip. Executive scorecards grade performance A–F so leadership gets clarity instantly.
+                <span className="text-white">AI analyzes</span> every event and tells you what to repeat, resize, or skip. <span className="text-white">Executive scorecards</span> grade performance A–F so leadership gets clarity instantly.
               </p>
               <ul className="space-y-2 text-sm text-purple-200">
                 <li className="flex gap-2">
