@@ -91,7 +91,7 @@ export default function Home() {
                 Event analytics that prove ROI.
               </p>
               <p className="text-slate-300 mb-6">
-                From registration to Success Score—capture every interaction, sync to Salesforce, and know which events actually drive pipeline.
+                Combines your KPIs with qualitative survey feedback into a single success metric—so you can evaluate events and know which ones to repeat.
               </p>
               <ul className="space-y-2 text-sm text-slate-400 mb-6">
                 <li className="flex items-center gap-2">
