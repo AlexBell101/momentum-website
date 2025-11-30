@@ -184,90 +184,136 @@ export default function EventKarma() {
       </header>
 
       <main className="bg-[#0f0a1a] text-slate-50">
-        {/* Hero Section - Clean, Typography-Focused */}
+        {/* Hero Section - Success Score Focus */}
         <section className="relative overflow-hidden py-20 md:py-28">
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(139,92,246,0.2),_rgba(168,85,247,0.1)_40%,_transparent_70%)]"></div>
-          <div className="relative mx-auto max-w-6xl px-4 text-center">
-            {/* Small badge */}
-            <p className="inline-flex items-center gap-2 rounded-full bg-purple-500/10 border border-purple-500/30 px-4 py-1.5 text-sm text-purple-200 mb-8">
-              <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
-              Event analytics for B2B teams
-            </p>
-
-            {/* Main headline - Bold and clear */}
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 leading-tight">
-              From registration<br />
-              <span className="ek-gradient-text">to performance insight.</span>
-            </h1>
-
-            {/* Subtitle */}
-            <p className="text-xl text-purple-100 max-w-2xl mx-auto mb-4">
-              Take your targets and goals, mix in real time feedback from your attendees.
-            </p>
-
-            {/* Tagline with karma platter */}
-            <div className="flex items-center justify-center gap-4 mb-8">
-              <p className="text-xl font-semibold ek-gradient-text">
-                Pipeline driving events: served.
+          <div className="relative mx-auto max-w-6xl px-4">
+            <div className="text-center mb-12">
+              {/* Small badge */}
+              <p className="inline-flex items-center gap-2 rounded-full bg-purple-500/10 border border-purple-500/30 px-4 py-1.5 text-sm text-purple-200 mb-8">
+                <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                The metric that matters
               </p>
-              {/* Small Karma Platter Icon */}
-              <svg width="50" height="35" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="line-drawing">
-                {/* Wisps */}
-                <path d="M100 40 Q105 28, 98 18" stroke="url(#heroGrad)" strokeWidth="2" fill="none" className="animate-wisp"/>
-                {/* Cloche lifted */}
-                <g className="animate-bob" style={{transformOrigin: '100px 60px'}}>
-                  <g transform="translate(15, 0) rotate(-10, 85, 60)">
-                    <path d="M50 75 Q50 50, 85 50 Q120 50, 120 75" stroke="url(#heroGrad)" strokeWidth="3" fill="none"/>
-                    <circle cx="85" cy="47" r="4" fill="#A855F7"/>
-                  </g>
-                </g>
-                {/* Plate */}
-                <ellipse cx="100" cy="100" rx="55" ry="10" stroke="url(#heroGrad)" strokeWidth="3" fill="none"/>
-                {/* Bar graph */}
-                <g opacity="0.9">
-                  <rect x="75" y="88" width="8" height="10" rx="1" fill="#8B5CF6"/>
-                  <rect x="88" y="82" width="8" height="16" rx="1" fill="#EC4899"/>
-                  <rect x="101" y="85" width="8" height="13" rx="1" fill="#A855F7"/>
-                  <rect x="114" y="89" width="8" height="9" rx="1" fill="#8B5CF6"/>
-                </g>
-                <defs>
-                  <linearGradient id="heroGrad" x1="0%" y1="100%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="#8B5CF6"/>
-                    <stop offset="50%" stopColor="#A855F7"/>
-                    <stop offset="100%" stopColor="#EC4899"/>
-                  </linearGradient>
-                </defs>
-              </svg>
+
+              {/* Main headline */}
+              <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 leading-tight">
+                One number that tells you<br />
+                <span className="ek-gradient-text">if your event actually worked.</span>
+              </h1>
+
+              {/* Subtitle */}
+              <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-8">
+                Stop debating ROI in spreadsheets. The Success Score synthesizes attendance, engagement, pipeline influence, and feedback into a single, defensible metric.
+              </p>
             </div>
 
-            {/* CTAs - Prominent and centered */}
-            <div className="flex flex-wrap justify-center gap-4 mb-6">
-              <a
-                href="/contact"
-                onClick={() => trackEvent('ek_cta_demo_click')}
-                className="ek-btn-gradient text-white text-sm px-6 py-3 rounded-lg font-medium inline-block transition-all"
-              >
-                Book a demo
-              </a>
-              <Link
-                href="/pass-demo?event=ek-demo&e=alex%40example.com"
-                onClick={() => trackEvent('ek_cta_pass_click')}
-                className="bg-white/10 hover:bg-white/20 backdrop-blur text-sm px-6 py-3 rounded-lg font-medium inline-block border border-purple-500/30"
-              >
-                See a live event pass
-              </Link>
-              <Link
-                href="/pricing"
-                onClick={() => trackEvent('ek_cta_pricing_click')}
-                className="text-sm px-5 py-3 rounded-lg font-medium inline-block text-purple-200 hover:text-white"
-              >
-                Pricing &rarr;
-              </Link>
+            <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
+              {/* Left: Inputs flowing to score */}
+              <div className="space-y-4">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-[#1a0d2e] border border-purple-500/30 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <p className="font-medium text-white">Attendance & Show Rate</p>
+                    <p className="text-sm text-slate-400">Who registered vs. who actually showed up</p>
+                  </div>
+                  <div className="text-purple-400 text-sm font-mono">→</div>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-[#1a0d2e] border border-purple-500/30 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <p className="font-medium text-white">Engagement Signals</p>
+                    <p className="text-sm text-slate-400">Sessions attended, questions asked, booth visits</p>
+                  </div>
+                  <div className="text-purple-400 text-sm font-mono">→</div>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-[#1a0d2e] border border-purple-500/30 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <p className="font-medium text-white">Pipeline Influence</p>
+                    <p className="text-sm text-slate-400">Opportunities touched, deals accelerated</p>
+                  </div>
+                  <div className="text-purple-400 text-sm font-mono">→</div>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-[#1a0d2e] border border-purple-500/30 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <p className="font-medium text-white">Attendee Feedback</p>
+                    <p className="text-sm text-slate-400">NPS scores, survey responses, sentiment</p>
+                  </div>
+                  <div className="text-purple-400 text-sm font-mono">→</div>
+                </div>
+              </div>
+
+              {/* Right: Score visualization */}
+              <div className="flex justify-center">
+                <div className="relative">
+                  <div className="w-64 h-64 rounded-full bg-gradient-to-br from-purple-500/20 to-pink-500/10 border border-purple-500/30 flex items-center justify-center">
+                    <div className="text-center">
+                      <p className="text-6xl font-bold ek-gradient-text">78</p>
+                      <p className="text-sm text-slate-300 mt-1">Success Score</p>
+                      <p className="text-xs text-purple-400 mt-2 font-medium">Grade: B+</p>
+                    </div>
+                  </div>
+                  {/* Decorative elements */}
+                  <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-green-500/20 border border-green-500/40 flex items-center justify-center">
+                    <svg className="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-[#1a0d2e] border border-purple-500/30 rounded-lg px-4 py-2">
+                    <p className="text-xs text-slate-300">Above your 6-event average</p>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <p className="text-xs text-purple-300/80">
-              Built for B2B event teams who seek enlightenment.
-            </p>
+            {/* CTAs */}
+            <div className="text-center">
+              <div className="flex flex-wrap justify-center gap-4 mb-4">
+                <a
+                  href="/contact"
+                  onClick={() => trackEvent('ek_cta_demo_click')}
+                  className="ek-btn-gradient text-white text-sm px-6 py-3 rounded-lg font-medium inline-block transition-all"
+                >
+                  Book a demo
+                </a>
+                <Link
+                  href="/success-score"
+                  className="bg-white/10 hover:bg-white/20 backdrop-blur text-sm px-6 py-3 rounded-lg font-medium inline-block border border-purple-500/30"
+                >
+                  How Success Score works
+                </Link>
+                <Link
+                  href="/pricing"
+                  onClick={() => trackEvent('ek_cta_pricing_click')}
+                  className="text-sm px-5 py-3 rounded-lg font-medium inline-block text-purple-200 hover:text-white"
+                >
+                  Pricing &rarr;
+                </Link>
+              </div>
+              <p className="text-xs text-purple-300/80">
+                Built for B2B event teams who demand clarity.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -480,113 +526,6 @@ export default function EventKarma() {
                 </li>
               </ul>
             </div>
-          </div>
-        </section>
-
-        {/* Success Score Section */}
-        <section className="mx-auto max-w-6xl px-4 py-20">
-          <div className="text-center mb-12">
-            <p className="inline-flex items-center gap-2 rounded-full bg-purple-500/10 border border-purple-500/30 px-4 py-1.5 text-sm text-purple-200 mb-6">
-              The metric that matters
-            </p>
-            <h2 className="text-3xl md:text-4xl font-semibold mb-4">
-              One number that tells you<br />
-              <span className="ek-gradient-text">if your event actually worked.</span>
-            </h2>
-            <p className="text-slate-300 max-w-2xl mx-auto text-lg">
-              Stop debating ROI in spreadsheets. The Success Score synthesizes attendance, engagement, pipeline influence, and feedback into a single, defensible metric.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            {/* Left: Inputs flowing to score */}
-            <div className="space-y-4">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-[#1a0d2e] border border-purple-500/30 flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-                <div className="flex-1">
-                  <p className="font-medium text-white">Attendance & Show Rate</p>
-                  <p className="text-sm text-slate-400">Who registered vs. who actually showed up</p>
-                </div>
-                <div className="text-purple-400 text-sm font-mono">→</div>
-              </div>
-
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-[#1a0d2e] border border-purple-500/30 flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                  </svg>
-                </div>
-                <div className="flex-1">
-                  <p className="font-medium text-white">Engagement Signals</p>
-                  <p className="text-sm text-slate-400">Sessions attended, questions asked, booth visits</p>
-                </div>
-                <div className="text-purple-400 text-sm font-mono">→</div>
-              </div>
-
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-[#1a0d2e] border border-purple-500/30 flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div className="flex-1">
-                  <p className="font-medium text-white">Pipeline Influence</p>
-                  <p className="text-sm text-slate-400">Opportunities touched, deals accelerated</p>
-                </div>
-                <div className="text-purple-400 text-sm font-mono">→</div>
-              </div>
-
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-[#1a0d2e] border border-purple-500/30 flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-                  </svg>
-                </div>
-                <div className="flex-1">
-                  <p className="font-medium text-white">Attendee Feedback</p>
-                  <p className="text-sm text-slate-400">NPS scores, survey responses, sentiment</p>
-                </div>
-                <div className="text-purple-400 text-sm font-mono">→</div>
-              </div>
-            </div>
-
-            {/* Right: Score visualization */}
-            <div className="flex justify-center">
-              <div className="relative">
-                <div className="w-64 h-64 rounded-full bg-gradient-to-br from-purple-500/20 to-pink-500/10 border border-purple-500/30 flex items-center justify-center">
-                  <div className="text-center">
-                    <p className="text-6xl font-bold ek-gradient-text">78</p>
-                    <p className="text-sm text-slate-300 mt-1">Success Score</p>
-                    <p className="text-xs text-purple-400 mt-2 font-medium">Grade: B+</p>
-                  </div>
-                </div>
-                {/* Decorative elements */}
-                <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-green-500/20 border border-green-500/40 flex items-center justify-center">
-                  <svg className="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-[#1a0d2e] border border-purple-500/30 rounded-lg px-4 py-2">
-                  <p className="text-xs text-slate-300">Above your 6-event average</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="text-center mt-12">
-            <Link
-              href="/success-score"
-              className="inline-flex items-center gap-2 text-purple-300 hover:text-white transition-colors"
-            >
-              Learn how Success Score works
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
           </div>
         </section>
 
@@ -818,6 +757,7 @@ export default function EventKarma() {
             </div>
             <nav className="flex flex-wrap gap-6 text-xs">
               <Link href="/" className="hover:text-white">Event Karma</Link>
+              <Link href="/success-score" className="hover:text-white">Success Score</Link>
               <Link href="/pricing" className="hover:text-white">Pricing</Link>
               <a href="https://docs.eventkarma.ai" className="hover:text-white">Docs</a>
               <Link href="/trust" className="hover:text-white">Trust</Link>
