@@ -326,9 +326,101 @@ export default function EventKarma() {
             Stop chasing MQLs.<br />
             <span className="ek-gradient-text">Start knowing what works.</span>
           </h2>
-          <p className="text-slate-300 max-w-2xl mx-auto text-lg">
+          <p className="text-purple-200 max-w-2xl mx-auto text-lg">
             Event Karma captures every interaction—from the first registration to the final follow-up—and connects it all to Salesforce. No manual syncs. No guessing.
           </p>
+        </section>
+
+        {/* Value Props */}
+        <section className="mx-auto max-w-6xl px-4 py-16">
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* Connected */}
+            <div className="bg-[#1a0d2e]/40 border border-purple-500/20 rounded-2xl p-6 hover:border-purple-500/40 transition-colors">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500/30 to-pink-500/20 flex items-center justify-center">
+                  <svg className="w-5 h-5 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold">Connected</h3>
+              </div>
+              <p className="text-purple-200 text-sm mb-4">
+                Every touchpoint flows to your CRM. Campaign Members update automatically. No spreadsheets, no imports, no gaps.
+              </p>
+              <ul className="space-y-2 text-sm text-purple-200">
+                <li className="flex gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-purple-400 flex-shrink-0"></span>
+                  Salesforce or HubSpot as your CRM
+                </li>
+                <li className="flex gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-purple-400 flex-shrink-0"></span>
+                  HubSpot marketing + Salesforce CRM
+                </li>
+                <li className="flex gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-purple-400 flex-shrink-0"></span>
+                  Real-time sync with full audit trail
+                </li>
+              </ul>
+            </div>
+
+            {/* Controlled */}
+            <div className="bg-[#1a0d2e]/40 border border-purple-500/20 rounded-2xl p-6 hover:border-purple-500/40 transition-colors">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500/30 to-pink-500/20 flex items-center justify-center">
+                  <svg className="w-5 h-5 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold">Controlled</h3>
+              </div>
+              <p className="text-purple-200 text-sm mb-4">
+                You decide when data goes live. Review attendees, validate emails, and publish when you&apos;re ready—not before.
+              </p>
+              <ul className="space-y-2 text-sm text-purple-200">
+                <li className="flex gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-pink-400 flex-shrink-0"></span>
+                  Publish Gate prevents accidents
+                </li>
+                <li className="flex gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-pink-400 flex-shrink-0"></span>
+                  Review before syncing
+                </li>
+                <li className="flex gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-pink-400 flex-shrink-0"></span>
+                  No premature automation triggers
+                </li>
+              </ul>
+            </div>
+
+            {/* Clear */}
+            <div className="bg-[#1a0d2e]/40 border border-purple-500/20 rounded-2xl p-6 hover:border-purple-500/40 transition-colors">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500/30 to-pink-500/20 flex items-center justify-center">
+                  <svg className="w-5 h-5 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold">Clear</h3>
+              </div>
+              <p className="text-purple-200 text-sm mb-4">
+                AI analyzes every event and tells you what to repeat, resize, or skip. Executive scorecards grade performance A–F so leadership gets clarity instantly.
+              </p>
+              <ul className="space-y-2 text-sm text-purple-200">
+                <li className="flex gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-purple-400 flex-shrink-0"></span>
+                  Executive scorecards with letter grades
+                </li>
+                <li className="flex gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-purple-400 flex-shrink-0"></span>
+                  Side-by-side event comparison
+                </li>
+                <li className="flex gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-purple-400 flex-shrink-0"></span>
+                  Survey analytics &amp; NPS tracking
+                </li>
+              </ul>
+            </div>
+          </div>
         </section>
 
         {/* How It Works - 4 Steps */}
@@ -439,98 +531,6 @@ export default function EventKarma() {
                 />
               </div>
               <p className="text-sm text-purple-300 mt-4">Exit survey</p>
-            </div>
-          </div>
-        </section>
-
-        {/* Value Props */}
-        <section className="mx-auto max-w-6xl px-4 py-16">
-          <div className="grid md:grid-cols-3 gap-6">
-            {/* Connected */}
-            <div className="bg-[#1a0d2e]/40 border border-purple-500/20 rounded-2xl p-6 hover:border-purple-500/40 transition-colors">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500/30 to-pink-500/20 flex items-center justify-center">
-                  <svg className="w-5 h-5 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-semibold">Connected</h3>
-              </div>
-              <p className="text-slate-300 text-sm mb-4">
-                Every touchpoint flows to your CRM. Campaign Members update automatically. No spreadsheets, no imports, no gaps.
-              </p>
-              <ul className="space-y-2 text-sm text-slate-300">
-                <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-purple-400 flex-shrink-0"></span>
-                  Salesforce or HubSpot as your CRM
-                </li>
-                <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-purple-400 flex-shrink-0"></span>
-                  HubSpot marketing + Salesforce CRM
-                </li>
-                <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-purple-400 flex-shrink-0"></span>
-                  Real-time sync with full audit trail
-                </li>
-              </ul>
-            </div>
-
-            {/* Controlled */}
-            <div className="bg-[#1a0d2e]/40 border border-purple-500/20 rounded-2xl p-6 hover:border-purple-500/40 transition-colors">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500/30 to-pink-500/20 flex items-center justify-center">
-                  <svg className="w-5 h-5 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-semibold">Controlled</h3>
-              </div>
-              <p className="text-slate-300 text-sm mb-4">
-                You decide when data goes live. Review attendees, validate emails, and publish when you&apos;re ready—not before.
-              </p>
-              <ul className="space-y-2 text-sm text-slate-300">
-                <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-pink-400 flex-shrink-0"></span>
-                  Publish Gate prevents accidents
-                </li>
-                <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-pink-400 flex-shrink-0"></span>
-                  Review before syncing
-                </li>
-                <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-pink-400 flex-shrink-0"></span>
-                  No premature automation triggers
-                </li>
-              </ul>
-            </div>
-
-            {/* Clear */}
-            <div className="bg-[#1a0d2e]/40 border border-purple-500/20 rounded-2xl p-6 hover:border-purple-500/40 transition-colors">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500/30 to-pink-500/20 flex items-center justify-center">
-                  <svg className="w-5 h-5 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-semibold">Clear</h3>
-              </div>
-              <p className="text-slate-300 text-sm mb-4">
-                AI analyzes every event and tells you what to repeat, resize, or skip. Executive scorecards grade performance A–F so leadership gets clarity instantly.
-              </p>
-              <ul className="space-y-2 text-sm text-slate-300">
-                <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-purple-400 flex-shrink-0"></span>
-                  Executive scorecards with letter grades
-                </li>
-                <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-purple-400 flex-shrink-0"></span>
-                  Side-by-side event comparison
-                </li>
-                <li className="flex gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-purple-400 flex-shrink-0"></span>
-                  Survey analytics &amp; NPS tracking
-                </li>
-              </ul>
             </div>
           </div>
         </section>
