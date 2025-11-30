@@ -5764,14 +5764,14 @@ header nav {
 }
 
 header nav a {
-  color: rgba(248, 250, 252, 0.9);
+  color: #C4B5FD;
   text-decoration: none;
   transition: color 0.2s;
   font-weight: 500;
 }
 
 header nav a:hover {
-  color: white;
+  color: #EC4899;
 }
 
 header .nav-actions {
